@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T17:04:11.3854207+06:00",
+  "title": "Design System: Reza Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Editorial Ink",
+        "canonical": "#151515",
+        "tonalRamp": ["#151515", "#2b2b2b", "#444444", "#606060", "#7e7e7e", "#a0a0a0", "#c8c8c8", "#eeeeee"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f3f0e8",
+        "tonalRamp": ["#24221e", "#46423a", "#686258", "#8c8579", "#b1aa9e", "#d4cec3", "#e8e4dc", "#f8f6f0"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Signal Lime",
+        "canonical": "#d8ff52",
+        "tonalRamp": ["#202700", "#3d4900", "#5a6c00", "#788f00", "#97b500", "#b7da19", "#d8ff52", "#efffb4"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Quiet Surface",
+        "canonical": "#e8e5dd",
+        "tonalRamp": ["#22211e", "#41403a", "#62605a", "#85827b", "#aaa69f", "#ccc8c0", "#e0ddd6", "#f5f3ee"]
+      },
+      "surface-strong": {
+        "role": "neutral",
+        "displayName": "Strong Quiet Surface",
+        "canonical": "#ddd9d0",
+        "tonalRamp": ["#211f1c", "#403d38", "#605c55", "#807b73", "#a19c93", "#c2bdb4", "#ddd9d0", "#f3f0e9"]
+      },
+      "product-paper": {
+        "role": "neutral",
+        "displayName": "Product Paper",
+        "canonical": "#f8f6ee",
+        "tonalRamp": ["#24231f", "#47443e", "#6a675f", "#8e8a81", "#b3afa6", "#d6d2c9", "#ebe8e1", "#faf9f5"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#262626", "#484848", "#6b6b6b", "#909090", "#b5b5b5", "#d6d6d6", "#ededed", "#ffffff"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Soft Ink Line",
+        "canonical": "rgba(21, 21, 21, 0.18)",
+        "tonalRamp": ["rgba(21,21,21,.90)", "rgba(21,21,21,.72)", "rgba(21,21,21,.56)", "rgba(21,21,21,.42)", "rgba(21,21,21,.30)", "rgba(21,21,21,.18)", "rgba(21,21,21,.10)", "rgba(21,21,21,.05)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Locally bundled variable DM Sans for the tightly set three-line hero statement."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Locally bundled variable DM Sans for short major section openings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Locally bundled variable DM Sans for project names and capability links."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Locally bundled variable DM Sans for clear explanations and lead copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Locally bundled variable DM Sans for metadata, tags, annotations, and directional actions."
+      },
+      "editorial-accent": {
+        "displayName": "Editorial Accent",
+        "purpose": "Locally bundled regular and italic Instrument Serif for one short human gesture in the hero or closing CTA."
+      }
+    },
+    "shadows": [
+      {
+        "name": "zevian-product-window",
+        "value": "0 20px 42px rgba(21,21,21,.14)",
+        "purpose": "Lifts the detailed illustrative Zevian interface from the stronger neutral surface."
+      },
+      {
+        "name": "secondary-interface-window",
+        "value": "0 14px 28px rgba(21,21,21,.10)",
+        "purpose": "Separates the LTR/RTL and POS windows from their neutral art fields."
+      },
+      {
+        "name": "order-ticket",
+        "value": "0 12px 24px rgba(21,21,21,.10)",
+        "purpose": "Gives the compact paper order note a light artifact-like lift."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-editorial",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared easing for hover transitions and product demonstrations."
+      },
+      {
+        "name": "zevian-evidence-scan",
+        "value": "6s cubic-bezier(.16,1,.3,1) infinite; delays 0s, 1.3s, 2.6s",
+        "purpose": "The only continuous motion; scans the three Zevian evidence rows one at a time."
+      },
+      {
+        "name": "orderific-hover-demo",
+        "value": "7s cubic-bezier(.16,1,.3,1) infinite; paused until project-row hover",
+        "purpose": "Crossfades English LTR and Arabic RTL layouts only while hovered."
+      },
+      {
+        "name": "purno-hover-demo",
+        "value": "4.5s cubic-bezier(.16,1,.3,1) infinite; paused until project-row hover",
+        "purpose": "Cycles cash, card, and mobile payment states only while hovered."
+      },
+      {
+        "name": "jayga-hover-demo",
+        "value": "5s cubic-bezier(.16,1,.3,1) infinite; paused until project-row hover",
+        "purpose": "Moves the order marker through four stages only while hovered."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation:none!important; transition:none!important; scroll-behavior:auto!important",
+        "purpose": "Removes all CSS animation and transitions and leaves one static LTR layout."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "800px"
+      }
+    ],
+    "caseStudyPatterns": [
+      {
+        "name": "editorial-hero",
+        "description": "A back link, tightly set outcome-led title with one serif gesture, ruled summary and tags, followed by one large product artifact."
+      },
+      {
+        "name": "indexed-sections",
+        "description": "A 22/78 desktop chapter grid with a sticky numbered index, top rule and statement headline; the index becomes static on mobile."
+      },
+      {
+        "name": "evidence-product-diagrams",
+        "description": "Simple flows, decision tables, source chips and interface previews that sit beside the claim they prove; lime marks active evidence or confidence."
+      },
+      {
+        "name": "trust-bento",
+        "description": "An asymmetric two-column grid with one dark proof card spanning two rows and supporting safeguards on quiet neutral surfaces."
+      },
+      {
+        "name": "outcomes",
+        "description": "Up to three verified measures in a ruled row, followed by learning, next steps and a next-project link. Research intent, observed use and commercial results remain distinct."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "REZA A Wordmark",
+      "kind": "custom",
+      "description": "The bold navigation wordmark with a neon-lime signal dot sized at about one fifth of the text.",
+      "html": "<a class=\"ds-mark\" href=\"#top\"><span>REZA A</span><i aria-hidden=\"true\"></i></a>",
+      "css": ".ds-mark{min-height:44px;display:inline-flex;align-items:center;color:var(--ink,#151515);font:750 20px/1 'DM Sans',sans-serif;letter-spacing:-.03em;text-decoration:none}.ds-mark i{width:.22em;height:.22em;margin-left:4px;position:relative;top:-.32em;flex:none;background:var(--accent,#d8ff52);border-radius:50%}"
+    },
+    {
+      "name": "Hero Statement",
+      "kind": "custom",
+      "description": "The compact three-line positioning statement that broadens the work from product design to clear systems and AI workflows.",
+      "html": "<div class=\"ds-hero\"><h1><span>PRODUCT DESIGNER</span><span class=\"ds-hero-mid\"><em>shaping</em></span><span>CLEAR SYSTEMS &amp; AI WORKFLOWS.</span></h1></div>",
+      "css": ".ds-hero{padding:28px 28px 24px;color:var(--ink,#151515);background:var(--paper,#f3f0e8);font-family:'DM Sans',sans-serif}.ds-hero h1{margin:0 0 26px;font-size:clamp(58px,6.4vw,88px);font-weight:500;line-height:.86;letter-spacing:-.04em;text-transform:uppercase}.ds-hero h1>span{display:block}.ds-hero-mid{display:flex;align-items:center;gap:3vw;padding-left:11%}.ds-hero em{font-family:'Instrument Serif',serif;font-weight:400;text-transform:none;letter-spacing:-.025em}@media(max-width:800px){.ds-hero{padding:20px 18px 18px}.ds-hero h1{margin-bottom:24px;font-size:clamp(45px,13.8vw,64px);line-height:.88}.ds-hero-mid{padding-left:0;gap:12px}}"
+    },
+    {
+      "name": "Selected Work Action",
+      "kind": "button",
+      "refersTo": "button-selected-work",
+      "description": "The lime hero CTA that gives the selected work a clear, compact entry point.",
+      "html": "<a class=\"ds-work-cta\" href=\"#work\">SEE SELECTED WORK <span aria-hidden=\"true\">↓</span></a>",
+      "css": ".ds-work-cta{display:inline-flex;align-items:center;gap:12px;padding:10px 14px;background:var(--accent,#d8ff52);color:var(--ink,#151515);border-radius:99px;font:600 13px/1.2 'DM Sans',sans-serif;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}.ds-work-cta span{font-size:17px;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-work-cta:hover span{transform:translateY(3px)}.ds-work-cta:focus-visible{outline:2px solid var(--ink,#151515);outline-offset:3px;box-shadow:0 0 0 5px var(--accent,#d8ff52);border-radius:4px}@media(prefers-reduced-motion:reduce){.ds-work-cta span{transition:none!important}}"
+    },
+    {
+      "name": "Primary Navigation Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A compact ink pill for the single main navigation action, with lime inversion in the mobile menu.",
+      "html": "<a class=\"ds-nav-cta\" href=\"#about\">LET’S TALK <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-nav-cta{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;background:var(--ink,#151515);color:#fff;border-radius:99px;font:600 12px/1.2 'DM Sans',sans-serif;letter-spacing:.04em;text-decoration:none}.ds-nav-cta span{transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-nav-cta:hover span{transform:translate(3px,-3px)}.ds-nav-cta:focus-visible{outline:2px solid var(--ink,#151515);outline-offset:3px;box-shadow:0 0 0 5px var(--accent,#d8ff52);border-radius:4px}@media(max-width:800px){.ds-nav-cta{background:var(--accent,#d8ff52);color:var(--ink,#151515);justify-content:center}}@media(prefers-reduced-motion:reduce){.ds-nav-cta span{transition:none!important}}"
+    },
+    {
+      "name": "Project Tag",
+      "kind": "chip",
+      "refersTo": "chip-outline",
+      "description": "A quiet bordered pill for project disciplines and methods.",
+      "html": "<span class=\"ds-project-tag\">DESIGN SYSTEM</span>",
+      "css": ".ds-project-tag{display:inline-flex;padding:7px 11px;color:var(--ink,#151515);background:transparent;border:1px solid var(--ink,#151515);border-radius:99px;font:400 12px/1.2 'DM Sans',sans-serif}"
+    },
+    {
+      "name": "Zevian Evidence Window",
+      "kind": "card",
+      "refersTo": "feature-card",
+      "description": "A detailed illustrative product view with three evidence readings and explicit source, override, and confidence metadata.",
+      "html": "<article class=\"ds-zevian\"><header><b>Zevian</b><span>•••</span></header><div class=\"ds-zevian-body\"><aside><b>Z</b><i></i><i></i><i></i></aside><main><small>ILLUSTRATIVE PRODUCT VIEW</small><h3>What needs attention?</h3><div class=\"ds-signal\"><span>Collaboration</span><b>Recurring theme</b></div><div class=\"ds-signal\"><span>Delivery pace</span><b>New signal</b></div><div class=\"ds-signal\"><span>Role clarity</span><b>Stable</b></div><div class=\"ds-meta\"><span><small>SOURCE</small>Weekly report</span><span><small>OVERRIDE</small>Available</span><span><small>CONFIDENCE</small>Medium</span></div></main></div></article>",
+      "css": ".ds-zevian{width:min(540px,92%);overflow:hidden;background:var(--product-paper,#f8f6ee);color:var(--ink,#151515);border:1px solid var(--ink,#151515);border-radius:13px;box-shadow:0 20px 42px rgba(21,21,21,.14);font-family:'DM Sans',sans-serif;transform:rotate(-1deg);transition:transform .7s cubic-bezier(.16,1,.3,1)}.ds-zevian:hover{transform:rotate(0) scale(1.025)}.ds-zevian>header{height:48px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(21,21,21,.18);font-size:13px}.ds-zevian-body{display:grid;grid-template-columns:52px 1fr}.ds-zevian aside{padding-top:18px;display:flex;flex-direction:column;align-items:center;gap:20px;border-right:1px solid rgba(21,21,21,.18)}.ds-zevian aside b{padding:5px;background:var(--ink,#151515);color:#fff;border-radius:5px}.ds-zevian aside i{width:16px;height:2px;background:#ccc}.ds-zevian main{padding:7%}.ds-zevian main>small{font-size:10px;letter-spacing:.08em}.ds-zevian h3{margin:9px 0 20px;font-size:27px;letter-spacing:-.03em}.ds-signal{position:relative;overflow:hidden;padding:10px 8px;display:flex;justify-content:space-between;border-top:1px solid rgba(21,21,21,.18);font-size:11px}.ds-signal>*{position:relative;z-index:1}.ds-signal:after{content:'';position:absolute;inset:2px 0;background:var(--accent,#d8ff52);transform:translateX(-104%);animation:ds-evidence 6s cubic-bezier(.16,1,.3,1) infinite}.ds-signal:nth-of-type(2):after{animation-delay:1.3s}.ds-signal:nth-of-type(3):after{animation-delay:2.6s}.ds-meta{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.ds-meta span{padding:8px;display:grid;gap:3px;background:var(--surface,#e8e5dd);border-radius:6px;font-size:10px}.ds-meta small{font-size:8px;letter-spacing:.04em;color:#64615a}@keyframes ds-evidence{0%,12%{transform:translateX(-104%)}24%,42%{transform:translateX(0)}55%,100%{transform:translateX(104%)}}@media(prefers-reduced-motion:reduce){.ds-zevian,.ds-zevian *{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "Compact Project Row",
+      "kind": "custom",
+      "description": "A ruled project entry that pairs concise case-study context with one neutral, hover-activated product demonstration.",
+      "html": "<a class=\"ds-project-row\" href=\"#case-study\"><div class=\"ds-project-meta\"><span>2022–24</span><h3>Orderific</h3><p>One component system working across English LTR and Arabic RTL.</p><small>DESIGN SYSTEM · RTL · SIX PLATFORMS</small></div><div class=\"ds-project-art\"><div class=\"ds-demo-window\">LTR / RTL PRODUCT VIEW</div></div><b>VIEW CASE STUDY ↗</b></a>",
+      "css": ".ds-project-row{min-height:300px;padding:26px 0;display:grid;grid-template-columns:40% 1fr;gap:32px;position:relative;color:var(--ink,#151515);border-bottom:1px solid var(--ink,#151515);font-family:'DM Sans',sans-serif;text-decoration:none}.ds-project-meta{display:flex;flex-direction:column;align-items:flex-start}.ds-project-meta>span{color:#5f5c56;font-size:13px}.ds-project-meta h3{margin:auto 0 12px;font-size:46px;line-height:1;letter-spacing:-.03em;font-weight:500}.ds-project-meta p{max-width:430px;margin:0 0 25px;font-size:18px;line-height:1.45}.ds-project-meta small{font-size:11px;letter-spacing:.04em}.ds-project-art{min-height:248px;display:grid;place-items:center;overflow:hidden;background:var(--surface,#e8e5dd);border:1px solid rgba(21,21,21,.12);border-radius:14px}.ds-demo-window{padding:40px;background:var(--product-paper,#f8f6ee);border:1px solid var(--ink,#151515);border-radius:12px;box-shadow:0 14px 28px rgba(21,21,21,.10);font-size:11px;transition:transform .6s cubic-bezier(.16,1,.3,1)}.ds-project-row>b{position:absolute;right:0;top:36px;font-size:12px;letter-spacing:.04em}.ds-project-row:hover .ds-demo-window{transform:translateY(-5px)}.ds-project-row:focus-visible{outline:2px solid var(--ink,#151515);outline-offset:3px;box-shadow:0 0 0 5px var(--accent,#d8ff52);border-radius:4px}@media(max-width:800px){.ds-project-row{grid-template-columns:1fr;padding:24px 0}.ds-project-meta h3{margin:40px 0 8px}.ds-project-art{min-height:216px}.ds-project-row>b{top:26px}}@media(prefers-reduced-motion:reduce){.ds-project-row *{animation:none!important;transition:none!important}}"
+    },
+    {
+      "name": "Systems I’ve Shaped Link",
+      "kind": "custom",
+      "description": "A compact ruled capability link showing a system outcome rather than a promotional card.",
+      "html": "<a class=\"ds-system-link\" href=\"#system\"><span>ORDERIFIC</span><h3>One system across six platforms, LTR and RTL.</h3><b aria-hidden=\"true\">↗</b></a>",
+      "css": ".ds-system-link{min-height:150px;padding:26px 0;display:grid;grid-template-columns:120px 1fr auto;gap:22px;align-items:center;color:var(--ink,#151515);border-bottom:1px solid var(--ink,#151515);font-family:'DM Sans',sans-serif;text-decoration:none}.ds-system-link>span{font-size:12px;letter-spacing:.05em}.ds-system-link h3{margin:0;font-size:24px;line-height:1.15;letter-spacing:-.02em;font-weight:500}.ds-system-link>b{font-size:18px;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-system-link:hover>b{transform:translate(3px,-3px)}.ds-system-link:focus-visible{outline:2px solid var(--ink,#151515);outline-offset:3px;box-shadow:0 0 0 5px var(--accent,#d8ff52);border-radius:4px}@media(max-width:800px){.ds-system-link{min-height:118px;padding:20px 0;grid-template-columns:100px 1fr auto}}@media(prefers-reduced-motion:reduce){.ds-system-link>b{transition:none!important}}"
+    },
+    {
+      "name": "Process Step",
+      "kind": "custom",
+      "description": "A practical step in the four-part method, with AI integrated into the product process and people kept in control.",
+      "html": "<article class=\"ds-step\"><span>04</span><h3>Use AI with intent</h3><p>I use AI to synthesize, prototype and explore—while keeping people in control.</p></article>",
+      "css": ".ds-step{display:grid;grid-template-columns:36px 1fr;gap:8px;padding:22px 18px 22px 0;color:var(--ink,#151515);background:var(--paper,#f3f0e8);border-top:1px solid var(--ink,#151515);border-bottom:1px solid var(--ink,#151515);font-family:'DM Sans',sans-serif}.ds-step>span{font-size:11px}.ds-step h3{margin:0 0 8px;font-size:20px;line-height:1.2;font-weight:500}.ds-step p{grid-column:2;max-width:360px;margin:0;color:#57544e;font-size:14px;line-height:1.45}@media(max-width:800px){.ds-step{padding:18px 0}}"
+    },
+    {
+      "name": "Problem-led Contact Footer",
+      "kind": "custom",
+      "description": "A direct closing invitation that connects Reza’s B2B systems and AI workflow focus to a messy product problem.",
+      "html": "<footer class=\"ds-contact\"><p>I’m Reza, a product designer and founder based in Dhaka. I work on B2B systems, AI workflows and products where clarity matters.</p><h2>Have a messy product problem? <a href=\"mailto:rezahasan1198@gmail.com\">Let’s talk.</a></h2><div><span>Based in Dhaka · Working worldwide</span><a href=\"mailto:rezahasan1198@gmail.com\">Email Reza</a><span>© 2026</span></div></footer>",
+      "css": ".ds-contact{display:grid;grid-template-columns:32% 68%;padding:76px 28px 28px;color:var(--ink,#151515);background:var(--paper,#f3f0e8);border-top:1px solid var(--ink,#151515);font-family:'DM Sans',sans-serif}.ds-contact>p{max-width:360px;margin:6px 0;font-size:16px;line-height:1.5}.ds-contact h2{margin:0 0 76px;font-size:clamp(48px,6vw,84px);line-height:.95;letter-spacing:-.04em;font-weight:500}.ds-contact h2 a{color:inherit;border-bottom:3px solid var(--ink,#151515);font:italic 400 1em/.95 'Instrument Serif',serif;text-decoration:none}.ds-contact>div{grid-column:1/-1;padding-top:20px;display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--ink,#151515);font-size:13px}.ds-contact>div a{color:inherit;text-decoration:underline;text-underline-offset:4px}.ds-contact a:focus-visible{outline:2px solid var(--ink,#151515);outline-offset:3px;box-shadow:0 0 0 5px var(--accent,#d8ff52);border-radius:4px}@media(max-width:800px){.ds-contact{grid-template-columns:1fr;padding:64px 18px 28px}.ds-contact h2{margin:42px 0 64px}.ds-contact>div{flex-wrap:wrap}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Founder’s Field Notes",
+    "overview": "This is a warm, light editorial portfolio with the directness of a working notebook. Large compact type carries a broader product-design position: Reza shapes clear systems and AI workflows, not only screens. Fine ink rules organize the page, neutral product surfaces make detailed work readable, and a single lime accent marks evidence, active signals, and useful next actions.\n\nThe system should feel clear enough to explain complex product decisions and personal enough to show a strong point of view. Zevian is the featured founder product and the only place where motion runs continuously. Other projects remain still until hover, so the page reads calmly before it demonstrates direction, payment choice, or order state.",
+    "keyCharacteristics": [
+      "Warm paper and near-black ink form the main canvas.",
+      "Lime is the only chromatic accent and marks the selected-work CTA, evidence, active signals, and the dot in the bold REZA A wordmark.",
+      "The hero states “Product designer shaping clear systems & AI workflows” in three tightly spaced lines.",
+      "Bold, tightly set DM Sans headlines receive brief Instrument Serif gestures.",
+      "Thin rules and compact rows create a continuous editorial rhythm.",
+      "Zevian holds the largest and most detailed illustrative product frame.",
+      "“Systems I’ve shaped” presents capability through two concise pieces of system evidence.",
+      "Process and contact copy is practical, direct, and grounded in how the work moves forward."
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "Lime is the only accent color. Do not introduce project-specific hues, gradients, or a multi-color chapter system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Useful Lime Rule",
+        "body": "Every lime use must identify a next action, evidence, an active state, selection, focus, or the personal signal mark.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Color Focus Rule",
+        "body": "Every focus-visible state uses an inner ink outline and an outer lime halo, so focus stays clear on both paper and neutral surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif as Gesture Rule",
+        "body": "Instrument Serif never carries body copy, navigation, tags, or interface labels. It interrupts the sans-serif voice briefly, then gives control back.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight Hero Rule",
+        "body": "Keep the hero’s 28px top padding, 24px bottom padding, 26px title-to-rule gap, and compact 0.86 display leading. Do not restore a full-viewport hero or loose line spacing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Artifact Majority Rule",
+        "body": "On desktop, the Zevian and selected-project artifacts receive more width than their explanations.",
+        "section": "layout"
+      },
+      {
+        "name": "The Compact Chapter Rule",
+        "body": "Secondary projects, capability links, process steps, and contact should read as concise evidence, not as separate landing pages.",
+        "section": "layout"
+      },
+      {
+        "name": "The Artifact Only Rule",
+        "body": "Shadows belong to product windows and working notes, never to structural sections or ordinary content rows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Meaningful Curve Rule",
+        "body": "Use a curve to identify a control, product window, physical note, or signal. Do not place each section inside a rounded container.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Claim-to-Proof Rule",
+        "body": "Every case-study visual must clarify a product decision, user signal, safeguard, or outcome stated beside it.",
+        "section": "case-studies"
+      },
+      {
+        "name": "The Honest Outcome Rule",
+        "body": "Separate observed use, research intent, and commercial results; never combine them into a stronger claim than the evidence supports.",
+        "section": "case-studies"
+      }
+    ],
+    "dos": [
+      "Do state the broad capability clearly: product design that shapes clear systems and AI workflows.",
+      "Do preserve the hero’s tight vertical rhythm and deliberate three-line wrap.",
+      "Do use Signal Lime on the selected-work CTA, evidence, active signals, the personal mark, selection, and focus.",
+      "Do keep Zevian’s illustrative label, three evidence readings, and three metadata cells visible.",
+      "Do frame Orderific and Zevian HRMS as “Systems I’ve shaped.”",
+      "Do keep process and contact copy specific, practical, and problem-led.",
+      "Do load DM Sans and Instrument Serif from the bundled Fontsource packages.",
+      "Do keep Zevian as the only continuously animated product demonstration.",
+      "Do disable all animation and transition when reduced motion is requested."
+    ],
+    "donts": [
+      "Don't narrow the hero back to interface or screen design alone.",
+      "Don't make the hero fill the viewport or loosen its headline rhythm.",
+      "Don't turn the Zevian product preview into anonymous dashboard decoration or remove its illustrative disclosure.",
+      "Don't reintroduce coral, lilac, project-specific color fields, gradients, or a multi-color story system.",
+      "Don't turn capability links into large promotional cards.",
+      "Don't use Instrument Serif for body copy, navigation, tags, or interface labels.",
+      "Don't load typography from a remote font CDN.",
+      "Don't add continuously running motion outside the Zevian evidence scan."
+    ]
+  }
+}

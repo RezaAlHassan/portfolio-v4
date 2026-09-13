@@ -923,6 +923,11 @@ const workflowMethods = [
     visual: 'git',
   },
   {
+    title: 'Code back into design',
+    description: 'I use Codex to read working code and create a structured prompt with exact layout, component, state and token details. I bring it into Figma Make, extract the design tokens and continue from the existing product instead of starting again.',
+    visual: 'code-design',
+  },
+  {
     title: 'Research synthesis',
     description: 'I turn scattered research into useful frames such as personas, SWOT analysis, competitor reviews and feature benchmarks—only when they help answer the product question.',
     visual: 'research',
@@ -959,6 +964,14 @@ function WorkflowVisual({ type }) {
   </div>;
   if (type === 'git') return <div className="workflow-visual git-visual" aria-hidden="true">
     <div className="git-rail"><i/><i/><i/><i/></div><div className="git-copy"><span>shape flow</span><span>review change</span><span>test build</span><strong>production</strong></div>
+  </div>;
+  if (type === 'code-design') return <div className="workflow-visual code-design-visual" aria-hidden="true">
+    <div className="code-design-flow">
+      <span><small>Input</small><strong>Working code</strong></span><i/>
+      <span className="code-design-active"><small>Codex</small><strong>Structured prompt</strong></span><i/>
+      <span><small>Build</small><strong>Figma Make</strong></span>
+    </div>
+    <div className="token-strip"><small>Extract tokens</small><span>Colour</span><span>Type</span><span>Space</span><span>Radius</span><strong>Continue in Figma</strong></div>
   </div>;
   if (type === 'research') return <div className="workflow-visual research-visual" aria-hidden="true">
     <div className="research-inputs"><span>Interviews</span><span>Market</span><span>Usage</span><span>Competitors</span></div><div className="research-output"><small>SYNTHESIS</small><strong>One product direction</strong><span>Evidence attached</span></div>

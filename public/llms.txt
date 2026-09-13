@@ -13,7 +13,7 @@ This is an editorial portfolio. Project descriptions explain the problem, Reza's
 - [Purno](/purno): Point-of-sale system connecting shop sales, inventory, payments, and daily operations.
 - [Jayga](/jayga): Warehouse system connecting storage, pricing, billing, delivery, and fulfilment.
 - [Portfolio redesign](/portfolio): Moodboard-led iteration into one editorial portfolio system.
-- [AI workflows](/ai-workflows): Research synthesis, prototyping, code, and human decision-making with AI.
+- [AI workflows](/ai-workflows): Research synthesis, prototyping, code, code-to-design handoff through Codex and Figma Make, and human decision-making with AI.
 - [About](/about): Background, values, interests, and working focus.
 
 ## Identity and contact

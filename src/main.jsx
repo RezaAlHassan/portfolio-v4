@@ -32,6 +32,18 @@ const projects = [
   },
 ];
 
+const pageMetadata = {
+  '/': ['Reza — Product designer & founder', 'Portfolio of Reza Al Hassan, a product designer and founder shaping B2B systems, AI workflows and prototypes.'],
+  '/zevian': ['Zevian — AI performance workflow case study', 'How Zevian turns weekly work reports into evidence-backed performance signals that managers can review and question.'],
+  '/zevian-hrms': ['Zevian HRMS — Interface system case study', 'An early HRMS concept and reusable interface system covering attendance, employee records, calendars, approvals and work policies.'],
+  '/orderific': ['Orderific — Design system case study', 'A shared component system across six restaurant products with RTL, LTR and theme-mode support.'],
+  '/purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
+  '/jayga': ['Jayga — Warehouse operations case study', 'A warehouse order system connecting storage, pricing, billing and fulfilment.'],
+  '/portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
+  '/ai-workflows': ['AI workflows — Reza Al Hassan', 'How Reza uses AI for research synthesis, prototyping, production code and product exploration while keeping people in control.'],
+  '/about': ['About Reza Al Hassan', 'Product designer and founder in Dhaka working on B2B systems, AI workflows and clarity-critical products.'],
+};
+
 const ImageModalContext = React.createContext(null);
 
 function CaseImageProvider({ children }) {
@@ -1005,6 +1017,17 @@ function AIWorkflowTeaser() {
 
 function App() {
   const path = window.location.pathname.replace(/\/$/, '');
+  useEffect(() => {
+    const [title, description] = pageMetadata[path || '/'] || pageMetadata['/'];
+    document.title = title;
+    let descriptionMeta = document.querySelector('meta[name="description"]');
+    if (!descriptionMeta) {
+      descriptionMeta = document.createElement('meta');
+      descriptionMeta.name = 'description';
+      document.head.appendChild(descriptionMeta);
+    }
+    descriptionMeta.content = description;
+  }, [path]);
   let page;
   if (path === '/zevian') page = <ZevianCase/>;
   else if (path === '/zevian-hrms') page = <ZevianHrmsCase/>;

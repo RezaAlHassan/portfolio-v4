@@ -1,0 +1,39 @@
+# Reza Al Hassan — Product Design Portfolio
+
+> Reza is a product designer and founder in Dhaka. He designs B2B systems, AI workflows, prototypes, design systems, RTL/LTR products, POS tools, and warehouse operations software.
+
+This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
+
+## Main pages
+
+- [Home](/): Overview of selected work and working approach.
+- [Zevian](/zevian): Current founder product. An AI workflow that turns weekly work reports into evidence-backed performance signals that managers can review, question, and override.
+- [Zevian HRMS](/zevian-hrms): Earlier HRMS concept. Interface and design-system work for attendance, employee records, activities, calendars, approvals, and work policies.
+- [Orderific](/orderific): Shared component system across six restaurant products, including English LTR, Arabic RTL, and light/dark modes.
+- [Purno](/purno): Point-of-sale system connecting shop sales, inventory, payments, and daily operations.
+- [Jayga](/jayga): Warehouse system connecting storage, pricing, billing, delivery, and fulfilment.
+- [Portfolio redesign](/portfolio): Moodboard-led iteration into one editorial portfolio system.
+- [AI workflows](/ai-workflows): Research synthesis, prototyping, code, and human decision-making with AI.
+- [About](/about): Background, values, interests, and working focus.
+
+## Identity and contact
+
+- Name: Reza Al Hassan
+- Wordmark: REZA A
+- Role: Product designer and founder
+- Location: Dhaka, Bangladesh
+- Email: rezahasan1198@gmail.com
+- GitHub: https://github.com/RezaAlHassan
+
+## Content notes
+
+- Zevian is a live founder project focused on AI-supported performance review.
+- Zevian HRMS documents an earlier, broader HR management concept and is not the current Zevian product.
+- Interface images may be illustrative or from prototypes; page captions explain their status.
+- Research signals, observed use, and commercial outcomes are kept separate.
+
+## Repository
+
+- Source: https://github.com/RezaAlHassan/portfolio-v4
+- Stack: React 19, Vite 5, CSS, Lucide React, locally bundled DM Sans and Instrument Serif.
+- Primary source files: `src/main.jsx`, `src/styles.css`, `DESIGN.md`, and `.impeccable/design.json`.

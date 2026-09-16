@@ -852,9 +852,9 @@ function JaygaCase() {
 
 function AboutMe() {
   const interests = [
-    { title: 'Video games', description: 'A way to relax, explore new worlds and enjoy systems that make learning feel natural.' },
-    { title: 'Football', description: 'I enjoy both playing and watching football. Manchester United is the team I follow.' },
-    { title: 'Travelling', description: 'New places give me fresh perspectives and a better sense of how differently people experience everyday life.' },
+    { title: 'Video games', description: 'I love a good single-player story, a difficult level and the feeling of finally getting past it.' },
+    { title: 'Football', description: 'I play when I can, follow Manchester United, and keep hoping the next match will be the one.' },
+    { title: 'Travelling', description: 'I like wandering around new places, trying food I cannot find at home and taking far too many photos.' },
   ];
 
   return <>
@@ -868,13 +868,21 @@ function AboutMe() {
         </div>
       </header>
 
+      <section className="personality-highlight section">
+        <div>
+          <h2>INTJ</h2>
+          <p>I like time to think, getting absorbed in new ideas and the quiet satisfaction of figuring something out. This profile explains a lot about how I am.</p>
+        </div>
+        <a href="https://www.16personalities.com/intj-careers" target="_blank" rel="noreferrer">Read the profile <ArrowUpRight/></a>
+      </section>
+
       <section className="about-values section">
         <p>What guides my work</p>
         <h2>Clarity over decoration.<br/>Evidence over assumption.<br/>Progress over perfection.</h2>
       </section>
 
       <section className="interests-section section" id="interests">
-        <div className="interests-head"><h2>Outside work</h2><p>A few things that keep me curious, competitive and open to new perspectives.</p></div>
+        <div className="interests-head"><h2>Outside work</h2><p>A few things that are simply part of my life.</p></div>
         <div className="interest-list">
           {interests.map((interest, index) => <article className="interest-row" key={interest.title}>
             <span>{String(index + 1).padStart(2, '0')}</span>

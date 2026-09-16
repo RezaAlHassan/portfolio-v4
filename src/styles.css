@@ -644,6 +644,12 @@ button { font:inherit; }
 .about-intro { margin-top:58px; padding-top:24px; border-top:1px solid var(--ink); display:grid; grid-template-columns:1.15fr .85fr; gap:10%; }
 .about-intro p { margin:0; max-width:690px; font-size:clamp(19px,2vw,27px); line-height:1.42; letter-spacing:-.015em; }
 .about-intro p:last-child { max-width:540px; font-size:18px; line-height:1.55; letter-spacing:0; }
+.personality-highlight { margin-top:0; padding-top:54px; padding-bottom:54px; display:grid; grid-template-columns:1fr auto; gap:48px; align-items:end; background:var(--ink); color:#fff; border-radius:16px; }
+.personality-highlight h2 { margin:0 0 18px; color:var(--accent); font-size:clamp(68px,9vw,128px); font-weight:500; line-height:.78; letter-spacing:-.055em; }
+.personality-highlight p { max-width:720px; margin:0; font-size:clamp(20px,2.2vw,30px); line-height:1.28; letter-spacing:-.02em; }
+.personality-highlight a { display:inline-flex; align-items:center; gap:9px; padding:12px 16px; background:var(--accent); color:var(--ink); border-radius:99px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap; }
+.personality-highlight a svg { width:16px; transition:transform .3s var(--ease); }
+.personality-highlight a:hover svg { transform:translate(3px,-3px); }
 .about-values { padding-top:82px; padding-bottom:98px; border-top:1px solid var(--ink); }
 .about-values>p { margin:0 0 44px; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
 .about-values h2 { max-width:1100px; margin:0; font-size:clamp(48px,6vw,86px); line-height:.96; letter-spacing:-.038em; font-weight:500; }
@@ -741,7 +747,7 @@ button { font:inherit; }
 .workflow-learning>a svg { width:16px; transition:transform .3s var(--ease); }.workflow-learning>a:hover svg{transform:translate(3px,-3px)}
 
 @media (max-width:900px) {
-  .about-hero{padding-top:48px;padding-bottom:82px}.about-hero h1{font-size:clamp(48px,13vw,78px)}.about-intro{grid-template-columns:1fr;gap:26px;margin-top:42px}.about-values{padding-top:68px;padding-bottom:78px}.interests-head{grid-template-columns:1fr;gap:18px}.interests-head p{justify-self:start}.interest-row{grid-template-columns:42px 1fr;gap:18px}.interest-row p{grid-column:2}
+  .about-hero{padding-top:48px;padding-bottom:82px}.about-hero h1{font-size:clamp(48px,13vw,78px)}.about-intro{grid-template-columns:1fr;gap:26px;margin-top:42px}.personality-highlight{grid-template-columns:1fr;gap:32px;padding-top:44px;padding-bottom:44px}.personality-highlight h2{font-size:clamp(68px,16vw,104px)}.personality-highlight p{max-width:620px}.personality-highlight a{justify-self:start}.about-values{padding-top:68px;padding-bottom:78px}.interests-head{grid-template-columns:1fr;gap:18px}.interests-head p{justify-self:start}.interest-row{grid-template-columns:42px 1fr;gap:18px}.interest-row p{grid-column:2}
   .workflow-teaser>a{grid-template-columns:1fr;gap:28px}.workflow-teaser span{margin-top:8px}.workflow-teaser .workflow-visual{min-height:210px}
   .workflow-hero{padding-top:28px;padding-bottom:80px}.workflow-hero h1{font-size:clamp(48px,13vw,78px)}.workflow-intro{grid-template-columns:1fr}.workflow-hero>.loop-visual{margin-top:36px;min-height:230px}.loop-cursor{display:none}
   .workflow-methods-head{grid-template-columns:1fr;gap:18px}.workflow-methods-head p{justify-self:start}.workflow-row{grid-template-columns:42px 1fr;gap:22px;min-height:0}.workflow-copy{padding:8px 0 16px}.workflow-row>.workflow-visual,.workflow-first-note{grid-column:2;min-height:220px}.workflow-first-note{height:220px}

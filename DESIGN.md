@@ -116,7 +116,7 @@ The system should feel clear enough to explain complex product decisions and per
 
 - Warm paper and near-black ink form the main canvas.
 - Lime is the only chromatic accent and marks the selected-work CTA, evidence, active signals, and the dot in the bold “REZA A” wordmark.
-- The hero states “Product designer shaping clear systems & AI workflows” in three tightly spaced lines.
+- The hero states “Product designer for early B2B & AI products” in three tightly spaced lines.
 - Bold, tightly set DM Sans headlines receive brief Instrument Serif gestures.
 - Thin rules and compact rows create a continuous editorial rhythm.
 - Zevian holds the largest and most detailed illustrative product frame.
@@ -176,7 +176,7 @@ The palette is a one-accent system: warm paper, strong ink, one electric lime si
 
 The page uses a centered canvas with a 1420px maximum width and 28px desktop gutters. Thin ink rules link the navigation, hero, project list, process, contact, and footer into one editorial sequence. Spacing is generous between chapters but compact inside project and system rows.
 
-The hero is intentionally short rather than full-screen. Its middle “shaping” line is offset by 11% and its closing line carries the expanded capability statement “Clear systems & AI workflows.” A slim ruled row below the headline pairs the founder statement with the lime selected-work CTA, making the work path visible without adding a second promotional block.
+The hero is intentionally short rather than full-screen. Its middle line uses “for” as the brief serif gesture and its closing line names AI products directly. A slim ruled row below the headline pairs a recruiter-friendly role statement with the lime selected-work CTA.
 
 The featured Zevian card uses a 40/60 split and a 520px minimum height, giving the product view the larger share. Selected projects use compact 40/rest rows with a 300px minimum height, 26px vertical padding, and a 248px minimum art field. The capability chapter, “Systems I’ve shaped,” uses two equal links in one row, each about 150px tall, with a single divider rather than large promotional cards.
 

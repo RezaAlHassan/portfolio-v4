@@ -1,12 +1,12 @@
 # Reza Al Hassan — Product Design Portfolio
 
-> Reza is a product designer and founder in Dhaka. He designs B2B systems, AI workflows, prototypes, design systems, RTL/LTR products, POS tools, and warehouse operations software.
+> Reza is a product designer and founder in Dhaka. He turns complex early B2B and AI workflows into clear MVPs, interfaces, and product decisions.
 
 This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
 
 ## Main pages
 
-- [Home](/): Overview of selected work and working approach.
+- [Home](/): Positioning, selected product work, project evidence, working approach, and contact details.
 - [Zevian](/zevian): Current founder product. An AI workflow that turns weekly work reports into evidence-backed performance signals that managers can review, question, and override.
 - [Zevian HRMS](/zevian-hrms): Earlier HRMS concept. Interface and design-system work for attendance, employee records, activities, calendars, approvals, and work policies.
 - [Orderific](/orderific): Shared component system across six restaurant products, including English LTR, Arabic RTL, and light/dark modes.
@@ -31,6 +31,15 @@ This is an editorial portfolio. Project descriptions explain the problem, Reza's
 - Zevian HRMS documents an earlier, broader HR management concept and is not the current Zevian product.
 - Interface images may be illustrative or from prototypes; page captions explain their status.
 - Research signals, observed use, and commercial outcomes are kept separate.
+
+## AI-readable case studies
+
+- [Zevian case study](/ai/zevian.md)
+- [Zevian HRMS case study](/ai/zevian-hrms.md)
+- [Orderific case study](/ai/orderific.md)
+- [Purno case study](/ai/purno.md)
+- [Jayga case study](/ai/jayga.md)
+- [Portfolio redesign case study](/ai/portfolio.md)
 
 ## Repository
 

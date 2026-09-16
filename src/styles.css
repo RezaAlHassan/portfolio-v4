@@ -224,6 +224,9 @@ button { font:inherit; }
 .outcome-numbers article+article { border-left:1px solid var(--ink); padding-left:24px; }
 .outcome-numbers strong { font-size:clamp(44px,5vw,70px); letter-spacing:-.05em; font-weight:500; }
 .outcome-numbers span { max-width:230px; font-size:14px; line-height:1.4; }
+.outcome-numbers.single-outcome { grid-template-columns:1fr; }
+.outcome-numbers.single-outcome article { min-height:160px; }
+.outcome-numbers.single-outcome span { max-width:520px; }
 .learning-grid { display:grid; grid-template-columns:.4fr 1fr; gap:32px; padding:65px 0; }
 .learning-grid h3 { margin:0; font-size:14px; font-weight:500; }
 .learning-grid p { margin:0 0 32px; max-width:690px; font-size:20px; line-height:1.5; }

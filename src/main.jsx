@@ -8,24 +8,24 @@ import './styles.css';
 const projects = [
   {
     title: 'Orderific',
-    description: 'Built a shared component system that helped six restaurant products stay consistent across English LTR and Arabic RTL.',
-    tags: ['Design system', 'RTL/LTR', '6 products'],
+    description: 'Built a scalable design system with tokens and variables across six restaurant products, English LTR and Arabic RTL.',
+    tags: ['Design systems', 'Design tokens', 'Variables', 'RTL/LTR'],
     year: '2025–26',
     visual: 'rtl',
     url: '/orderific',
   },
   {
     title: 'Purno',
-    description: 'Turned a loose scope into a POS workflow that connects shop sales, stock and local payment methods.',
-    tags: ['POS', 'Retail workflow', 'Payments'],
+    description: 'Prototyped and tested complex fintech payment workflows for a POS across desktop, tablet and mobile.',
+    tags: ['Fintech', 'Multi-platform', 'Prototyping', 'Usability testing'],
     year: '2024–25',
     visual: 'pos',
     url: '/purno',
   },
   {
     title: 'Jayga',
-    description: 'Designed one warehouse workflow across storage, pricing, billing and fulfilment for three connected apps.',
-    tags: ['Warehouse ops', 'Product lead', '3 apps'],
+    description: 'Turned field research and business rules into a multi-product warehouse system for storage, billing and fulfilment.',
+    tags: ['Complex workflows', 'Operational tools', 'Systems thinking', 'Field research'],
     year: '2023–25',
     visual: 'pipeline',
     url: '/jayga',
@@ -33,7 +33,7 @@ const projects = [
 ];
 
 const pageMetadata = {
-  '/': ['Reza — Product designer for B2B and AI products', 'Portfolio of Reza Al Hassan, a product designer with a CS background who turns complex B2B and AI workflows into clear, buildable products.'],
+  '/': ['Reza — Product designer for B2B and AI products', '0→1 product design for B2B SaaS and AI products, combining UX research, product strategy, systems thinking, design systems and prototyping.'],
   '/zevian': ['Zevian — Performance investigation case study', 'How Zevian helps sales managers detect performance changes, add context and decide what needs action.'],
   '/zevian-hrms': ['Zevian HRMS — Interface system case study', 'An early HRMS concept and reusable interface system covering attendance, employee records, calendars, approvals and work policies.'],
   '/orderific': ['Orderific — Design system case study', 'A shared component system across six restaurant products with RTL, LTR and theme-mode support.'],
@@ -125,7 +125,7 @@ function Hero() {
       </h1>
       <div className="hero-bottom">
         <div className="hero-copy">
-          <p>I turn messy workflows into clear MVPs, interfaces and product decisions — with a CS background and founder-level ownership.</p>
+          <p>I design 0→1 B2B SaaS and AI products for complex workflows—from UX research and product strategy to design systems and prototypes.</p>
         </div>
         <a href="#work" className="scroll-link">See selected work <ArrowDown /></a>
       </div>
@@ -161,7 +161,7 @@ function Featured() {
       <a className="feature-card" href="/zevian">
         <div className="feature-copy">
           <div className="feature-top"><span className="tag">Founder product · AI workflow</span><span>2026—Now</span></div>
-          <div><h3>Zevian</h3><p>Helps sales managers see what changed, investigate possible causes and decide what needs action.</p><div className="feature-tags"><span>Founder-led</span><span>B2B SaaS</span><span>AI trust</span><span>React prototype</span></div></div>
+          <div><h3>Zevian</h3><p>Helps sales managers see what changed, investigate possible causes and decide what needs action.</p><div className="feature-tags"><span>AI-native</span><span>Human-in-the-loop</span><span>Trust &amp; uncertainty</span><span>0→1 product</span></div></div>
           <div className="feature-link">View case study <ArrowUpRight /></div>
         </div>
         <ZevianVisual />
@@ -196,7 +196,7 @@ function ProjectVisual({ type }) {
 function SelectedProjects() {
   return (
     <section className="section projects">
-      <div className="projects-title"><h2>Selected projects</h2><p>Clear product work across design systems, retail and warehouse operations.</p></div>
+      <div className="projects-title"><h2>Selected projects</h2><p>Product strategy, research and systems thinking across AI products, fintech and operational tools.</p></div>
       <div className="project-list">
         {projects.map((p) => <a href={p.url} className="project-row" key={p.title}>
           <div className="project-meta"><span>{p.year}</span><h3>{p.title}</h3><p>{p.description}</p><div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div></div>
@@ -210,7 +210,7 @@ function SelectedProjects() {
 function DesignSystems() {
   return (
     <section className="systems-section section">
-      <div className="systems-heading"><h2>Briefs</h2></div>
+      <div className="systems-heading"><h2>Systems and process</h2></div>
       <div className="system-cases">
         <a href="/portfolio" className="system-case orderific-system">
           <span>Portfolio</span><h3>Redesigned the portfolio through moodboard-led exploration, clearer storytelling and a consistent editorial system.</h3><ArrowUpRight />
@@ -287,7 +287,7 @@ function PortfolioCase() {
 function About() {
   return (
     <footer className="about section" id="about">
-      <div className="about-top"><div className="about-copy"><p>Available for product design roles and B2B system-heavy projects.</p></div><h2>Have a messy product<br/>problem? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
+      <div className="about-top"><div className="about-copy"><p>Available for product design roles across B2B SaaS, AI products and complex operational systems.</p></div><h2>Have a messy product<br/>problem? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
       <div className="footer-row"><Mark/><span>Based in Dhaka · Working worldwide</span><div><a href="mailto:rezahasan1198@gmail.com">Email Reza</a><a href="https://www.linkedin.com/in/reza1198/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://www.instagram.com/rezaa.hassan/" target="_blank" rel="noreferrer">Instagram</a></div><span>© 2026</span></div>
     </footer>
   );
@@ -307,7 +307,7 @@ function ZevianCase() {
       <section className="case-hero case-wrap">
         <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
         <h1>Know what changed.<br/><em>Understand why.</em></h1>
-        <div className="case-hero-bottom"><p>Zevian helps sales managers investigate performance changes before they become pipeline problems.</p><div className="case-tags"><span>Founder product</span><span>Product strategy</span><span>AI trust</span><span>Figma to React</span></div></div>
+        <div className="case-hero-bottom"><p>Zevian helps sales managers investigate performance changes before they become pipeline problems.</p><div className="case-tags"><span>Founder-led 0→1</span><span>AI-native</span><span>Human-in-the-loop</span><span>Trust &amp; uncertainty</span><span>Design-to-code</span></div></div>
         <figure className="zevian-hero-product">
           <ExpandableImage src="/Zevian-Findings.png" alt="Zevian findings list with a detailed investigation drawer for a drop in meetings booked" caption="The findings list supports fast scanning; the drawer holds evidence, possible reasons, context and the manager's decision." loading="eager" decoding="sync" />
           <figcaption>List for scanning. Drawer for investigation.</figcaption>
@@ -518,7 +518,7 @@ function OrderificCase() {
         <h1>One system.<br/>Six products.<br/><em>Two directions.</em></h1>
         <div className="case-hero-bottom">
           <p>I strengthened one design system across six restaurant products, adding RTL rules, refining light and dark themes, and documenting handoff checks.</p>
-          <div className="case-tags"><span>Design system</span><span>RTL</span><span>Dark mode</span><span>Governance</span></div>
+          <div className="case-tags"><span>Design systems</span><span>Design tokens</span><span>Variables</span><span>RTL/LTR</span><span>Multi-platform</span></div>
         </div>
         <div className="orderific-stage">
           <div className="stage-note"><span>Shared component set</span><strong>6 platforms</strong></div>
@@ -618,7 +618,7 @@ function PurnoCase() {
         <h1><span>A faster sale</span><span>for a shop owner</span><em>using software for the first time.</em></h1>
         <div className="case-hero-bottom">
           <p>I shaped a loose brief into a cross-platform POS for small shops in Bangladesh, bringing sales, stock and local payment methods into one daily flow.</p>
-          <div className="case-tags"><span>First product designer</span><span>POS</span><span>Fintech</span><span>Bangladesh</span></div>
+          <div className="case-tags"><span>Fintech</span><span>Multi-platform</span><span>Prototyping</span><span>Usability testing</span></div>
         </div>
         <div className="purno-stage">
           <div className="stage-note"><span>Merchant app</span><strong>Desktop · tablet · mobile</strong></div>
@@ -734,7 +734,7 @@ function JaygaCase() {
         <h1><span>Three days</span><span>became <em>2–3 hours.</em></span></h1>
         <div className="case-hero-bottom">
           <p>I led product on Jayga’s warehouse system, connecting storage, pricing, billing and delivery across the client, admin and warehouse floor.</p>
-          <div className="case-tags"><span>Product lead</span><span>Warehouse operations</span><span>Service design</span><span>2023–25</span></div>
+          <div className="case-tags"><span>Operational tools</span><span>Systems thinking</span><span>Field research</span><span>Business rules</span></div>
         </div>
         <div className="jayga-stage" aria-label="Jayga admin and warehouse applications">
           <div className="stage-note"><span>Measured result</span><strong>3 days → 2–3 hours</strong></div>
@@ -1004,7 +1004,7 @@ function AIWorkflows() {
 function AIWorkflowTeaser() {
   return <section className="workflow-teaser section">
     <a href="/ai-workflows">
-      <div><h2>How I work with AI</h2><p>Iteration loops, research synthesis, production code and the human decisions between them.</p><span>Explore my workflows <ArrowUpRight/></span></div>
+      <div><h2>How I work with AI</h2><p>AI-assisted prototyping, research synthesis, design-to-code, production code and the human decisions between them.</p><span>Explore my workflows <ArrowUpRight/></span></div>
       <WorkflowVisual type="loop"/>
     </a>
   </section>;

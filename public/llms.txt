@@ -1,6 +1,6 @@
 # Reza Al Hassan — Product Design Portfolio
 
-> Reza is a product designer and founder in Dhaka. He turns complex early B2B and AI workflows into clear MVPs, interfaces, and product decisions.
+> Reza is a product designer and founder in Dhaka. He works on 0→1 B2B SaaS and AI products, combining UX research, product strategy, systems thinking, design systems, and AI-assisted prototyping.
 
 This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
 

@@ -265,7 +265,7 @@ function PortfolioCase() {
       <section className="case-section case-wrap" id="process">
         <div className="case-index">02 / Direction</div>
         <div className="case-content">
-          <h2>The references became principles, not templates.</h2>
+          <h2>References became design principles.</h2>
           <div className="portfolio-direction">{direction.map(([number, title, description]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
         </div>
       </section>
@@ -287,7 +287,7 @@ function PortfolioCase() {
 function About() {
   return (
     <footer className="about section" id="about">
-      <div className="about-top"><div className="about-copy"><p>Available for product design roles across B2B SaaS, AI products and complex operational systems.</p></div><h2>Have a messy product<br/>problem? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
+      <div className="about-top"><div className="about-copy"><p>Available for product design roles across B2B SaaS, AI products and complex operational systems.</p></div><h2>Have a complex product<br/>challenge? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
       <div className="footer-row"><Mark/><span>Based in Dhaka · Working worldwide</span><div><a href="mailto:rezahasan1198@gmail.com">Email Reza</a><a href="https://www.linkedin.com/in/reza1198/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://www.instagram.com/rezaa.hassan/" target="_blank" rel="noreferrer">Instagram</a></div><span>© 2026</span></div>
     </footer>
   );
@@ -318,11 +318,11 @@ function ZevianCase() {
         <div className="case-index">01 / Current product</div>
         <div className="case-content">
           <h2>Dashboards show the number. Zevian helps investigate the change.</h2>
-          <p className="lead narrow">Sales managers already understand their KPIs. The harder work starts when an important metric moves: connecting signals, checking context and deciding whether the change needs action.</p>
+          <p className="lead narrow">When an important metric changes, sales managers connect supporting signals, gather context and decide whether it needs action.</p>
           <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Discovery · Product · UI</dd></div><div><dt>Core flow</dt><dd>Add · Match · Review · Save</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>Current product direction</dd></div></dl>
           <div className="current-flow" aria-label="Current Zevian workflow">
             <div><span>01</span><strong>Add existing data</strong><p>CSV, XLSX, CRM or dialer export.</p></div>
-            <div><span>02</span><strong>Map automatically</strong><p>Show only uncertain matches.</p></div>
+            <div><span>02</span><strong>Map automatically</strong><p>Confirm the few uncertain matches.</p></div>
             <div><span>03</span><strong>Detect change</strong><p>Compare outcomes with a recent baseline.</p></div>
             <div><span>04</span><strong>Link signals</strong><p>Connect evidence and possible causes.</p></div>
             <div><span>05</span><strong>Add context</strong><p>Keep every source visible.</p></div>
@@ -335,12 +335,12 @@ function ZevianCase() {
       <section className="case-section case-wrap" id="process">
         <div className="case-index">02 / What discovery changed</div>
         <div className="case-content">
-          <h2>The first product model did not survive discovery.</h2>
-          <div className="research-note"><strong>Discovery ran from May to September alongside building and GTM.</strong><p>It was not several months of full-time research. The interviews, prototype feedback and synthesis represented about 1–2 weeks of focused effort.</p></div>
+          <h2>Discovery shifted the product from evaluation to investigation.</h2>
+          <div className="research-note"><strong>Discovery ran from May to September alongside building and GTM.</strong><p>The interviews, prototype feedback and synthesis represented about 1–2 weeks of focused effort within that period.</p></div>
           <div className="pivot-list">
-            <article><span>Evaluation → diagnosis</span><h3>Managers did not need another KPI explanation.</h3><p>They needed help after something changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
-            <article><span>Coaching → wider causes</span><h3>A performance drop is not always a people problem.</h3><p>Lead quality, selling time, campaigns, process changes and data issues can all change an outcome. Zevian began offering possible reasons instead of making an early judgment.</p></article>
-            <article><span>Manual setup → exceptions</span><h3>The manager was still doing too much work.</h3><p>I removed manual categorisation and mapping from the main path. Zevian now handles clear cases automatically and asks for help only when the data is ambiguous.</p></article>
+            <article><span>Evaluation → diagnosis</span><h3>The KPI evaluation model became a performance investigation workflow.</h3><p>Managers needed support after a metric changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
+            <article><span>Coaching → wider causes</span><h3>Managers needed more context than employee input.</h3><p>Lead quality, selling time, campaigns, process changes and data issues can all change an outcome. Zevian surfaces possible reasons and keeps the finding open to new context.</p></article>
+            <article><span>Manual setup → exceptions</span><h3>The workflow needed fewer manual tasks.</h3><p>Zevian handles categorisation and clear matches automatically. Managers review ambiguous cases, context and decisions.</p></article>
           </div>
           <blockquote>“Something changed. Why did it change?”<cite>The question that replaced the scoring model</cite></blockquote>
         </div>
@@ -349,12 +349,12 @@ function ZevianCase() {
       <section className="case-section case-wrap evolution">
         <div className="case-index">03 / Product evolution</div>
         <div className="case-content">
-          <h2>Each iteration moved work away from the manager.</h2>
-          <p className="lead narrow">The interface became simpler because the product question became clearer.</p>
+          <h2>Each iteration reduced the number of tasks the user had to complete.</h2>
+          <p className="lead narrow">The product question became clearer, so the interface required fewer steps.</p>
           <div className="model-evolution">
-            <article><span>V1 · Evaluation</span><h3>Score the employee</h3><p>KPI → employee → AI score → coaching</p><small>Problem: a score hid the cause.</small></article>
-            <article><span>V2 · Pattern detection</span><h3>Find the change</h3><p>Performance → baseline → finding → coaching</p><small>Problem: coaching was still assumed.</small></article>
-            <article><span>V3 · Context review</span><h3>Test possible reasons</h3><p>Finding → possible reason → context → decision</p><small>Problem: the manager still prepared too much.</small></article>
+            <article><span>V1 · Evaluation</span><h3>Score the employee</h3><p>KPI → employee → AI score → coaching</p><small>Next need: explain what caused the change.</small></article>
+            <article><span>V2 · Pattern detection</span><h3>Find the change</h3><p>Performance → baseline → finding → coaching</p><small>Next need: include causes beyond coaching.</small></article>
+            <article><span>V3 · Context review</span><h3>Test possible reasons</h3><p>Finding → possible reason → context → decision</p><small>Next need: prepare the review automatically.</small></article>
             <article className="model-current"><span>V4 · Current</span><h3>Review the exceptions</h3><p>Upload → auto-match → risk → context → decision → history</p><small>Zevian handles the structure first.</small></article>
           </div>
           <div className="before-after"><div><span>Early assumption</span><strong>Managers need a better way to evaluate employees.</strong></div><div><span>Current focus</span><strong>Managers need a faster way to investigate meaningful changes.</strong></div></div>
@@ -364,12 +364,12 @@ function ZevianCase() {
       <section className="case-section case-wrap product-story">
         <div className="case-index">04 / Current experience</div>
         <div className="case-content">
-          <h2>Automatic first. Exception handling second.</h2>
-          <p className="lead narrow">Zevian prepares the investigation. The manager reviews uncertain matches, missing context and the final decision.</p>
+          <h2>Zevian handles clear cases first. Managers review exceptions.</h2>
+          <p className="lead narrow">Zevian prepares the investigation. The manager reviews uncertain matches, context and final decisions.</p>
           <div className="product-evidence">
             <article className="evidence-row evidence-match">
-              <div className="evidence-copy"><span>Review matches</span><h3>Ask only when a match is uncertain.</h3><p>Most employee and metric mapping happens automatically. The manager sees the few rows Zevian cannot confirm.</p></div>
-              <figure><ExpandableImage src="/Match-Data.png" alt="Zevian review match screen asking whether J Rahman should link to Joy Rahman or Jamal Rahman" caption="Exception handling for an unresolved employee match."/><figcaption>One ambiguity, with clear choices and a safe skip action.</figcaption></figure>
+              <div className="evidence-copy"><span>Review matches</span><h3>Bring uncertain matches to the manager.</h3><p>Zevian maps clear rows automatically and presents the remaining choices for confirmation.</p></div>
+              <figure><ExpandableImage src="/Match-Data.png" alt="Zevian review match screen asking whether J Rahman should link to Joy Rahman or Jamal Rahman" caption="Exception handling for an unresolved employee match."/><figcaption>One uncertain match, with clear choices and a safe skip action.</figcaption></figure>
             </article>
             <article className="evidence-row evidence-context">
               <div className="evidence-copy"><span>Context states</span><h3>Keep context and decisions separate.</h3><p>Manager and employee notes stay attributable. Employee input requires review, and late context never changes a saved decision by itself.</p></div>
@@ -383,18 +383,18 @@ function ZevianCase() {
       <section className="case-section case-wrap outcome" id="outcome">
         <div className="case-index">05 / System and build</div>
         <div className="case-content">
-          <h2>Three focused days turned the clearer model into a system.</h2>
-          <p className="lead narrow">This was the interface redesign, not the full research timeline. Discovery continued alongside building, outreach and GTM.</p>
+          <h2>The product model became a reusable interface system in three focused days.</h2>
+          <p className="lead narrow">The three days cover the interface redesign. Discovery continued alongside building, outreach and GTM.</p>
           <div className="build-days">
-            <article><span>Day 1</span><h3>Structure</h3><p>Reduced the workflow to Add data → Review matches → Review findings → Save decisions.</p></article>
+            <article><span>Day 1</span><h3>Structure</h3><p>Defined the four-step workflow: Add data → Review matches → Review findings → Save decisions.</p></article>
             <article><span>Day 2</span><h3>System</h3><p>Defined the list, drawer, context states, confidence, priority and semantic tokens.</p></article>
-            <article><span>Day 3</span><h3>Edge cases</h3><p>Handled unresolved matches, late context, mixed sources and incomplete decisions.</p></article>
+            <article><span>Day 3</span><h3>Edge cases</h3><p>Documented unresolved matches, late context, mixed sources and decisions made with partial context.</p></article>
           </div>
           <div className="system-evidence">
             <figure><ExpandableImage src="/Zevian-Colors.png" alt="Zevian primitive and semantic colour token system" caption="Primitive colours feed semantic roles for backgrounds, text, actions and product states."/><figcaption>I started with only the essential tokens and components: colour, type, inputs, buttons, links, badges and chips. The system can grow with the product as new workflow needs become clear.</figcaption></figure>
             <div><h3>Attio for scan. Notion for depth.</h3><p>Dense rows make the findings list quick to read. The drawer uses a calmer document structure for evidence, context and decisions.</p><h3>AI as a working partner.</h3><p>I used ChatGPT for research synthesis, product critique, reference analysis, token structure, state exploration and later design-to-code. The product decisions remained grounded in research and product reasoning.</p><h3>Figma to React.</h3><p>I translated the stable direction into a reusable React prototype for demos, product validation and faster state changes.</p></div>
           </div>
-          <div className="final-learning"><span>Main learning</span><p>A score was not the product. The useful product was the investigation around a change—and the manager's ability to judge it fairly.</p></div>
+          <div className="final-learning"><span>Main learning</span><p>The product became the investigation around a change—and the manager's ability to judge it fairly.</p></div>
           <a className="next-project" href="/orderific"><span>Next case study</span><strong>Orderific <ArrowUpRight/></strong></a>
         </div>
       </section>
@@ -447,10 +447,10 @@ function ZevianHrmsCase() {
       <section className="case-section case-wrap" id="overview">
         <div className="case-index">01 / Context</div>
         <div className="case-content">
-          <h2>A concept before<br/>the focused product.</h2>
+          <h2>The earlier HRMS<br/>product concept.</h2>
           <div className="overview-grid"><p className="lead">The concept brought attendance, employee records, activities, calendars, approvals and work policies into one system.</p><p>I started with a working prototype. Walking through its flows showed how broad the scope had become and which interface rules could be reused.</p></div>
           <dl className="case-meta"><div><dt>Product</dt><dd>Zevian HRMS concept</dd></div><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Scope</dt><dd>Prototype · UI system</dd></div><div><dt>Foundation</dt><dd>Ant Design</dd></div><div><dt>Method</dt><dd>Atomic Design</dd></div><div><dt>Status</dt><dd>Early product direction</dd></div></dl>
-          <div className="hrms-context-note"><strong>This is not the current Zevian.</strong><p>The Zevian name later moved to a focused product for investigating performance changes and supporting manager decisions. This page documents the earlier HRMS interface and system work.</p></div>
+          <div className="hrms-context-note"><strong>Earlier Zevian HRMS concept</strong><p>The Zevian name later moved to a focused product for investigating performance changes and supporting manager decisions. This page documents the earlier HRMS interface and system work.</p></div>
         </div>
       </section>
 
@@ -470,7 +470,7 @@ function ZevianHrmsCase() {
       <section className="case-section case-wrap hrms-system-section">
         <div className="case-index">03 / System</div>
         <div className="case-content">
-          <h2>Refine the rules<br/>before adding screens.</h2>
+          <h2>Reusable rules<br/>for every screen.</h2>
           <div className="overview-grid"><p className="lead">Built on Ant Design and organised with Atomic Design, the library gave inputs, buttons, avatars and navigation one set of rules.</p><p>Semantic variables carried those rules across light and dark themes, dashboards, records and reports.</p></div>
           <div className="hrms-system-proof">
             <HrmsImage className="hrms-system-main" src="/zevian-hrms/inputs.png" alt="Zevian design system input fields, selectors, toggles and states" caption="Inputs and states" />
@@ -486,7 +486,7 @@ function ZevianHrmsCase() {
       <section className="case-section case-wrap" id="outcome">
         <div className="case-index">04 / Result</div>
         <div className="case-content">
-          <h2>The broad scope became<br/>easier to test and reduce.</h2>
+          <h2>A testable concept and<br/>reusable interface system.</h2>
           <div className="hrms-outcome">
             <article><strong>Working prototype</strong><p>The team could walk through the concept and question its scope.</p></article>
             <article><strong>Reusable UI rules</strong><p>Core controls and navigation gave dashboards, records and reports the same starting point.</p></article>
@@ -533,9 +533,9 @@ function OrderificCase() {
           <div className="overview-grid"><p className="lead">As Orderific grew across six restaurant products, components drifted and direction rules were inconsistent. The team needed one system for component states, RTL and theme modes.</p><p>Across the system work, I looked for where the team repeated effort or needed clearer rules.</p></div>
           <dl className="case-meta"><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Collaboration</dt><dd>Designers · PMs · engineers</dd></div><div><dt>Scope</dt><dd>Components · RTL · Theming</dd></div><div><dt>Leadership</dt><dd>Hiring · Mentoring · QA</dd></div><div><dt>Period</dt><dd>2025–26</dd></div><div><dt>Context</dt><dd>Six restaurant products</dd></div></dl>
           <div className="orderific-decisions">
-            <article><span>Components</span><h3>Improve one component, not every screen.</h3><p>Designers could choose the state they needed without breaking the component.</p></article>
+            <article><span>Components</span><h3>Improve the shared component.</h3><p>Designers could choose the state they needed within the shared component.</p></article>
             <article><span>Direction</span><h3>Build RTL into each component.</h3><p>Each component knows what should move and what should stay in place.</p></article>
-            <article><span>Team rules</span><h3>Write down the handoff rules.</h3><p>The team could follow the system without asking me each time.</p></article>
+            <article><span>Team rules</span><h3>Document the handoff rules.</h3><p>The team could apply the system independently during design and handoff.</p></article>
           </div>
         </div>
       </section>
@@ -543,7 +543,7 @@ function OrderificCase() {
       <section className="case-section case-wrap" id="process">
         <div className="case-index">02 / Components</div>
         <div className="case-content">
-          <h2>Build better components before making more screens.</h2>
+          <h2>Reusable components for product screens.</h2>
           <p className="lead narrow">A review found inconsistent spacing, corners and shadows, plus missing states that forced designers to detach components. I added reusable properties and shared token rules.</p>
           <div className="change-list">
             <div><span>01</span><strong>Add missing options</strong><p>Designers could choose the type, state, help text and content from one panel.</p></div>
@@ -552,7 +552,7 @@ function OrderificCase() {
           </div>
           <div className="input-drift-proof">
             <OrderificImage src="/orderific/input-drift.png" alt="Orderific welcome message form with text inputs, time fields, an editor, a switch and action buttons" caption="One real screen brings many input types and states together."/>
-            <div><h3>One form exposed the component drift.</h3><p>Text fields, time fields, an editor, a switch and disabled actions used different spacing, corners and states. Shared rules brought them back into one system.</p></div>
+            <div><h3>One form defined the shared component rules.</h3><p>Text fields, time fields, an editor, a switch and disabled actions used different spacing, corners and states. Shared rules brought them into one system.</p></div>
           </div>
           <OrderificImage src="/orderific/component-playground.png" alt="Orderific input component playground and properties panel" caption="One place to inspect every input property and state."/>
         </div>
@@ -561,7 +561,7 @@ function OrderificCase() {
       <section className="case-section case-wrap" id="direction">
         <div className="case-index">03 / RTL + themes</div>
         <div className="case-content">
-          <h2>Some parts should move. Others should stay in place.</h2>
+          <h2>RTL rules for movement and fixed elements.</h2>
           <div className="direction-rule"><div><span>Move</span><p>Navigation, reading order, text alignment and direction controls.</p></div><div><span>Stay in place</span><p>Maps, charts, the logo and the phone country field.</p></div></div>
           <p className="lead narrow">Direction became a component property, so designers could start in RTL without rebuilding layouts or remembering each rule.</p>
           <div className="direction-images">
@@ -580,7 +580,7 @@ function OrderificCase() {
       <section className="case-section case-wrap" id="governance">
         <div className="case-index">04 / Team + governance</div>
         <div className="case-content">
-          <h2>Help the team use the system without me.</h2>
+          <h2>Design system governance for the team.</h2>
           <div className="governance-grid">
             <div><p className="lead">I hired and mentored two junior designers, trained QA, and documented recurring handoff decisions for engineers.</p><ul><li>How files and components should be organised</li><li>Three levels of design tokens</li><li>One clear source for every component</li><li>Checks for states, content, RTL and dark mode</li></ul></div>
             <OrderificImage src="/orderific/governance.png" alt="A page from the Orderific design rules document" caption="The guide made system checks a normal part of handoff."/>
@@ -629,12 +629,12 @@ function PurnoCase() {
       <section className="case-section case-wrap" id="overview">
         <div className="case-index">01 / Overview</div>
         <div className="case-content">
-          <h2>Payments and sales did not connect.</h2>
+          <h2>One workflow for payments, stock and sales.</h2>
           <div className="overview-grid"><p className="lead">Shop owners handled payments, stock and sales in separate tools. Purno brought them into one system.</p><p>The interface was designed for merchants with limited software experience and had to stay clear while a customer waited.</p></div>
           <dl className="case-meta"><div><dt>Role</dt><dd>First product designer</dd></div><div><dt>Team</dt><dd>Founder · engineers · shop owners</dd></div><div><dt>Timeline</dt><dd>2 months</dd></div><div><dt>Platforms</dt><dd>Desktop · tablet · mobile</dd></div><div><dt>Methods</dt><dd>UX audit · flows · moderated testing</dd></div><div><dt>Stage</dt><dd>Funded MVP</dd></div></dl>
           <div className="purno-decisions">
             <article><span>Find products</span><h3>Flatten the category structure.</h3><p>Remove three levels of navigation between the merchant and an item.</p></article>
-            <article><span>Read at a distance</span><h3>Test cards from across the counter.</h3><p>Make selected items clear at arm’s length, not only close to the screen.</p></article>
+            <article><span>Read at a distance</span><h3>Test cards from across the counter.</h3><p>Make selected items clear at arm’s length during a sale.</p></article>
             <article><span>Take payment</span><h3>Reuse patterns merchants already know.</h3><p>Make card, cash and mobile-wallet flows feel like tools already used at the counter.</p></article>
           </div>
         </div>
@@ -649,7 +649,7 @@ function PurnoCase() {
             <PurnoImage src="/purno/competitive-audit.webp" alt="Comparative UX audit of six retail and payment products" caption="Comparative UX audit across retail and payment products."/>
             <PurnoImage src="/purno/user-flows.webp" alt="Purno user flows for login, registration and payment" caption="Dependency mapping set the order: inventory, cart, then each payment method."/>
           </div>
-          <div className="purno-principle"><strong>Design standard</strong><p>Less to remember. Less to read. Fewer levels to move through while a customer is waiting.</p></div>
+          <div className="purno-principle"><strong>Design standard</strong><p>Quick to learn. Easy to scan. Shallow navigation while a customer is waiting.</p></div>
         </div>
       </section>
 
@@ -660,7 +660,7 @@ function PurnoCase() {
           <p className="lead narrow">The original structure nested categories four levels deep. I reduced it to one visible level, then used category colour to help merchants scan the home screen quickly.</p>
           <PurnoImage className="purno-image--wide" src="/purno/categories-redesign.webp" alt="Purno category screen before and after flattening the hierarchy" caption="A four-level structure became one visible category list."/>
           <div className="purno-test-story">
-            <div><span>Five versions</span><h3>The product card came before the home screen.</h3><p>I tested five card versions in default and selected states. The chosen state had to remain clear from an arm’s length.</p></div>
+            <div><span>Five versions</span><h3>Product-card testing set the home-screen pattern.</h3><p>I tested five card versions in default and selected states. The chosen state had to remain clear from an arm’s length.</p></div>
             <PurnoImage src="/purno/product-card-testing.webp" alt="Five product card versions in default and selected states" caption="Top row: default. Bottom row: selected."/>
           </div>
           <div className="purno-result-band"><strong>~20% faster</strong><p>Transaction time in moderated testing after colour-coded cards replaced emoji category chips.</p></div>
@@ -707,7 +707,7 @@ function PurnoCase() {
       <section className="case-section case-wrap outcome" id="outcome">
         <div className="case-index">05 / Result</div>
         <div className="case-content">
-          <h2>From an unfinished scope to a funded MVP.</h2>
+          <h2>From an open brief to a funded MVP.</h2>
           <div className="outcome-numbers purno-outcomes"><article><strong>$10k</strong><span>Seed funding raised after a pitch supported by the designed MVP</span></article><article><strong>~20%</strong><span>Faster transactions in moderated testing</span></article><article><strong>3</strong><span>Designed for desktop, tablet and mobile</span></article></div>
           <div className="learning-grid"><h3>Main learning</h3><p>Localisation goes beyond translation. Menu depth, reading distance and payment habits determine whether a POS works at a busy counter.</p><h3>Evidence note</h3><p>The speed result comes from moderated tests of the colour-coded cards. The funding relates to the MVP pitch, not long-term product impact.</p></div>
           <a className="next-project" href="/jayga"><span>Next case study</span><strong>Jayga <ArrowUpRight/></strong></a>
@@ -782,7 +782,7 @@ function JaygaCase() {
           <p className="lead narrow">I divided the warehouse into fixed grids with unique IDs. A grid is what a customer rents, where an item is assigned and what the bill is calculated from.</p>
           <div className="grid-rule"><div><span>Problem</span><p>Pricing did not reflect how much rack space was used, and the team could not see which space generated revenue.</p></div><div><span>Product rule</span><p>Assign and confirm one grid before opening the next, limiting errors before another space changes.</p></div></div>
           <div className="jayga-grid-story">
-            <div><h3>Split one item without losing its history.</h3><p>A quantity can sit across several grids while staying on one item record. Because the live occupancy count was delayed, an “Assigned” tag showed which units had been placed.</p><p className="evidence-note">Hindsight: the tag was a workaround. A live occupancy count would be the stronger system.</p></div>
+            <div><h3>Keep item history across multiple grids.</h3><p>A quantity can sit across several grids while staying on one item record. Because the live occupancy count was delayed, an “Assigned” tag showed which units had been placed.</p><p className="evidence-note">Next system improvement: replace the temporary tag with a live occupancy count.</p></div>
             <JaygaImage src="/jayga/assign-grids.png" alt="Jayga interface for splitting an item quantity across warehouse grids" caption="Quantity splits stay on one item card, with each grid confirmed separately."/>
           </div>
           <JaygaImage className="jayga-image--wide" src="/jayga/payment-summary.png" alt="Jayga client payment summary with assigned grids, quantity and advance due" caption="Before payment, every split becomes one checkable summary."/>
@@ -807,7 +807,7 @@ function JaygaCase() {
       <section className="case-section case-wrap" id="delivery">
         <div className="case-index">05 / Delivery + billing</div>
         <div className="case-content">
-          <h2>The floor confirms reality before the record changes.</h2>
+          <h2>Floor confirmation controls record changes.</h2>
           <p className="lead narrow">A delivery starts in the admin console, reaches the warehouse aisle on mobile, and lists the grids to pull from. If the physical count does not match, a person checks it before the delivery continues.</p>
           <div className="warehouse-flow">
             <JaygaImage src="/jayga/delivery-request.png" alt="Jayga admin interface for selecting stored items for delivery" caption="Admin selects the client, items and quantities."/>
@@ -828,7 +828,7 @@ function JaygaCase() {
         <div className="case-content">
           <h2>Order processing fell from three days to 2–3 hours.</h2>
           <div className="outcome-numbers jayga-outcomes single-outcome"><article><strong>3 days → 2–3 hrs</strong><span>Measured order-processing time before and after the system was used</span></article></div>
-          <div className="learning-grid"><h3>Main learning</h3><p>Operations software becomes useful when the digital record follows the physical work. The grid connected stock, space and billing because it matched how the warehouse actually worked.</p><h3>Hindsight</h3><p>The mobile app should have been in the first release, and occupancy should have updated live. By phase two, the light design system also needed stronger rules across all three apps.</p></div>
+          <div className="learning-grid"><h3>Main learning</h3><p>Operations software becomes useful when the digital record follows the physical work. The grid connected stock, space and billing because it matched how the warehouse actually worked.</p><h3>Next priorities</h3><p>Add the mobile app to the first release, update occupancy live, and strengthen the design system rules across all three apps.</p></div>
           <a className="next-project" href="/portfolio"><span>Next case study</span><strong>Portfolio <ArrowUpRight/></strong></a>
         </div>
       </section>

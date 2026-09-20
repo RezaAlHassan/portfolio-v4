@@ -319,7 +319,7 @@ function ZevianCase() {
         <div className="case-content">
           <h2>Dashboards show the number. Zevian helps investigate the change.</h2>
           <p className="lead narrow">When an important metric changes, sales managers connect supporting signals, gather context and decide whether it needs action.</p>
-          <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Discovery · Product · UI</dd></div><div><dt>Core flow</dt><dd>Add · Match · Review · Save</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>Current product direction</dd></div></dl>
+          <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Strategy · UX · UI</dd></div><div><dt>Research</dt><dd>Interviews · Prototype feedback</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>Current product direction</dd></div></dl>
           <div className="current-flow" aria-label="Current Zevian workflow">
             <div><span>01</span><strong>Add existing data</strong><p>CSV, XLSX, CRM or dialer export.</p></div>
             <div><span>02</span><strong>Map automatically</strong><p>Confirm the few uncertain matches.</p></div>
@@ -338,9 +338,9 @@ function ZevianCase() {
           <h2>Discovery shifted the product from evaluation to investigation.</h2>
           <div className="research-note"><strong>Discovery ran from May to September alongside building and GTM.</strong><p>The interviews, prototype feedback and synthesis represented about 1–2 weeks of focused effort within that period.</p></div>
           <div className="pivot-list">
-            <article><span>Evaluation → diagnosis</span><h3>The KPI evaluation model became a performance investigation workflow.</h3><p>Managers needed support after a metric changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
+            <article><span>Evaluation → diagnosis</span><h3>Start with the changed metric.</h3><p>Managers needed support after a metric changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
             <article><span>Coaching → wider causes</span><h3>Managers needed more context than employee input.</h3><p>Lead quality, selling time, campaigns, process changes and data issues can all change an outcome. Zevian surfaces possible reasons and keeps the finding open to new context.</p></article>
-            <article><span>Manual setup → exceptions</span><h3>The workflow needed fewer manual tasks.</h3><p>Zevian handles categorisation and clear matches automatically. Managers review ambiguous cases, context and decisions.</p></article>
+            <article><span>Manual setup → exceptions</span><h3>Automate the clear cases.</h3><p>Zevian handles categorisation and clear matches automatically. Managers review ambiguous cases, context and decisions.</p></article>
           </div>
           <blockquote>“Something changed. Why did it change?”<cite>The question that replaced the scoring model</cite></blockquote>
         </div>
@@ -350,7 +350,7 @@ function ZevianCase() {
         <div className="case-index">03 / Product evolution</div>
         <div className="case-content">
           <h2>Each iteration reduced the number of tasks the user had to complete.</h2>
-          <p className="lead narrow">The product question became clearer, so the interface required fewer steps.</p>
+          <p className="lead narrow">Interviews moved the model from employee scoring toward broader context, automatic preparation and exception review.</p>
           <div className="model-evolution">
             <article><span>V1 · Evaluation</span><h3>Score the employee</h3><p>KPI → employee → AI score → coaching</p><small>Next need: explain what caused the change.</small></article>
             <article><span>V2 · Pattern detection</span><h3>Find the change</h3><p>Performance → baseline → finding → coaching</p><small>Next need: include causes beyond coaching.</small></article>
@@ -358,6 +358,7 @@ function ZevianCase() {
             <article className="model-current"><span>V4 · Current</span><h3>Review the exceptions</h3><p>Upload → auto-match → risk → context → decision → history</p><small>Zevian handles the structure first.</small></article>
           </div>
           <div className="before-after"><div><span>Early assumption</span><strong>Managers need a better way to evaluate employees.</strong></div><div><span>Current focus</span><strong>Managers need a faster way to investigate meaningful changes.</strong></div></div>
+          <p className="zevian-archive-note"><span>Earlier product evidence</span><span>The <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">archived scoring prototype <ArrowUpRight/></a> shows the product before discovery shifted it toward performance investigation.</span></p>
         </div>
       </section>
 
@@ -365,11 +366,15 @@ function ZevianCase() {
         <div className="case-index">04 / Current experience</div>
         <div className="case-content">
           <h2>Zevian handles clear cases first. Managers review exceptions.</h2>
-          <p className="lead narrow">Zevian prepares the investigation. The manager reviews uncertain matches, context and final decisions.</p>
+          <p className="lead narrow">Confidence and source labels show which records moved automatically and where human judgment is required.</p>
           <div className="product-evidence">
             <article className="evidence-row evidence-match">
-              <div className="evidence-copy"><span>Review matches</span><h3>Bring uncertain matches to the manager.</h3><p>Zevian maps clear rows automatically and presents the remaining choices for confirmation.</p></div>
+              <div className="evidence-copy"><span>Review matches</span><h3>Resolve uncertain employee matches.</h3><p>Zevian maps clear rows automatically and presents the remaining choices for confirmation.</p></div>
               <figure><ExpandableImage src="/Match-Data.png" alt="Zevian review match screen asking whether J Rahman should link to Joy Rahman or Jamal Rahman" caption="Exception handling for an unresolved employee match."/><figcaption>One uncertain match, with clear choices and a safe skip action.</figcaption></figure>
+            </article>
+            <article className="evidence-row evidence-findings">
+              <div className="evidence-copy"><span>Review findings</span><h3>Use confidence to guide the review.</h3><p>Change, risk, priority, baseline and confidence help managers choose which finding needs context first.</p></div>
+              <figure><ExpandableImage src="/Findings-Cropped.png" alt="Zevian findings table showing performance changes, priority, baseline, confidence and context actions" caption="A scan-first table helps managers compare findings before opening the investigation."/><figcaption>Compare the signal, confidence and next action in one row.</figcaption></figure>
             </article>
             <article className="evidence-row evidence-context">
               <div className="evidence-copy"><span>Context states</span><h3>Keep context and decisions separate.</h3><p>Manager and employee notes stay attributable. Employee input requires review, and late context never changes a saved decision by itself.</p></div>
@@ -384,7 +389,7 @@ function ZevianCase() {
         <div className="case-index">05 / System and build</div>
         <div className="case-content">
           <h2>The product model became a reusable interface system in three focused days.</h2>
-          <p className="lead narrow">The three days cover the interface redesign. Discovery continued alongside building, outreach and GTM.</p>
+          <p className="lead narrow">Discovery continued alongside building, outreach and GTM; this focused sprint covered interface structure, states and edge cases.</p>
           <div className="build-days">
             <article><span>Day 1</span><h3>Structure</h3><p>Defined the four-step workflow: Add data → Review matches → Review findings → Save decisions.</p></article>
             <article><span>Day 2</span><h3>System</h3><p>Defined the list, drawer, context states, confidence, priority and semantic tokens.</p></article>

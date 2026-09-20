@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import '@fontsource-variable/dm-sans';
 import '@fontsource/instrument-serif/400-italic.css';
-import { ArrowDown, ArrowLeft, ArrowUpRight, Check, Menu, X } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowUpRight, Menu, X } from 'lucide-react';
 import './styles.css';
 
 const projects = [
@@ -34,7 +34,7 @@ const projects = [
 
 const pageMetadata = {
   '/': ['Reza — Product designer for B2B and AI products', 'Portfolio of Reza Al Hassan, a product designer with a CS background who turns complex B2B and AI workflows into clear, buildable products.'],
-  '/zevian': ['Zevian — AI performance workflow case study', 'How Zevian turns weekly work reports into evidence-backed performance signals that managers can review and question.'],
+  '/zevian': ['Zevian — Performance investigation case study', 'How Zevian helps sales managers detect performance changes, add context and decide what needs action.'],
   '/zevian-hrms': ['Zevian HRMS — Interface system case study', 'An early HRMS concept and reusable interface system covering attendance, employee records, calendars, approvals and work policies.'],
   '/orderific': ['Orderific — Design system case study', 'A shared component system across six restaurant products with RTL, LTR and theme-mode support.'],
   '/purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
@@ -135,7 +135,7 @@ function Hero() {
 
 function ZevianVisual() {
   return (
-    <div className="zevian-visual" role="img" aria-label="Illustrative Zevian interface highlighting evidence-backed scoring, manager overrides and live customer use">
+    <div className="zevian-visual" role="img" aria-label="Illustrative Zevian interface showing performance changes, supporting evidence and manager review">
       <div className="product-window">
         <div className="window-bar"><span>Zevian</span><div><i /><i /><i /></div></div>
         <div className="window-body">
@@ -161,7 +161,7 @@ function Featured() {
       <a className="feature-card" href="/zevian">
         <div className="feature-copy">
           <div className="feature-top"><span className="tag">Founder product · AI workflow</span><span>2026—Now</span></div>
-          <div><h3>Zevian</h3><p>Helps managers understand what changed in team performance, review the evidence and prepare for better coaching conversations.</p><div className="feature-tags"><span>Founder-led</span><span>B2B SaaS</span><span>AI trust</span><span>React prototype</span></div></div>
+          <div><h3>Zevian</h3><p>Helps sales managers see what changed, investigate possible causes and decide what needs action.</p><div className="feature-tags"><span>Founder-led</span><span>B2B SaaS</span><span>AI trust</span><span>React prototype</span></div></div>
           <div className="feature-link">View case study <ArrowUpRight /></div>
         </div>
         <ZevianVisual />
@@ -300,114 +300,101 @@ function FlowArrow({ className = '' }) {
   </svg>;
 }
 
-function MergeArrow({ className = '' }) {
-  return <svg className={`merge-arrow ${className}`} viewBox="0 0 104 72" aria-hidden="true" focusable="false">
-    <path d="M3 11h15c18 0 20 25 39 25h36" />
-    <path d="M3 61h15c18 0 20-25 39-25" />
-    <path d="m82 26 11 10-11 10" />
-  </svg>;
-}
-
-function ResearchFlow() {
-  return <div className="research-flow" aria-label="Research inputs converge into patterns, then become product rules">
-    <div className="flow-stack flow-inputs">
-      <span className="flow-caption">Listen</span>
-      <div className="flow-node"><small>Manager interviews</small><strong>Issues surface late</strong></div>
-      <div className="flow-node"><small>Survey responses</small><strong>Reasons and fairness matter</strong></div>
-    </div>
-    <MergeArrow/>
-    <div className="flow-node flow-node--focus"><small>Synthesise</small><strong>Find repeated needs</strong></div>
-    <FlowArrow/>
-    <div className="flow-node flow-node--decision"><small>Decide</small><strong>Define product rules</strong></div>
-  </div>;
-}
-
-function AskPreview() {
-  return <figure className="ask-preview" aria-label="Example of Ask Zevian answering from cited reports">
-    <div className="ask-top"><strong>Ask Zevian</strong><small>Illustrative example · 12 reports</small></div>
-    <p>Who may need coaching this week?</p>
-    <div className="thinking-line"><i aria-hidden="true"/><span>Reading submitted reports</span></div>
-    <div className="answer-block"><div className="answer-head"><strong>Two patterns need a closer look.</strong><div className="answer-confidence"><small>Confidence</small><b>Medium</b><span>Recent evidence is limited</span></div></div><p className="answer-evidence">Fahim missed the activity target twice. Nabila’s delivery pace fell for three weeks.</p><b>Suggested action: review follow-up timing before the next 1:1.</b></div>
-    <div className="source-chips"><span>Fahim · Week 32</span><span>Nabila · Week 32</span></div>
-    <figcaption>Sources stay visible under every answer.</figcaption>
-  </figure>;
-}
-
 function ZevianCase() {
   return <>
     <Nav caseStudy/>
-    <main className="case-page" id="top">
+    <main className="case-page zevian-page" id="top">
       <section className="case-hero case-wrap">
         <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
-        <h1>Performance signals<br/><em>people can question.</em></h1>
-        <div className="case-hero-bottom"><p>I founded Zevian to turn weekly work reports into source-linked performance signals that managers can review, question and override.</p><div className="case-tags"><span>Founder project</span><span>AI product</span><span>B2B SaaS</span><span>Early live product</span></div></div>
-        <div className="case-stage"><ZevianVisual/></div>
+        <h1>Know what changed.<br/><em>Understand why.</em></h1>
+        <div className="case-hero-bottom"><p>Zevian helps sales managers investigate performance changes before they become pipeline problems.</p><div className="case-tags"><span>Founder product</span><span>Product strategy</span><span>AI trust</span><span>Figma to React</span></div></div>
+        <figure className="zevian-hero-product">
+          <ExpandableImage src="/Zevian-Findings.png" alt="Zevian findings list with a detailed investigation drawer for a drop in meetings booked" caption="The findings list supports fast scanning; the drawer holds evidence, possible reasons, context and the manager's decision." loading="eager" decoding="sync" />
+          <figcaption>List for scanning. Drawer for investigation.</figcaption>
+        </figure>
       </section>
 
       <section className="case-section case-wrap overview" id="overview">
-        <div className="case-index">01 / Overview</div>
+        <div className="case-index">01 / Current product</div>
         <div className="case-content">
-          <h2>Make the weeks between reviews visible.</h2>
-          <p className="lead narrow">Managers often rely on memory until review time. Zevian shows weekly changes, links them to evidence and keeps the final decision with the manager.</p>
-          <dl className="case-meta"><div><dt>Audience</dt><dd>Remote sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Work</dt><dd>Discovery · Strategy · Interaction · Trust</dd></div><div><dt>Tools</dt><dd>React · Supabase · AI prototyping</dd></div><div><dt>Stage</dt><dd>Live founder project</dd></div><div><dt>Product</dt><dd>Evolving with real use</dd></div></dl>
-          <div className="principles"><article><b>01</b><h3>Check the context</h3><p>Review the business context before assessing the work.</p></article><article><b>02</b><h3>Show the evidence</h3><p>Link every signal to its source material.</p></article><article><b>03</b><h3>Keep managers in control</h3><p>Managers review the context and make the final decision.</p></article></div>
+          <h2>Dashboards show the number. Zevian helps investigate the change.</h2>
+          <p className="lead narrow">Sales managers already understand their KPIs. The harder work starts when an important metric moves: connecting signals, checking context and deciding whether the change needs action.</p>
+          <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Discovery · Product · UI</dd></div><div><dt>Core flow</dt><dd>Add · Match · Review · Save</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>Current product direction</dd></div></dl>
+          <div className="current-flow" aria-label="Current Zevian workflow">
+            <div><span>01</span><strong>Add existing data</strong><p>CSV, XLSX, CRM or dialer export.</p></div>
+            <div><span>02</span><strong>Map automatically</strong><p>Show only uncertain matches.</p></div>
+            <div><span>03</span><strong>Detect change</strong><p>Compare outcomes with a recent baseline.</p></div>
+            <div><span>04</span><strong>Link signals</strong><p>Connect evidence and possible causes.</p></div>
+            <div><span>05</span><strong>Add context</strong><p>Keep every source visible.</p></div>
+            <div><span>06</span><strong>Decide and save</strong><p>Managers keep the final call.</p></div>
+          </div>
+          <p className="system-principle"><strong>Product principle</strong><span>Move complexity behind the system and ask the manager to review ambiguity, context and decisions.</span></p>
         </div>
       </section>
 
       <section className="case-section case-wrap" id="process">
-        <div className="case-index">02 / Process</div>
+        <div className="case-index">02 / What discovery changed</div>
         <div className="case-content">
-          <h2>Discovery shaped the product rules.</h2>
-          <div className="research-note"><strong>8 prototype-led discovery sessions · 16 survey responses</strong><p>I sourced and contacted sales managers, then used each session to question the product assumptions and improve the flow.</p></div>
-          <div className="overview-grid"><p className="lead">My first prototype treated the employee submission as the main explanation for a performance dip.</p><p>Managers showed me that they also use their own observations, call analytics, peer feedback and operational changes. I refined the prototype after each session, then kept the MVP focused on this core evidence-gathering flow.</p></div>
-          <div className="discovery-insight">Managers often notice a problem only after the monthly numbers fall.<span>Pattern across discovery</span></div>
-          <ResearchFlow/>
-          <table className="decision-table">
-            <thead><tr><th scope="col">Discovery signal</th><th scope="col">What it meant</th><th scope="col">Product rule</th></tr></thead>
-            <tbody><tr><td data-label="Discovery signal">Managers notice issues late</td><td data-label="What it meant">Weekly visibility gap</td><td data-label="Product rule"><strong>Surface attention areas before review</strong></td></tr>
-            <tr><td data-label="Discovery signal">Managers asked how each score was made</td><td data-label="What it meant">Trust gap</td><td data-label="Product rule"><strong>Show evidence, reasoning and confidence</strong></td></tr>
-            <tr><td data-label="Discovery signal">Coaching varies by manager</td><td data-label="What it meant">Inconsistent follow-up</td><td data-label="Product rule"><strong>Add coaching need to each signal</strong></td></tr>
-            <tr><td data-label="Discovery signal">Context changes performance</td><td data-label="What it meant">Human judgment needed</td><td data-label="Product rule"><strong>Add override and audit history</strong></td></tr>
-            <tr><td data-label="Discovery signal">Inputs can be gamed</td><td data-label="What it meant">Reports can be optimized</td><td data-label="Product rule"><strong>Flag gaming and lower confidence</strong></td></tr></tbody>
-          </table>
-          <div className="iteration-strip"><div><small>Early idea</small><strong>“Give me a score”</strong></div><FlowArrow/><div><small>Testing showed</small><strong>A score hid the reason</strong></div><FlowArrow/><div className="iteration-result"><small>Current direction</small><strong>“Show me what needs attention”</strong></div></div>
+          <h2>The first product model did not survive discovery.</h2>
+          <div className="research-note"><strong>Discovery ran from May to September alongside building and GTM.</strong><p>It was not several months of full-time research. The interviews, prototype feedback and synthesis represented about 1–2 weeks of focused effort.</p></div>
+          <div className="pivot-list">
+            <article><span>Evaluation → diagnosis</span><h3>Managers did not need another KPI explanation.</h3><p>They needed help after something changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
+            <article><span>Coaching → wider causes</span><h3>A performance drop is not always a people problem.</h3><p>Lead quality, selling time, campaigns, process changes and data issues can all change an outcome. Zevian began offering possible reasons instead of making an early judgment.</p></article>
+            <article><span>Manual setup → exceptions</span><h3>The manager was still doing too much work.</h3><p>I removed manual categorisation and mapping from the main path. Zevian now handles clear cases automatically and asks for help only when the data is ambiguous.</p></article>
+          </div>
+          <blockquote>“Something changed. Why did it change?”<cite>The question that replaced the scoring model</cite></blockquote>
         </div>
       </section>
 
-      <section className="case-section case-wrap experience">
-        <div className="case-index">03 / Product experience</div>
+      <section className="case-section case-wrap evolution">
+        <div className="case-index">03 / Product evolution</div>
         <div className="case-content">
-          <h2>Start with attention. Move into evidence.</h2>
-          <p className="lead narrow">The dashboard flags a change, report detail shows the source and Ask Zevian supports follow-up questions.</p>
-          <div className="experience-grid">
-            <article className="dashboard-preview"><div className="dash-top"><strong>What needs attention?</strong></div><div className="attention-signals"><div><span>Delivery pace</span><b className="active">New signal</b></div><div><span>Collaboration</span><b>Recurring</b></div><div><span>Role clarity</span><b>Stable</b></div></div><div className="attention-row"><span>Review suggested</span><strong>2 reports</strong></div></article>
-            <article className="score-preview"><div className="score-title"><strong>Signal detail</strong><span className="signal-confidence">Medium confidence</span></div><p>Delivery pace is slowing</p><div className="signal-details"><div><small>Evidence</small><span>Late follow-ups in 3 reports</span></div><div><small>Coaching need</small><span>Review timing this week</span></div></div><div className="manager-check"><Check/><span>Manager reviews final action</span></div></article>
-            <article className="ask-card"><AskPreview/></article>
+          <h2>Each iteration moved work away from the manager.</h2>
+          <p className="lead narrow">The interface became simpler because the product question became clearer.</p>
+          <div className="model-evolution">
+            <article><span>V1 · Evaluation</span><h3>Score the employee</h3><p>KPI → employee → AI score → coaching</p><small>Problem: a score hid the cause.</small></article>
+            <article><span>V2 · Pattern detection</span><h3>Find the change</h3><p>Performance → baseline → finding → coaching</p><small>Problem: coaching was still assumed.</small></article>
+            <article><span>V3 · Context review</span><h3>Test possible reasons</h3><p>Finding → possible reason → context → decision</p><small>Problem: the manager still prepared too much.</small></article>
+            <article className="model-current"><span>V4 · Current</span><h3>Review the exceptions</h3><p>Upload → auto-match → risk → context → decision → history</p><small>Zevian handles the structure first.</small></article>
           </div>
+          <div className="before-after"><div><span>Early assumption</span><strong>Managers need a better way to evaluate employees.</strong></div><div><span>Current focus</span><strong>Managers need a faster way to investigate meaningful changes.</strong></div></div>
         </div>
       </section>
 
-      <section className="case-section case-wrap trust">
-        <div className="case-index">04 / Trust layer</div>
+      <section className="case-section case-wrap product-story">
+        <div className="case-index">04 / Current experience</div>
         <div className="case-content">
-          <h2>Managers review every AI suggestion.</h2>
-          <p className="lead narrow">Because these signals affect people, Zevian shows uncertainty and records every manager decision.</p>
-          <div className="trust-grid">
-            <article className="trust-main"><span className="confidence-pill">Evidence stays visible</span><h3>One recommendation,<br/>with its source attached.</h3><p>Every recommendation links back to the report, KPI history and manager-defined criteria.</p><div className="proof-line"><Check/><span>Evidence found in Week 32 report</span></div><details><summary>View retrieval detail</summary><p>Managers can open the retrieved inputs and check why a signal appeared.</p></details></article>
-            <article><span>Confidence flag</span><h3>Show when review is needed.</h3><p>Limited or suspicious evidence lowers confidence and asks for manager review.</p><div className="mini-record"><b>Confidence</b><span>Medium</span><b>Reason</b><span>Limited recent evidence</span></div></article>
-            <article><span>Manager override</span><h3>Change it—with a reason.</h3><div className="mini-record"><b>AI suggestion</b><span>Needs coaching</span><b>Manager changed to</b><span>Watch next week</span><b>Reason</b><span>New territory assigned</span></div></article>
-            <article><span>Audit trail</span><h3>Keep what changed and why.</h3><div className="mini-record"><b>Changed by</b><span>Manager</span><b>Previous → New</b><span>Needs coaching → Watch</span><b>Reason</b><span>Saved</span></div></article>
-            <article><span>Gaming protection</span><h3>Flag writing made for the AI.</h3><p>Repeated target terms without matching evidence lower confidence and trigger manager review.</p></article>
+          <h2>Automatic first. Exception handling second.</h2>
+          <p className="lead narrow">Zevian prepares the investigation. The manager reviews uncertain matches, missing context and the final decision.</p>
+          <div className="product-evidence">
+            <article className="evidence-row evidence-match">
+              <div className="evidence-copy"><span>Review matches</span><h3>Ask only when a match is uncertain.</h3><p>Most employee and metric mapping happens automatically. The manager sees the few rows Zevian cannot confirm.</p></div>
+              <figure><ExpandableImage src="/Match-Data.png" alt="Zevian review match screen asking whether J Rahman should link to Joy Rahman or Jamal Rahman" caption="Exception handling for an unresolved employee match."/><figcaption>One ambiguity, with clear choices and a safe skip action.</figcaption></figure>
+            </article>
+            <article className="evidence-row evidence-context">
+              <div className="evidence-copy"><span>Context states</span><h3>Keep context and decisions separate.</h3><p>Manager and employee notes stay attributable. Employee input requires review, and late context never changes a saved decision by itself.</p></div>
+              <figure><div className="wide-image-scroll"><ExpandableImage src="/Zevian-Context.png" alt="Zevian context state progression from no context to manager and employee context with a combined summary" caption="No context, requested, received and reviewed states keep sources and decisions clear."/></div><figcaption>No context → requested → received → reviewed.</figcaption></figure>
+            </article>
           </div>
+          <div className="trust-rail" aria-label="AI trust decisions"><span>Visible confidence</span><span>Evidence and reasoning</span><span>Possible reasons</span><span>Attributable context</span><span>Manager decision</span><span>Saved history</span></div>
         </div>
       </section>
 
       <section className="case-section case-wrap outcome" id="outcome">
-        <div className="case-index">05 / Outcome</div>
+        <div className="case-index">05 / System and build</div>
         <div className="case-content">
-          <h2>Early validation, with retention still unknown.</h2>
-          <div className="outcome-numbers"><article><strong>4.4 / 5</strong><span>Average usefulness rating from five managers</span></article><article><strong>4 of 5</strong><span>Participants who said they would try it at the tested price</span></article><article><strong>2</strong><span>Early paying customers from direct outreach</span></article></div>
-          <div className="learning-grid"><h3>Main learning</h3><p>A score alone was not useful. Managers needed the source, the exception and control over the final action.</p><h3>Next</h3><p>Collect enough usage data to understand retention and improve the path from a signal to a useful coaching conversation.</p></div>
+          <h2>Three focused days turned the clearer model into a system.</h2>
+          <p className="lead narrow">This was the interface redesign, not the full research timeline. Discovery continued alongside building, outreach and GTM.</p>
+          <div className="build-days">
+            <article><span>Day 1</span><h3>Structure</h3><p>Reduced the workflow to Add data → Review matches → Review findings → Save decisions.</p></article>
+            <article><span>Day 2</span><h3>System</h3><p>Defined the list, drawer, context states, confidence, priority and semantic tokens.</p></article>
+            <article><span>Day 3</span><h3>Edge cases</h3><p>Handled unresolved matches, late context, mixed sources and incomplete decisions.</p></article>
+          </div>
+          <div className="system-evidence">
+            <figure><ExpandableImage src="/Zevian-Colors.png" alt="Zevian primitive and semantic colour token system" caption="Primitive colours feed semantic roles for backgrounds, text, actions and product states."/><figcaption>I started with only the essential tokens and components: colour, type, inputs, buttons, links, badges and chips. The system can grow with the product as new workflow needs become clear.</figcaption></figure>
+            <div><h3>Attio for scan. Notion for depth.</h3><p>Dense rows make the findings list quick to read. The drawer uses a calmer document structure for evidence, context and decisions.</p><h3>AI as a working partner.</h3><p>I used ChatGPT for research synthesis, product critique, reference analysis, token structure, state exploration and later design-to-code. The product decisions remained grounded in research and product reasoning.</p><h3>Figma to React.</h3><p>I translated the stable direction into a reusable React prototype for demos, product validation and faster state changes.</p></div>
+          </div>
+          <div className="final-learning"><span>Main learning</span><p>A score was not the product. The useful product was the investigation around a change—and the manager's ability to judge it fairly.</p></div>
           <a className="next-project" href="/orderific"><span>Next case study</span><strong>Orderific <ArrowUpRight/></strong></a>
         </div>
       </section>
@@ -463,7 +450,7 @@ function ZevianHrmsCase() {
           <h2>A concept before<br/>the focused product.</h2>
           <div className="overview-grid"><p className="lead">The concept brought attendance, employee records, activities, calendars, approvals and work policies into one system.</p><p>I started with a working prototype. Walking through its flows showed how broad the scope had become and which interface rules could be reused.</p></div>
           <dl className="case-meta"><div><dt>Product</dt><dd>Zevian HRMS concept</dd></div><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Scope</dt><dd>Prototype · UI system</dd></div><div><dt>Foundation</dt><dd>Ant Design</dd></div><div><dt>Method</dt><dd>Atomic Design</dd></div><div><dt>Status</dt><dd>Early product direction</dd></div></dl>
-          <div className="hrms-context-note"><strong>This is not the current Zevian.</strong><p>The Zevian name later moved to a different, focused product for source-linked performance signals. This page documents the earlier HRMS interface and system work.</p></div>
+          <div className="hrms-context-note"><strong>This is not the current Zevian.</strong><p>The Zevian name later moved to a focused product for investigating performance changes and supporting manager decisions. This page documents the earlier HRMS interface and system work.</p></div>
         </div>
       </section>
 

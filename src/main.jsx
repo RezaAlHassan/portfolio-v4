@@ -8,7 +8,7 @@ import './styles.css';
 const projects = [
   {
     title: 'Orderific',
-    description: 'Built a scalable design system with tokens and variables across six restaurant products, English LTR and Arabic RTL.',
+    description: 'Strengthened a shared design system across six restaurant products, with reusable components, theme modes and English LTR / Arabic RTL rules.',
     tags: ['Design systems', 'Design tokens', 'Variables', 'RTL/LTR'],
     year: '2025–26',
     visual: 'rtl',
@@ -16,17 +16,17 @@ const projects = [
   },
   {
     title: 'Purno',
-    description: 'Prototyped and tested complex fintech payment workflows for a POS across desktop, tablet and mobile.',
+    description: 'Designed a connected retail system for store payments, inventory and owner insights, shaped by local payment habits and usability testing.',
     tags: ['Fintech', 'Multi-platform', 'Prototyping', 'Usability testing'],
-    year: '2024–25',
+    year: '2024',
     visual: 'pos',
     url: '/purno',
   },
   {
     title: 'Jayga',
-    description: 'Turned field research and business rules into a multi-product warehouse system for storage, billing and fulfilment.',
+    description: 'Led service and product design for shared SME storage, connecting customers, admins, warehouse staff and logistics partners.',
     tags: ['Complex workflows', 'Operational tools', 'Systems thinking', 'Field research'],
-    year: '2023–25',
+    year: '2024',
     visual: 'pipeline',
     url: '/jayga',
   },
@@ -133,84 +133,25 @@ function Hero() {
   );
 }
 
-function ZevianVisual() {
-  return (
-    <div className="zevian-visual" role="img" aria-label="Illustrative Zevian interface showing performance changes, supporting evidence and manager review">
-      <div className="product-window">
-        <div className="window-bar"><span>Zevian</span><div><i /><i /><i /></div></div>
-        <div className="window-body">
-          <div className="side-rail"><b>Z</b><i/><i/><i/><i/></div>
-          <div className="analysis-panel">
-            <span className="tiny-label">ILLUSTRATIVE PRODUCT VIEW</span>
-            <h3>What needs attention?</h3>
-            <div className="signal-row evidence"><span>Collaboration</span><b>Recurring theme</b></div>
-            <div className="signal-row evidence"><span>Delivery pace</span><b>New signal</b></div>
-            <div className="signal-row evidence"><span>Role clarity</span><b>Stable</b></div>
-            <div className="evidence-meta"><span><small>Source</small>Weekly report</span><span><small>Override</small>Available</span><span><small>Confidence</small>Medium</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Featured() {
-  return (
-    <section className="section featured" id="work">
-      <div className="section-head"><h2>One product,<br/>from the inside.</h2><p>Founder-led product design for a manager workflow with visible evidence, confidence and human control.</p></div>
-      <a className="feature-card" href="/zevian">
-        <div className="feature-copy">
-          <div className="feature-top"><span className="tag">Founder product · AI workflow</span><span>2026—Now</span></div>
-          <div><h3>Zevian</h3><p>Helps sales managers see what changed, investigate possible causes and decide what needs action.</p><div className="feature-tags"><span>AI-native</span><span>Human-in-the-loop</span><span>Trust &amp; uncertainty</span><span>0→1 product</span></div></div>
-          <div className="feature-link">View case study <ArrowUpRight /></div>
-        </div>
-        <ZevianVisual />
-      </a>
-    </section>
-  );
-}
-
-function ProjectVisual({ type }) {
-  if (type === 'rtl') return (
-    <div className="project-art rtl-art" aria-hidden="true">
-      <div className="direction-label"><span>LTR</span><span>RTL</span></div>
-      <div className="rtl-window rtl-ltr"><aside><i/><i/><i/></aside><div className="rtl-content"><b>Delivery zones</b><span/><span/><span/></div></div>
-      <div className="rtl-window rtl-rtl" dir="rtl"><aside><i/><i/><i/></aside><div className="rtl-content"><b>مناطق التوصيل</b><span/><span/><span/></div></div>
-      <div className="language-switch"><span>EN</span><b>LTR / RTL</b><span>AR</span></div>
-    </div>
-  );
-  if (type === 'pos') return (
-    <div className="project-art pos-art" aria-hidden="true">
-      <div className="pos-window"><div className="pos-items"><small>ILLUSTRATIVE POS VIEW</small><span>Tea</span><span>Rice · 2kg</span><span>Soap</span></div><div className="pos-cart"><small>CART · 3 ITEMS</small><b>৳ 1,240</b><div className="pay-methods"><span>Cash</span><span>Card</span><span>Mobile</span></div></div></div>
-      <div className="receipt"><b>PAID</b><span>Purno POS</span></div>
-    </div>
-  );
-  return (
-    <div className="project-art pipeline-art" aria-hidden="true">
-      <div className="pipeline"><span>Order</span><span>Storage</span><span>Billing</span><span>Fulfilled</span><i/></div>
-      <div className="order-ticket"><small>ILLUSTRATIVE ORDER</small><b>Ready to move</b><span>8 items</span></div>
-    </div>
-  );
-}
-
 function SelectedProjects() {
-  return (
-    <section className="section projects">
-      <div className="projects-title"><h2>Selected projects</h2><p>Product strategy, research and systems thinking across AI products, fintech and operational tools.</p></div>
-      <div className="project-list">
-        {projects.map((p) => <a href={p.url} className="project-row" key={p.title}>
-          <div className="project-meta"><span>{p.year}</span><h3>{p.title}</h3><p>{p.description}</p><div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div></div>
-          <ProjectVisual type={p.visual}/>
-        </a>)}
-      </div>
-    </section>
-  );
+  const selected = [{ title: 'Zevian', year: '2026 / Now', description: 'Designing and prototyping an AI workflow for sales managers to investigate performance changes and decide what needs action.', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  return <section className="section projects work-section" id="work">
+    <div className="projects-title"><h2>Selected projects</h2><p>Product strategy, research and systems thinking across AI products, retail and warehouse operations.</p></div>
+    <div className="work-grid">
+      {selected.map((project, index) => <a href={project.url} className="work-card" key={project.title}>
+        <figure className={`work-cover work-cover--${project.title.toLowerCase()}`}><img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/></figure>
+        <div className="work-card-heading"><span>{index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
+        <h3>{project.title}</h3><p>{project.description}</p>
+        <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+      </a>)}
+    </div>
+  </section>;
 }
 
 function DesignSystems() {
   return (
     <section className="systems-section section">
-      <div className="systems-heading"><h2>Systems and process</h2></div>
+      <div className="systems-heading"><h2>More design work</h2></div>
       <div className="system-cases">
         <a href="/portfolio" className="system-case orderific-system">
           <span>Portfolio</span><h3>Redesigned the portfolio through moodboard-led exploration, clearer storytelling and a consistent editorial system.</h3><ArrowUpRight />
@@ -274,7 +215,7 @@ function PortfolioCase() {
         <div className="case-index">03 / Result</div>
         <div className="case-content">
           <h2>Consistency came from the small decisions.</h2>
-          <div className="overview-grid"><p className="lead">A small set of spacing, divider, tag and project-row rules now holds the site together.</p><p>The homepage separates featured work, selected projects and system work in one scan path.</p></div>
+          <div className="overview-grid"><p className="lead">A shared set of spacing, typography, cover and tag rules keeps the site consistent.</p><p>The homepage presents four product case studies in one grid, followed by supporting system work and working methods.</p></div>
           <p className="portfolio-archive-note">Previous version: <a href="https://rezaalhasan.netlify.app/" target="_blank" rel="noreferrer">View the earlier portfolio <ArrowUpRight/></a></p>
           <a className="next-project" href="/zevian"><span>Next case study</span><strong>Zevian <ArrowUpRight/></strong></a>
         </div>
@@ -319,14 +260,21 @@ function ZevianCase() {
         <div className="case-content">
           <h2>Dashboards show the number. Zevian helps investigate the change.</h2>
           <p className="lead narrow">When an important metric changes, sales managers connect supporting signals, gather context and decide whether it needs action.</p>
-          <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Strategy · UX · UI</dd></div><div><dt>Research</dt><dd>Interviews · Prototype feedback</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>Current product direction</dd></div></dl>
-          <div className="current-flow" aria-label="Current Zevian workflow">
-            <div><span>01</span><strong>Add existing data</strong><p>CSV, XLSX, CRM or dialer export.</p></div>
-            <div><span>02</span><strong>Map automatically</strong><p>Confirm the few uncertain matches.</p></div>
-            <div><span>03</span><strong>Detect change</strong><p>Compare outcomes with a recent baseline.</p></div>
-            <div><span>04</span><strong>Link signals</strong><p>Connect evidence and possible causes.</p></div>
-            <div><span>05</span><strong>Add context</strong><p>Keep every source visible.</p></div>
-            <div><span>06</span><strong>Decide and save</strong><p>Managers keep the final call.</p></div>
+          <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Strategy · UX · UI</dd></div><div><dt>Research</dt><dd>Interviews · Prototype feedback</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>React prototype / ongoing validation</dd></div></dl>
+          <div className="zevian-flowchart" aria-label="Zevian workflow from data upload to a saved manager decision">
+            <div className="workflow-lane"><span className="workflow-lane-label">Start with existing data</span><div className="flow-node"><strong>Add data</strong><p>CSV, XLSX, CRM or dialer export.</p></div></div>
+            <div className="flow-connector" aria-hidden="true"><ArrowDown/></div>
+            <div className="workflow-lane automatic-lane"><span className="workflow-lane-label">System prepares</span><ol className="system-flow-nodes">
+              <li className="flow-node"><strong>Match records</strong><p>Map clear matches automatically.</p></li>
+              <li className="flow-node"><strong>Detect changes</strong><p>Compare outcomes with a recent baseline.</p></li>
+              <li className="flow-node"><strong>Link signals</strong><p>Show evidence and possible reasons.</p></li>
+            </ol><p className="flow-review-note">Uncertain matches go to the manager for confirmation.</p></div>
+            <div className="flow-connector" aria-hidden="true"><ArrowDown/></div>
+            <div className="workflow-lane manager-lane"><span className="workflow-lane-label">Manager reviews</span><ol className="manager-flow-nodes">
+              <li className="flow-node"><strong>Check the finding</strong><p>Review evidence, risk and confidence.</p></li>
+              <li className="flow-node"><strong>Add context</strong><p>Optional. Keep each source visible.</p></li>
+              <li className="flow-node decision-node"><strong>Decide and save</strong><p>The manager makes the final call. The system keeps the history.</p></li>
+            </ol></div>
           </div>
           <p className="system-principle"><strong>Product principle</strong><span>Move complexity behind the system and ask the manager to review ambiguity, context and decisions.</span></p>
         </div>
@@ -349,13 +297,11 @@ function ZevianCase() {
       <section className="case-section case-wrap evolution">
         <div className="case-index">03 / Product evolution</div>
         <div className="case-content">
-          <h2>Each iteration reduced the number of tasks the user had to complete.</h2>
+          <h2>Each iteration moved more preparation out of the manager's workflow.</h2>
           <p className="lead narrow">Interviews moved the model from employee scoring toward broader context, automatic preparation and exception review.</p>
-          <div className="model-evolution">
-            <article><span>V1 · Evaluation</span><h3>Score the employee</h3><p>KPI → employee → AI score → coaching</p><small>Next need: explain what caused the change.</small></article>
-            <article><span>V2 · Pattern detection</span><h3>Find the change</h3><p>Performance → baseline → finding → coaching</p><small>Next need: include causes beyond coaching.</small></article>
-            <article><span>V3 · Context review</span><h3>Test possible reasons</h3><p>Finding → possible reason → context → decision</p><small>Next need: prepare the review automatically.</small></article>
-            <article className="model-current"><span>V4 · Current</span><h3>Review the exceptions</h3><p>Upload → auto-match → risk → context → decision → history</p><small>Zevian handles the structure first.</small></article>
+          <div className="model-evolution model-evolution--two">
+            <article><span>V1 / Evaluation and patterns</span><h3>Evaluate performance and guide coaching.</h3><p>KPIs and employee data &rarr; scores or performance findings &rarr; coaching</p><small>Gap: explain the change and consider causes beyond employee performance.</small></article>
+            <article className="model-current"><span>V2 / Investigation and decision</span><h3>Prepare the evidence. Review the exceptions.</h3><p>Upload &rarr; auto-match &rarr; finding and possible reasons &rarr; context &rarr; decision &rarr; history</p><small>The system prepares the review; the manager judges the evidence and decides.</small></article>
           </div>
           <div className="before-after"><div><span>Early assumption</span><strong>Managers need a better way to evaluate employees.</strong></div><div><span>Current focus</span><strong>Managers need a faster way to investigate meaningful changes.</strong></div></div>
           <p className="zevian-archive-note"><span>Earlier product evidence</span><span>The <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">archived scoring prototype <ArrowUpRight/></a> shows the product before discovery shifted it toward performance investigation.</span></p>
@@ -388,8 +334,8 @@ function ZevianCase() {
       <section className="case-section case-wrap outcome" id="outcome">
         <div className="case-index">05 / System and build</div>
         <div className="case-content">
-          <h2>The product model became a reusable interface system in three focused days.</h2>
-          <p className="lead narrow">Discovery continued alongside building, outreach and GTM; this focused sprint covered interface structure, states and edge cases.</p>
+          <h2>From product decisions to a testable React prototype.</h2>
+          <p className="lead narrow">I translated the product model into interface structure, states and edge cases during a three-day design sprint, then built a React prototype for demos and validation.</p>
           <div className="build-days">
             <article><span>Day 1</span><h3>Structure</h3><p>Defined the four-step workflow: Add data → Review matches → Review findings → Save decisions.</p></article>
             <article><span>Day 2</span><h3>System</h3><p>Defined the list, drawer, context states, confidence, priority and semantic tokens.</p></article>
@@ -614,6 +560,28 @@ function PurnoImage({ src, alt, caption, className = '' }) {
   </figure>;
 }
 
+function SourceDiagram({ src, alt, className = '' }) {
+  return <figure className={`source-diagram ${className}`}>
+    <ExpandableImage src={src} alt={alt} caption="Product workflow and responsibilities."/>
+    <figcaption>Open diagram at full size <ArrowUpRight aria-hidden="true"/></figcaption>
+  </figure>;
+}
+
+function PurnoCoreFlow() {
+  return <SourceDiagram className="purno-core-flow" src="/purno/core-flow.svg" alt="Purno core flow: Store app with Inventory, Cart, Order and Payment in a vertical flow, branching into Card, MFS and Cash, then Receipt. Owner app with Sales Tracking, Top Selling, Payment Methods and Work."/>;
+}
+
+function JaygaServiceDiagrams() {
+  return <div className="service-diagrams">
+    <SourceDiagram src="/jayga/ecosystem.svg" alt="Jayga ecosystem: the Jayga system at the centre, surrounded by Customer SMEs, Admin Team, Payments, Storage Grids, Logistics partners and Warehouse Team with their responsibilities."/>
+    <SourceDiagram src="/jayga/service-journey.svg" alt="Jayga service journey: Book, Receive, Entry, Assign, Store, Monitor, Retrieve and Deliver across Client, Admin, Warehouse Team, System and Logistics Partner lanes."/>
+  </div>;
+}
+
+function JaygaGridDiagram() {
+  return <SourceDiagram src="/jayga/grid-model.svg" alt="Warehouse and grid: map twenty 50-square-metre grids, then place items for two users and bill by occupied space and per-grid price."/>;
+}
+
 function PurnoCase() {
   return <>
     <Nav caseStudy/>
@@ -627,17 +595,17 @@ function PurnoCase() {
         </div>
         <div className="purno-stage">
           <div className="stage-note"><span>Merchant app</span><strong>Desktop · tablet · mobile</strong></div>
-          <ExpandableImage className="case-stage-image" src="/purno/cover.webp" alt="Purno POS shown across desktop, tablet and mobile devices" caption="Purno POS across desktop, tablet and mobile." loading="eager" decoding="sync" />
+          <ExpandableImage className="case-stage-image" src="/purno/cover.webp" alt="Purno payment cover showing the total and split amount" caption="Purno payment experience." loading="eager" decoding="sync" />
         </div>
       </section>
 
       <section className="case-section case-wrap" id="overview">
         <div className="case-index">01 / Overview</div>
         <div className="case-content">
-          <h2>One workflow for payments, stock and sales.</h2>
-          <div className="overview-grid"><p className="lead">Shop owners handled payments, stock and sales in separate tools. Purno brought them into one system.</p><p>The interface was designed for merchants with limited software experience and had to stay clear while a customer waited.</p></div>
-          <dl className="case-meta"><div><dt>Role</dt><dd>First product designer</dd></div><div><dt>Team</dt><dd>Founder · engineers · shop owners</dd></div><div><dt>Timeline</dt><dd>2 months</dd></div><div><dt>Platforms</dt><dd>Desktop · tablet · mobile</dd></div><div><dt>Methods</dt><dd>UX audit · flows · moderated testing</dd></div><div><dt>Stage</dt><dd>Funded MVP</dd></div></dl>
-          <div className="purno-decisions">
+          <h2>Payments first. A connected retail system next.</h2>
+          <div className="overview-grid"><p className="lead">Purno began with payments, then expanded to inventory, a small work tracker and sales insights for the owner.</p><p>The interface was designed for merchants with limited software experience and had to stay clear while a customer waited.</p></div>
+          <dl className="case-meta"><div><dt>Role</dt><dd>First product designer</dd></div><div><dt>Team</dt><dd>Product designer / founder</dd></div><div><dt>Timeline</dt><dd>3 months</dd></div><div><dt>Platforms</dt><dd>Desktop · tablet · mobile</dd></div><div><dt>Methods</dt><dd>UX audit · flows · moderated testing</dd></div><div><dt>Stage</dt><dd>Funded MVP</dd></div></dl>
+          <div className="orderific-decisions">
             <article><span>Find products</span><h3>Flatten the category structure.</h3><p>Remove three levels of navigation between the merchant and an item.</p></article>
             <article><span>Read at a distance</span><h3>Test cards from across the counter.</h3><p>Make selected items clear at arm’s length during a sale.</p></article>
             <article><span>Take payment</span><h3>Reuse patterns merchants already know.</h3><p>Make card, cash and mobile-wallet flows feel like tools already used at the counter.</p></article>
@@ -650,10 +618,10 @@ function PurnoCase() {
         <div className="case-content">
           <h2>Borrow familiar patterns, then fit them to local retail.</h2>
           <p className="lead narrow">I compared five POS products with bKash to identify familiar checkout patterns to test and assumptions that could slow local merchants down.</p>
-          <div className="purno-research-pair">
+          <div className="purno-audit">
             <PurnoImage src="/purno/competitive-audit.webp" alt="Comparative UX audit of six retail and payment products" caption="Comparative UX audit across retail and payment products."/>
-            <PurnoImage src="/purno/user-flows.webp" alt="Purno user flows for login, registration and payment" caption="Dependency mapping set the order: inventory, cart, then each payment method."/>
           </div>
+          <PurnoCoreFlow/>
           <div className="purno-principle"><strong>Design standard</strong><p>Quick to learn. Easy to scan. Shallow navigation while a customer is waiting.</p></div>
         </div>
       </section>
@@ -709,8 +677,21 @@ function PurnoCase() {
         </div>
       </section>
 
+      <section className="case-section case-wrap" id="owner-experience">
+        <div className="case-index">05 / Owner experience</div>
+        <div className="case-content">
+          <h2>Connect the sale to the owner's next decision.</h2>
+          <p className="lead narrow">The checkout answers what happened in one sale. I designed the owner app around three broader questions: how is the business performing, what is selling, and how was a transaction paid? Daily metrics, category reports and transaction details provide different levels of detail.</p>
+          <div className="owner-screens">
+            <PurnoImage src="/purno/owner-home.svg" alt="Purno owner home with sales metrics, peak time and top-selling products" caption="Monitor daily performance"/>
+            <PurnoImage src="/purno/owner-reports.svg" alt="Purno owner reports with category sales and employee sales" caption="Compare sales by category and employee"/>
+            <PurnoImage src="/purno/owner-transaction.svg" alt="Purno transaction details showing split payments, customer, employee and branch" caption="Inspect a transaction and its payments"/>
+          </div>
+        </div>
+      </section>
+
       <section className="case-section case-wrap outcome" id="outcome">
-        <div className="case-index">05 / Result</div>
+        <div className="case-index">06 / Result</div>
         <div className="case-content">
           <h2>From an open brief to a funded MVP.</h2>
           <div className="outcome-numbers purno-outcomes"><article><strong>$10k</strong><span>Seed funding raised after a pitch supported by the designed MVP</span></article><article><strong>~20%</strong><span>Faster transactions in moderated testing</span></article><article><strong>3</strong><span>Designed for desktop, tablet and mobile</span></article></div>
@@ -736,13 +717,13 @@ function JaygaCase() {
     <main className="case-page jayga-page" id="top">
       <section className="case-hero case-wrap jayga-hero">
         <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
-        <h1><span>Three days</span><span>became <em>2–3 hours.</em></span></h1>
+        <h1><span>Connecting storage,</span><span>people <em>and systems.</em></span></h1>
         <div className="case-hero-bottom">
           <p>I led product on Jayga’s warehouse system, connecting storage, pricing, billing and delivery across the client, admin and warehouse floor.</p>
           <div className="case-tags"><span>Operational tools</span><span>Systems thinking</span><span>Field research</span><span>Business rules</span></div>
         </div>
         <div className="jayga-stage" aria-label="Jayga admin and warehouse applications">
-          <div className="stage-note"><span>Measured result</span><strong>3 days → 2–3 hours</strong></div>
+          <div className="stage-note"><span>Shared storage for SMEs</span><strong>Client / admin / warehouse</strong></div>
           <JaygaImage src="/jayga/admin-requests.png" alt="Jayga admin console showing active warehouse grid requests"/>
           <JaygaImage src="/jayga/delivery-mobile.png" alt="Jayga mobile app showing a warehouse delivery request"/>
         </div>
@@ -753,7 +734,8 @@ function JaygaCase() {
         <div className="case-content">
           <h2>One order record connected the work.</h2>
           <div className="overview-grid"><p className="lead">Warehouse work ran through spreadsheets, handwritten logs and separate handoffs. Orders took days because storage, billing and delivery did not share one record.</p><p>Jayga rents shared warehouse space to businesses that need less than a full facility. I designed the system that linked each customer’s rented space, stock and bill.</p></div>
-          <dl className="case-meta"><div><dt>Role</dt><dd>Product lead</dd></div><div><dt>Team</dt><dd>8 people</dd></div><div><dt>Timeline</dt><dd>4 months · 2 months design</dd></div><div><dt>Platforms</dt><dd>2 web apps · 1 mobile app</dd></div><div><dt>Methods</dt><dd>Interviews · contextual inquiry</dd></div><div><dt>Tools</dt><dd>Figma · Notion</dd></div></dl>
+          <dl className="case-meta"><div><dt>Role</dt><dd>Product lead</dd></div><div><dt>Team</dt><dd>Product lead / 5 engineers / founder</dd></div><div><dt>Timeline</dt><dd>4 months</dd></div><div><dt>Platforms</dt><dd>2 web apps · 1 mobile app</dd></div><div><dt>Methods</dt><dd>Interviews · contextual inquiry</dd></div><div><dt>Tools</dt><dd>Figma · Notion</dd></div></dl>
+          <p className="lead narrow">I mapped workflows, defined the grid and billing rules, set the design language and owned the product backlog. I worked with five engineers and the founder, who held the product vision and final decisions.</p>
           <div className="jayga-decisions">
             <article><span>Billable unit</span><h3>Model the grid.</h3><p>A grid became the shared unit for storage, pricing and billing.</p></article>
             <article><span>Shared record</span><h3>Enter each fact once.</h3><p>Client, admin and floor staff do different work on the same order record.</p></article>
@@ -767,7 +749,7 @@ function JaygaCase() {
         <div className="case-content">
           <h2>Three apps. One warehouse record.</h2>
           <p className="lead narrow">A client starts an order, an admin confirms space and billing, and warehouse staff verify the stock—all on the same record.</p>
-          <JaygaImage className="jayga-image--wide" src="/jayga/order-flow.png" alt="Jayga order flow across client, admin and warehouse applications" caption="The order status travels from the client to the admin and warehouse floor."/>
+          <JaygaServiceDiagrams/>
           <div className="jayga-apps">
             <article><span>Web · Client</span><h3>Client dashboard</h3><p>Starts orders and shows used space, open requests and the running daily bill.</p></article>
             <article><span>Web · Admin</span><h3>Admin console</h3><p>Handles requests, grid assignment, payments, billing and operational oversight.</p></article>
@@ -784,6 +766,7 @@ function JaygaCase() {
         <div className="case-index">03 / Grid logic</div>
         <div className="case-content">
           <h2>Make physical space work like product data.</h2>
+          <JaygaGridDiagram/>
           <p className="lead narrow">I divided the warehouse into fixed grids with unique IDs. A grid is what a customer rents, where an item is assigned and what the bill is calculated from.</p>
           <div className="grid-rule"><div><span>Problem</span><p>Pricing did not reflect how much rack space was used, and the team could not see which space generated revenue.</p></div><div><span>Product rule</span><p>Assign and confirm one grid before opening the next, limiting errors before another space changes.</p></div></div>
           <div className="jayga-grid-story">
@@ -829,10 +812,11 @@ function JaygaCase() {
       </section>
 
       <section className="case-section case-wrap outcome" id="outcome">
-        <div className="case-index">06 / Measured result</div>
+        <div className="case-index">06 / Delivery and decisions</div>
         <div className="case-content">
-          <h2>Order processing fell from three days to 2–3 hours.</h2>
-          <div className="outcome-numbers jayga-outcomes single-outcome"><article><strong>3 days → 2–3 hrs</strong><span>Measured order-processing time before and after the system was used</span></article></div>
+          <h2>Own the rules that connect the product and the operation.</h2>
+          <p className="lead narrow">I led product logic and end-to-end flows across the client, admin and warehouse experiences. Under a tight timeline, I prioritised decisions that could block engineering and kept lower-risk details open for iteration.</p>
+          <p>Flows and prototypes became shared working models for responsibilities, states and edge cases. I mapped workflows, set the design language and owned the backlog; the founder held the product vision and final decisions.</p>
           <div className="learning-grid"><h3>Main learning</h3><p>Operations software becomes useful when the digital record follows the physical work. The grid connected stock, space and billing because it matched how the warehouse actually worked.</p><h3>Next priorities</h3><p>Add the mobile app to the first release, update occupancy live, and strengthen the design system rules across all three apps.</p></div>
           <a className="next-project" href="/portfolio"><span>Next case study</span><strong>Portfolio <ArrowUpRight/></strong></a>
         </div>
@@ -1037,7 +1021,7 @@ export function App({ initialPath = null }) {
   else if (path === '/portfolio') page = <PortfolioCase/>;
   else if (path === '/ai-workflows') page = <AIWorkflows/>;
   else if (path === '/about') page = <AboutMe/>;
-  else page = <><Nav/><main><Hero/><Featured/><SelectedProjects/><DesignSystems/><AIWorkflowTeaser/></main><About/></>;
+  else page = <><Nav/><main><Hero/><SelectedProjects/><DesignSystems/><AIWorkflowTeaser/></main><About/></>;
   return <CaseImageProvider>{page}</CaseImageProvider>;
 }
 

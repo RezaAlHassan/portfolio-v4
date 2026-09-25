@@ -6,12 +6,12 @@ This is an editorial portfolio. Project descriptions explain the problem, Reza's
 
 ## Main pages
 
-- [Home](/): Positioning, selected product work, project evidence, working approach, and contact details.
+- [Home](/): Positioning, a four-project grid with equal-height covers, project evidence, working approach, and contact details.
 - [Zevian](/zevian): Current founder product. A decision-support workflow that helps sales managers detect performance changes, investigate possible causes, gather context, and decide what needs action.
 - [Zevian HRMS](/zevian-hrms): Earlier HRMS concept. Interface and design-system work for attendance, employee records, activities, calendars, approvals, and work policies.
 - [Orderific](/orderific): Shared component system across six restaurant products, including English LTR, Arabic RTL, and light/dark modes.
-- [Purno](/purno): Point-of-sale system connecting shop sales, inventory, payments, and daily operations.
-- [Jayga](/jayga): Warehouse system connecting storage, pricing, billing, delivery, and fulfilment.
+- [Purno](/purno): Connected retail system with a store app for inventory and payments, and an owner app for sales insights and work.
+- [Jayga](/jayga): Coordinated storage service for SMEs, connecting customers, admins, warehouse staff, logistics, grids and billing.
 - [Portfolio redesign](/portfolio): Moodboard-led iteration into one editorial portfolio system.
 - [AI workflows](/ai-workflows): Research synthesis, prototyping, code, code-to-design handoff through Codex and Figma Make, and human decision-making with AI.
 - [About](/about): Background, values, interests, and working focus.

@@ -4,3 +4,6 @@ dist/
 .impeccable/review/
 .impeccable/chrome-profile*/
 .impeccable/edge-*/
+
+# Local PDF inspection tools and renders
+tmp/

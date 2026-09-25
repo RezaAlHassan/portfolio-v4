@@ -237,7 +237,7 @@ Thin ink borders are the main form language. Editorial structure stays square an
 
 ### Zevian Evidence Window
 
-Zevian is the signature component and the only continuously animated area. A slightly rotated Product Paper window sits on Strong Quiet Surface. The interface is clearly labelled “Illustrative product view” and asks “What needs attention?” Three evidence rows connect a topic to its current reading: Collaboration / Recurring theme, Delivery pace / New signal, and Role clarity / Stable. A three-cell metadata strip records Source / Weekly report, Override / Available, and Confidence / Medium. This detail makes the preview feel like product evidence rather than generic dashboard decoration.
+Zevian is the signature component and the only continuously animated area. A slightly rotated Product Paper window sits on Strong Quiet Surface. The interface is clearly labelled “Illustrative product view” and asks “What changed?” Three evidence rows connect sales signals to their current readings: Meetings booked / Below baseline, Call volume / Lower activity, and Connect rate / Stable. A three-cell metadata strip records Source / CRM export, Confidence / Low, and Next step / Review context. The preview follows the current performance-investigation direction: notice the change, compare supporting signals, and review context before deciding on a cause.
 
 A lime band scans one evidence row at a time over six seconds with 1.3-second offsets. On card hover, the window settles to zero rotation and grows by 2.5% over 700ms.
 
@@ -301,3 +301,34 @@ Under `prefers-reduced-motion: reduce`, remove every CSS animation and transitio
 - **Don't** use Instrument Serif for body copy, navigation, tags, or interface labels.
 - **Don't** load typography from a remote font CDN.
 - **Don't** add continuously running motion outside the Zevian evidence scan.
+
+
+## Source artwork update (September 2026)
+
+The homepage Zevian, Purno and Jayga previews now use static crops from Reza's Portfolio 2027 PDF. This replaces their illustrative UI and animation guidance above. Zevian shows the evidence/context/decision area; Purno uses the payment cover; Jayga uses the warehouse fieldwork photo. Original artwork colours are preserved inside images; the surrounding site keeps the warm-paper, ink and signal-lime system. Orderific retains its existing LTR/RTL demonstration.
+
+Case-study diagrams from the PDF use ExpandableImage. Portrait diagrams sit side by side on desktop and stack on mobile. Keep captions outside the source artwork.
+
+
+## Project grid and native diagrams (current)
+
+The homepage uses a two-by-two grid: Zevian, Orderific, Purno and Jayga. At 800px and below it becomes one column. Covers use object-fit: contain so the complete source artwork remains visible. Zevian uses Zevian-cover.png; Orderific uses the real RTL/LTR comparison; Purno uses its original full cover. This replaces the previous featured split, project rows and illustrative animation guidance.
+
+Purno's core flow and Jayga's ecosystem, service journey and grid model are native HTML/CSS diagrams, based on the PDF's meaning. Use the site tokens, DM Sans, ink connectors and a lime payment highlight. Purno's owner gallery uses the three supplied screen images with ExpandableImage. Do not use cropped PDF slides as diagrams.
+
+
+## Exact diagram layouts and cover clarity (current)
+
+Use the original PDF vector geometry for Purno's core flow and Jayga's ecosystem, service journey and grid. Preserve their labels, whitespace, symbols, lanes and text outlines. Recolour the artwork to warm paper, ink and neutral surfaces. This replaces the earlier HTML/CSS diagram redesign. Diagrams open through ExpandableImage.
+
+Use the matching sharp vector artwork for Zevian's cover, the high-resolution RTL/LTR source with only outer canvas trimmed for Orderific, the full Purno cover and the original warehouse-visit.jpg for Jayga. Give covers suitable aspect ratios instead of adding paper bands. Frame Jayga around the person checking stock.
+
+
+## Fixed cover frames (current)
+
+All four homepage covers share a fixed height: 400px on desktop, 320px between 801px and 1100px, and 300px on mobile. Use object-fit: cover with project-specific focal positions. This overrides the earlier variable aspect ratios and full-source visibility rule. The work portfolio story prioritises ownership, product decisions, delivery and evidence.
+
+
+## Case-study refinements
+
+Purno decision summaries reuse Orderific's three-card component styling. Its owner screens use sharp vector artwork and remain expandable. Zevian's overview uses a connected, responsive flowchart separating system preparation from manager review. Product evolution has two combined stages: evaluation/patterns and investigation/decision.

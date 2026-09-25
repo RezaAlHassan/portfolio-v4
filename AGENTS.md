@@ -35,3 +35,19 @@ Do not edit `dist/`; it is generated and ignored by Git.
 - Reuse `ExpandableImage` for project images that should open in the image viewer.
 - Add route-specific title and description data to `pageMetadata` when adding a page.
 - Update `public/llms.txt` and this file when routes or project meanings change.
+
+## Portfolio PDF evidence
+
+- The Portfolio 2027 PDF adds Jayga's service ecosystem and journey, and Purno's owner app.
+- Purno: 2024, three months, product designer and founder. Jayga: 2024, four months, product lead, five engineers and founder.
+- Preserve the PDF diagrams exactly as vector artwork, including whitespace, topology and text outlines; adapt their colours to the portfolio design system. The homepage has four complete covers in a 2x2 grid, stacking on mobile. Use the sharp matching Zevian vector cover, high-resolution Orderific RTL/LTR comparison, full Purno cover and original Jayga warehouse photo. Owner-app screens are supplied separately.
+- See PORTFOLIO-REVIEW.md for claims that still need supporting evidence. Do not restore Jayga's order-speed headline without confirming its source.
+
+## Work portfolio audience
+
+- Review site copy for employment and client work. The university PDF is a visual reference, not the authority for the website story.
+- Keep ownership, decisions, delivery status and evidence distinct. See WORK-PORTFOLIO-REVIEW.md for unresolved story questions.
+- All homepage covers use the same fixed height per breakpoint and object-fit: cover; crop instead of stretching or changing individual frame heights.
+
+- Zevian evolution has two stages: evaluation and patterns; investigation and decision. Do not split these back into four versions.
+- Purno owner screens use vector assets under public/purno/owner-*.svg; keep them expandable.

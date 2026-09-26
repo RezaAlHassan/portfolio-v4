@@ -15,6 +15,7 @@ const routes = {
   'purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
   'jayga': ['Jayga — Warehouse operations case study', 'A warehouse system connecting storage, pricing, billing, delivery and fulfilment.'],
   'portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
+  'sprint': ['2-week product design sprint — Reza Al Hassan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
 };
 
 const escapeHtml = (value) => value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -35,7 +36,7 @@ const toMarkdown = (html, title, description, slug) => {
     .replace(/ *\n */g, '\n')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
-  return `# ${title}\n\n> ${description}\n\n${decode(content)}\n\n---\n\n[View the visual case study](/${slug})\n`;
+  return `# ${title}\n\n> ${description}\n\n${decode(content)}\n\n---\n\n[View the visual ${slug === 'sprint' ? 'page' : 'case study'}](/${slug})\n`;
 };
 
 const vite = await createServer({ root, configFile:false, server:{ middlewareMode:true }, appType:'custom', logLevel:'error' });
@@ -43,7 +44,10 @@ try {
   const { App } = await vite.ssrLoadModule('/src/main.jsx');
   for (const [slug, [title, description]] of Object.entries(routes)) {
     const rendered = renderToString(React.createElement(App, { initialPath:`/${slug}` }));
-    const jsonLd = JSON.stringify({'@context':'https://schema.org','@type':'CreativeWork',name:title,description,author:{'@type':'Person',name:'Reza Al Hassan',jobTitle:'Product Designer'},inLanguage:'en',url:`/${slug}`}).replaceAll('<','\\u003c');
+    const person = {'@type':'Person',name:'Reza Al Hassan',jobTitle:'Product Designer'};
+    const jsonLd = JSON.stringify(slug === 'sprint'
+      ? {'@context':'https://schema.org','@type':'Service',name:title,description,provider:person,url:`/${slug}`}
+      : {'@context':'https://schema.org','@type':'CreativeWork',name:title,description,author:person,inLanguage:'en',url:`/${slug}`}).replaceAll('<','\\u003c');
     const html = shell
       .replace(/<title>.*?<\/title>/s, `<title>${escapeHtml(title)}</title>`)
       .replace(/<meta name="description" content=".*?"\s*\/?>/s, `<meta name="description" content="${escapeHtml(description)}" />`)
@@ -60,4 +64,4 @@ try {
   await vite.close();
 }
 
-console.log(`Generated ${Object.keys(routes).length} complete HTML and Markdown case studies.`);
+console.log(`Generated ${Object.keys(routes).length} complete HTML and Markdown pages.`);

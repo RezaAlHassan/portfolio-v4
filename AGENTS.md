@@ -51,3 +51,10 @@ Do not edit `dist/`; it is generated and ignored by Git.
 
 - Zevian evolution has two stages: evaluation and patterns; investigation and decision. Do not split these back into four versions.
 - Purno owner screens use vector assets under public/purno/owner-*.svg; keep them expandable.
+
+## Product design sprint page
+
+- `/sprint` is the service-focused destination for founders and product leaders; the homepage remains the work portfolio.
+- Keep one dominant sprint contact action, compact evidence from Zevian, Purno and Jayga, and a short post-sprint partnership note.
+- Keep the sprint scope and starting price clear. Do not imply that prototype or design evidence proves shipped product outcomes.
+- The sprint hero uses the Zevian demo video with a pause control. Show Purno screens at full height. Use Jayga's desktop grid-assignment image as the main proof, with the mobile view beside it only when space allows.

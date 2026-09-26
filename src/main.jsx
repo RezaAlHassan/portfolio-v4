@@ -42,7 +42,10 @@ const pageMetadata = {
   '/portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
   '/ai-workflows': ['AI workflows — Reza Al Hassan', 'How Reza uses AI for research synthesis, prototyping, production code and product exploration while keeping people in control.'],
   '/about': ['About Reza Al Hassan', 'Product designer and founder in Dhaka working on B2B systems, AI workflows and clarity-critical products.'],
+  '/sprint': ['2-week product design sprint — Reza Al Hassan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
 };
+
+const sprintEmail = 'mailto:rezahasan1198@gmail.com?subject=Product%20design%20sprint&body=Hi%20Reza%2C%0A%0AThe%20workflow%20we%20need%20help%20with%20is%3A%20';
 
 const ImageModalContext = React.createContext(null);
 
@@ -88,7 +91,7 @@ function Mark({ home = false }) {
   return <a className="mark" href={home ? '/' : '#top'} aria-label={home ? 'Back to home' : 'Back to top'}><span>REZA A</span><i aria-hidden="true" /></a>;
 }
 
-function Nav({ caseStudy = false, aboutPage = false }) {
+function Nav({ caseStudy = false, aboutPage = false, sprintPage = false }) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     const close = (event) => event.key === 'Escape' && setOpen(false);
@@ -98,17 +101,18 @@ function Nav({ caseStudy = false, aboutPage = false }) {
   return (
     <header className="nav-shell">
       <nav className="nav" aria-label="Main navigation">
-        <Mark home={caseStudy || aboutPage} />
+        <Mark home={caseStudy || aboutPage || sprintPage} />
         <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="main-menu" aria-label="Toggle menu">{open ? <X /> : <Menu />}</button>
         <div id="main-menu" className={`nav-links ${open ? 'open' : ''}`}>
           {caseStudy && <a href="/" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> All work</a>}
           {aboutPage && <a href="/" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> All work</a>}
-          {!caseStudy && !aboutPage && <a href="#work" onClick={() => setOpen(false)}>Work</a>}
-          <a href="/ai-workflows" onClick={() => setOpen(false)}>AI workflows</a>
+          {sprintPage && <a href="/" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> Portfolio</a>}
+          {!caseStudy && !aboutPage && !sprintPage && <a href="#work" onClick={() => setOpen(false)}>Work</a>}
+          {!sprintPage && <a href="/ai-workflows" onClick={() => setOpen(false)}>AI workflows</a>}
           {caseStudy && <a href="#process" onClick={() => setOpen(false)}>Process</a>}
           {caseStudy && <a href="#outcome" onClick={() => setOpen(false)}>Outcome</a>}
-          {aboutPage ? <a href="#interests" onClick={() => setOpen(false)}>Interests</a> : <a href="/about" onClick={() => setOpen(false)}>About</a>}
-          <a className="nav-cta" href="mailto:rezahasan1198@gmail.com">Let’s talk <ArrowUpRight /></a>
+          {sprintPage ? <a href="#proof" onClick={() => setOpen(false)}>Proof</a> : aboutPage ? <a href="#interests" onClick={() => setOpen(false)}>Interests</a> : <a href="/about" onClick={() => setOpen(false)}>About</a>}
+          <a className="nav-cta" href={sprintPage ? sprintEmail : 'mailto:rezahasan1198@gmail.com'}>{sprintPage ? 'Discuss a sprint' : 'Let’s talk'} <ArrowUpRight /></a>
         </div>
       </nav>
     </header>
@@ -1016,6 +1020,89 @@ function AIWorkflowTeaser() {
   </section>;
 }
 
+const sprintProof = [
+  {
+    name: 'Zevian', kind: 'AI product · current prototype', href: '/zevian',
+    problem: 'From signal to decision',
+    detail: 'Managers can check the evidence, add context and decide what to do.',
+    images: [{ src: '/Zevian-Findings.png', alt: 'Zevian findings list and investigation drawer with supporting signals, context and a manager decision', caption: 'A finding connects evidence, context and the next decision.' }],
+  },
+  {
+    name: 'Purno', kind: 'Retail · payments', href: '/purno',
+    problem: 'A simpler sale at the counter',
+    detail: 'Find a product, choose a payment method and finish the sale.',
+    images: [
+      { src: '/purno/find-product.webp', alt: 'Purno product selection screen', caption: 'Find a product during a sale.' },
+      { src: '/purno/take-payment.webp', alt: 'Purno payment method selection screen', caption: 'Choose the next payment step.' },
+    ],
+  },
+  {
+    name: 'Jayga', kind: 'Storage · operations', href: '/jayga',
+    problem: 'Stock assigned to the right grids',
+    detail: 'One view shows each item, its grid and the quantity to verify.',
+    images: [
+      { src: '/jayga/assign-grids.png', alt: 'Jayga desktop grid assignment interface with item quantities, assigned status, available grids and design annotations', caption: 'Desktop: assign item quantities to available grids.' },
+      { src: '/jayga/assignment-mobile.png', alt: 'Jayga mobile grid assignment screen showing items, grids, quantities and a confirm action', caption: 'Mobile: verify each assignment.' },
+    ],
+  },
+];
+
+function SprintPage() {
+  const [videoPaused, setVideoPaused] = useState(false);
+  const videoRef = useRef(null);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) videoRef.current?.pause();
+  }, []);
+  const toggleVideo = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) videoRef.current.play().catch(() => setVideoPaused(true));
+    else videoRef.current.pause();
+  };
+  const steps = [
+    ['01', 'Understand', 'Find the real problem.'],
+    ['02', 'Structure', 'Map the key flow.'],
+    ['03', 'Design', 'Make the new screens.'],
+    ['04', 'Handle states', 'Cover errors and edge cases.'],
+    ['05', 'Hand off', 'Give engineers clear specs.'],
+  ];
+  return <>
+    <Nav sprintPage/>
+    <main className="sprint-page" id="top">
+      <section className="sprint-hero section" aria-labelledby="sprint-title">
+        <div className="sprint-hero-copy">
+          <span className="sprint-kicker">2-week product design sprint</span>
+          <h1 id="sprint-title">I make complex flows <em>clearer.</em></h1>
+          <p>For B2B SaaS and AI teams with one important workflow that needs fixing.</p>
+          <div className="sprint-hero-action"><a className="sprint-button" href={sprintEmail}>Start a 2-week sprint <ArrowUpRight/></a><span>One defined problem · Starting at $2,000</span></div>
+        </div>
+        <figure className="sprint-hero-proof">
+          <video ref={videoRef} autoPlay muted loop playsInline preload="metadata" poster="/zevian/demo-poster.jpg" aria-label="Zevian prototype showing a manager review a performance finding and its supporting evidence" onPlay={() => setVideoPaused(false)} onPause={() => setVideoPaused(true)}><source src="/zevian/demo-loop.mp4" type="video/mp4"/></video>
+          <figcaption><span>Zevian prototype</span><span>Signal → evidence → context → decision</span><button type="button" onClick={toggleVideo} aria-label={videoPaused ? 'Play Zevian preview' : 'Pause Zevian preview'}>{videoPaused ? 'Play video' : 'Pause video'}</button></figcaption>
+        </figure>
+      </section>
+
+      <section className="sprint-section section" id="proof" aria-labelledby="proof-title">
+        <div className="sprint-section-head"><span>Selected work / 01</span><div><h2 id="proof-title">Real product problems. Clearer flows.</h2></div></div>
+        <div className="sprint-proof-list">{sprintProof.map(item => <article className={`sprint-proof sprint-proof--${item.name.toLowerCase()}`} key={item.name}>
+          <div className="sprint-proof-copy"><span>{item.kind}</span><h3>{item.name}</h3><strong>{item.problem}</strong><p>{item.detail}</p><a href={item.href}>View full case study <ArrowUpRight/></a></div>
+          <div className={`sprint-proof-images sprint-proof-images--${item.images.length}`}>{item.images.map(image => <figure key={image.src}><ExpandableImage src={image.src} alt={image.alt} caption={image.caption}/><figcaption>{image.caption}</figcaption></figure>)}</div>
+        </article>)}</div>
+      </section>
+
+      <section className="sprint-section sprint-offer section" id="sprint" aria-labelledby="offer-title">
+        <div className="sprint-section-head"><span>The sprint / 02</span><div><h2 id="offer-title">One problem, start to handoff.</h2></div></div>
+        <ol className="sprint-steps">{steps.map(([number, title, description]) => <li key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></li>)}</ol>
+        <div className="sprint-scope"><div><span>What you get</span><p>A clear flow, polished UI, key states, a useful prototype and a handoff your engineers can use. We agree on the scope first.</p></div><div><span>Time and price</span><p>About two weeks. Starts at $2,000; most scopes are $2,000–$3,000.</p></div></div>
+      </section>
+
+      <section className="sprint-partnership section" aria-labelledby="partnership-title"><span>After the sprint</span><div><h2 id="partnership-title">Need help after the sprint?</h2><p>I can stay with your team for new features, design updates and engineering support.</p></div></section>
+
+      <section className="sprint-close section" aria-labelledby="close-title"><span>Start with the hard part</span><h2 id="close-title">Have a messy product flow? <em>Let’s make it clearer.</em></h2><p>Send me the workflow. I’ll tell you if a sprint can help.</p><a className="sprint-button" href={sprintEmail}>Discuss a sprint <ArrowUpRight/></a></section>
+    </main>
+    <footer className="sprint-footer section"><div className="footer-row"><Mark/><span>Based in Dhaka · Working worldwide</span><div><a href="/">Portfolio</a><a href="mailto:rezahasan1198@gmail.com">Email Reza</a><a href="https://www.linkedin.com/in/reza1198/" target="_blank" rel="noreferrer">LinkedIn</a></div><span>© 2026</span></div></footer>
+  </>;
+}
+
 export function App({ initialPath = null }) {
   const path = (initialPath ?? window.location.pathname).replace(/\/$/, '');
   useEffect(() => {
@@ -1038,6 +1125,7 @@ export function App({ initialPath = null }) {
   else if (path === '/portfolio') page = <PortfolioCase/>;
   else if (path === '/ai-workflows') page = <AIWorkflows/>;
   else if (path === '/about') page = <AboutMe/>;
+  else if (path === '/sprint') page = <SprintPage/>;
   else page = <><Nav/><main><Hero/><SelectedProjects/><DesignSystems/><AIWorkflowTeaser/></main><About/></>;
   return <CaseImageProvider>{page}</CaseImageProvider>;
 }

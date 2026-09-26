@@ -134,16 +134,33 @@ function Hero() {
 }
 
 function SelectedProjects() {
+  const [demoPaused, setDemoPaused] = useState(false);
+  const demoRef = useRef(null);
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (reducedMotion.matches) demoRef.current?.pause();
+  }, []);
   const selected = [{ title: 'Zevian', year: '2026 / Now', description: 'Designing and prototyping an AI workflow for sales managers to investigate performance changes and decide what needs action.', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  const toggleDemo = () => {
+    if (!demoRef.current) return;
+    if (demoRef.current.paused) demoRef.current.play().catch(() => setDemoPaused(true));
+    else demoRef.current.pause();
+  };
   return <section className="section projects work-section" id="work">
     <div className="projects-title"><h2>Selected projects</h2><p>Product strategy, research and systems thinking across AI products, retail and warehouse operations.</p></div>
     <div className="work-grid">
-      {selected.map((project, index) => <a href={project.url} className="work-card" key={project.title}>
-        <figure className={`work-cover work-cover--${project.title.toLowerCase()}`}><img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/></figure>
-        <div className="work-card-heading"><span>{index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
-        <h3>{project.title}</h3><p>{project.description}</p>
-        <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-      </a>)}
+      {selected.map((project, index) => <article className="work-card" key={project.title}>
+        <a href={project.url} className="work-card-link">
+          <figure className={`work-cover work-cover--${project.title.toLowerCase()}`}>
+            <img src={index === 0 ? '/zevian/demo-poster.jpg' : project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/>
+            {index === 0 && <video ref={demoRef} autoPlay muted loop playsInline preload="metadata" poster="/zevian/demo-poster.jpg" aria-hidden="true" onPlay={() => setDemoPaused(false)} onPause={() => setDemoPaused(true)}><source src="/zevian/demo-loop.mp4" type="video/mp4"/></video>}
+          </figure>
+          <div className="work-card-heading"><span>{index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
+          <h3>{project.title}</h3><p>{project.description}</p>
+          <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+        </a>
+        {index === 0 && <button className="demo-toggle" type="button" onClick={toggleDemo} aria-label={demoPaused ? 'Play Zevian preview' : 'Pause Zevian preview'}>{demoPaused ? 'Play preview' : 'Pause preview'}</button>}
+      </article>)}
     </div>
   </section>;
 }

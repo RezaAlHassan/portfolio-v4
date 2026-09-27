@@ -938,6 +938,7 @@ button { font:inherit; }
 .work-card:first-child .work-card-heading>span { background:var(--accent); padding:6px 10px; border-radius:99px; }
 .work-card h3 { margin:16px 0 10px; font-size:44px; font-weight:500; letter-spacing:-.035em; }
 .work-card-link>p { margin:0 0 22px; font-size:18px; line-height:1.5; max-width:560px; }
+.work-description { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
 .work-card .tags { margin-top:auto; }
 .work-card:hover h3 { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:6px; }
 .native-diagram { margin:32px 0; padding:32px; border:1px solid var(--line); border-radius:14px; background:var(--surface); color:var(--ink); }

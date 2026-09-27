@@ -10,7 +10,8 @@ import { DraggableMarquee } from './DraggableMarquee';
 const projects = [
   {
     title: 'Orderific',
-    description: 'Strengthened a shared design system across six restaurant products, with reusable components, theme modes and English LTR / Arabic RTL rules.',
+    description: 'Shared system for restaurant products.',
+    achievement: 'Team observations: 25% faster designer and QA onboarding.',
     tags: ['Design systems', 'Design tokens', 'Variables', 'RTL/LTR'],
     year: '2025–26',
     visual: 'rtl',
@@ -18,7 +19,8 @@ const projects = [
   },
   {
     title: 'Purno',
-    description: 'Designed a connected retail system for store payments, inventory and owner insights, shaped by local payment habits and usability testing.',
+    description: 'Payments and inventory for retailers.',
+    achievement: '$10k seed funding from designs alone.',
     tags: ['Fintech', 'Multi-platform', 'Prototyping', 'Usability testing'],
     year: '2024',
     visual: 'pos',
@@ -26,7 +28,8 @@ const projects = [
   },
   {
     title: 'Jayga',
-    description: 'Led service and product design for shared SME storage, connecting customers, admins, warehouse staff and logistics partners.',
+    description: 'Shared storage for small businesses.',
+    achievement: 'Rack pricing: 3x potential revenue per m².',
     tags: ['Complex workflows', 'Operational tools', 'Systems thinking', 'Field research'],
     year: '2024',
     visual: 'pipeline',
@@ -158,7 +161,7 @@ function SelectedProjects() {
     reducedMotion.addEventListener('change', update);
     return () => reducedMotion.removeEventListener('change', update);
   }, []);
-  const selected = [{ title: 'Zevian', year: '2026 / Now', description: 'Designing and prototyping an AI workflow for sales managers to investigate performance changes and decide what needs action.', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  const selected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI performance insights for sales teams.', achievement: '10+ discovery conversations shaped React prototyping.', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
   const toggleDemo = () => {
     if (!demoRef.current) return;
     if (demoRef.current.paused) { demoManualPlay.current = true; demoRef.current.play().catch(() => setDemoPaused(true)); }
@@ -182,7 +185,7 @@ function SelectedProjects() {
             <img src={index === 0 ? '/zevian/demo-poster.jpg' : project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/>
           </figure>}
           <div className="work-card-heading"><span>{index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
-          <h3>{project.title}</h3><p>{project.description}</p>
+          <h3>{project.title}</h3><p className="work-description">{project.description}<br/>{project.achievement}</p>
           <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
         </a>
       </article>)}

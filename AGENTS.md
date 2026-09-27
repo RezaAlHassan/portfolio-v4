@@ -47,10 +47,13 @@ Do not edit `dist/`; it is generated and ignored by Git.
 
 - Review site copy for employment and client work. The university PDF is a visual reference, not the authority for the website story.
 - Keep ownership, decisions, delivery status and evidence distinct. See WORK-PORTFOLIO-REVIEW.md for unresolved story questions.
+- Avoid summary lines and overview cards that repeat nearby headings, project descriptions or later evidence. Keep introductions when they add necessary background, scope, decision reasons or evidence limits.
 - All homepage covers use the same fixed height per breakpoint and object-fit: cover; crop instead of stretching or changing individual frame heights.
+- Orderific's homepage cover contains the supplied `public/Or-C1.png` through `Or-C4.png` cards in `DraggableMarquee`. Keep the outer cover height and project metadata aligned with the other projects; show inner cards fully, support drag/swipe and keyboard arrows, and reuse ExpandableImage. The strip moves slowly by default, pauses on hover or focus, and has no visible controls. Keep keyboard arrows and Space to pause, and disable automatic motion for reduced-motion users. Zevian also autoplays without visible controls; clicking its cover or pressing Enter/Space pauses or plays it.
 
 - Zevian evolution has two stages: evaluation and patterns; investigation and decision. Do not split these back into four versions.
 - Purno owner screens use vector assets under public/purno/owner-*.svg; keep them expandable.
+- The homepage hero has one canvas particle detail in `src/Particles.jsx`, alternating Tangled path and Clear flow, opening on Clear flow. It sits beside the headline on desktop and below the supporting copy on smaller screens, with only a Hover hint. It moves only on interaction, supports keyboard shape changes and stays static for reduced motion.
 
 ## Product design sprint page
 

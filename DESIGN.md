@@ -104,6 +104,16 @@ components:
 
 # Design System: Reza Portfolio
 
+## Homepage Orderific component cards (current)
+
+Orderific's homepage preview now uses four supplied component-card exports in an automatically moving draggable strip. The outer project cover keeps the same fixed height and corner radius as the other covers. Inner cards remain complete and undistorted, expand through the shared viewer, and support swipe, drag and keyboard controls without visible control icons or labels. This replaces the full LTR/RTL comparison on the homepage; the case study retains the wider interface evidence.
+
+## Homepage particle detail (current)
+
+The homepage hero pairs its headline with an ink-dot canvas up to 440px wide. The shape opens as Clear flow and alternates with Tangled path on press. A longer four-step flow fills more of the canvas, showing the move from a complicated path to a clear structure. The only visible hint is Hover. On screens at 1100px and below, the canvas sits below the supporting copy and selected-work action. The contact section has no duplicate canvas.
+
+The 2,400 dots fill the flow blocks and tangled shape. They move only after pointer movement or a shape change, and stop once settled. The shape button supports Enter and Space. Reduced motion keeps each selected shape static. Use warm paper and ink; keep the headline visually dominant.
+
 ## Overview
 
 **Creative North Star: "The Founder’s Field Notes"**
@@ -332,3 +342,8 @@ All four homepage covers share a fixed height: 400px on desktop, 320px between 8
 ## Case-study refinements
 
 Purno decision summaries reuse Orderific's three-card component styling. Its owner screens use sharp vector artwork and remain expandable. Zevian's overview uses a connected, responsive flowchart separating system preparation from manager review. Product evolution has two combined stages: evaluation/patterns and investigation/decision.
+
+
+## Homepage preview motion (current)
+
+Zevian and Orderific both move automatically without visible control icons, action labels or hints. Click the Zevian cover to pause or play; its title and details open the case study. Orderific loops slowly, remains draggable and swipeable, and opens individual cards with ExpandableImage. Pause the strip on hover, keyboard focus and while an image viewer is open. Keep arrow-key navigation and Space to pause. Reduced-motion users get still previews. This replaces the earlier restriction on continuous motion outside Zevian. All outer cover heights remain equal.

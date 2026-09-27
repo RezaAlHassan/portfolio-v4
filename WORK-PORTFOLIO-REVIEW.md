@@ -25,4 +25,8 @@ The portfolio-redesign page supports craft but is weaker hiring evidence than th
 
 ## Changes made
 
+### Copy repetition review (September 2026)
+
+Removed the homepage project-summary line, generic section introductions and repeated overview decision cards. Shortened repeated hero, footer, owner-app and personal-introduction copy. Zevian still shows both evolution stages; HRMS retains its earlier-project context note. Research limits, delivery status, ownership and projected-versus-observed outcomes remain explicit.
+
 Aligned Orderific ownership wording, clarified Zevian's prototype stage and build output, connected the Purno owner screens to business questions, moved Jayga ownership earlier and replaced its first-opportunity framing with delivery responsibility. Existing metrics were not newly verified or strengthened.

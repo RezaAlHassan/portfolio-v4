@@ -7,6 +7,19 @@ This repository contains Reza Al Hassan's product-design portfolio. Preserve fac
 - Zevian: the current founder product for evidence-backed AI performance signals.
 - Zevian HRMS: an earlier, broader HR management concept and interface-system project.
 
+## Portfolio routes
+
+- `/` is a two-link entry page for `/product` and `/design`.
+- `/design` keeps the original design homepage and four-cover layout. Its cover order is Zevian, Orderific, Jayga and Purno.
+- `/product` has four covers in this order: Zevian, Orderific, Jayga and Purno. Jayga is marked as the featured project. There is no Other work section.
+- `/product/jayga`, `/product/zevian`, `/product/purno` and `/product/orderific` put outcomes before process while preserving design decisions and process flows. Do not show a Jayga deferred section.
+- `/product/purno` preserves the full Purno design story. `/product/zevian` preserves the full investigation flow and two-stage evolution. `/product/orderific` starts with the measured handover and onboarding comparisons, then covers the first seven months of systems, RTL, audits, hiring and team guidance before the later interface-to-data mapping phase. It shows component properties, documentation, the selected dark-mode Figma frame with its name, LTR/RTL and light/dark examples. Keep images expandable and their claims specific.
+- Orderific's early scope was four restaurant management platforms and two HRMS platforms. The 28% development-time result came from a before-and-after handover comparison. The onboarding-time comparison was between Reza's own onboarding and that of new hires after he wrote the Figma guide. Do not present the later field-to-data mapping as the whole project, or call all six platforms restaurant products.
+- Product homepage project descriptions have at most three text lines: up to two for the work and one regular-weight metric line. Jayga's ~3× revenue figure is a modelled potential, not a realised result.
+- The product cards report two paying Zevian customers, a 28% Orderific development-time reduction and half the onboarding time, Jayga leadership of an eight-person team, and Purno's moderated-test and seed-funding figures. Keep the Zevian customer count distinct from validation of its current prototype. The Jayga team total is broader than the five engineers and founder named in the four-month storage case.
+- Jayga ran from November 2023 to August 2025. The storage case shown here is a four-month scope in 2024; keep those dates distinct. The product case reuses the full design-case layout with product-focused copy, research, journey mapping, prioritisation, grid rules and delivery decisions.
+- The original `/jayga`, `/zevian`, `/purno` and `/orderific` design cases remain available.
+
 ## Commands
 
 - Install dependencies: `npm install`

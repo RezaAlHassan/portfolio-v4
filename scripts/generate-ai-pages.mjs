@@ -9,9 +9,15 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const output = join(root, 'dist');
 const shell = await readFile(join(output, 'index.html'), 'utf8');
 const routes = {
+  'product': ['Reza Al Hassan — Product portfolio', 'Product and design work across Zevian, Orderific, Jayga and Purno.'],
+  'design': ['Reza Al Hassan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
+  'product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
+  'product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],
+  'product/purno': ['Purno — Product case study', 'Product scope and design decisions behind a retail POS and owner app.'],
+  'product/orderific': ['Orderific — Product and design systems case study', 'Handover, RTL design, team leadership and design systems across four restaurant and two HRMS platforms, followed by interface-to-data mapping.'],
   'zevian': ['Zevian — AI performance workflow case study', 'How Zevian turns weekly work reports into evidence-backed performance signals that managers can review and question.'],
   'zevian-hrms': ['Zevian HRMS — Interface system case study', 'An earlier HRMS concept and reusable interface system for attendance, employee records, calendars, approvals and work policies.'],
-  'orderific': ['Orderific — Design system case study', 'A shared component system across six restaurant products with RTL, LTR and theme-mode support.'],
+  'orderific': ['Orderific — Design system case study', 'Design systems across four restaurant management and two HRMS platforms, with RTL, LTR and theme-mode support.'],
   'purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
   'jayga': ['Jayga — Warehouse operations case study', 'A warehouse system connecting storage, pricing, billing, delivery and fulfilment.'],
   'portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
@@ -42,6 +48,11 @@ const toMarkdown = (html, title, description, slug) => {
 const vite = await createServer({ root, configFile:false, server:{ middlewareMode:true }, appType:'custom', logLevel:'error' });
 try {
   const { App } = await vite.ssrLoadModule('/src/main.jsx');
+  const entry = renderToString(React.createElement(App, { initialPath:'/' }));
+  await writeFile(join(output, 'index.html'), shell
+    .replace(/<title>.*?<\/title>/s, '<title>Reza Al Hassan — Product and design portfolios</title>')
+    .replace(/<meta name="description" content=".*?"\s*\/?>/s, '<meta name="description" content="Choose the product or design portfolio of Reza Al Hassan." />')
+    .replace('<div id="root"></div>', `<div id="root">${entry}</div>`));
   for (const [slug, [title, description]] of Object.entries(routes)) {
     const rendered = renderToString(React.createElement(App, { initialPath:`/${slug}` }));
     const person = {'@type':'Person',name:'Reza Al Hassan',jobTitle:'Product Designer'};

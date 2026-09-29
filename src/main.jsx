@@ -18,6 +18,15 @@ const projects = [
     url: '/orderific',
   },
   {
+    title: 'Jayga',
+    description: 'Shared storage for small businesses.',
+    achievement: 'Rack pricing: 3x potential revenue per m².',
+    tags: ['Complex workflows', 'Operational tools', 'Systems thinking', 'Field research'],
+    year: 'Nov 2023–Aug 2025',
+    visual: 'pipeline',
+    url: '/jayga',
+  },
+  {
     title: 'Purno',
     description: 'Payments and inventory for retailers.',
     achievement: '$10k seed funding from designs alone.',
@@ -26,22 +35,19 @@ const projects = [
     visual: 'pos',
     url: '/purno',
   },
-  {
-    title: 'Jayga',
-    description: 'Shared storage for small businesses.',
-    achievement: 'Rack pricing: 3x potential revenue per m².',
-    tags: ['Complex workflows', 'Operational tools', 'Systems thinking', 'Field research'],
-    year: '2024',
-    visual: 'pipeline',
-    url: '/jayga',
-  },
 ];
 
 const pageMetadata = {
-  '/': ['Reza — Product designer for B2B and AI products', '0→1 product design for B2B SaaS and AI products, combining UX research, product strategy, systems thinking, design systems and prototyping.'],
+  '/product': ['Reza Al Hassan — Product portfolio', 'Product and design work across Zevian, Orderific, Jayga and Purno.'],
+  '/design': ['Reza Al Hassan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
+  '/product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
+  '/product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],
+  '/product/purno': ['Purno — Product case study', 'Product scope and design decisions behind a retail POS and owner app.'],
+  '/product/orderific': ['Orderific — Product and design systems case study', 'Handover, RTL design, team leadership and design systems across four restaurant and two HRMS platforms, followed by interface-to-data mapping.'],
+  '/': ['Reza Al Hassan — Product and design portfolios', 'Choose the product or design portfolio of Reza Al Hassan.'],
   '/zevian': ['Zevian — Performance investigation case study', 'How Zevian helps sales managers detect performance changes, add context and decide what needs action.'],
   '/zevian-hrms': ['Zevian HRMS — Interface system case study', 'An early HRMS concept and reusable interface system covering attendance, employee records, calendars, approvals and work policies.'],
-  '/orderific': ['Orderific — Design system case study', 'A shared component system across six restaurant products with RTL, LTR and theme-mode support.'],
+  '/orderific': ['Orderific — Design system case study', 'Design systems across four restaurant management and two HRMS platforms, with RTL, LTR and theme-mode support.'],
   '/purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
   '/jayga': ['Jayga — Warehouse operations case study', 'A warehouse order system connecting storage, pricing, billing and fulfilment.'],
   '/portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
@@ -103,7 +109,7 @@ function Mark({ home = false }) {
   return <a className="mark" href={home ? '/' : '#top'} aria-label={home ? 'Back to home' : 'Back to top'}><span>REZA A</span><i aria-hidden="true" /></a>;
 }
 
-function Nav({ caseStudy = false, aboutPage = false, sprintPage = false }) {
+function Nav({ caseStudy = false, aboutPage = false, sprintPage = false, portfolio = 'design', processHref = '#process' }) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     const close = (event) => event.key === 'Escape' && setOpen(false);
@@ -116,12 +122,13 @@ function Nav({ caseStudy = false, aboutPage = false, sprintPage = false }) {
         <Mark home={caseStudy || aboutPage || sprintPage} />
         <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="main-menu" aria-label="Toggle menu">{open ? <X /> : <Menu />}</button>
         <div id="main-menu" className={`nav-links ${open ? 'open' : ''}`}>
-          {caseStudy && <a href="/" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> All work</a>}
-          {aboutPage && <a href="/" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> All work</a>}
-          {sprintPage && <a href="/" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> Portfolio</a>}
+          {caseStudy && <a href={`/${portfolio}`} onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> All work</a>}
+          {aboutPage && <a href="/design" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> All work</a>}
+          {sprintPage && <a href="/design" onClick={() => setOpen(false)}><ArrowLeft className="nav-back-icon"/> Portfolio</a>}
           {!caseStudy && !aboutPage && !sprintPage && <a href="#work" onClick={() => setOpen(false)}>Work</a>}
+          {!sprintPage && <a href={portfolio === 'product' ? '/design' : '/product'} onClick={() => setOpen(false)}>{portfolio === 'product' ? 'Design' : 'Product'}</a>}
           {!sprintPage && <a href="/ai-workflows" onClick={() => setOpen(false)}>AI workflows</a>}
-          {caseStudy && <a href="#process" onClick={() => setOpen(false)}>Process</a>}
+          {caseStudy && <a href={processHref} onClick={() => setOpen(false)}>Process</a>}
           {caseStudy && <a href="#outcome" onClick={() => setOpen(false)}>Outcome</a>}
           {sprintPage ? <a href="#proof" onClick={() => setOpen(false)}>Proof</a> : aboutPage ? <a href="#interests" onClick={() => setOpen(false)}>Interests</a> : <a href="/about" onClick={() => setOpen(false)}>About</a>}
           <a className="nav-cta" href={sprintPage ? sprintEmail : 'mailto:rezahasan1198@gmail.com'}>{sprintPage ? 'Discuss a sprint' : 'Let’s talk'} <ArrowUpRight /></a>
@@ -150,7 +157,23 @@ function Hero() {
   );
 }
 
-function SelectedProjects() {
+function ProductHero() {
+  return <section className="hero hero--particles" id="top">
+    <h1><span>PRODUCT <em>&amp; design</em></span><span>FOR COMPLEX</span><span>B2B PROBLEMS.</span></h1>
+    <Particles/>
+    <div className="hero-bottom"><div className="hero-copy"><p>I work across product strategy, interface design and technical delivery. I turn research and business rules into flows, prototypes and decisions teams can build.</p></div><a href="#work" className="scroll-link">See product work <ArrowDown/></a></div>
+  </section>;
+}
+
+function PortfolioEntry() {
+  return <main className="portfolio-entry" id="top">
+    <div className="portfolio-entry-inner"><span className="entry-mark">REZA A<i aria-hidden="true"/></span><div className="entry-intro"><p>Reza Al Hassan · Dhaka, Bangladesh</p><h1>Choose a <em>portfolio.</em></h1><span>Two views of work across product decisions, interfaces and delivery.</span></div>
+      <div className="entry-choices"><a href="/product"><span>01 / Product</span><strong>Product decisions, design and delivery.</strong><ArrowUpRight aria-hidden="true"/></a><a href="/design"><span>02 / Design</span><strong>Product design, systems and interface evidence.</strong><ArrowUpRight aria-hidden="true"/></a></div>
+    </div>
+  </main>;
+}
+
+function SelectedProjects({ portfolio = 'design' }) {
   const [demoPaused, setDemoPaused] = useState(false);
   const demoRef = useRef(null);
   const demoManualPlay = useRef(false);
@@ -161,18 +184,24 @@ function SelectedProjects() {
     reducedMotion.addEventListener('change', update);
     return () => reducedMotion.removeEventListener('change', update);
   }, []);
-  const selected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI performance insights for sales teams.', achievement: '10+ discovery conversations shaped React prototyping.', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  const designSelected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI performance insights for sales teams.', achievement: '10+ discovery conversations shaped React prototyping.', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  const selected = portfolio === 'product' ? [
+    { title: 'Zevian', year: '2026 · Founder product', metric: '10+ discovery conversations · 2 paying customers', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
+    { title: 'Orderific', year: '2025–26 · Product designer', metric: '28% less development time · ½ onboarding time', description: 'Scaled design systems and improved design-to-development workflows.', tags: ['Design systems', 'RTL design', 'Technical delivery'], url: '/product/orderific', visual: 'rtl', image: '/orderific/cover-comparison.svg', alt: 'Orderific interface components in English LTR and Arabic RTL' },
+    { title: 'Jayga', year: 'Nov 2023–Aug 2025 · Product lead', metric: '~3× revenue/m² potential · 8-person team led', description: 'Turned warehouse operations into grid, billing and delivery workflows.', tags: ['Product rules', 'Service flows', 'Operational tools'], url: '/product/jayga', image: '/jayga/warehouse-visit.jpg', alt: 'Checking stock in a Jayga warehouse aisle' },
+    { title: 'Purno', year: '2024 · Product designer', metric: '~20% faster in moderated testing · $10K seed', description: 'Designed POS workflows across sales, inventory and operations.', tags: ['POS flows', 'Interface design', 'Testing'], url: '/product/purno', image: '/purno/cover.webp', alt: 'Purno payment cover showing the total and split amount' },
+  ] : designSelected;
   const toggleDemo = () => {
     if (!demoRef.current) return;
     if (demoRef.current.paused) { demoManualPlay.current = true; demoRef.current.play().catch(() => setDemoPaused(true)); }
     else demoRef.current.pause();
   };
-  return <section className="section projects work-section" id="work">
-    <div className="projects-title"><h2>Selected projects</h2></div>
+  return <section className={`section projects work-section ${portfolio === 'product' ? 'work-section--product' : ''}`} id="work">
+    <div className="projects-title"><h2>{portfolio === 'product' ? 'Product work' : 'Selected projects'}</h2></div>
     <div className="work-grid">
       {selected.map((project, index) => <article className={`work-card work-card--${project.title.toLowerCase()}`} key={project.title}>
         {project.title === 'Orderific' && <figure className="work-cover work-cover--orderific work-cover--marquee"><DraggableMarquee items={orderificCards} speed={1} renderItem={(item, { duplicate }) => <ExpandableImage src={item.src} alt={item.alt} tabIndex={duplicate ? -1 : undefined}/>}/></figure>}
-        {index === 0 && <figure className="work-cover work-cover--zevian">
+        {project.title === 'Zevian' && <figure className="work-cover work-cover--zevian">
           <img src="/zevian/demo-poster.jpg" alt={project.alt} loading="eager"/>
           <video ref={demoRef} autoPlay muted loop playsInline preload="metadata" poster="/zevian/demo-poster.jpg" aria-hidden="true" onPlay={() => {
             if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && !demoManualPlay.current) demoRef.current.pause();
@@ -181,11 +210,13 @@ function SelectedProjects() {
           <button className="demo-toggle" type="button" onClick={toggleDemo} aria-label={demoPaused ? 'Play Zevian preview' : 'Pause Zevian preview'}/>
         </figure>}
         <a href={project.url} className="work-card-link">
-          {project.title !== 'Orderific' && index !== 0 && <figure className={`work-cover work-cover--${project.title.toLowerCase()}`}>
-            <img src={index === 0 ? '/zevian/demo-poster.jpg' : project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/>
+          {project.title !== 'Orderific' && project.title !== 'Zevian' && <figure className={`work-cover work-cover--${project.title.toLowerCase()}`}>
+            <img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/>
           </figure>}
-          <div className="work-card-heading"><span>{index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
-          <h3>{project.title}</h3><p className="work-description">{project.description}<br/>{project.achievement}</p>
+          <div className="work-card-heading"><span>{portfolio === 'design' && index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
+          <h3>{project.title}{portfolio === 'product' && project.title === 'Jayga' && <span className="work-featured-label">Featured project</span>}</h3>{portfolio === 'product'
+            ? <p className="work-description"><span className="work-summary">{project.description}</span><span className="work-metric">{project.metric}</span></p>
+            : <p className="work-description">{project.description}<br/>{project.achievement}</p>}
           <div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
         </a>
       </article>)}
@@ -207,6 +238,48 @@ function DesignSystems() {
       </div>
     </section>
   );
+}
+
+function JaygaProductCase() {
+  return <JaygaCase portfolio="product"/>;
+}
+
+function ProductOrderificCase() {
+  return <><Nav caseStudy portfolio="product" processHref="#first-seven-months"/>
+    <main className="case-page product-case product-orderific-page" id="top">
+      <section className="case-hero case-wrap"><a className="back-link" href="/product"><ArrowLeft/> Product work</a><p className="product-case-kicker">2025–26 · Product designer · Design and engineering</p><h1>Make complex systems<br/><em>easier to build.</em></h1><div className="case-hero-bottom"><p>I improved how designers and engineers worked together across restaurant management and HRMS products, from handover and RTL design to later database mapping.</p><div className="case-tags"><span>Handover</span><span>Design systems</span><span>RTL/LTR</span><span>Team guidance</span><span>Data mapping</span></div></div></section>
+
+      <section className="case-section case-wrap product-outcome" id="outcome"><div className="case-index">01 / Measured results</div><div className="case-content"><h2>Faster handover, clearer onboarding.</h2><p className="lead narrow">I compared development time before and after changing handover. For onboarding, I compared my own time with that of new hires after I wrote a Figma guide for designers and QA. Both are internal comparisons.</p><div className="orderific-result-pair"><div><strong>28%</strong><span>less development time after handover changes</span></div><div><strong>½</strong><span>the onboarding time after the Figma guide</span></div></div></div></section>
+
+      <section className="case-section case-wrap" id="first-seven-months"><div className="case-index">02 / First seven months</div><div className="case-content"><h2>Build the system, then help the team use it.</h2><p className="lead narrow">As development began, my work moved from interface design and handover to reviews, hiring and team support.</p><ol className="orderific-phase-list"><li><span>01 / Handover</span><div><h3>Reduce work lost between design and development.</h3><p>I improved handover and scaled the restaurant and HRMS design systems.</p></div></li><li><span>02 / RTL</span><div><h3>Design Arabic flows for restaurant management.</h3><p>I set RTL rules for navigation, reading order and components while keeping English screens in the same system.</p></div></li><li><span>03–04 / Audit</span><div><h3>Review 56 mapping projects with a two-person design team.</h3><p>I checked screens and naming rules, guided junior designers, and worked through conflicts with engineers as development started.</p></div></li><li><span>05 / Hiring</span><div><h3>Help select the next designers.</h3><p>I took part in junior-designer interviews and design tests.</p></div></li><li><span>06 / Team delivery</span><div><h3>Keep prototypes, tasks and system assets aligned.</h3><p>I guided prototyping, managed design tasks and onboarding, and fixed asset differences across three design systems.</p></div></li><li><span>07 / Guidance</span><div><h3>Make the system easier to learn and check.</h3><p>I wrote the Figma guide for designers and QA, prepared ICP research, and made icon use more consistent.</p></div></li></ol></div></section>
+
+      <section className="case-section case-wrap" id="design-system">
+        <div className="case-index">03 / Design system evidence</div>
+        <div className="case-content">
+          <h2>Make the Figma files easier to build from.</h2>
+          <p className="lead narrow">I made components easier to reuse and screens easier to find. Later, unique frame names helped engineers and automated tools identify the right interface.</p>
+          <div className="product-decision-list"><article><span>Identification</span><h3>Unique frame names</h3><p>Use one naming pattern so automated tools and people can find the same screen.</p></article><article><span>Components</span><h3>Reusable input states</h3><p>Keep input type, helper text, content and state inside component properties.</p></article><article><span>Governance</span><h3>Rules before handoff</h3><p>Document token layers, component states, RTL behaviour and review checks.</p></article></div>
+          <div className="product-other-proof"><figure><ExpandableImage src="/orderific/component-playground.png" alt="Orderific input component playground showing type, state, helper and variable mode properties" caption="The component playground exposes input properties and states used across screens."/><figcaption>Reusable component properties</figcaption></figure><figure><ExpandableImage src="/orderific/governance.png" alt="Orderific documentation page about token structure and naming conventions" caption="Documentation for token layers and naming rules."/><figcaption>Documentation and naming rules</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section className="case-section case-wrap" id="scale">
+        <div className="case-index">04 / Product scale</div>
+        <div className="case-content">
+          <h2>Systems across platforms, directions and devices.</h2>
+          <p className="lead narrow">Restaurant screens needed to work in Arabic and English, light and dark themes, and on desktop and tablet. The wider work also included a mobile kitchen system and a customer app for orders, menus and events.</p>
+          <div className="orderific-scale-facts"><div><span>4</span><p>restaurant management platforms</p></div><div><span>2</span><p>HRMS platforms</p></div><div><span>2</span><p>mobile app roles: kitchen and customer</p></div></div>
+          <div className="orderific-scale-images">
+            <figure className="orderific-scale-images--wide"><ExpandableImage src="/orderific/rtl-comparison.png" alt="Orderific delivery zone in English LTR and Arabic RTL" caption="The delivery-zone screen in LTR and RTL."/><figcaption>Direction: LTR and RTL</figcaption></figure>
+            <figure><ExpandableImage src="/orderific/reports-light.png" alt="Orderific reports screen in light mode" caption="Reports in light mode."/><figcaption>Light mode</figcaption></figure>
+            <figure><ExpandableImage src="/orderific/dark-mode.png" alt="Selected Figma frame outlined in blue, with a visible frame name above a dark-mode Orderific reports screen" caption="The selected dark-mode Figma frame shows the blue outline and its unique frame name."/><figcaption>Dark mode · selected frame and name</figcaption></figure>
+          </div>
+          <a className="product-other-link" href="/orderific">See the design system case study <ArrowUpRight/></a>
+        </div>
+      </section>
+      <section className="case-section case-wrap" id="mapping"><div className="case-index">05 / Later database mapping</div><div className="case-content"><h2>Connect form fields to business data.</h2><p className="lead narrow">The automated tool could recognise an input field, but it could not know what that field meant to the business. I linked it to the right database value and worked with engineers to fix mismatches. This came after the earlier design mapping work.</p><ol className="orderific-mapping-flow"><li><span>01</span><strong>Design the screen</strong><p>Use clear components, states and unique frame names.</p></li><li><span>02</span><strong>Detect fields</strong><p>The tool identifies inputs and other interface objects.</p></li><li><span>03</span><strong>Connect the data</strong><p>Link each field to its business value in the database.</p></li><li><span>04</span><strong>Check the build</strong><p>Fix mismatches across the screen, components and data with engineers.</p></li></ol><figure className="product-case-figure"><ExpandableImage src="/orderific/input-drift.png" alt="Orderific form with input fields and a guideline table of business codes" caption="A product form shows interface fields beside business codes. The mapper itself is not shown."/><figcaption>Interface fields and business values in one product screen.</figcaption></figure></div></section>
+    </main><About portfolio="product"/>
+  </>;
 }
 
 function PortfolioVisual() {
@@ -233,7 +306,7 @@ function PortfolioCase() {
     <Nav caseStudy/>
     <main className="case-page portfolio-case" id="top">
       <section className="case-hero case-wrap">
-        <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
+        <a className="back-link" href="/design"><ArrowLeft/> Selected work</a>
         <h1>A portfolio built<br/><em>through iteration.</em></h1>
         <div className="case-hero-bottom"><p>I rebuilt the portfolio around a clearer project hierarchy and one editorial system, using moodboards to test the visual direction.</p><div className="case-tags"><span>Portfolio</span><span>Visual direction</span><span>Design system</span><span>2026</span></div></div>
         <div className="case-stage portfolio-stage"><PortfolioVisual/></div>
@@ -270,10 +343,10 @@ function PortfolioCase() {
   </>;
 }
 
-function About() {
+function About({ portfolio = 'design' }) {
   return (
     <footer className="about section" id="about">
-      <div className="about-top"><div className="about-copy"><p>Available for product design roles.</p></div><h2>Have a complex product<br/>challenge? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
+      <div className="about-top"><div className="about-copy"><p>{portfolio === 'product' ? 'Available for product manager and product design roles.' : 'Available for product design roles.'}</p></div><h2>Have a complex product<br/>challenge? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
       <div className="footer-row"><Mark/><span>Based in Dhaka · Working worldwide</span><div><a href="mailto:rezahasan1198@gmail.com">Email Reza</a><a href="https://www.linkedin.com/in/reza1198/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://www.instagram.com/rezaa.hassan/" target="_blank" rel="noreferrer">Instagram</a></div><span>© 2026</span></div>
     </footer>
   );
@@ -286,12 +359,12 @@ function FlowArrow({ className = '' }) {
   </svg>;
 }
 
-function ZevianCase() {
+function ZevianCase({ portfolio = 'design' }) {
   return <>
-    <Nav caseStudy/>
+    <Nav caseStudy portfolio={portfolio}/>
     <main className="case-page zevian-page" id="top">
       <section className="case-hero case-wrap">
-        <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
+        <a className="back-link" href={`/${portfolio}`}><ArrowLeft/> {portfolio === 'product' ? 'Product work' : 'Selected work'}</a>
         <h1>Know what changed.<br/><em>Understand why.</em></h1>
         <div className="case-hero-bottom"><p>Zevian helps sales managers investigate performance changes before they become pipeline problems.</p><div className="case-tags"><span>Founder-led 0→1</span><span>AI-native</span><span>Human-in-the-loop</span><span>Trust &amp; uncertainty</span><span>Design-to-code</span></div></div>
         <figure className="zevian-hero-product">
@@ -299,6 +372,11 @@ function ZevianCase() {
           <figcaption>List for scanning. Drawer for investigation.</figcaption>
         </figure>
       </section>
+
+      {portfolio === 'product' && <section className="case-section case-wrap product-outcome" id="outcome">
+        <div className="case-index">Outcome / current stage</div>
+        <div className="case-content"><h2>A new direction, shown in a working prototype.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring. The React prototype lets managers review evidence and make a decision. Zevian has two paying customers, and validation of this investigation flow continues.</p></div>
+      </section>}
 
       <section className="case-section case-wrap overview" id="overview">
         <div className="case-index">01 / Current product</div>
@@ -328,7 +406,7 @@ function ZevianCase() {
       <section className="case-section case-wrap" id="process">
         <div className="case-index">02 / What discovery changed</div>
         <div className="case-content">
-          <h2>Discovery shifted the product from evaluation to investigation.</h2>
+          <h2>What interviews changed.</h2>
           <div className="research-note"><strong>Discovery ran from May to September alongside building and GTM.</strong><p>The interviews, prototype feedback and synthesis represented about 1–2 weeks of focused effort within that period.</p></div>
           <div className="pivot-list">
             <article><span>Evaluation → diagnosis</span><h3>Start with the changed metric.</h3><p>Managers needed support after a metric changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
@@ -374,7 +452,7 @@ function ZevianCase() {
         </div>
       </section>
 
-      <section className="case-section case-wrap outcome" id="outcome">
+      <section className="case-section case-wrap outcome" id={portfolio === 'product' ? undefined : 'outcome'}>
         <div className="case-index">05 / System and build</div>
         <div className="case-content">
           <h2>From product decisions to a testable React prototype.</h2>
@@ -393,7 +471,7 @@ function ZevianCase() {
         </div>
       </section>
     </main>
-    <About/>
+    <About portfolio={portfolio}/>
   </>;
 }
 
@@ -429,7 +507,7 @@ function ZevianHrmsCase() {
     <Nav caseStudy/>
     <main className="case-page hrms-page" id="top">
       <section className="case-hero case-wrap hrms-hero">
-        <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
+        <a className="back-link" href="/design"><ArrowLeft/> Selected work</a>
         <h1>An HR system<br/><em>given one language.</em></h1>
         <div className="case-hero-bottom"><p>I refined an early HRMS concept and working prototype into a reusable interface system for employee records, attendance, policies and approvals.</p><div className="case-tags"><span>Early concept</span><span>HRMS</span><span>Design system</span><span>Prototype</span></div></div>
         <div className="hrms-stage" aria-label="Zevian HRMS interface overview">
@@ -507,10 +585,10 @@ function OrderificCase() {
     <Nav caseStudy/>
     <main className="case-page orderific-page" id="top">
       <section className="case-hero case-wrap orderific-hero">
-        <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
-        <h1>One system.<br/>Six products.<br/><em>Two directions.</em></h1>
+        <a className="back-link" href="/design"><ArrowLeft/> Selected work</a>
+        <h1>Two product families.<br/>Six platforms.<br/><em>Two directions.</em></h1>
         <div className="case-hero-bottom">
-          <p>I strengthened one design system across six restaurant products, adding RTL rules, refining light and dark themes, and documenting handoff checks.</p>
+          <p>I strengthened design systems across four restaurant management and two HRMS platforms, adding RTL rules to the RMS, refining themes, and documenting handoff checks.</p>
           <div className="case-tags"><span>Design systems</span><span>Design tokens</span><span>Variables</span><span>RTL/LTR</span><span>Multi-platform</span></div>
         </div>
         <div className="orderific-stage">
@@ -522,9 +600,9 @@ function OrderificCase() {
       <section className="case-section case-wrap" id="overview">
         <div className="case-index">01 / Overview</div>
         <div className="case-content">
-          <h2>Four system initiatives across six products.</h2>
-          <p className="lead narrow">As Orderific grew across six restaurant products, components drifted and direction rules were inconsistent. The team needed one system for component states, RTL and theme modes.</p>
-          <dl className="case-meta"><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Collaboration</dt><dd>Designers · PMs · engineers</dd></div><div><dt>Scope</dt><dd>Components · RTL · Theming</dd></div><div><dt>Leadership</dt><dd>Hiring · Mentoring · QA</dd></div><div><dt>Period</dt><dd>2025–26</dd></div><div><dt>Context</dt><dd>Six restaurant products</dd></div></dl>
+          <h2>System work across six platforms.</h2>
+          <p className="lead narrow">Across four restaurant management and two HRMS platforms, components drifted and handoff rules varied. The RMS screens also needed clear direction and theme rules.</p>
+          <dl className="case-meta"><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Collaboration</dt><dd>Designers · PMs · engineers</dd></div><div><dt>Scope</dt><dd>Components · RTL · Theming</dd></div><div><dt>Leadership</dt><dd>Hiring · Mentoring · QA</dd></div><div><dt>Period</dt><dd>2025–26</dd></div><div><dt>Context</dt><dd>4 RMS · 2 HRMS platforms</dd></div></dl>
         </div>
       </section>
 
@@ -580,7 +658,7 @@ function OrderificCase() {
         <div className="case-index">05 / System result</div>
         <div className="case-content">
           <h2>One shared system for design and handoff.</h2>
-          <div className="outcome-numbers orderific-outcomes"><article><strong>1 shared set</strong><span>Used across six restaurant products</span></article><article><strong>3</strong><span>Token layers: global, alias and component</span></article><article><strong>2 directions</strong><span>LTR and RTL across light and dark themes</span></article></div>
+          <div className="outcome-numbers orderific-outcomes"><article><strong>6 platforms</strong><span>Four RMS and two HRMS platforms</span></article><article><strong>3</strong><span>Token layers: global, alias and component</span></article><article><strong>2 directions</strong><span>LTR and RTL across light and dark themes in RMS</span></article></div>
           <div className="learning-grid"><h3>Main learning</h3><p>The library became useful only when component rules, documentation and review checks worked together.</p></div>
           <a className="next-project" href="/purno"><span>Next case study</span><strong>Purno <ArrowUpRight/></strong></a>
         </div>
@@ -619,12 +697,12 @@ function JaygaGridDiagram() {
   return <SourceDiagram src="/jayga/grid-model.svg" alt="Warehouse and grid: map twenty 50-square-metre grids, then place items for two users and bill by occupied space and per-grid price."/>;
 }
 
-function PurnoCase() {
+function PurnoCase({ portfolio = 'design' }) {
   return <>
-    <Nav caseStudy/>
+    <Nav caseStudy portfolio={portfolio}/>
     <main className="case-page purno-page" id="top">
       <section className="case-hero case-wrap purno-hero">
-        <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
+        <a className="back-link" href={`/${portfolio}`}><ArrowLeft/> {portfolio === 'product' ? 'Product work' : 'Selected work'}</a>
         <h1><span>A faster sale</span><span>for a shop owner</span><em>using software for the first time.</em></h1>
         <div className="case-hero-bottom">
           <p>I shaped a loose brief into a cross-platform POS for small shops in Bangladesh, bringing sales, stock and local payment methods into one daily flow.</p>
@@ -635,6 +713,11 @@ function PurnoCase() {
           <ExpandableImage className="case-stage-image" src="/purno/cover.webp" alt="Purno payment cover showing the total and split amount" caption="Purno payment experience." loading="eager" decoding="sync" />
         </div>
       </section>
+
+      {portfolio === 'product' && <section className="case-section case-wrap product-outcome" id="outcome">
+        <div className="case-index">Outcome / evidence</div>
+        <div className="case-content"><h2>A designed MVP supported a $10k seed pitch.</h2><p className="lead narrow">In moderated testing, colour-coded product cards reduced transaction time by about 20%. That result applies to the tested card change. The funding is a business milestone, not evidence of product adoption.</p></div>
+      </section>}
 
       <section className="case-section case-wrap" id="overview">
         <div className="case-index">01 / Overview</div>
@@ -722,17 +805,17 @@ function PurnoCase() {
         </div>
       </section>
 
-      <section className="case-section case-wrap outcome" id="outcome">
+      <section className="case-section case-wrap outcome" id={portfolio === 'product' ? undefined : 'outcome'}>
         <div className="case-index">06 / Result</div>
         <div className="case-content">
-          <h2>From an open brief to a funded MVP.</h2>
-          <div className="outcome-numbers purno-outcomes"><article><strong>$10k</strong><span>Seed funding raised after a pitch supported by the designed MVP</span></article><article><strong>~20%</strong><span>Faster transactions in moderated testing</span></article><article><strong>3</strong><span>Designed for desktop, tablet and mobile</span></article></div>
-          <div className="learning-grid"><h3>Main learning</h3><p>Localisation goes beyond translation. Menu depth, reading distance and payment habits determine whether a POS works at a busy counter.</p><h3>Evidence note</h3><p>The speed result comes from moderated tests of the colour-coded cards. The funding relates to the MVP pitch, not long-term product impact.</p></div>
+          <h2>{portfolio === 'product' ? 'What made the flow work at the counter.' : 'From an open brief to a funded MVP.'}</h2>
+          {portfolio !== 'product' && <div className="outcome-numbers purno-outcomes"><article><strong>$10k</strong><span>Seed funding raised after a pitch supported by the designed MVP</span></article><article><strong>~20%</strong><span>Faster transactions in moderated testing</span></article><article><strong>3</strong><span>Designed for desktop, tablet and mobile</span></article></div>}
+          {portfolio === 'product' ? <p className="lead narrow">Shallow menus, clear product cards and familiar local payment choices helped merchants keep the sale moving while a customer waited.</p> : <div className="learning-grid"><h3>Main learning</h3><p>Localisation goes beyond translation. Menu depth, reading distance and payment habits determine whether a POS works at a busy counter.</p><h3>Evidence note</h3><p>The speed result comes from moderated tests of the colour-coded cards. The funding relates to the MVP pitch, not long-term product impact.</p></div>}
           <a className="next-project" href="/jayga"><span>Next case study</span><strong>Jayga <ArrowUpRight/></strong></a>
         </div>
       </section>
     </main>
-    <About/>
+    <About portfolio={portfolio}/>
   </>;
 }
 
@@ -743,16 +826,18 @@ function JaygaImage({ src, alt, caption, className = '' }) {
   </figure>;
 }
 
-function JaygaCase() {
+function JaygaCase({ portfolio = 'design' }) {
+  const isProduct = portfolio === 'product';
   return <>
-    <Nav caseStudy/>
-    <main className="case-page jayga-page" id="top">
+    <Nav caseStudy portfolio={isProduct ? 'product' : undefined} processHref={isProduct ? '#research' : undefined}/>
+    <main className={`case-page jayga-page ${isProduct ? 'jayga-page--product' : ''}`} id="top">
       <section className="case-hero case-wrap jayga-hero">
-        <a className="back-link" href="/"><ArrowLeft/> Selected work</a>
-        <h1><span>Connecting storage,</span><span>people <em>and systems.</em></span></h1>
+        <a className="back-link" href={isProduct ? '/product' : '/design'}><ArrowLeft/> {isProduct ? 'Product work' : 'Selected work'}</a>
+        {isProduct && <p className="product-case-kicker">Nov 2023–Aug 2025 · Product lead · Featured project</p>}
+        <h1>{isProduct ? <><span>Making storage</span><span>work <em>as a product.</em></span></> : <><span>Connecting storage,</span><span>people <em>and systems.</em></span></>}</h1>
         <div className="case-hero-bottom">
-          <p>I led product on Jayga’s warehouse system, connecting storage, pricing, billing and delivery across the client, admin and warehouse floor.</p>
-          <div className="case-tags"><span>Operational tools</span><span>Systems thinking</span><span>Field research</span><span>Business rules</span></div>
+          <p>{isProduct ? 'I turned warehouse research into priorities and product rules for space, stock, delivery and billing.' : 'I led product on Jayga’s warehouse system, connecting storage, pricing, billing and delivery across the client, admin and warehouse floor.'}</p>
+          <div className="case-tags"><span>Product leadership</span><span>Service design</span><span>Field research</span><span>Business rules</span></div>
         </div>
         <div className="jayga-stage" aria-label="Jayga admin and warehouse applications">
           <div className="stage-note"><span>Shared storage for SMEs</span><strong>Client / admin / warehouse</strong></div>
@@ -761,26 +846,28 @@ function JaygaCase() {
         </div>
       </section>
 
+      {isProduct && <section className="case-section case-wrap product-outcome" id="outcome"><div className="case-index">01 / Outcome and status</div><div className="case-content"><h2>One order record connected space, stock and billing.</h2><p className="lead narrow">The 2024 storage work produced client and admin flows and a mobile floor concept. It also led to a rack-pricing model with up to 3× potential revenue per m². The model was approved for future work but was not built; actual revenue is unknown.</p></div></section>}
+
       <section className="case-section case-wrap" id="overview">
-        <div className="case-index">01 / Overview</div>
+        <div className="case-index">{isProduct ? '02 / Scope and role' : '01 / Overview'}</div>
         <div className="case-content">
-          <h2>One order record connected the work.</h2>
+          <h2>{isProduct ? 'Lead the decisions that connect the operation.' : 'One order record connected the work.'}</h2>
           <div className="overview-grid"><p className="lead">Warehouse work ran through spreadsheets, handwritten logs and separate handoffs. Orders took days because storage, billing and delivery did not share one record.</p><p>Jayga rents shared warehouse space to businesses that need less than a full facility. I designed the system that linked each customer’s rented space, stock and bill.</p></div>
-          <dl className="case-meta"><div><dt>Role</dt><dd>Product lead</dd></div><div><dt>Team</dt><dd>Product lead / 5 engineers / founder</dd></div><div><dt>Timeline</dt><dd>4 months</dd></div><div><dt>Platforms</dt><dd>2 web apps · 1 mobile app</dd></div><div><dt>Methods</dt><dd>Interviews · contextual inquiry</dd></div><div><dt>Tools</dt><dd>Figma · Notion</dd></div></dl>
-          <p className="lead narrow">I mapped workflows, defined the grid and billing rules, set the design language and owned the product backlog. I worked with five engineers and the founder, who held the product vision and final decisions.</p>
+          <dl className="case-meta"><div><dt>Role</dt><dd>Product lead</dd></div><div><dt>Team</dt><dd>{isProduct ? '8-person team · 5 engineers' : 'Product lead / 5 engineers / founder'}</dd></div><div><dt>Project period</dt><dd>Nov 2023–Aug 2025</dd></div><div><dt>Experiences</dt><dd>2 web views · 1 mobile design</dd></div><div><dt>Methods</dt><dd>Interviews · contextual inquiry</dd></div><div><dt>Storage scope</dt><dd>2024 · 4 months</dd></div></dl>
+          <p className="lead narrow">{isProduct ? 'I led the eight-person team and owned the backlog, working with five engineers on grid and billing rules. The founder held the product vision and final decisions. This case covers four months of storage work within the longer Jayga project.' : 'I mapped workflows, defined the grid and billing rules, set the design language and owned the product backlog. I worked with five engineers and the founder, who held the product vision and final decisions.'}</p>
         </div>
       </section>
 
       <section className="case-section case-wrap" id="process">
-        <div className="case-index">02 / Core system</div>
+        <div className="case-index">{isProduct ? '03 / Service journey' : '02 / Core system'}</div>
         <div className="case-content">
-          <h2>Three apps. One warehouse record.</h2>
-          <p className="lead narrow">A client starts an order, an admin confirms space and billing, and warehouse staff verify the stock—all on the same record.</p>
+          <h2>{isProduct ? 'Map each handoff before setting the rules.' : 'Three apps. One warehouse record.'}</h2>
+          <p className="lead narrow">{isProduct ? 'I traced an order from booking to delivery across the client, admin, warehouse team and logistics partner. The map showed which handoffs needed one shared record.' : 'A client starts an order, an admin confirms space and billing, and warehouse staff verify the stock—all on the same record.'}</p>
           <JaygaServiceDiagrams/>
           <div className="jayga-apps">
             <article><span>Web · Client</span><h3>Client dashboard</h3><p>Starts orders and shows used space, open requests and the running daily bill.</p></article>
             <article><span>Web · Admin</span><h3>Admin console</h3><p>Handles requests, grid assignment, payments, billing and operational oversight.</p></article>
-            <article><span>Mobile · Floor</span><h3>Warehouse Manager</h3><p>Guides stock assignment and confirms counts from the warehouse aisle.</p></article>
+            <article><span>Mobile · Floor</span><h3>Warehouse Manager</h3><p>{isProduct ? 'Designed for stock assignment and count confirmation on the warehouse floor; planned for a later release.' : 'Guides stock assignment and confirms counts from the warehouse aisle.'}</p></article>
           </div>
           <div className="jayga-screen-pair">
             <JaygaImage src="/jayga/admin-requests.png" alt="Jayga admin console with warehouse grid requests" caption="Admin: every request with its warehouse, item, duration and status."/>
@@ -790,11 +877,11 @@ function JaygaCase() {
       </section>
 
       <section className="case-section case-wrap" id="grids">
-        <div className="case-index">03 / Grid logic</div>
+        <div className="case-index">{isProduct ? '04 / Product rules' : '03 / Grid logic'}</div>
         <div className="case-content">
-          <h2>Make physical space work like product data.</h2>
+          <h2>{isProduct ? 'Prioritise the grid as the shared product record.' : 'Make physical space work like product data.'}</h2>
           <JaygaGridDiagram/>
-          <p className="lead narrow">I divided the warehouse into fixed grids with unique IDs. A grid is what a customer rents, where an item is assigned and what the bill is calculated from.</p>
+          <p className="lead narrow">{isProduct ? 'I chose fixed grid IDs so the team could assign stock and charge for the space it used. Grid assignment and floor checks came before a live space count.' : 'I divided the warehouse into fixed grids with unique IDs. A grid is what a customer rents, where an item is assigned and what the bill is calculated from.'}</p>
           <div className="grid-rule"><div><span>Problem</span><p>Pricing did not reflect how much rack space was used, and the team could not see which space generated revenue.</p></div><div><span>Product rule</span><p>Assign and confirm one grid before opening the next, limiting errors before another space changes.</p></div></div>
           <div className="jayga-grid-story">
             <div><h3>Keep item history across multiple grids.</h3><p>A quantity can sit across several grids while staying on one item record. Because the live occupancy count was delayed, an “Assigned” tag showed which units had been placed.</p><p className="evidence-note">Next system improvement: replace the temporary tag with a live occupancy count.</p></div>
@@ -805,31 +892,31 @@ function JaygaCase() {
       </section>
 
       <section className="case-section case-wrap" id="research">
-        <div className="case-index">04 / Field research</div>
+        <div className="case-index">{isProduct ? '05 / Research and opportunity' : '04 / Field research'}</div>
         <div className="case-content">
-          <h2>The warehouse changed the pricing idea.</h2>
+          <h2>{isProduct ? 'Use field evidence to choose customers and pricing.' : 'The warehouse changed the pricing idea.'}</h2>
           <div className="jayga-field">
             <JaygaImage src="/jayga/warehouse-visit.jpg" alt="A warehouse aisle observed during Jayga field research" caption="Warehouse field visit."/>
             <div><p className="lead">A warehouse visit revealed unused vertical space. I proposed rack-level pricing so each level could be filled and priced separately.</p><div className="projection-note"><span>Modelled, not measured</span><strong>~3× revenue per m²</strong><p>Stakeholders approved the pricing idea for future work, but it was not built. The actual revenue change is unknown.</p></div></div>
           </div>
           <div className="research-summary">
-            <div><span>23 businesses surveyed</span><h3>Price, distance, security and retrieval shaped the storage choice.</h3><p>I compared six customer groups by demand, storage cost, item value and growth potential.</p></div>
-            <JaygaImage src="/jayga/opportunity-matrix.png" alt="Jayga opportunity matrix comparing customer segments by cost and demand" caption="The matrix pointed toward NGOs and raw-material businesses before general ecommerce storage."/>
+            <div><span>23 businesses surveyed</span><h3>{isProduct ? 'Focus on customers who need flexible storage.' : 'Price, distance, security and retrieval shaped the storage choice.'}</h3><p>{isProduct ? 'I compared six customer groups by demand, cost, item value and growth. Survey answers on price, distance, security and retrieval pointed first toward NGOs and raw-material businesses.' : 'I compared six customer groups by demand, storage cost, item value and growth potential.'}</p></div>
+            <JaygaImage src="/jayga/opportunity-matrix.png" alt="Jayga opportunity matrix comparing customer segments by cost and demand" caption={isProduct ? 'Six customer groups compared by storage cost and demand.' : 'The matrix pointed toward NGOs and raw-material businesses before general ecommerce storage.'}/>
           </div>
         </div>
       </section>
 
       <section className="case-section case-wrap" id="delivery">
-        <div className="case-index">05 / Delivery + billing</div>
+        <div className="case-index">{isProduct ? '06 / Delivery decisions' : '05 / Delivery + billing'}</div>
         <div className="case-content">
-          <h2>Floor confirmation controls record changes.</h2>
-          <p className="lead narrow">A delivery starts in the admin console, reaches the warehouse aisle on mobile, and lists the grids to pull from. If the physical count does not match, a person checks it before the delivery continues.</p>
+          <h2>{isProduct ? 'Make stock checks part of the delivery flow.' : 'Floor confirmation controls record changes.'}</h2>
+          <p className="lead narrow">{isProduct ? 'I designed a flow from the admin request to a planned mobile floor check. Staff would see the source grids and confirm the physical count. A mismatch would stop the flow for a person to review before the order record changed.' : 'A delivery starts in the admin console, reaches the warehouse aisle on mobile, and lists the grids to pull from. If the physical count does not match, a person checks it before the delivery continues.'}</p>
           <div className="warehouse-flow">
             <JaygaImage src="/jayga/delivery-request.png" alt="Jayga admin interface for selecting stored items for delivery" caption="Admin selects the client, items and quantities."/>
             <FlowArrow/>
-            <JaygaImage src="/jayga/assignment-mobile.png" alt="Jayga mobile list of grids used for a delivery" caption="The floor app lists the source grids."/>
+            <JaygaImage src="/jayga/assignment-mobile.png" alt="Jayga mobile list of grids used for a delivery" caption={isProduct ? 'Mobile concept: show staff the source grids.' : 'The floor app lists the source grids.'}/>
             <FlowArrow/>
-            <JaygaImage src="/jayga/count-mobile.png" alt="Jayga mobile screen confirming a physical stock count" caption="Staff confirm the count or report a mismatch."/>
+            <JaygaImage src="/jayga/count-mobile.png" alt="Jayga mobile screen confirming a physical stock count" caption={isProduct ? 'Mobile concept: confirm the count or report a mismatch.' : 'Staff confirm the count or report a mismatch.'}/>
           </div>
           <div className="billing-story">
             <div><span>Billing follows the stock</span><h3>Empty a grid. Lower the bill.</h3><p>Invoices use the dates, duration and space already stored on the order. When warehouse staff confirm that a grid is empty, the client stops paying for it.</p></div>
@@ -838,18 +925,16 @@ function JaygaCase() {
         </div>
       </section>
 
-      <section className="case-section case-wrap outcome" id="outcome">
-        <div className="case-index">06 / Delivery and decisions</div>
+      <section className="case-section case-wrap outcome" id={isProduct ? 'reflection' : 'outcome'}>
+        <div className="case-index">{isProduct ? '07 / Leadership and next steps' : '06 / Delivery and decisions'}</div>
         <div className="case-content">
-          <h2>Own the rules that connect the product and the operation.</h2>
-          <p className="lead narrow">I led product logic and end-to-end flows across the client, admin and warehouse experiences. Under a tight timeline, I prioritised decisions that could block engineering and kept lower-risk details open for iteration.</p>
-          <p>Flows and prototypes became shared working models for responsibilities, states and edge cases. I mapped workflows, set the design language and owned the backlog; the founder held the product vision and final decisions.</p>
-          <div className="learning-grid"><h3>Main learning</h3><p>Operations software becomes useful when the digital record follows the physical work. The grid connected stock, space and billing because it matched how the warehouse actually worked.</p><h3>Next priorities</h3><p>Add the mobile app to the first release, update occupancy live, and strengthen the design system rules across all three apps.</p></div>
-          <a className="next-project" href="/portfolio"><span>Next case study</span><strong>Portfolio <ArrowUpRight/></strong></a>
+          <h2>{isProduct ? 'Keep the digital record tied to warehouse work.' : 'Own the rules that connect the product and the operation.'}</h2>
+          {isProduct ? <p className="lead narrow">The grid model worked because it matched how staff handled physical stock. The next steps were a live space count and the planned mobile floor app, using the same rules as the web views.</p> : <><p className="lead narrow">I led product logic and end-to-end flows across the client, admin and warehouse experiences. Under a tight timeline, I prioritised decisions that could block engineering and kept lower-risk details open for iteration.</p><p>Flows and prototypes became shared working models for responsibilities, states and edge cases. I mapped workflows, set the design language and owned the backlog; the founder held the product vision and final decisions.</p><div className="learning-grid"><h3>Main learning</h3><p>Operations software becomes useful when the digital record follows the physical work. The grid connected stock, space and billing because it matched how the warehouse actually worked.</p><h3>Next priorities</h3><p>Bring the planned mobile floor app into a later release, update occupancy live, and strengthen the design system rules across the three experiences.</p></div></>}
+          <a className="next-project" href={isProduct ? '/product/purno' : '/portfolio'}><span>Next case study</span><strong>{isProduct ? 'Purno' : 'Portfolio'} <ArrowUpRight/></strong></a>
         </div>
       </section>
     </main>
-    <About/>
+    <About portfolio={isProduct ? 'product' : undefined}/>
   </>;
 }
 
@@ -990,7 +1075,7 @@ function AIWorkflows() {
     <Nav caseStudy/>
     <main className="workflow-page" id="top">
       <header className="workflow-hero section">
-        <a className="back-link" href="/"><ArrowLeft/> Back to selected work</a>
+        <a className="back-link" href="/design"><ArrowLeft/> Back to selected work</a>
         <h1>AI helps me move<br/>faster. <em>I keep the<br/>direction human.</em></h1>
         <div className="workflow-intro"><p>I use AI across product design, research and development—not as a shortcut to a finished answer, but as a way to explore, test and improve the work.</p><span>My working system · always evolving</span></div>
         <WorkflowVisual type="loop"/>
@@ -1122,7 +1207,14 @@ export function App({ initialPath = null }) {
     descriptionMeta.content = description;
   }, [path]);
   let page;
-  if (path === '/zevian') page = <ZevianCase/>;
+  if (path === '' || path === '/') page = <PortfolioEntry/>;
+  else if (path === '/product') page = <><Nav portfolio="product"/><main><ProductHero/><SelectedProjects portfolio="product"/></main><About portfolio="product"/></>;
+  else if (path === '/design') page = <><Nav/><main><Hero/><SelectedProjects/><DesignSystems/><AIWorkflowTeaser/></main><About/></>;
+  else if (path === '/product/jayga') page = <JaygaProductCase/>;
+  else if (path === '/product/zevian') page = <ZevianCase portfolio="product"/>;
+  else if (path === '/product/purno') page = <PurnoCase portfolio="product"/>;
+  else if (path === '/product/orderific') page = <ProductOrderificCase/>;
+  else if (path === '/zevian') page = <ZevianCase/>;
   else if (path === '/zevian-hrms') page = <ZevianHrmsCase/>;
   else if (path === '/orderific') page = <OrderificCase/>;
   else if (path === '/purno') page = <PurnoCase/>;
@@ -1131,7 +1223,7 @@ export function App({ initialPath = null }) {
   else if (path === '/ai-workflows') page = <AIWorkflows/>;
   else if (path === '/about') page = <AboutMe/>;
   else if (path === '/sprint') page = <SprintPage/>;
-  else page = <><Nav/><main><Hero/><SelectedProjects/><DesignSystems/><AIWorkflowTeaser/></main><About/></>;
+  else page = <PortfolioEntry/>;
   return <CaseImageProvider>{page}</CaseImageProvider>;
 }
 

@@ -1,16 +1,22 @@
-# Reza Al Hassan — Product Design Portfolio
+# Reza Al Hassan — Product and Design Portfolios
 
-> Reza is a product designer and founder in Dhaka. He works on 0→1 B2B SaaS and AI products, combining UX research, product strategy, systems thinking, design systems, and AI-assisted prototyping.
+> Reza is a product designer and founder in Dhaka who works across product direction, interface design and technical delivery for B2B SaaS and AI products.
 
 This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
 
 ## Main pages
 
-- [Home](/): Positioning, a four-project grid with equal-height covers, project evidence, working approach, and contact details.
+- [Portfolio entry](/): Two links, Product and Design.
+- [Product portfolio](/product): Zevian, Orderific, Jayga and Purno in a four-cover grid. Jayga is marked as the featured project. Each card has a short work statement and a separate, regular-weight metric line. Zevian reports two paying customers; Jayga reports leadership of an eight-person team.
+- [Design portfolio](/design): The original four-project design homepage and layout.
+- [Jayga product case](/product/jayga): Jayga ran from November 2023 to August 2025. Reza led an eight-person team; the featured storage case covers four months in 2024. It uses the full design-case layout with an outcome-first product story, service journey, customer-segment prioritisation, grid and billing rules, delivery decisions and a modelled ~3× rack-pricing opportunity. The proposed pricing model was not built; actual revenue is unknown.
+- [Zevian product case](/product/zevian): Discovery changed the direction from evaluation to investigation. Zevian has two paying customers; the investigation flow remains a prototype under validation.
+- [Purno product case](/product/purno): Designed MVP, moderated product-card test and owner app, with evidence limits stated.
+- [Orderific product and design case](/product/orderific): A before-and-after comparison showed 28% less development time after handover changes. Comparing Reza's onboarding with new hires' showed half the time after a Figma guide. Early work covered four restaurant management and two HRMS platforms, RTL interfaces, 56 design mapping projects, hiring, mentoring and QA. Later work covered interface-to-data mapping and Figma frame naming. The case includes LTR/RTL and light/dark examples and the selected dark-mode frame name.
 - [Product design sprint](/sprint): A focused two-week offer for one complex B2B SaaS, AI or operational product workflow, with product evidence, scope, starting price and a direct contact action. A post-sprint partnership is available.
 - [Zevian](/zevian): Current founder product. A decision-support workflow that helps sales managers detect performance changes, investigate possible causes, gather context, and decide what needs action.
 - [Zevian HRMS](/zevian-hrms): Earlier HRMS concept. Interface and design-system work for attendance, employee records, activities, calendars, approvals, and work policies.
-- [Orderific](/orderific): Shared component system across six restaurant products, including English LTR, Arabic RTL, and light/dark modes.
+- [Orderific](/orderific): Design systems across four restaurant management and two HRMS platforms. The RMS examples show English LTR, Arabic RTL, and light/dark modes.
 - [Purno](/purno): Connected retail system with a store app for inventory and payments, and an owner app for sales insights and work.
 - [Jayga](/jayga): Coordinated storage service for SMEs, connecting customers, admins, warehouse staff, logistics, grids and billing.
 - [Portfolio redesign](/portfolio): Moodboard-led iteration into one editorial portfolio system.
@@ -36,6 +42,12 @@ This is an editorial portfolio. Project descriptions explain the problem, Reza's
 ## AI-readable case studies
 
 - [Zevian case study](/ai/zevian.md)
+- [Product portfolio](/ai/product.md)
+- [Design portfolio](/ai/design.md)
+- [Jayga product case](/ai/product/jayga.md)
+- [Zevian product case](/ai/product/zevian.md)
+- [Purno product case](/ai/product/purno.md)
+- [Orderific product and design case](/ai/product/orderific.md)
 - [Zevian HRMS case study](/ai/zevian-hrms.md)
 - [Orderific case study](/ai/orderific.md)
 - [Purno case study](/ai/purno.md)

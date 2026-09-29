@@ -104,6 +104,12 @@ components:
 
 # Design System: Reza Portfolio
 
+## Portfolio entry and product route (September 2026)
+
+The base URL is a two-link entry page for Product and Design. `/design` keeps the existing four-cover portfolio. `/product` uses the same hero and a four-cover grid ordered Zevian, Orderific, Jayga and Purno, with no Other work section. Jayga is marked as the featured project. The product route presents a hybrid of product direction, interface design and technical delivery. The product case studies put the outcome and its evidence limit before process. Zevian and Purno keep their full design stories and process flows. Orderific's product story covers early handover and system scaling across four restaurant management and two HRMS platforms, RTL design, audits, hiring, mentoring, QA guidance, then later interface-to-data mapping and Figma structure. Jayga ran from November 2023 to August 2025; its storage case covers four months in 2024, uses the full design-case layout and keeps the service diagrams. No deferred section appears.
+
+Product cards use a work statement of up to two lines and a regular-weight metric on the third line. The Jayga metric is a modelled revenue potential. The Orderific metric is a 28% development-time reduction from a before-and-after handover comparison; its case also reports half the onboarding time after a Figma guide, comparing Reza's onboarding with new hires. The product Orderific story shows the selected dark-mode Figma frame with its blue outline and visible name, LTR/RTL, light/dark, desktop/tablet adaptations, and the kitchen and customer mobile app roles. The Jayga product story connects field research, service journey mapping, customer-segment prioritisation, grid rules and the unbuilt rack-pricing model.
+
 ## Homepage Orderific component cards (current)
 
 Orderific's homepage preview now uses four supplied component-card exports in an automatically moving draggable strip. The outer project cover keeps the same fixed height and corner radius as the other covers. Inner cards remain complete and undistorted, expand through the shared viewer, and support swipe, drag and keyboard controls without visible control icons or labels. This replaces the full LTR/RTL comparison on the homepage; the case study retains the wider interface evidence.
@@ -322,7 +328,7 @@ Case-study diagrams from the PDF use ExpandableImage. Portrait diagrams sit side
 
 ## Project grid and native diagrams (current)
 
-The homepage uses a two-by-two grid: Zevian, Orderific, Purno and Jayga. At 800px and below it becomes one column. Covers use object-fit: contain so the complete source artwork remains visible. Zevian uses Zevian-cover.png; Orderific uses the real RTL/LTR comparison; Purno uses its original full cover. This replaces the previous featured split, project rows and illustrative animation guidance.
+The homepage uses a two-by-two grid: Zevian, Orderific, Jayga and Purno. At 800px and below it becomes one column. Covers use object-fit: contain so the complete source artwork remains visible. Zevian uses Zevian-cover.png; Orderific uses the real RTL/LTR comparison; Purno uses its original full cover. This replaces the previous featured split, project rows and illustrative animation guidance.
 
 Purno's core flow and Jayga's ecosystem, service journey and grid model are native HTML/CSS diagrams, based on the PDF's meaning. Use the site tokens, DM Sans, ink connectors and a lime payment highlight. Purno's owner gallery uses the three supplied screen images with ExpandableImage. Do not use cropped PDF slides as diagrams.
 

@@ -1,13 +1,13 @@
 # Reza Al Hassan — Product and Design Portfolios
 
-> Reza is a product designer and founder in Dhaka who works across product direction, interface design and technical delivery for B2B SaaS and AI products.
+> Reza is a product manager, designer and founder in Dhaka who works across product direction, interface design and technical delivery for B2B SaaS and AI products.
 
 This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
 
 ## Main pages
 
 - [Portfolio entry](/): Two links, Product and Design.
-- [Product portfolio](/product): Zevian, Orderific, Jayga and Purno in a four-cover grid. Jayga is marked as the featured project. Each card has a short work statement and a separate, regular-weight metric line. Zevian reports two paying customers; Jayga reports leadership of an eight-person team.
+- [Product portfolio](/product): Product manager positioning with a design-led approach. Zevian, Orderific, Jayga and Purno appear in a four-cover grid. Jayga is marked as the featured project. Each card has a short work statement and a separate, regular-weight metric line. Zevian reports two paying customers; Jayga reports leadership of an eight-person team.
 - [Design portfolio](/design): The original four-project design homepage and layout.
 - [Jayga product case](/product/jayga): Jayga ran from November 2023 to August 2025. Reza led an eight-person team; the featured storage case covers four months in 2024. It uses the full design-case layout with an outcome-first product story, service journey, customer-segment prioritisation, grid and billing rules, delivery decisions and a modelled ~3× rack-pricing opportunity. The proposed pricing model was not built; actual revenue is unknown.
 - [Zevian product case](/product/zevian): Discovery changed the direction from evaluation to investigation. Zevian has two paying customers; the investigation flow remains a prototype under validation.

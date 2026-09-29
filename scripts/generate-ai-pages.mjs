@@ -9,7 +9,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const output = join(root, 'dist');
 const shell = await readFile(join(output, 'index.html'), 'utf8');
 const routes = {
-  'product': ['Reza Al Hassan — Product portfolio', 'Product and design work across Zevian, Orderific, Jayga and Purno.'],
+  'product': ['Reza Al Hassan — Product manager portfolio', 'Product management work across Zevian, Orderific, Jayga and Purno, led with a design approach.'],
   'design': ['Reza Al Hassan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
   'product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
   'product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],

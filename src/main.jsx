@@ -38,7 +38,7 @@ const projects = [
 ];
 
 const pageMetadata = {
-  '/product': ['Reza Al Hassan — Product portfolio', 'Product and design work across Zevian, Orderific, Jayga and Purno.'],
+  '/product': ['Reza Al Hassan — Product manager portfolio', 'Product management work across Zevian, Orderific, Jayga and Purno, led with a design approach.'],
   '/design': ['Reza Al Hassan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
   '/product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
   '/product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],
@@ -159,16 +159,16 @@ function Hero() {
 
 function ProductHero() {
   return <section className="hero hero--particles" id="top">
-    <h1><span>PRODUCT <em>&amp; design</em></span><span>FOR COMPLEX</span><span>B2B PROBLEMS.</span></h1>
+    <h1><span>PRODUCT MANAGER</span><span>FOR COMPLEX</span><span>B2B PRODUCTS.</span></h1>
     <Particles/>
-    <div className="hero-bottom"><div className="hero-copy"><p>I work across product strategy, interface design and technical delivery. I turn research and business rules into flows, prototypes and decisions teams can build.</p></div><a href="#work" className="scroll-link">See product work <ArrowDown/></a></div>
+    <div className="hero-bottom"><div className="hero-copy"><p>I lead product work with a design-led approach, turning research and business rules into priorities, workflows and decisions teams can build.</p></div><a href="#work" className="scroll-link">See product work <ArrowDown/></a></div>
   </section>;
 }
 
 function PortfolioEntry() {
   return <main className="portfolio-entry" id="top">
     <div className="portfolio-entry-inner"><span className="entry-mark">REZA A<i aria-hidden="true"/></span><div className="entry-intro"><p>Reza Al Hassan · Dhaka, Bangladesh</p><h1>Choose a <em>portfolio.</em></h1><span>Two views of work across product decisions, interfaces and delivery.</span></div>
-      <div className="entry-choices"><a href="/product"><span>01 / Product</span><strong>Product decisions, design and delivery.</strong><ArrowUpRight aria-hidden="true"/></a><a href="/design"><span>02 / Design</span><strong>Product design, systems and interface evidence.</strong><ArrowUpRight aria-hidden="true"/></a></div>
+      <div className="entry-choices"><a href="/product"><span>01 / Product</span><strong>Product leadership, decisions and delivery.</strong><ArrowUpRight aria-hidden="true"/></a><a href="/design"><span>02 / Design</span><strong>Product design, systems and interface evidence.</strong><ArrowUpRight aria-hidden="true"/></a></div>
     </div>
   </main>;
 }
@@ -346,7 +346,7 @@ function PortfolioCase() {
 function About({ portfolio = 'design' }) {
   return (
     <footer className="about section" id="about">
-      <div className="about-top"><div className="about-copy"><p>{portfolio === 'product' ? 'Available for product manager and product design roles.' : 'Available for product design roles.'}</p></div><h2>Have a complex product<br/>challenge? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
+      <div className="about-top"><div className="about-copy"><p>{portfolio === 'product' ? 'Available for product manager roles.' : 'Available for product design roles.'}</p></div><h2>Have a complex product<br/>challenge? <a href="mailto:rezahasan1198@gmail.com">Let’s talk.</a></h2></div>
       <div className="footer-row"><Mark/><span>Based in Dhaka · Working worldwide</span><div><a href="mailto:rezahasan1198@gmail.com">Email Reza</a><a href="https://www.linkedin.com/in/reza1198/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://www.instagram.com/rezaa.hassan/" target="_blank" rel="noreferrer">Instagram</a></div><span>© 2026</span></div>
     </footer>
   );

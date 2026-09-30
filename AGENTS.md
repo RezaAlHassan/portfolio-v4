@@ -11,7 +11,7 @@ This repository contains Reza Al Hassan's product-design portfolio. Preserve fac
 
 - `/` is a two-link entry page for `/product` and `/design`.
 - `/design` keeps the original design homepage and four-cover layout. Its cover order is Zevian, Orderific, Jayga and Purno.
-- `/product` has four covers in this order: Zevian, Orderific, Jayga and Purno. Jayga is marked as the featured project. There is no Other work section.
+- `/product` has four covers in this order: Jayga, Zevian, Orderific and Purno. Jayga is marked as the featured project. There is no Other work section.
 - The `/product` hero leads with Product Manager and mentions design once as a design-led approach in supporting copy. Keep `/design` clearly design-focused.
 - `/product/jayga`, `/product/zevian`, `/product/purno` and `/product/orderific` put outcomes before process while preserving design decisions and process flows. Do not show a Jayga deferred section.
 - `/product/purno` preserves the full Purno design story. `/product/zevian` preserves the full investigation flow and two-stage evolution. `/product/orderific` starts with the measured handover and onboarding comparisons, then covers the first seven months of systems, RTL, audits, hiring and team guidance before the later interface-to-data mapping phase. It shows component properties, documentation, the selected dark-mode Figma frame with its name, LTR/RTL and light/dark examples. Keep images expandable and their claims specific.

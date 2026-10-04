@@ -10,7 +10,7 @@ import { DraggableMarquee } from './DraggableMarquee';
 const projects = [
   {
     title: 'Orderific',
-    description: 'Design systems for restaurant and HRMS platforms.',
+    description: 'Design systems and handoff rules for six connected restaurant apps.',
     metric: '28% less dev time · ½ onboarding time',
     tags: ['Design systems', 'Design tokens', 'Variables', 'RTL/LTR'],
     year: '2025–26',
@@ -29,8 +29,8 @@ const projects = [
   {
     title: 'Purno',
     description: 'Retail POS for payments and inventory.',
-    metric: '~20% faster in tests · 5 card variants',
-    tags: ['Fintech', 'Multi-platform', 'Prototyping', 'Usability testing'],
+    metric: '$10K seed · 5 card explorations',
+    tags: ['Fintech', 'Multi-platform', 'Prototyping', 'Interface design'],
     year: '2024',
     visual: 'pos',
     url: '/purno',
@@ -43,11 +43,11 @@ const pageMetadata = {
   '/product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
   '/product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],
   '/product/purno': ['Purno — Product case study', 'Product scope and design decisions behind a retail POS and owner app.'],
-  '/product/orderific': ['Orderific — Product and design systems case study', 'Handover, RTL design, team leadership and design systems across four restaurant and two HRMS platforms, followed by interface-to-data mapping.'],
+  '/product/orderific': ['Orderific — Product and design systems case study', 'Design systems, documented naming rules and handoff across six responsive restaurant apps. BMS also supports LTR, RTL, light and dark modes.'],
   '/': ['Reza Al Hassan — Product and design portfolios', 'Choose the product or design portfolio of Reza Al Hassan.'],
   '/zevian': ['Zevian — Performance investigation case study', 'How Zevian helps sales managers detect performance changes, add context and decide what needs action.'],
   '/zevian-hrms': ['Zevian HRMS — Interface system case study', 'An early HRMS concept and reusable interface system covering attendance, employee records, calendars, approvals and work policies.'],
-  '/orderific': ['Orderific — Design system case study', 'Design systems across four restaurant management and two HRMS platforms, with RTL, LTR and theme-mode support.'],
+  '/orderific': ['Orderific — Design system case study', 'Design systems and handoff rules across six responsive restaurant apps, with BMS examples in LTR, RTL, light and dark modes.'],
   '/purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
   '/jayga': ['Jayga — Warehouse operations case study', 'A warehouse order system connecting storage, pricing, billing and fulfilment.'],
   '/portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
@@ -188,8 +188,8 @@ function SelectedProjects({ portfolio = 'design' }) {
   const selected = portfolio === 'product' ? [
     { title: 'Jayga', year: 'Nov 2023–Aug 2025 · Product lead', metric: '~3× revenue/m² potential · 8-person team led', description: 'Turned warehouse operations into grid, billing and delivery workflows.', tags: ['Product rules', 'Service flows', 'Operational tools'], url: '/product/jayga', image: '/jayga/warehouse-visit.jpg', alt: 'Checking stock in a Jayga warehouse aisle' },
     { title: 'Zevian', year: '2026 · Founder product', metric: '10+ discovery conversations · 2 paying customers', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
-    { title: 'Orderific', year: '2025–26 · Product designer', metric: '28% less development time · ½ onboarding time', description: 'Scaled design systems and improved design-to-development workflows.', tags: ['Design systems', 'RTL design', 'Technical delivery'], url: '/product/orderific', visual: 'rtl', image: '/orderific/cover-comparison.svg', alt: 'Orderific interface components in English LTR and Arabic RTL' },
-    { title: 'Purno', year: '2024 · Product designer', metric: '~20% faster in moderated testing · $10K seed', description: 'Designed POS workflows across sales, inventory and operations.', tags: ['POS flows', 'Interface design', 'Testing'], url: '/product/purno', image: '/purno/cover.webp', alt: 'Purno payment cover showing the total and split amount' },
+    { title: 'Orderific', year: '2025–26 · Product designer', metric: '28% less development time · ½ onboarding time', description: 'Scaled design systems for six connected restaurant apps.', tags: ['Design systems', 'RTL design', 'Technical delivery'], url: '/product/orderific', visual: 'rtl', image: '/orderific/cover-comparison.svg', alt: 'Orderific interface components in English LTR and Arabic RTL' },
+    { title: 'Purno', year: '2024 · Product designer', metric: '$10K seed · desktop, tablet and mobile', description: 'Designed POS workflows across sales, inventory and operations.', tags: ['POS flows', 'Interface design', 'Payments'], url: '/product/purno', image: '/purno/cover.webp', alt: 'Purno payment cover showing the total and split amount' },
   ] : designSelected;
   const toggleDemo = () => {
     if (!demoRef.current) return;
@@ -243,20 +243,38 @@ function JaygaProductCase() {
   return <JaygaCase portfolio="product"/>;
 }
 
+function OrderificAppMap() {
+  return <div className="orderific-app-map" aria-label="Named apps in the Orderific restaurant platform">
+    <div className="orderific-app-map-head" aria-hidden="true"><span>App</span><span>Role in the platform</span></div>
+    <article><h3>BMS <small>Brand management system</small></h3><div>
+      <ul className="orderific-app-features">
+        <li><strong>Sales and stock</strong><span>Orders, menus, ingredients, inventory and suppliers</span></li>
+        <li><strong>Guest service</strong><span>Tables, rooms, reservations, QR codes, reviews and delivery</span></li>
+        <li><strong>Growth and team</strong><span>Marketing, coupons, discounts, loyalty and teams</span></li>
+      </ul>
+      <ul className="orderific-app-modes"><li>Desktop · tablet</li><li>Light · dark</li><li>English LTR · Arabic RTL</li></ul>
+    </div></article>
+    <article><h3>CP (MCP)</h3><div><p>People place orders, book reservations, pay and join events. Restaurant owners manage events.</p><ul className="orderific-app-modes"><li>Tablet · mobile</li></ul></div></article>
+    <article><h3>MSP <small>Kitchen management</small></h3><div><p>Orders go straight to the kitchen app, using menus and ingredient setup from BMS.</p><ul className="orderific-app-modes"><li>Desktop · tablet</li></ul></div></article>
+    <article><h3>WSP <small>Delivery tracking</small></h3><div><p>Merchants and delivery staff confirm and update deliveries. Merchants set delivery settings.</p><ul className="orderific-app-modes"><li>Desktop · tablet · mobile</li></ul></div></article>
+    <article><h3>WCP Smartmenu <small>Payments</small></h3><div><p>Handles payment setup and payments in the Smartmenu flow.</p><ul className="orderific-app-modes"><li>Desktop · tablet</li></ul></div></article>
+  </div>;
+}
+
 function ProductOrderificCase() {
   return <><Nav caseStudy portfolio="product" processHref="#first-seven-months"/>
     <main className="case-page product-case product-orderific-page" id="top">
-      <section className="case-hero case-wrap"><a className="back-link" href="/product"><ArrowLeft/> Product work</a><p className="product-case-kicker">2025–26 · Product designer · Design and engineering</p><h1>Make complex systems<br/><em>easier to build.</em></h1><div className="case-hero-bottom"><p>I improved how designers and engineers worked together across restaurant management and HRMS products, from handover and RTL design to later database mapping.</p><div className="case-tags"><span>Handover</span><span>Design systems</span><span>RTL/LTR</span><span>Team guidance</span><span>Data mapping</span></div></div></section>
+      <section className="case-hero case-wrap"><a className="back-link" href="/product"><ArrowLeft/> Product work</a><p className="product-case-kicker">2025–26 · Product designer · Design and engineering</p><h1>Make complex systems<br/><em>easier to build.</em></h1><div className="case-hero-bottom"><p>I worked across six apps in one restaurant management platform, improving design systems, file naming and handoff for automated development.</p><div className="case-tags"><span>Handover</span><span>Design systems</span><span>RTL/LTR</span><span>Team guidance</span><span>Data mapping</span></div></div></section>
 
       <section className="case-section case-wrap product-outcome" id="outcome"><div className="case-index">01 / Measured results</div><div className="case-content"><h2>Two internal comparisons.</h2><p className="lead narrow">I compared development time before and after changing handover. For onboarding, I compared my own time with that of new hires after I wrote a Figma guide for designers and QA.</p><div className="orderific-result-pair"><div><strong>28%</strong><span>less development time after handover changes</span></div><div><strong>½</strong><span>the onboarding time after the Figma guide</span></div></div></div></section>
 
-      <section className="case-section case-wrap" id="first-seven-months"><div className="case-index">02 / First seven months</div><div className="case-content"><h2>Build the system, then help the team use it.</h2><p className="lead narrow">As development began, my work moved from interface design and handover to reviews, hiring and team support.</p><ol className="orderific-phase-list"><li><span>01 / Handover</span><div><h3>Reduce work lost between design and development.</h3><p>I improved handover and scaled the restaurant and HRMS design systems.</p></div></li><li><span>02 / RTL</span><div><h3>Design Arabic flows for restaurant management.</h3><p>I set RTL rules for navigation, reading order and components while keeping English screens in the same system.</p></div></li><li><span>03–04 / Audit</span><div><h3>Review 56 mapping projects with a two-person design team.</h3><p>I checked screens and naming rules, guided junior designers, and worked through conflicts with engineers as development started.</p></div></li><li><span>05 / Hiring</span><div><h3>Help select the next designers.</h3><p>I took part in junior-designer interviews and design tests.</p></div></li><li><span>06 / Team delivery</span><div><h3>Keep prototypes, tasks and system assets aligned.</h3><p>I guided prototyping, managed design tasks and onboarding, and fixed asset differences across three design systems.</p></div></li><li><span>07 / Guidance</span><div><h3>Make the system easier to learn and check.</h3><p>I wrote the Figma guide for designers and QA, prepared ICP research, and made icon use more consistent.</p></div></li></ol></div></section>
+      <section className="case-section case-wrap" id="first-seven-months"><div className="case-index">02 / First seven months</div><div className="case-content"><h2>Build the system, then help the team use it.</h2><p className="lead narrow">As development began, my work moved from design systems and handoff to reviews, hiring and team support.</p><ol className="orderific-phase-list"><li><span>01 / Handover</span><div><h3>Prepare files for development.</h3><p>I improved handoff, set standard frame and component names, and documented rules for automated development.</p></div></li><li><span>02 / RTL</span><div><h3>Design Arabic flows for restaurant management.</h3><p>I set RTL rules for navigation, reading order and components while keeping English screens in the same system.</p></div></li><li><span>03–04 / Audit</span><div><h3>Review 56 mapping projects with a two-person design team.</h3><p>I checked screens and naming rules, guided junior designers, and worked through conflicts with engineers as development started.</p></div></li><li><span>05 / Hiring</span><div><h3>Help select the next designers.</h3><p>I took part in junior-designer interviews and design tests.</p></div></li><li><span>06 / Team delivery</span><div><h3>Keep prototypes, tasks and system assets aligned.</h3><p>I guided prototyping, managed design tasks and onboarding, and fixed asset differences across the design systems.</p></div></li><li><span>07 / Guidance</span><div><h3>Make the system easier to learn and check.</h3><p>I wrote the Figma guide for designers and QA, prepared ICP research, and made icon use more consistent.</p></div></li></ol></div></section>
 
       <section className="case-section case-wrap" id="design-system">
         <div className="case-index">03 / Design system evidence</div>
         <div className="case-content">
           <h2>Properties and names for handoff.</h2>
-          <p className="lead narrow">Later, unique frame names helped engineers and automated tools identify the right interface.</p>
+          <p className="lead narrow">Standard frame names and written rules helped engineers and automated tools identify the right interface across the app suite.</p>
           <div className="product-decision-list"><article><span>Identification</span><h3>Unique frame names</h3><p>Use one naming pattern so automated tools and people can find the same screen.</p></article><article><span>Components</span><h3>Reusable input states</h3><p>Keep input type, helper text, content and state inside component properties.</p></article><article><span>Governance</span><h3>Rules before handoff</h3><p>Document token layers, component states, RTL behaviour and review checks.</p></article></div>
           <div className="product-other-proof"><figure><ExpandableImage src="/orderific/component-playground.png" alt="Orderific input component playground showing type, state, helper and variable mode properties" caption="The component playground exposes input properties and states used across screens."/><figcaption>Reusable component properties</figcaption></figure><figure><ExpandableImage src="/orderific/governance.png" alt="Orderific documentation page about token structure and naming conventions" caption="Documentation for token layers and naming rules."/><figcaption>Documentation and naming rules</figcaption></figure></div>
         </div>
@@ -266,8 +284,9 @@ function ProductOrderificCase() {
         <div className="case-index">04 / Product scale</div>
         <div className="case-content">
           <h2>RTL, themes and device rules.</h2>
-          <p className="lead narrow">Restaurant screens needed to work in Arabic and English, light and dark themes, and on desktop and tablet. The wider work also included a mobile kitchen system and a customer app for orders, menus and events.</p>
-          <div className="orderific-scale-facts"><div><span>4</span><p>restaurant management platforms</p></div><div><span>2</span><p>HRMS platforms</p></div><div><span>2</span><p>mobile app roles: kitchen and customer</p></div></div>
+          <p className="lead narrow">One restaurant management platform connected six apps, each with responsive views for its users. BMS held the main business setup and also supported light and dark modes and English LTR and Arabic RTL.</p>
+          <div className="orderific-scale-facts"><div><span>1</span><p>connected restaurant management platform</p></div><div><span>6</span><p>apps in the omnichannel suite</p></div><div><span>2</span><p>BMS directions: LTR and RTL</p></div></div>
+          <OrderificAppMap/>
           <div className="orderific-scale-images">
             <figure className="orderific-scale-images--wide"><ExpandableImage src="/orderific/rtl-comparison.png" alt="Orderific delivery zone in English LTR and Arabic RTL" caption="The delivery-zone screen in LTR and RTL."/><figcaption>Direction: LTR and RTL</figcaption></figure>
             <figure><ExpandableImage src="/orderific/reports-light.png" alt="Orderific reports screen in light mode" caption="Reports in light mode."/><figcaption>Light mode</figcaption></figure>
@@ -380,7 +399,6 @@ function ZevianCase({ portfolio = 'design' }) {
       <section className="case-section case-wrap overview" id="overview">
         <div className="case-index">01 / Current product</div>
         <div className="case-content">
-          <h2>Dashboards show the number. Zevian helps investigate the change.</h2>
           <p className="lead narrow">When an important metric changes, sales managers connect supporting signals, gather context and decide whether it needs action.</p>
           <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Strategy · UX · UI</dd></div><div><dt>Research</dt><dd>Interviews · Prototype feedback</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>React prototype / ongoing validation</dd></div></dl>
           <div className="zevian-flowchart" aria-label="Zevian workflow from data upload to a saved manager decision">
@@ -406,11 +424,11 @@ function ZevianCase({ portfolio = 'design' }) {
         <div className="case-index">02 / What discovery changed</div>
         <div className="case-content">
           <h2>What interviews changed.</h2>
-          <div className="research-note"><strong>Discovery ran from May to September alongside building and GTM.</strong><p>The interviews, prototype feedback and synthesis represented about 1–2 weeks of focused effort within that period.</p></div>
+          <p className="zevian-research-context">Discovery ran from May to September alongside building and GTM, with about 1–2 weeks spent on interviews, prototype feedback and synthesis.</p>
           <div className="pivot-list">
-            <article><span>Evaluation → diagnosis</span><h3>Start with the changed metric.</h3><p>Managers needed support after a metric changed. I replaced employee scoring with recent baselines, meaningful changes and investigation.</p></article>
-            <article><span>Coaching → wider causes</span><h3>Managers needed more context than employee input.</h3><p>Lead quality, selling time, campaigns, process changes and data issues can all change an outcome. Zevian surfaces possible reasons and keeps the finding open to new context.</p></article>
-            <article><span>Manual setup → exceptions</span><h3>Automate the clear cases.</h3><p>Zevian handles categorisation and clear matches automatically. Managers review ambiguous cases, context and decisions.</p></article>
+            <article><h3>Start with the change.</h3><p>Managers needed to investigate a changed metric, so I replaced employee scores with recent baselines and supporting signals.</p></article>
+            <article><h3>Look beyond employee input.</h3><p>Lead quality, campaigns, process changes and data issues can also affect results. Zevian keeps possible reasons open for review.</p></article>
+            <article><h3>Automate clear matches.</h3><p>Zevian handles clear data matches and categorisation. Managers review uncertain cases and make the final decision.</p></article>
           </div>
           <blockquote>“Something changed. Why did it change?”<cite>The question that replaced the scoring model</cite></blockquote>
         </div>
@@ -424,7 +442,14 @@ function ZevianCase({ portfolio = 'design' }) {
             <article><span>V1 / Evaluation and patterns</span><h3>Evaluate performance and guide coaching.</h3><p>KPIs and employee data &rarr; scores or performance findings &rarr; coaching</p><small>Gap: explain the change and consider causes beyond employee performance.</small></article>
             <article className="model-current"><span>V2 / Investigation and decision</span><h3>Prepare the evidence. Review the exceptions.</h3><p>Upload &rarr; auto-match &rarr; finding and possible reasons &rarr; context &rarr; decision &rarr; history</p><small>The system prepares the review; the manager judges the evidence and decides.</small></article>
           </div>
-          <p className="zevian-archive-note"><span>Earlier product evidence</span><span>The <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">archived scoring prototype <ArrowUpRight/></a> shows the product before discovery shifted it toward performance investigation.</span></p>
+          <div className="zevian-archive-intro"><p>These screens show what the first model asked managers to do: define scoring rules, review scored reports, read a team summary and ask questions about reports. Discovery later moved the main task toward investigating a change and deciding what needs action.</p></div>
+          <div className="zevian-archive-gallery">
+            <figure><ExpandableImage src="/zevian/archived/kpi-creation.png" alt="Archived Zevian KPI setup, showing a long scoring form beside a later two-step version" caption="KPI setup in the earlier evaluation prototype."/><figcaption><strong>Set scoring rules</strong><span>The manager defined what success meant before reports could be evaluated.</span></figcaption></figure>
+            <figure><ExpandableImage src="/zevian/archived/report-detail.png" alt="Archived Zevian report detail with an employee score, numeric criteria, report evidence and coaching notes" caption="Scored report in the earlier evaluation prototype."/><figcaption><strong>Review a scored report</strong><span>The report tied a score to targets, written evidence and coaching notes.</span></figcaption></figure>
+            <figure><ExpandableImage src="/zevian/archived/manager-dashboard.png" alt="Archived Zevian manager dashboard with a team average score, reporting status and AI team summary" caption="Manager dashboard in the earlier evaluation prototype."/><figcaption><strong>Read the team view</strong><span>The dashboard led with a team score and reporting summary.</span></figcaption></figure>
+            <figure><ExpandableImage src="/zevian/archived/ask-ai.png" alt="Archived Zevian Ask AI screen annotated to show the selected people and dates, an answer grounded in report text and linked source reports" caption="Ask AI in the earlier evaluation prototype, with scope and source reports visible."/><figcaption><strong>Ask AI about the reports</strong><span>The manager chose the people and dates. The answer linked back to the reports it used.</span></figcaption></figure>
+          </div>
+          <p className="zevian-archive-note">Open the <a href="https://demo.zevian.co" target="_blank" rel="noreferrer">earlier evaluation demo <ArrowUpRight/></a> or read the <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">full archived case <ArrowUpRight/></a>. These show the previous direction; they do not validate the current investigation flow.</p>
         </div>
       </section>
 
@@ -585,13 +610,13 @@ function OrderificCase() {
     <main className="case-page orderific-page" id="top">
       <section className="case-hero case-wrap orderific-hero">
         <a className="back-link" href="/design"><ArrowLeft/> Selected work</a>
-        <h1>Two product families.<br/>Six platforms.<br/><em>Two directions.</em></h1>
+        <h1>One platform.<br/>Six connected apps.<br/><em>Two directions.</em></h1>
         <div className="case-hero-bottom">
-          <p>I strengthened design systems across four restaurant management and two HRMS platforms, adding RTL rules to the RMS, refining themes, and documenting handoff checks.</p>
+          <p>I strengthened design systems across six responsive restaurant apps. BMS also needed LTR and RTL layouts and light and dark modes. I documented naming and handoff rules for development.</p>
           <div className="case-tags"><span>Design systems</span><span>Design tokens</span><span>Variables</span><span>RTL/LTR</span><span>Multi-platform</span></div>
         </div>
         <div className="orderific-stage">
-          <div className="stage-note"><span>Shared component set</span><strong>6 platforms</strong></div>
+          <div className="stage-note"><span>Restaurant management platform</span><strong>6 connected apps</strong></div>
           <ExpandableImage className="case-stage-image" src="/orderific/cover.png" alt="Orderific restaurant dashboard assembled from the shared design system" caption="Orderific’s shared component system across restaurant products." loading="eager" decoding="sync" />
         </div>
       </section>
@@ -600,8 +625,9 @@ function OrderificCase() {
         <div className="case-index">01 / Overview</div>
         <div className="case-content">
           <h2>Components drifted across products.</h2>
-          <p className="lead narrow">Across four restaurant management and two HRMS platforms, handoff rules varied. The RMS screens also needed clear direction and theme rules.</p>
-          <dl className="case-meta"><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Collaboration</dt><dd>Designers · PMs · engineers</dd></div><div><dt>Scope</dt><dd>Components · RTL · Theming</dd></div><div><dt>Leadership</dt><dd>Hiring · Mentoring · QA</dd></div><div><dt>Period</dt><dd>2025–26</dd></div><div><dt>Context</dt><dd>4 RMS · 2 HRMS platforms</dd></div></dl>
+          <p className="lead narrow">BMS held the core restaurant setup. Customer, kitchen, delivery and Smartmenu apps used that shared context. The six apps needed consistent components and files that engineers and automated tools could identify.</p>
+          <dl className="case-meta"><div><dt>Role</dt><dd>Product designer</dd></div><div><dt>Collaboration</dt><dd>Designers · PMs · engineers</dd></div><div><dt>Scope</dt><dd>Components · RTL · Theming</dd></div><div><dt>Leadership</dt><dd>Hiring · Mentoring · QA</dd></div><div><dt>Period</dt><dd>2025–26</dd></div><div><dt>Context</dt><dd>1 platform · 6 apps</dd></div></dl>
+          <OrderificAppMap/>
         </div>
       </section>
 
@@ -628,11 +654,11 @@ function OrderificCase() {
         <div className="case-content">
           <h2>Mirror navigation. Keep maps fixed.</h2>
           <div className="direction-rule"><div><span>Move</span><p>Navigation, reading order, text alignment and direction controls.</p></div><div><span>Stay in place</span><p>Maps, charts, the logo and the phone country field.</p></div></div>
-          <p className="lead narrow">Direction became a component property, so designers could start in RTL without rebuilding layouts or remembering each rule.</p>
+          <p className="lead narrow">In BMS, direction became a component property, so designers could start in RTL without rebuilding layouts or remembering each rule. The same screens adapted to tablet and desktop.</p>
           <div className="direction-images">
             <OrderificImage className="orderific-image--rtl" src="/orderific/rtl-comparison.png" alt="Orderific delivery zone interface shown in LTR and RTL" caption="Delivery zone in English LTR and Arabic RTL."/>
             <div className="theme-mode-block">
-              <div className="theme-mode-note"><strong>Refined light and dark themes with Figma variable modes.</strong><p>Both themes use the same components and layout. Only the token values change, so states and actions stay consistent.</p></div>
+              <div className="theme-mode-note"><strong>Refined BMS light and dark themes with Figma variable modes.</strong><p>Both themes use the same components and layout. Only the token values change, so states and actions stay consistent.</p></div>
               <div className="theme-mode-pair">
                 <OrderificImage src="/orderific/reports-light.png" alt="Orderific reports interface in light mode" caption="Light mode"/>
                 <OrderificImage className="orderific-image--dark" src="/orderific/dark-mode.png" alt="Orderific reports interface in dark mode" caption="Dark mode"/>
@@ -645,9 +671,9 @@ function OrderificCase() {
       <section className="case-section case-wrap" id="governance">
         <div className="case-index">04 / Team + governance</div>
         <div className="case-content">
-          <h2>Checks for design, QA and engineering.</h2>
+          <h2>Names and checks for design, QA and engineering.</h2>
           <div className="governance-grid">
-            <div><p className="lead">I hired and mentored two junior designers, trained QA, and documented recurring handoff decisions for engineers.</p><ul><li>How files and components should be organised</li><li>Three levels of design tokens</li><li>One clear source for every component</li><li>Checks for states, content, RTL and dark mode</li></ul></div>
+            <div><p className="lead">I hired and mentored two junior designers, trained QA, and documented naming and handoff rules so files were ready for engineers and automated development.</p><ul><li>Standard names for files, frames and components</li><li>Three levels of design tokens</li><li>One clear source for every component</li><li>Checks for states, content, RTL and dark mode</li></ul></div>
             <OrderificImage src="/orderific/governance.png" alt="A page from the Orderific design rules document" caption="Guide page with component and handoff checks."/>
           </div>
         </div>
@@ -657,7 +683,7 @@ function OrderificCase() {
         <div className="case-index">05 / System result</div>
         <div className="case-content">
           <h2>One shared system for design and handoff.</h2>
-          <div className="outcome-numbers orderific-outcomes"><article><strong>6 platforms</strong><span>Four RMS and two HRMS platforms</span></article><article><strong>3</strong><span>Token layers: global, alias and component</span></article><article><strong>2 directions</strong><span>LTR and RTL across light and dark themes in RMS</span></article></div>
+          <div className="outcome-numbers orderific-outcomes"><article><strong>6 apps</strong><span>One connected restaurant management platform</span></article><article><strong>3</strong><span>Token layers: global, alias and component</span></article><article><strong>BMS</strong><span>LTR and RTL, light and dark, tablet and desktop</span></article></div>
           <div className="learning-grid"><h3>Main learning</h3><p>The library became useful only when component rules, documentation and review checks worked together.</p></div>
           <a className="next-project" href="/purno"><span>Next case study</span><strong>Purno <ArrowUpRight/></strong></a>
         </div>
@@ -731,7 +757,7 @@ function PurnoCase({ portfolio = 'design' }) {
         <h1><span>A faster sale</span><span>for a shop owner</span><em>using software for the first time.</em></h1>
         <div className="case-hero-bottom">
           <p>I shaped a loose brief into a cross-platform POS for small shops in Bangladesh, bringing sales, stock and local payment methods into one daily flow.</p>
-          <div className="case-tags"><span>Fintech</span><span>Multi-platform</span><span>Prototyping</span><span>Usability testing</span></div>
+          <div className="case-tags"><span>Fintech</span><span>Multi-platform</span><span>Prototyping</span><span>Interface design</span></div>
         </div>
         <div className="purno-stage">
           <div className="stage-note"><span>Merchant app</span><strong>Desktop · tablet · mobile</strong></div>
@@ -741,7 +767,7 @@ function PurnoCase({ portfolio = 'design' }) {
 
       {portfolio === 'product' && <section className="case-section case-wrap product-outcome" id="outcome">
         <div className="case-index">Outcome / evidence</div>
-        <div className="case-content"><h2>A designed MVP supported a $10k seed pitch.</h2><p className="lead narrow">In moderated testing, colour-coded product cards reduced transaction time by about 20%. That result applies to the tested card change. The funding is a business milestone, not evidence of product adoption.</p></div>
+        <div className="case-content"><h2>A designed MVP supported a $10k seed pitch.</h2><p className="lead narrow">I turned a payments brief into connected store and owner flows. The funding is a business milestone, not evidence of product adoption.</p></div>
       </section>}
 
       <section className="case-section case-wrap" id="overview">
@@ -749,7 +775,7 @@ function PurnoCase({ portfolio = 'design' }) {
         <div className="case-content">
           <h2>Payments first. A connected retail system next.</h2>
           <div className="overview-grid"><p className="lead">Purno began with payments, then expanded to inventory, a small work tracker and sales insights for the owner.</p><p>The interface was designed for merchants with limited software experience and had to stay clear while a customer waited.</p></div>
-          <dl className="case-meta"><div><dt>Role</dt><dd>First product designer</dd></div><div><dt>Team</dt><dd>Product designer / founder</dd></div><div><dt>Timeline</dt><dd>3 months</dd></div><div><dt>Platforms</dt><dd>Desktop · tablet · mobile</dd></div><div><dt>Methods</dt><dd>UX audit · flows · moderated testing</dd></div><div><dt>Stage</dt><dd>Funded MVP</dd></div></dl>
+          <dl className="case-meta"><div><dt>Role</dt><dd>First product designer</dd></div><div><dt>Team</dt><dd>Product designer / founder</dd></div><div><dt>Timeline</dt><dd>3 months</dd></div><div><dt>Platforms</dt><dd>Desktop · tablet · mobile</dd></div><div><dt>Methods</dt><dd>UX audit · flows · interface exploration</dd></div><div><dt>Stage</dt><dd>Funded MVP</dd></div></dl>
         </div>
       </section>
 
@@ -757,7 +783,7 @@ function PurnoCase({ portfolio = 'design' }) {
         <div className="case-index">02 / Research + scope</div>
         <div className="case-content">
           <h2>Compare POS and local payment patterns.</h2>
-          <p className="lead narrow">I compared five POS products with bKash to identify familiar checkout patterns to test and assumptions that could slow local merchants down.</p>
+          <p className="lead narrow">I compared five POS products with bKash to identify familiar checkout patterns and assumptions that could slow local merchants down.</p>
           <div className="purno-audit">
             <PurnoImage src="/purno/competitive-audit.webp" alt="Comparative UX audit of six retail and payment products" caption="Comparative UX audit across retail and payment products."/>
           </div>
@@ -770,14 +796,13 @@ function PurnoCase({ portfolio = 'design' }) {
         <div className="case-index">03 / Inventory</div>
         <div className="case-content">
           <h2>Flatten the category menu.</h2>
-          <p className="lead narrow">The original structure nested categories four levels deep. I reduced it to one visible level, then used category colour to help merchants scan the home screen quickly.</p>
+          <p className="lead narrow">The audit and flow work pointed to a need for shallow navigation at the counter. The original structure nested categories four levels deep. I reduced it to one visible level, then explored colour as a way to make the home screen easier to scan.</p>
           <PurnoImage className="purno-image--wide" src="/purno/categories-redesign.webp" alt="Purno category screen before and after flattening the hierarchy" caption="Category navigation before and after."/>
           <div className="purno-test-story">
-            <div><span>Five versions</span><p>I tested each card in default and selected states. The selected state had to remain clear from an arm’s length.</p></div>
-            <PurnoImage src="/purno/product-card-testing.webp" alt="Five product card versions in default and selected states" caption="Top row: default. Bottom row: selected."/>
+            <div><span>Five explorations</span><p>I compared card layouts in their default and selected states. The chosen direction uses colour to separate categories while keeping the selected state visible from a distance.</p></div>
+            <PurnoImage src="/purno/product-card-testing.webp" alt="Five Purno product card explorations in default and selected states" caption="Top row: default. Bottom row: selected."/>
           </div>
-          <div className="purno-result-band"><strong>~20% faster</strong><p>Transaction time in moderated testing after colour-coded cards replaced emoji category chips.</p></div>
-          <PurnoImage className="purno-image--wide" src="/purno/home-redesign.webp" alt="Purno home screen before and after colour-coded product cards" caption="Home screen before and after the card change."/>
+          <PurnoImage className="purno-image--wide" src="/purno/home-redesign.webp" alt="Purno home screen before and after colour-coded product cards" caption="The home screen moved from emoji category chips to colour-coded product cards."/>
         </div>
       </section>
 
@@ -833,8 +858,8 @@ function PurnoCase({ portfolio = 'design' }) {
         <div className="case-index">06 / Result</div>
         <div className="case-content">
           <h2>{portfolio === 'product' ? 'What made the flow work at the counter.' : 'From an open brief to a funded MVP.'}</h2>
-          {portfolio !== 'product' && <div className="outcome-numbers purno-outcomes"><article><strong>$10k</strong><span>Seed funding raised after a pitch supported by the designed MVP</span></article><article><strong>~20%</strong><span>Faster transactions in moderated testing</span></article><article><strong>3</strong><span>Designed for desktop, tablet and mobile</span></article></div>}
-          {portfolio === 'product' ? <p className="lead narrow">Shallow menus, clear product cards and familiar local payment choices helped merchants keep the sale moving while a customer waited.</p> : <div className="learning-grid"><h3>Main learning</h3><p>Localisation goes beyond translation. Menu depth, reading distance and payment habits determine whether a POS works at a busy counter.</p><h3>Evidence note</h3><p>The speed result comes from moderated tests of the colour-coded cards. The funding relates to the MVP pitch, not long-term product impact.</p></div>}
+          {portfolio !== 'product' && <div className="outcome-numbers purno-outcomes"><article><strong>$10k</strong><span>Seed funding raised after a pitch supported by the designed MVP</span></article><article><strong>3</strong><span>Designed for desktop, tablet and mobile</span></article></div>}
+          {portfolio === 'product' ? <p className="lead narrow">Shallow menus, clear product cards and familiar local payment choices shaped the intended counter flow.</p> : <div className="learning-grid"><h3>Main learning</h3><p>Localisation goes beyond translation. Menu depth, reading distance and payment habits shape a POS for a busy counter.</p><h3>Funding</h3><p>The designed MVP supported the seed pitch. Funding does not show how the product performed after launch.</p></div>}
           <a className="next-project" href="/jayga"><span>Next case study</span><strong>Jayga <ArrowUpRight/></strong></a>
         </div>
       </section>

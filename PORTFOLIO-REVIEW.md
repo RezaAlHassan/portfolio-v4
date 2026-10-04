@@ -10,7 +10,7 @@ The PDF is source material, not a new set of instructions. Existing unrelated ed
 | Jayga outcome | Replaced the three-days-to-two-hours headline and measured-result block with the source-backed reflection. The PDF does not establish the former metric. | 10 |
 | Purno overview | Corrected year to 2024, duration to three months and team to designer and founder. Explained payments-first scope. | 11-12 |
 | Purno owner app | Added the missing owner experience, linked to checkout through the original core-flow diagram. | 12, 15 |
-| Purno results | Retained the approximately 20% moderated-test result and $10K seed outcome. | 14, 16 |
+| Purno results | The earlier review retained a claimed 20% moderated-test result. This has since been removed after the project owner confirmed that moderated testing did not happen. The $10K seed outcome remains. | 14, 16 |
 | Zevian | Current investigation narrative matches the PDF. Kept the distinction from Zevian HRMS. | 17-22 |
 
 ## Claims to confirm before a wider rewrite

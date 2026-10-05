@@ -20,7 +20,7 @@ const projects = [
   {
     title: 'Jayga',
     description: 'Warehouse interfaces for storage, billing and delivery.',
-    metric: '23 businesses surveyed · 3 app designs',
+    metric: '~3× projected revenue/m² · led 4 engineers',
     tags: ['Complex workflows', 'Operational tools', 'Systems thinking', 'Field research'],
     year: 'Nov 2023–Aug 2025',
     visual: 'pipeline',
@@ -29,7 +29,7 @@ const projects = [
   {
     title: 'Purno',
     description: 'Retail POS for payments and inventory.',
-    metric: '$10K seed · 5 card explorations',
+    metric: '$10K seed · cross-platform POS',
     tags: ['Fintech', 'Multi-platform', 'Prototyping', 'Interface design'],
     year: '2024',
     visual: 'pos',
@@ -184,7 +184,7 @@ function SelectedProjects({ portfolio = 'design' }) {
     reducedMotion.addEventListener('change', update);
     return () => reducedMotion.removeEventListener('change', update);
   }, []);
-  const designSelected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI investigation for sales managers.', metric: '10+ discovery conversations · 4-step prototype', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  const designSelected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI investigation for sales managers.', metric: '10+ discovery conversations · React prototype', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
   const selected = portfolio === 'product' ? [
     { title: 'Jayga', year: 'Nov 2023–Aug 2025 · Product lead', metric: '~3× revenue/m² potential · 8-person team led', description: 'Turned warehouse operations into grid, billing and delivery workflows.', tags: ['Product rules', 'Service flows', 'Operational tools'], url: '/product/jayga', image: '/jayga/warehouse-visit.jpg', alt: 'Checking stock in a Jayga warehouse aisle' },
     { title: 'Zevian', year: '2026 · Founder product', metric: '10+ discovery conversations · 2 paying customers', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
@@ -196,7 +196,7 @@ function SelectedProjects({ portfolio = 'design' }) {
     if (demoRef.current.paused) { demoManualPlay.current = true; demoRef.current.play().catch(() => setDemoPaused(true)); }
     else demoRef.current.pause();
   };
-  return <section className={`section projects work-section ${portfolio === 'product' ? 'work-section--product' : ''}`} id="work">
+  return <section className={`section projects work-section ${portfolio === 'product' ? 'work-section--product' : 'work-section--design'}`} id="work">
     <div className="projects-title"><h2>{portfolio === 'product' ? 'Product work' : 'Selected projects'}</h2></div>
     <div className="work-grid">
       {selected.map((project, index) => <article className={`work-card work-card--${project.title.toLowerCase()}`} key={project.title}>
@@ -225,15 +225,35 @@ function SelectedProjects({ portfolio = 'design' }) {
 
 function DesignSystems() {
   return (
-    <section className="systems-section section">
-      <div className="systems-heading"><h2>More design work</h2></div>
-      <div className="system-cases">
-        <a href="/portfolio" className="system-case orderific-system">
-          <span>Portfolio</span><h3>Redesigned the portfolio through moodboard-led exploration, clearer storytelling and a consistent editorial system.</h3><ArrowUpRight />
-        </a>
-        <a href="/zevian-hrms" className="system-case hrms-system">
-          <span>Zevian HRMS</span><h3>Refined an existing theme-mode system using light/dark variable modes across HR dashboards, records and reports.</h3><ArrowUpRight />
-        </a>
+    <section className="section projects work-section other-work-section" id="other-work">
+      <div className="projects-title"><h2>Other work</h2></div>
+      <div className="work-grid">
+        <article className="work-card">
+          <a href="/zevian-hrms" className="work-card-link">
+            <figure className="work-cover other-work-cover other-work-cover--hrms">
+              <img src="/zevian-hrms/policy-cover.png" alt="Zevian HRMS work modality policy screen" loading="lazy"/>
+            </figure>
+            <div className="work-card-heading"><span>Earlier interface system</span><ArrowUpRight aria-hidden="true"/></div>
+            <h3>Zevian HRMS</h3>
+            <p className="work-description"><span className="work-summary">Theme modes and reusable components for an HR management concept.</span></p>
+            <div className="tags"><span>Design system</span><span>Theme modes</span><span>HRMS</span></div>
+          </a>
+        </article>
+        <article className="work-card">
+          <a href="/portfolio" className="work-card-link">
+            <figure className="work-cover other-work-cover other-work-cover--portfolio" aria-hidden="true">
+              <div className="portfolio-cover-sheet">
+                <div className="portfolio-cover-masthead"><span>REZA A</span><span>PRODUCT DESIGN</span></div>
+                <strong>Ideas into<br/><em>clear systems.</em></strong>
+                <div className="portfolio-cover-choices"><span>01 / Product</span><span>02 / Design</span></div>
+              </div>
+            </figure>
+            <div className="work-card-heading"><span>Personal project</span><ArrowUpRight aria-hidden="true"/></div>
+            <h3>Portfolio</h3>
+            <p className="work-description"><span className="work-summary">Moodboards and iteration shaped a clearer editorial portfolio.</span></p>
+            <div className="tags"><span>Visual direction</span><span>Web design</span><span>Interaction</span></div>
+          </a>
+        </article>
       </div>
     </section>
   );
@@ -1259,7 +1279,7 @@ export function App({ initialPath = null }) {
   let page;
   if (path === '' || path === '/') page = <PortfolioEntry/>;
   else if (path === '/product') page = <><Nav portfolio="product"/><main><ProductHero/><SelectedProjects portfolio="product"/></main><About portfolio="product"/></>;
-  else if (path === '/design') page = <><Nav/><main><Hero/><SelectedProjects/><DesignSystems/><AIWorkflowTeaser/></main><About/></>;
+  else if (path === '/design') page = <><Nav/><main><Hero/><SelectedProjects/><AIWorkflowTeaser/><DesignSystems/></main><About/></>;
   else if (path === '/product/jayga') page = <JaygaProductCase/>;
   else if (path === '/product/zevian') page = <ZevianCase portfolio="product"/>;
   else if (path === '/product/purno') page = <PurnoCase portfolio="product"/>;

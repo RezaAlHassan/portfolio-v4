@@ -355,3 +355,7 @@ Purno decision summaries reuse Orderific's three-card component styling. Its own
 ## Homepage preview motion (current)
 
 Zevian and Orderific both move automatically without visible control icons, action labels or hints. Click the Zevian cover to pause or play; its title and details open the case study. Orderific loops slowly, remains draggable and swipeable, and opens individual cards with ExpandableImage. Pause the strip on hover, keyboard focus and while an image viewer is open. Keep arrow-key navigation and Space to pause. Reduced-motion users get still previews. This replaces the earlier restriction on continuous motion outside Zevian. All outer cover heights remain equal.
+
+## Design homepage secondary work (current)
+
+The AI workflows teaser follows the four main design covers at full content width, with compact height and a short gap before Other work. Other work uses a smaller heading and the same two-column card pattern as the main projects. Zevian HRMS comes first with the supplied work-policy crop; Portfolio follows with a code-native editorial cover. Both cards link to their full cases and stack on mobile.

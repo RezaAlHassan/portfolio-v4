@@ -10,7 +10,8 @@ This repository contains Reza Al Hassan's product-design portfolio. Preserve fac
 ## Portfolio routes
 
 - `/` is a two-link entry page for `/product` and `/design`.
-- `/design` keeps the original design homepage and four-cover layout. Its cover order is Zevian, Orderific, Jayga and Purno.
+- `/design` keeps the original design homepage and four-cover layout. Its cover order is Zevian, Orderific, Jayga and Purno. A short, full-width AI workflows teaser follows the main covers, then an Other work section shows Zevian HRMS and Portfolio as image cards. The HRMS card uses the work-policy crop.
+- `/design` metric lines show Zevian's 10+ discovery conversations and React prototype; Jayga's modelled ~3× revenue per m² and leadership of four engineers; and Purno's $10K seed funding and cross-platform POS. The Jayga case still reports work with five engineers in the 2024 storage scope; verify how these team counts relate before changing the case.
 - `/product` has four covers in this order: Jayga, Zevian, Orderific and Purno. Jayga is marked as the featured project. There is no Other work section.
 - The `/product` hero leads with Product Manager and mentions design once as a design-led approach in supporting copy. Keep `/design` clearly design-focused.
 - `/product/jayga`, `/product/zevian`, `/product/purno` and `/product/orderific` put outcomes before process while preserving design decisions and process flows. Do not show a Jayga deferred section.

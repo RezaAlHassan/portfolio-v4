@@ -69,7 +69,7 @@ Do not edit `dist/`; it is generated and ignored by Git.
 
 - Zevian evolution has two stages: evaluation and patterns; investigation and decision. Do not split these back into four versions.
 - Purno owner screens use vector assets under public/purno/owner-*.svg; keep them expandable.
-- The homepage hero has one canvas particle detail in `src/Particles.jsx`, alternating Tangled path and Clear flow, opening on Clear flow. It sits beside the headline on desktop and below the supporting copy on smaller screens, with only a Hover hint. It moves only on interaction, supports keyboard shape changes and stays static for reduced motion.
+- The homepage hero has one canvas particle detail in `src/Particles.jsx`, opening on a grain portrait made from Reza's supplied photo, then cycling through Tangled path and Clear flow. The portrait uses sampled ink dots from `src/portrait-points.json`. It sits beside the headline on desktop and below the supporting copy on smaller screens, with only a Hover hint. On first entering view, the dots fade in and gather into the portrait over about 1.5 seconds. After that, it moves only on interaction, supports keyboard shape changes and stays static for reduced motion, which also skips the entrance animation.
 
 ## Product design sprint page
 

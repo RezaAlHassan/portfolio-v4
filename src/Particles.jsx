@@ -1,12 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
+import portraitPoints from './portrait-points.json';
 
-const shapes = ['Tangled path', 'Clear flow'];
+const shapes = ['Portrait', 'Tangled path', 'Clear flow'];
 const count = 2400;
 const homeCache = new Map();
 
-// Fill both shapes with the same dots, then pair homes by angle.
+// Sample each shape, then pair particle homes by angle.
 function sample(shape) {
   if (homeCache.has(shape)) return homeCache.get(shape);
+  if (shape === 'Portrait') {
+    const points = portraitPoints.map(([x, y]) => ({ x, y }));
+    points.sort((a, b) => Math.atan2(a.y - 120, a.x - 180) - Math.atan2(b.y - 120, b.x - 180));
+    homeCache.set(shape, points);
+    return points;
+  }
   const paths = [];
   const fills = [];
   if (shape === 'Tangled path') {
@@ -55,8 +62,8 @@ function sample(shape) {
   return points;
 }
 
-export function Particles({ shape = 'Clear flow', reach = 80, force = 60, grain = 'Fine' }) {
-  const [current, setCurrent] = useState(shapes.includes(shape) ? shape : 'Clear flow');
+export function Particles({ shape = 'Portrait', reach = 80, force = 60, grain = 'Fine' }) {
+  const [current, setCurrent] = useState(shapes.includes(shape) ? shape : 'Portrait');
   const canvasRef = useRef(null);
   const stageRef = useRef(null);
   const engineRef = useRef(null);
@@ -67,24 +74,48 @@ export function Particles({ shape = 'Clear flow', reach = 80, force = 60, grain 
     if (!ctx) return undefined;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const ink = getComputedStyle(stageRef.current).color;
-    const dots = sample(shapes.includes(shape) ? shape : 'Clear flow').map(home => ({ home, x: home.x, y: home.y, vx: 0, vy: 0 }));
-    let frame = 0, visible = true, last = 0;
+    let activeShape = shapes.includes(shape) ? shape : 'Portrait';
+    const dots = sample(activeShape).map((home, i) => {
+      const spread = Math.sin((i + 1) * 127.1) * 43758.5453;
+      const seed = spread - Math.floor(spread);
+      const startX = 20 + seed * 320;
+      const startY = home.y + 35 + seed * 70;
+      return { home, startX, startY, delay: seed * 350, x: motion.matches ? home.x : startX, y: motion.matches ? home.y : startY, opacity: motion.matches ? 1 : 0, vx: 0, vy: 0 };
+    });
+    let frame = 0, visible = false, last = 0, introStart = null, introDone = motion.matches;
     const draw = () => {
       ctx.setTransform(canvas.width / 360, 0, 0, canvas.height / 240, 0, 0);
       ctx.clearRect(0, 0, 360, 240);
       ctx.fillStyle = ink;
-      const radius = grain === 'Coarse' ? 1.8 : 1;
+      const radius = (grain === 'Coarse' ? 1.8 : 1) * (activeShape === 'Portrait' ? .55 : 1);
       for (const dot of dots) {
+        ctx.globalAlpha = dot.opacity;
         const stretch = 1 + Math.min(Math.hypot(dot.vx, dot.vy) * .12, 3);
         ctx.beginPath();
         ctx.ellipse(dot.x, dot.y, radius * stretch, radius / Math.sqrt(stretch), Math.atan2(dot.vy, dot.vx), 0, Math.PI * 2);
         ctx.fill();
       }
+      ctx.globalAlpha = 1;
     };
     const tick = time => {
       frame = 0;
       const dt = Math.min((time - last) / 16.67 || 1, 2);
       last = time;
+      if (!introDone) {
+        introStart ??= time;
+        const elapsed = time - introStart;
+        for (const dot of dots) {
+          const progress = Math.max(0, Math.min(1, (elapsed - dot.delay) / 1200));
+          const ease = 1 - (1 - progress) ** 3;
+          dot.x = dot.startX + (dot.home.x - dot.startX) * ease;
+          dot.y = dot.startY + (dot.home.y - dot.startY) * ease;
+          dot.opacity = Math.min(1, progress * 3);
+        }
+        draw();
+        introDone = elapsed >= 1550;
+        if (visible && !motion.matches) frame = requestAnimationFrame(tick);
+        return;
+      }
       let energy = 0;
       for (const dot of dots) {
         dot.vx = (dot.vx + (dot.home.x - dot.x) * .05 * dt) * Math.pow(.84, dt);
@@ -102,17 +133,27 @@ export function Particles({ shape = 'Clear flow', reach = 80, force = 60, grain 
     };
     const settle = () => {
       cancelAnimationFrame(frame); frame = 0;
-      for (const dot of dots) { dot.x = dot.home.x; dot.y = dot.home.y; dot.vx = dot.vy = 0; }
+      introDone = true;
+      for (const dot of dots) { dot.x = dot.home.x; dot.y = dot.home.y; dot.opacity = 1; dot.vx = dot.vy = 0; }
       draw();
     };
     engineRef.current = {
       change(next) {
+        if (next === activeShape) return;
+        introDone = true;
         const homes = sample(next);
-        dots.forEach((dot, i) => { dot.home = homes[i]; });
+        activeShape = next;
+        const previousCount = dots.length;
+        while (dots.length < homes.length) {
+          const origin = dots[dots.length % previousCount];
+          dots.push({ home: homes[dots.length], x: origin.x, y: origin.y, opacity: 1, vx: 0, vy: 0 });
+        }
+        dots.length = homes.length;
+        dots.forEach((dot, i) => { dot.home = homes[i]; dot.opacity = 1; });
         if (motion.matches) settle(); else wake();
       },
       push(event, shock = false) {
-        if (motion.matches) return;
+        if (motion.matches || !introDone) return;
         const rect = canvas.getBoundingClientRect();
         const x = (event.clientX - rect.left) * 360 / rect.width;
         const y = (event.clientY - rect.top) * 240 / rect.height;
@@ -149,7 +190,7 @@ export function Particles({ shape = 'Clear flow', reach = 80, force = 60, grain 
 
   const next = () => setCurrent(value => shapes[(shapes.indexOf(value) + 1) % shapes.length]);
   return <div className="hero-particles">
-    <button ref={stageRef} type="button" className="particle-stage" aria-label={`${current} made of dots. Change to ${shapes[(shapes.indexOf(current) + 1) % shapes.length]}.`} onPointerMove={event => { if (event.pointerType !== 'touch') engineRef.current?.push(event); }} onClick={event => { if (event.detail > 0) engineRef.current?.push(event, true); next(); }}>
+    <button ref={stageRef} type="button" className="particle-stage" aria-label={`${current === 'Portrait' ? "Reza's portrait" : current} made of dots. Change to ${shapes[(shapes.indexOf(current) + 1) % shapes.length]}.`} onPointerMove={event => { if (event.pointerType !== 'touch') engineRef.current?.push(event); }} onClick={event => { if (event.detail > 0) engineRef.current?.push(event, true); next(); }}>
       <canvas ref={canvasRef} aria-hidden="true"/>
     </button>
     <span className="particle-hint">Hover</span>

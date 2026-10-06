@@ -118,7 +118,7 @@ Orderific's homepage preview now uses four supplied component-card exports in an
 
 ## Homepage particle detail (current)
 
-The homepage hero pairs its headline with an ink-dot canvas up to 440px wide. The shape opens as Clear flow and alternates with Tangled path on press. A longer four-step flow fills more of the canvas, showing the move from a complicated path to a clear structure. The only visible hint is Hover. On screens at 1100px and below, the canvas sits below the supporting copy and selected-work action. The contact section has no duplicate canvas.
+The homepage hero pairs its headline with an ink-dot canvas up to 440px wide. It opens with a grain portrait sampled from Reza's supplied photo, preserving his hair, glasses and facial features in fine ink dots. On first entering view, dots fade in from a loose cloud and gather into the portrait over about 1.5 seconds, then rest until interaction. Reduced motion shows the finished portrait immediately. Pressing cycles through Portrait, Tangled path and Clear flow. The portrait uses more, smaller dots to show facial detail; the flow uses larger dots. The only visible hint is Hover. On screens at 1100px and below, the canvas sits below the supporting copy and selected-work action. The contact section has no duplicate canvas.
 
 The 2,400 dots fill the flow blocks and tangled shape. They move only after pointer movement or a shape change, and stop once settled. The shape button supports Enter and Space. Reduced motion keeps each selected shape static. Use warm paper and ink; keep the headline visually dominant.
 
@@ -358,4 +358,4 @@ Zevian and Orderific both move automatically without visible control icons, acti
 
 ## Design homepage secondary work (current)
 
-The AI workflows teaser follows the four main design covers at full content width, with compact height and a short gap before Other work. Other work uses a smaller heading and the same two-column card pattern as the main projects. Zevian HRMS comes first with the supplied work-policy crop; Portfolio follows with a code-native editorial cover. Both cards link to their full cases and stack on mobile.
+The AI workflows teaser follows the four main design covers at full content width, with compact content and generous space above and below. Its content sits below the divider with a clear inset. Spacing reduces on mobile. Other work uses a smaller heading and the same two-column card pattern as the main projects. Zevian HRMS comes first with the supplied work-policy crop; Portfolio follows with a code-native editorial cover. Both cards link to their full cases and stack on mobile.

@@ -413,13 +413,13 @@ function ZevianCase({ portfolio = 'design' }) {
 
       {portfolio === 'product' && <section className="case-section case-wrap product-outcome" id="outcome">
         <div className="case-index">Outcome / current stage</div>
-        <div className="case-content"><h2>A new direction, shown in a working prototype.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring. The React prototype lets managers review evidence and make a decision. Zevian has two paying customers, and validation of this investigation flow continues.</p></div>
+        <div className="case-content"><h2>A new direction, shown in a working prototype.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring toward manager-led investigation. Zevian has two paying customers; the current prototype remains in development and under validation.</p></div>
       </section>}
 
       <section className="case-section case-wrap overview" id="overview">
         <div className="case-index">01 / Current product</div>
         <div className="case-content">
-          <p className="lead narrow">When an important metric changes, sales managers connect supporting signals, gather context and decide whether it needs action.</p>
+          <p className="lead narrow">Zevian is moving from employee scoring to finding issues in the sales pipeline. Current development connects CRM and outreach platforms so managers can investigate changes, gather context and decide what needs action.</p>
           <dl className="case-meta"><div><dt>Audience</dt><dd>Sales managers</dd></div><div><dt>Role</dt><dd>Founder · Product designer</dd></div><div><dt>Scope</dt><dd>Strategy · UX · UI</dd></div><div><dt>Research</dt><dd>Interviews · Prototype feedback</dd></div><div><dt>Build</dt><dd>Figma · React prototype</dd></div><div><dt>Status</dt><dd>React prototype / ongoing validation</dd></div></dl>
           <div className="zevian-flowchart" aria-label="Zevian workflow from data upload to a saved manager decision">
             <div className="workflow-lane"><span className="workflow-lane-label">Start with existing data</span><div className="flow-node"><strong>Add data</strong><p>CSV, XLSX, CRM or dialer export.</p></div></div>
@@ -444,13 +444,21 @@ function ZevianCase({ portfolio = 'design' }) {
         <div className="case-index">02 / What discovery changed</div>
         <div className="case-content">
           <h2>What interviews changed.</h2>
-          <p className="zevian-research-context">Discovery ran from May to September alongside building and GTM, with about 1–2 weeks spent on interviews, prototype feedback and synthesis.</p>
+          <p className="zevian-method-summary">I combined manager interviews and prototype feedback with AI-assisted transcript synthesis. Feedback shifted the product from scoring and dashboards to focused investigation, visible evidence and manager-led decisions.</p>
+          <details className="zevian-method"><summary>Research method and feedback-to-design changes</summary><div className="zevian-method-body zevian-method-body--research">
+          <h4>Interviews, prototype feedback and synthesis.</h4>
+          <p>Discovery ran from May to September alongside building and GTM, with about 1–2 weeks spent on interviews, prototype feedback and synthesis.</p>
+          <h4>Transcript and AI workflow.</h4>
+          <p>I used Fireflies to create interview transcripts, uploaded them to Google Drive and kept them organised in a dedicated folder. I connected the folder to ChatGPT for research synthesis.</p>
           <div className="pivot-list">
-            <article><h3>Start with the change.</h3><p>Managers needed to investigate a changed metric, so I replaced employee scores with recent baselines and supporting signals.</p></article>
+            <article><h3>Replace the dashboard with a focused review.</h3><p>One manager struggled to understand what the dashboard numbers meant. I removed the dashboard from the current prototype and narrowed the workflow to reviewing a finding, its evidence and context.</p></article>
+            <article><h3>Support investigation, not just pattern detection.</h3><p>One manager said investigating patterns was already part of their job; another described investigation as the bigger problem. I shifted from employee scoring to helping managers understand a change through recent baselines and supporting signals.</p></article>
+            <article><h3>Keep the decision with the manager.</h3><p>One manager said they did not trust AI decisions. I kept evidence, confidence and possible reasons visible, with the manager making the final call.</p></article>
             <article><h3>Look beyond employee input.</h3><p>Lead quality, campaigns, process changes and data issues can also affect results. Zevian keeps possible reasons open for review.</p></article>
             <article><h3>Automate clear matches.</h3><p>Zevian handles clear data matches and categorisation. Managers review uncertain cases and make the final decision.</p></article>
           </div>
           <blockquote>“Something changed. Why did it change?”<cite>The question that replaced the scoring model</cite></blockquote>
+          </div></details>
         </div>
       </section>
 
@@ -462,14 +470,21 @@ function ZevianCase({ portfolio = 'design' }) {
             <article><span>Earlier prototype: employee scoring</span><h3>Evaluate performance and guide coaching.</h3><p>KPIs and employee data &rarr; scores or performance findings &rarr; coaching</p><small>Gap: explain the change and consider causes beyond employee performance.</small></article>
             <article className="model-current"><span>Current: investigation and diagnosis</span><h3>Prepare the evidence. Review the exceptions.</h3><p>Upload &rarr; auto-match &rarr; finding and possible reasons &rarr; context &rarr; decision &rarr; history</p><small>The system prepares the review; the manager judges the evidence and decides.</small></article>
           </div>
-          <div className="zevian-archive-intro"><h3>Earlier prototype: employee scoring</h3><p>Managers set scoring rules and reviewed employee reports. Discovery shifted the focus to investigating changes and their possible causes.</p></div>
+          <div className="zevian-archive-intro"><h3>Earlier prototype: employee scoring</h3><p>The first prototype scored employees and detected patterns based on KPIs set by the manager. Discovery shifted the focus to investigating changes and their possible causes.</p></div>
+          <p className="zevian-method-summary">I used AI agents to build and maintain the earlier prototype, then iterated on manager feedback.</p>
+          <details className="zevian-method"><summary>Earlier prototype: AI build and testing workflow</summary><div className="zevian-method-body">
+            <h4>Combine UI libraries.</h4><p>I combined shadcn with the Datadog library and set up the libraries for the employee-scoring prototype.</p>
+            <h4>Connect the data and manage environments.</h4><p>I built SQL scripts, connected the prototype to Supabase and maintained production, local and test branches.</p>
+            <h4>Use agents across development and testing.</h4><p>I worked with Antigravity, Codex and Claude Code on the build, and used Google's Jules to set up automated tests.</p>
+            <h4>Iterate on manager feedback.</h4><p>Manager feedback informed changes to the prototype. The earlier demo shows employee scoring and pattern detection based on manager-set KPIs.</p>
+          </div></details>
+          <aside className="zevian-prototype-highlight" aria-label="Earlier prototype links"><div className="zevian-prototype-actions"><a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">Open earlier prototype <ArrowUpRight/></a><a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Read earlier case study <ArrowUpRight/></a></div><p>The demo shows employee scoring and manager-set KPI patterns.</p></aside>
           <div className="zevian-archive-gallery">
             <figure><ExpandableImage src="/zevian/archived/kpi-creation.png" alt="Archived Zevian KPI setup, showing a long scoring form beside a later two-step version" caption="KPI setup in the earlier evaluation prototype."/><figcaption><strong>Set scoring rules</strong><span>The manager defined what success meant before reports could be evaluated.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/report-detail.png" alt="Archived Zevian report detail with an employee score, numeric criteria, report evidence and coaching notes" caption="Scored report in the earlier evaluation prototype."/><figcaption><strong>Review a scored report</strong><span>The report tied a score to targets, written evidence and coaching notes.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/manager-dashboard.png" alt="Archived Zevian manager dashboard with a team average score, reporting status and AI team summary" caption="Manager dashboard in the earlier evaluation prototype."/><figcaption><strong>Read the team view</strong><span>The dashboard led with a team score and reporting summary.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/ask-ai.png" alt="Archived Zevian Ask AI screen annotated to show the selected people and dates, an answer grounded in report text and linked source reports" caption="Ask AI in the earlier evaluation prototype, with scope and source reports visible."/><figcaption><strong>Ask AI about the reports</strong><span>The manager chose the people and dates. The answer linked back to the reports it used.</span></figcaption></figure>
           </div>
-          <p className="zevian-archive-note">Open the <a href="https://demo.zevian.co" target="_blank" rel="noreferrer">earlier evaluation demo <ArrowUpRight/></a> or read the <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">full archived case <ArrowUpRight/></a>. These show the previous direction; they do not validate the current investigation flow.</p>
         </div>
       </section>
 
@@ -477,6 +492,7 @@ function ZevianCase({ portfolio = 'design' }) {
         <div className="case-index">04 / Current experience</div>
         <div className="case-content">
           <h2>Current: investigation and diagnosis</h2>
+          <aside className="zevian-prototype-highlight zevian-prototype-highlight--current" aria-label="Current prototype status"><strong>Current prototype: in development</strong><p>Work includes CRM and outreach integrations to find issues in the sales pipeline. The linked demo above shows the earlier employee-scoring prototype.</p></aside>
           <p className="zevian-proof-swipe-hint">Swipe each image to inspect it, or tap to open the full view.</p>
           <div className="zevian-proof-sequence">
             <article className="zevian-proof-step">
@@ -500,7 +516,7 @@ function ZevianCase({ portfolio = 'design' }) {
         <div className="case-index">05 / System and build</div>
         <div className="case-content">
           <h2>From product decisions to a testable React prototype.</h2>
-          <p className="lead narrow">I translated the product model into interface structure, states and edge cases during a three-day design sprint, then built a React prototype for demos and validation.</p>
+          <p className="lead narrow">During a three-day design sprint, I defined the interface structure, states and edge cases for the investigation workflow.</p>
           <div className="build-days">
             <article><span>Day 1</span><h3>Structure</h3><p>Defined the four-step workflow: Add data → Review matches → Review findings → Save decisions.</p></article>
             <article><span>Day 2</span><h3>System</h3><p>Defined the list, drawer, context states, confidence, priority and semantic tokens.</p></article>
@@ -508,8 +524,15 @@ function ZevianCase({ portfolio = 'design' }) {
           </div>
           <div className="system-evidence">
             <figure><ExpandableImage src="/Zevian-Colors.png" alt="Zevian primitive and semantic colour token system" caption="Primitive colours feed semantic roles for backgrounds, text, actions and product states."/><figcaption>I started with only the essential tokens and components: colour, type, inputs, buttons, links, badges and chips. The system can grow with the product as new workflow needs become clear.</figcaption></figure>
-            <div><h3>Attio for scan. Notion for depth.</h3><p>Dense rows make the findings list quick to read. The drawer uses a calmer document structure for evidence, context and decisions.</p><h3>AI as a working partner.</h3><p>I used ChatGPT for research synthesis, product critique, reference analysis, token structure, state exploration and later design-to-code. The product decisions remained grounded in research and product reasoning.</p><h3>Figma to React.</h3><p>I translated the stable direction into a reusable React prototype for demos, product validation and faster state changes.</p></div>
+            <div><h3>Attio for scan. Notion for depth.</h3><p>Dense rows make the findings list quick to read. The drawer uses a calmer document structure for evidence, context and decisions.</p></div>
           </div>
+          <p className="zevian-method-summary">I set the visual direction in Figma before the AI-assisted build, giving the current prototype a clear design foundation.</p>
+          <details className="zevian-method"><summary>Current prototype: design method and AI workflow</summary><div className="zevian-method-body">
+            <h4>Start with a design foundation.</h4><p>I designed tokens in a Figma file and a few pages with components to guide the build. This gave the AI concrete references instead of relying on the common SaaS dashboard layouts it often produces with shadcn variants.</p>
+            <h4>Use AI to explore, then make the decisions.</h4><p>I used ChatGPT for product critique, reference analysis, token structure and state exploration. I kept product decisions grounded in research and my own judgment.</p>
+            <h4>Bring the design into React.</h4><p>I used Claude Code and Codex to build the React investigation prototype from the design direction. The prototype remains in development.</p>
+            <h4>Develop the sales-pipeline workflow.</h4><p>Current work includes CRM and outreach integrations to bring sales-pipeline signals into the investigation workflow. Validation continues as the product develops.</p>
+          </div></details>
           <div className="final-learning"><span>Main learning</span><p>The product became the investigation around a change—and the manager's ability to judge it fairly.</p></div>
           <a className="next-project" href="/orderific"><span>Next case study</span><strong>Orderific <ArrowUpRight/></strong></a>
         </div>

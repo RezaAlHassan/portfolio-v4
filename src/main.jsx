@@ -459,10 +459,10 @@ function ZevianCase({ portfolio = 'design' }) {
         <div className="case-content">
           <h2>Each iteration moved more preparation out of the manager's workflow.</h2>
           <div className="model-evolution model-evolution--two">
-            <article><span>V1 / Evaluation and patterns</span><h3>Evaluate performance and guide coaching.</h3><p>KPIs and employee data &rarr; scores or performance findings &rarr; coaching</p><small>Gap: explain the change and consider causes beyond employee performance.</small></article>
-            <article className="model-current"><span>V2 / Investigation and decision</span><h3>Prepare the evidence. Review the exceptions.</h3><p>Upload &rarr; auto-match &rarr; finding and possible reasons &rarr; context &rarr; decision &rarr; history</p><small>The system prepares the review; the manager judges the evidence and decides.</small></article>
+            <article><span>Earlier prototype: employee scoring</span><h3>Evaluate performance and guide coaching.</h3><p>KPIs and employee data &rarr; scores or performance findings &rarr; coaching</p><small>Gap: explain the change and consider causes beyond employee performance.</small></article>
+            <article className="model-current"><span>Current: investigation and diagnosis</span><h3>Prepare the evidence. Review the exceptions.</h3><p>Upload &rarr; auto-match &rarr; finding and possible reasons &rarr; context &rarr; decision &rarr; history</p><small>The system prepares the review; the manager judges the evidence and decides.</small></article>
           </div>
-          <div className="zevian-archive-intro"><p>These screens show what the first model asked managers to do: define scoring rules, review scored reports, read a team summary and ask questions about reports. Discovery later moved the main task toward investigating a change and deciding what needs action.</p></div>
+          <div className="zevian-archive-intro"><h3>Earlier prototype: employee scoring</h3><p>Managers set scoring rules and reviewed employee reports. Discovery shifted the focus to investigating changes and their possible causes.</p></div>
           <div className="zevian-archive-gallery">
             <figure><ExpandableImage src="/zevian/archived/kpi-creation.png" alt="Archived Zevian KPI setup, showing a long scoring form beside a later two-step version" caption="KPI setup in the earlier evaluation prototype."/><figcaption><strong>Set scoring rules</strong><span>The manager defined what success meant before reports could be evaluated.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/report-detail.png" alt="Archived Zevian report detail with an employee score, numeric criteria, report evidence and coaching notes" caption="Scored report in the earlier evaluation prototype."/><figcaption><strong>Review a scored report</strong><span>The report tied a score to targets, written evidence and coaching notes.</span></figcaption></figure>
@@ -476,7 +476,7 @@ function ZevianCase({ portfolio = 'design' }) {
       <section className="case-section case-wrap product-story">
         <div className="case-index">04 / Current experience</div>
         <div className="case-content">
-          <h2>Investigation.</h2>
+          <h2>Current: investigation and diagnosis</h2>
           <p className="zevian-proof-swipe-hint">Swipe each image to inspect it, or tap to open the full view.</p>
           <div className="zevian-proof-sequence">
             <article className="zevian-proof-step">

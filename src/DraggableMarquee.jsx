@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-export function DraggableMarquee({ items, speed = 1, className = '', renderItem }) {
+export function DraggableMarquee({ items, speed = 1, className = '', renderItem, label = 'Orderific component cards' }) {
   const viewportRef = useRef(null);
   const dragRef = useRef(null);
   const suppressClick = useRef(false);
@@ -49,7 +49,7 @@ export function DraggableMarquee({ items, speed = 1, className = '', renderItem 
     setDragging(false);
   };
   return <div className={`draggable-marquee ${className}`}>
-    <div ref={viewportRef} className="marquee-viewport" role="region" aria-label={`Orderific component cards. Drag or use arrow keys. Press Space to ${paused ? 'resume' : 'pause'} automatic movement.`} aria-keyshortcuts="Space ArrowLeft ArrowRight" tabIndex={0} data-dragging={dragging || undefined}
+    <div ref={viewportRef} className="marquee-viewport" role="region" aria-label={`${label}. Drag or use arrow keys. Press Space to ${paused ? 'resume' : 'pause'} automatic movement.`} aria-keyshortcuts="Space ArrowLeft ArrowRight" tabIndex={0} data-dragging={dragging || undefined}
       onMouseEnter={() => { motion.current.hover = true; }} onMouseLeave={() => { motion.current.hover = false; }}
       onFocusCapture={() => { motion.current.focus = true; }} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) motion.current.focus = false; }}
       onKeyDown={event => {

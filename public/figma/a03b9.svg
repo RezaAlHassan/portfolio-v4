@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame" clip-path="url(#clip0_0_16)">
+<g id="Vector">
+</g>
+<g id="Mask group">
+<mask id="mask0_0_16" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="1" width="18" height="22">
+<g id="Group">
+<g id="Group_2">
+<path id="Vector_2" d="M20.5 7L12 2L3.5 7V17L12 22L20.5 17V7Z" fill="white" stroke="white" stroke-linejoin="round"/>
+<path id="Vector_3" d="M12 11V15M16 9V15M8 13V15" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</mask>
+<g mask="url(#mask0_0_16)">
+<path id="Vector_4" d="M0 0H24V24H0V0Z" fill="#E8F3FF"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_16">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

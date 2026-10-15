@@ -1,0 +1,55 @@
+.new-portfolio .orderific-case{display:flex;flex-direction:column;align-items:flex-start;gap:36px}
+.new-portfolio .orderific-intro{max-width:1101px}
+.new-portfolio .orderific-intro h1{font-size:36px;margin-bottom:8px}
+.new-portfolio .orderific-intro>p{font-size:20px;color:#6b6b6b}
+.new-portfolio .orderific-details{display:flex;flex-wrap:wrap;gap:24px 48px;padding:0;margin:0}
+.new-portfolio .orderific-details div{display:flex;flex-direction:column;gap:6px}
+.new-portfolio .orderific-details dt{font-size:14px;color:#6b6b6b}
+.new-portfolio .orderific-details dd{font-size:16px;margin:0}
+.new-portfolio .orderific-section-heading{width:822px;max-width:100%}
+.new-portfolio .orderific-section-heading h2{font-size:28px;margin-bottom:8px}
+.new-portfolio .orderific-section-heading>p{font-size:20px;color:#868686}
+.new-portfolio .orderific-pair{display:flex;align-items:flex-start;gap:36px;max-width:100%;min-width:0}
+.new-portfolio .orderific-context{width:1094px;gap:38px}
+.new-portfolio .orderific-context>.orderific-note{flex:1}
+.new-portfolio .orderific-note{max-width:100%;min-width:0}
+.new-portfolio .orderific-note h3{font-size:20px;margin-bottom:8px}
+.new-portfolio .orderific-note p{font-size:16px;color:#868686}
+.new-portfolio .orderific-notes{display:flex;flex-direction:column;gap:36px;width:779px;max-width:100%;min-width:0}
+.new-portfolio .orderific-figure{max-width:100%;min-width:0;flex-shrink:1}
+.new-portfolio .orderific-figure>.responsive-artifact{width:100%!important}
+.new-portfolio .orderific-expand{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;border-radius:0;background:transparent;overflow:hidden;cursor:zoom-in}
+.new-portfolio .orderific-framed .orderific-expand{outline:1px solid #f5f5f5;outline-offset:-1px}
+.new-portfolio .orderific-case .orderific-image{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover}
+.new-portfolio .orderific-cover-crop{height:122.89%;left:-.08%;top:-2.87%;width:99.96%}
+.new-portfolio .orderific-component-run{width:1105px}
+.new-portfolio .orderific-direction-labels{display:flex;gap:8px}
+.new-portfolio .orderific-direction-labels span{display:flex;align-items:center;justify-content:center;width:115px;padding:14px 18px;border-radius:8px;font-size:16px;background:#efefef}
+.new-portfolio .orderific-direction-labels span:first-child{background:#e8f3ff}
+.new-portfolio .orderific-rtl-run{display:flex;gap:36px;width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#ccc #f5f5f5;padding-bottom:8px}
+.new-portfolio .orderific-rtl-run>.orderific-figure{flex:0 0 851px;max-width:none}
+.new-portfolio .orderific-direction-crop{height:100.17%;left:.02%;top:-.06%}
+.new-portfolio .orderific-mode-run{width:323.689px}
+.new-portfolio .orderific-collaboration{align-items:center}
+.new-portfolio .orderific-document{flex-shrink:0}
+.new-portfolio .orderific-design-rules{background:#efefef;padding:22px 28px;width:265px;max-width:100%}
+.new-portfolio .orderific-design-rules h3{font-size:20px;margin-bottom:16px}
+.new-portfolio .orderific-design-rules ul{display:flex;flex-direction:column;gap:12px;list-style:none;padding:0;margin:0;font-size:16px;color:#6b6b6b}
+.new-portfolio .orderific-document figcaption{font-size:16px;color:#868686;margin-top:8px}
+.new-portfolio .orderific-collaboration>p{font-size:16px;color:#868686;width:483px;max-width:100%;min-width:0}
+.new-portfolio .orderific-deliverables{display:flex;flex-direction:column;gap:16px;font-size:20px;line-height:1.3;list-style:none;padding:0;margin:0}
+.new-portfolio .orderific-deliverables span{color:#6b6b6b}
+.new-portfolio .orderific-next{display:inline-flex;align-items:center;min-height:47px;border-radius:10px;background:#efefef;padding:12px 16px;font-size:16px}
+@media(max-width:1000px){.new-portfolio .orderific-collaboration{flex-wrap:wrap}}
+@media(max-width:650px){
+ .new-portfolio .orderific-case{gap:28px}
+ .new-portfolio .orderific-intro h1{font-size:30px}
+ .new-portfolio .orderific-pair:not(.orderific-mode-run){flex-direction:column;gap:24px;align-items:flex-start;width:100%}
+ .new-portfolio .orderific-context>.orderific-note{flex:auto}
+ .new-portfolio .orderific-details{gap:20px}
+ .new-portfolio .orderific-details div{width:100%}
+ .new-portfolio .orderific-section-heading h2{font-size:26px}
+ .new-portfolio .orderific-rtl-run>.orderific-figure{flex-basis:calc(100vw - 40px)}
+ .new-portfolio .orderific-design-rules{max-width:100%}
+ .new-portfolio .orderific-document{max-width:100%}
+}

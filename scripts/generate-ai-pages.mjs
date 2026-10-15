@@ -47,12 +47,16 @@ const toMarkdown = (html, title, description, slug) => {
 
 const vite = await createServer({ root, configFile:false, server:{ middlewareMode:true }, appType:'custom', logLevel:'error' });
 try {
-  const { App } = await vite.ssrLoadModule('/src/main.jsx');
+  const { App, pageMetadata } = await vite.ssrLoadModule('/src/main.jsx');
+  for (const [path, metadata] of Object.entries(pageMetadata)) { if (path !== '/') routes[path.slice(1)] = metadata; }
+  for (const [slug, metadata] of Object.entries(routes)) {
+    if (slug !== 'archive' && !slug.startsWith('archive/')) routes[`archive/${slug}`] = [`Archived ${metadata[0]}`, metadata[1]];
+  }
   const entry = renderToString(React.createElement(App, { initialPath:'/' }));
   await writeFile(join(output, 'index.html'), shell
-    .replace(/<title>.*?<\/title>/s, '<title>Reza Al Hassan — Product and design portfolios</title>')
-    .replace(/<meta name="description" content=".*?"\s*\/?>/s, '<meta name="description" content="Choose the product or design portfolio of Reza Al Hassan." />')
-    .replace('<div id="root"></div>', `<div id="root">${entry}</div>`));
+    .replace(/<title>.*?<\/title>/s, '<title>Reza Al Hassan — Product designer and manager</title>')
+    .replace(/<meta name="description" content=".*?"\s*\/?>/s, '<meta name="description" content="I shape B2B products from early research to complete user experiences. Selected work by Reza Al Hassan." />')
+    .replace('<div id="root"></div>', `<div id="root" data-route="/">${entry}</div>`));
   for (const [slug, [title, description]] of Object.entries(routes)) {
     const rendered = renderToString(React.createElement(App, { initialPath:`/${slug}` }));
     const person = {'@type':'Person',name:'Reza Al Hassan',jobTitle:'Product Designer'};
@@ -63,7 +67,7 @@ try {
       .replace(/<title>.*?<\/title>/s, `<title>${escapeHtml(title)}</title>`)
       .replace(/<meta name="description" content=".*?"\s*\/?>/s, `<meta name="description" content="${escapeHtml(description)}" />`)
       .replace('</head>', `<link rel="alternate" type="text/markdown" href="/ai/${slug}.md" title="AI-readable case study" /><script type="application/ld+json">${jsonLd}</script></head>`)
-      .replace('<div id="root"></div>', `<div id="root">${rendered}</div>`);
+      .replace('<div id="root"></div>', `<div id="root" data-route="/${slug}">${rendered}</div>`);
     const htmlPath = join(output, slug, 'index.html');
     await mkdir(dirname(htmlPath), { recursive:true });
     await writeFile(htmlPath, html);

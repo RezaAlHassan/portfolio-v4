@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="184.298" height="213" viewBox="0 0 184.298 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 86">
+<mask id="path-1-inside-1_0_20" fill="white">
+<path d="M0 0H184.298V213H0V0Z"/>
+</mask>
+<path d="M184.298 213V216.021H187.319V213H184.298ZM0 213H-3.02128V216.021H0V213ZM184.298 0H181.277V213H184.298H187.319V0H184.298ZM184.298 213V209.979H0V213V216.021H184.298V213ZM0 213H3.02128V0H0H-3.02128V213H0Z" fill="#9F9F9F" mask="url(#path-1-inside-1_0_20)"/>
+<line id="Line 6" x1="3.02148" y1="138.756" x2="181.277" y2="138.756" stroke="#9F9F9F" stroke-width="3.02128" stroke-dasharray="6.04 6.04"/>
+<line id="Line 6_2" x1="3.02148" y1="66.2457" x2="181.277" y2="66.2457" stroke="#9F9F9F" stroke-width="3.02128" stroke-dasharray="6.04 6.04"/>
+<g id="Frame 86_2">
+<rect width="57.4043" height="57.4043" transform="translate(27.1914 152.352)" fill="#E8F3FF"/>
+</g>
+<g id="Frame 87">
+<rect width="57.4043" height="57.4043" transform="translate(92.1494 152.352)" fill="#E8F3FF"/>
+</g>
+<g id="Frame 88">
+<rect width="57.4043" height="57.4043" transform="translate(27.1914 78.3311)" fill="#E8F3FF"/>
+</g>
+<g id="Frame 89">
+<rect width="57.4043" height="57.4043" transform="translate(92.1494 76.8203)" fill="#E8F3FF"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,167 @@
+/* Shared Figma-era system for retained content. Archive routes never get this scope. */
+.new-portfolio.portfolio-secondary{
+ --ink:#151515;--paper:#fafafa;--product-paper:#fff;
+ --surface:#f1f1f1;--surface-strong:#e6e6e6;--accent:#e8f0ff;
+ --line:#e7e7e7;--rule:#e7e7e7;--rule-soft:#ededed;
+ color:var(--ink);font-family:Outfit,sans-serif;line-height:1.5;
+}
+.new-portfolio :focus-visible{box-shadow:none}
+.new-portfolio::selection,.new-portfolio ::selection{background:#dbeafe;color:#151515}
+.new-portfolio.portfolio-secondary>main{width:calc(100% - 80px);max-width:1219px;margin:0 auto;padding:42px 0 48px}
+.new-portfolio.portfolio-secondary :is(.section,.case-wrap){width:100%;max-width:none;margin-inline:0;padding-inline:0}
+.new-portfolio.portfolio-secondary :is(h1,h2,h3,h4,p,li,dt,dd,summary,button,a,blockquote){font-family:inherit;letter-spacing:normal;text-transform:none}
+.new-portfolio.portfolio-secondary :is(h1,h2,h3,h4) em{font-family:inherit;font-style:normal;letter-spacing:normal}
+.new-portfolio.portfolio-secondary h1{font-size:36px;line-height:1.25;font-weight:400;letter-spacing:normal;text-transform:none;max-width:1101px;margin:0 0 8px}
+.new-portfolio.portfolio-secondary h1>span{display:inline}
+.new-portfolio.portfolio-secondary h1>span:not(:last-child)::after{content:' '}
+.new-portfolio.portfolio-secondary h2{font-size:28px;line-height:1.25;font-weight:400;letter-spacing:normal;margin:0 0 8px}
+.new-portfolio.portfolio-secondary h3{font-size:20px;line-height:1.3;font-weight:400;letter-spacing:normal;margin:0 0 8px}
+.new-portfolio.portfolio-secondary h4{font-size:18px;line-height:1.35;font-weight:400;margin:0 0 8px}
+.new-portfolio.portfolio-secondary p{font-size:16px;line-height:1.5;color:#6b6b6b;margin:0 0 16px}
+.new-portfolio.portfolio-secondary p:last-child{margin-bottom:0}
+.new-portfolio.portfolio-secondary :is(.lead,.case-hero-bottom>p,.about-intro p,.workflow-intro>p,.sprint-hero-copy>p){font-size:20px;line-height:1.5;font-weight:400;letter-spacing:normal;color:#6b6b6b}
+.new-portfolio.portfolio-secondary :is(.case-content>p,.case-content>h2,.case-content>h3,.case-content>.narrow){max-width:822px}
+.new-portfolio.portfolio-secondary :is(.case-hero,.about-hero,.workflow-hero,.sprint-hero){padding-top:0;padding-bottom:36px}
+.new-portfolio.portfolio-secondary :is(.case-section,.sprint-section){display:block;padding:36px 0;border-top:1px solid var(--rule-soft);margin:0}
+.new-portfolio.portfolio-secondary .case-index{position:static;display:block;padding:0;margin:0 0 16px;color:#868686;font-size:14px;line-height:1.4;text-transform:none;letter-spacing:normal}
+.new-portfolio.portfolio-secondary .case-content{width:100%;min-width:0}
+.new-portfolio.portfolio-secondary .case-content h2{font-size:28px;line-height:1.25;font-weight:400;letter-spacing:normal;margin-bottom:8px}
+.new-portfolio.portfolio-secondary .case-content h3{font-size:20px;line-height:1.3;font-weight:400;letter-spacing:normal;margin-bottom:8px}
+.new-portfolio.portfolio-secondary .case-content p{font-size:16px;line-height:1.5;letter-spacing:normal;color:#6b6b6b}
+.new-portfolio.portfolio-secondary .case-content p.lead{font-size:20px;line-height:1.5;font-weight:400}
+.new-portfolio.portfolio-secondary .back-link{margin-bottom:20px;min-height:32px;font-size:14px;color:#6b6b6b}
+.new-portfolio.portfolio-secondary .case-hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:20px;margin-top:8px;padding:0;border:0}
+.new-portfolio.portfolio-secondary .case-hero-bottom>p{max-width:1101px;margin:0}
+.new-portfolio.portfolio-secondary .case-tags{justify-content:flex-start;gap:8px 20px}
+.new-portfolio.portfolio-secondary .case-tags span{padding:0;border:0;border-radius:0;color:#868686;font-size:14px;line-height:1.5}
+.new-portfolio.portfolio-secondary :is(.case-meta,.zevian-project-meta){display:flex;flex-wrap:wrap;gap:24px 48px;margin:28px 0;padding:0;border:0}
+.new-portfolio.portfolio-secondary :is(.case-meta,.zevian-project-meta)>div{padding:0;border:0;max-width:100%}
+.new-portfolio.portfolio-secondary :is(.case-meta,.zevian-project-meta) dt{font-size:14px;color:#868686;text-transform:none;letter-spacing:normal;margin:0 0 6px}
+.new-portfolio.portfolio-secondary :is(.case-meta,.zevian-project-meta) dd{font-size:16px;color:var(--ink);line-height:1.5;margin:0}
+.new-portfolio.portfolio-secondary :is(.overview-grid,.learning-grid){gap:24px 36px;margin-block:24px;max-width:1094px}
+.new-portfolio.portfolio-secondary :is(.case-stage,.hrms-stage,.jayga-stage,.purno-stage){background:var(--surface);border-radius:8px;border-color:var(--line);margin-top:28px}
+.new-portfolio.portfolio-secondary :is(.orderific-image--rtl,.jayga-image--wide){width:100%;max-width:100%;margin-left:0}
+.new-portfolio.portfolio-secondary :is(figcaption,.evidence-note,.stage-note,.hrms-stage-note){font-size:14px;line-height:1.45;color:#868686;letter-spacing:normal;text-transform:none}
+.new-portfolio.portfolio-secondary :is(.case-evidence-grid,.case-comparison-grid,.purno-screen-pair,.jayga-screen-pair){gap:36px;margin-block:28px}
+.new-portfolio.portfolio-secondary :is(.research-note,.system-principle,.projection-note,.hrms-context-note,.zevian-visual-reflection,.final-learning){padding:20px 24px;border:0;border-radius:8px;background:var(--surface);margin-block:28px}
+.new-portfolio.portfolio-secondary :is(.principles,.orderific-decisions,.jayga-decisions) article{background:var(--surface);border:0;border-radius:8px;padding:20px 24px;min-height:0}
+.new-portfolio.portfolio-secondary :is(.outcome-numbers,.product-outcome-grid) strong{font-family:Outfit,sans-serif;font-size:36px;line-height:1.2;font-weight:400;letter-spacing:normal}
+.new-portfolio.portfolio-secondary :is(.outcome-numbers,.product-outcome-grid) span{font-size:14px;line-height:1.5;letter-spacing:normal;text-transform:none}
+.new-portfolio.portfolio-secondary .case-content blockquote{font-family:inherit;font-size:24px;line-height:1.4;font-weight:400;letter-spacing:normal;margin:28px 0;max-width:822px}
+.new-portfolio.portfolio-secondary .image-expand-trigger{background:transparent;border-radius:0}
+.new-portfolio.portfolio-secondary .next-project{display:inline-flex;align-items:center;gap:10px;width:auto;max-width:100%;min-height:48px;padding:12px 16px;margin-top:28px;border:1px solid transparent;border-radius:10px;background:#efefef;text-decoration:none;transition:background-color 180ms ease,border-color 180ms ease}
+.new-portfolio.portfolio-secondary .next-project :is(span,strong){font-size:16px;font-weight:400;line-height:1.3;letter-spacing:normal;text-transform:none}
+.new-portfolio.portfolio-secondary .next-project strong{display:inline-flex;align-items:center;gap:10px}
+.new-portfolio.portfolio-secondary .next-project svg{width:16px;height:16px;transition:transform 180ms ease}
+.new-portfolio.portfolio-secondary .next-project:hover{background:#e3e3e0;border-color:#d4d4cf;text-decoration:none}
+.new-portfolio.portfolio-secondary .next-project:hover svg{transform:translateX(3px)}
+.new-portfolio.portfolio-secondary .next-project:focus-visible{background:#e8f0ff;outline:2px solid #2563eb;outline-offset:3px}
+.new-portfolio.portfolio-secondary>.portfolio-footer{border-top:1px solid var(--rule-soft);margin-top:0;padding-top:28px;padding-bottom:48px}
+
+/* Zevian product story uses the same top-details and reading-column structure. */
+.new-portfolio.portfolio-secondary .zevian-reference-layout{display:block}
+.new-portfolio.portfolio-secondary .zevian-reference-sidebar{position:static;min-height:0;padding:0;margin:0 0 36px;gap:8px}
+.new-portfolio.portfolio-secondary .zevian-reference-sidebar .zevian-project-meta{flex-direction:row;gap:24px 48px;margin:16px 0 0}
+.new-portfolio.portfolio-secondary .zevian-sidebar-next{display:none}
+.new-portfolio.portfolio-secondary .zevian-reference-content::before{display:none}
+.new-portfolio.portfolio-secondary .zevian-reference-description{font-size:20px;font-weight:400;line-height:1.5;letter-spacing:normal;max-width:822px}
+.new-portfolio.portfolio-secondary .zevian-reference-content :is(.zevian-evidence,.zevian-archive-gallery){max-width:100%}
+.new-portfolio.portfolio-secondary .zevian-reference-content :is(.case-section,.zevian-image-sequence){margin-bottom:36px}
+.new-portfolio.portfolio-secondary .zevian-reference-content :is(.case-section,.overview,.product-outcome)::before{display:none}
+.new-portfolio.portfolio-secondary .zevian-reference-content :is(.zevian-method,.model-evolution,.final-learning){max-width:822px}
+
+/* About and supporting stories. */
+.new-portfolio.portfolio-secondary .about-background{padding-block:28px 36px;border-top:1px solid var(--rule)}
+.new-portfolio.portfolio-secondary .about-background h2{margin-bottom:24px}
+.new-portfolio.portfolio-secondary .about-background h3{font-size:16px;font-weight:500;line-height:1.5;margin:0}
+.new-portfolio.portfolio-secondary .about-background p{font-size:16px;line-height:1.5;margin:0}
+.new-portfolio.portfolio-secondary .about-experience-list{list-style:none;padding:0;margin:0;display:grid;gap:20px}
+.new-portfolio.portfolio-secondary .about-experience-list li{display:grid;grid-template-columns:220px 290px minmax(0,1fr);gap:20px}
+.new-portfolio.portfolio-secondary .about-background .about-role{color:#747474}
+.new-portfolio.portfolio-secondary .about-background .about-duration{font-size:14px;color:#747474;margin-top:4px}
+.new-portfolio.portfolio-secondary .about-education-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+@media(max-width:1100px){
+ .new-portfolio.portfolio-secondary .about-experience-list li{grid-template-columns:200px minmax(0,1fr);gap:4px 24px}
+ .new-portfolio.portfolio-secondary .about-experience-list li>p:last-child{grid-column:2}
+}
+@media(max-width:650px){
+ .new-portfolio.portfolio-secondary .about-experience-list li,.new-portfolio.portfolio-secondary .about-education-grid{grid-template-columns:1fr;gap:4px}
+ .new-portfolio.portfolio-secondary .about-experience-list li>p:last-child{grid-column:auto}
+ .new-portfolio.portfolio-secondary .about-education-grid{gap:24px}
+}
+.new-portfolio.portfolio-secondary .about-hero-heading{grid-template-columns:minmax(0,1fr) 280px;gap:48px;align-items:center}
+.new-portfolio.portfolio-secondary .about-portrait{border-radius:8px}
+.new-portfolio.portfolio-secondary .about-intro{margin-top:28px;padding-top:0;border:0;gap:36px}
+.new-portfolio.portfolio-secondary .personality-highlight.section{background:var(--surface);color:var(--ink);padding:24px;border-radius:8px;gap:36px}
+.new-portfolio.portfolio-secondary .personality-highlight h2{color:var(--ink);font-size:28px;line-height:1.25}
+.new-portfolio.portfolio-secondary .personality-highlight p{font-size:16px;line-height:1.5;max-width:720px}
+.new-portfolio.portfolio-secondary .personality-highlight a{background:#fff;border-radius:8px;font-size:14px;font-weight:400;text-transform:none}
+.new-portfolio.portfolio-secondary :is(.about-values,.interests-section,.workflow-methods,.workflow-learning){padding-top:36px;padding-bottom:36px;border-color:var(--rule-soft)}
+.new-portfolio.portfolio-secondary .about-values>p{font-size:14px;margin-bottom:16px;text-transform:none}
+.new-portfolio.portfolio-secondary .about-values h2{font-size:28px;line-height:1.4}
+.new-portfolio.portfolio-secondary .interests-head{padding-bottom:16px;border-color:var(--rule-soft)}
+.new-portfolio.portfolio-secondary .interest-row{min-height:0;grid-template-columns:40px .7fr 1.3fr;gap:24px;padding:24px 0}
+.new-portfolio.portfolio-secondary .interest-row h3{font-size:20px;transform:none}
+.new-portfolio.portfolio-secondary .workflow-intro{margin-top:16px;padding-top:0;border:0;gap:24px}
+.new-portfolio.portfolio-secondary .workflow-methods-head{padding-bottom:16px}
+.new-portfolio.portfolio-secondary .workflow-row{grid-template-columns:40px minmax(0,1fr) minmax(0,1fr);gap:24px;min-height:0;padding:28px 0;border-color:var(--rule-soft)}
+.new-portfolio.portfolio-secondary .workflow-row h3{font-size:20px}
+.new-portfolio.portfolio-secondary .workflow-copy p{font-size:16px}
+.new-portfolio.portfolio-secondary .workflow-visual{border-color:var(--line);border-radius:8px}
+.new-portfolio.portfolio-secondary .workflow-first-note{border-color:var(--line);border-radius:8px}
+.new-portfolio.portfolio-secondary .loop-track::after{background:#2563eb;box-shadow:0 0 0 5px rgb(37 99 235 / 10%)}
+.new-portfolio.portfolio-secondary .crafted-side strong{font-family:inherit;font-size:24px;font-style:normal}
+.new-portfolio.portfolio-secondary .workflow-learning>p{font-size:20px;max-width:822px;line-height:1.5}
+.new-portfolio.portfolio-secondary .portfolio-direction article{min-height:0;padding:24px 0;grid-template-columns:40px .7fr 1.3fr;gap:24px}
+.new-portfolio.portfolio-secondary .portfolio-process-step{border:1px solid var(--line);border-radius:8px;min-height:180px}
+.new-portfolio.portfolio-secondary .portfolio-process-step strong{font-family:inherit;font-size:24px;line-height:1.25;letter-spacing:normal}
+
+/* The service offer retains its scope, price and contact flow. */
+.new-portfolio.portfolio-secondary .sprint-hero-copy h1{margin:16px 0 8px}
+.new-portfolio.portfolio-secondary :is(.sprint-kicker,.sprint-section-head>span,.sprint-proof-copy>span,.sprint-scope span,.sprint-partnership>span,.sprint-close>span){font-size:14px;font-weight:400;letter-spacing:normal;text-transform:none;color:#868686}
+.new-portfolio.portfolio-secondary .sprint-button{background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:10px;min-height:48px;font-size:16px;font-weight:400;letter-spacing:normal;transition:background-color 180ms ease}
+.new-portfolio.portfolio-secondary .sprint-button:hover{background:#303030;text-decoration:none}
+.new-portfolio.portfolio-secondary .sprint-hero-action{margin-top:24px}
+.new-portfolio.portfolio-secondary .sprint-hero-proof{background:transparent;padding:0;border-radius:0;max-width:100%}
+.new-portfolio.portfolio-secondary .sprint-hero-proof video{border-radius:8px}
+.new-portfolio.portfolio-secondary .sprint-section-head{grid-template-columns:1fr;gap:12px;margin-bottom:24px}
+.new-portfolio.portfolio-secondary .sprint-section-head h2{font-size:28px}
+.new-portfolio.portfolio-secondary .sprint-proof{padding:28px 0;border-color:var(--rule-soft)}
+.new-portfolio.portfolio-secondary .sprint-proof-copy h3{font-size:24px;margin:8px 0 12px}
+.new-portfolio.portfolio-secondary .sprint-proof-copy strong{font-size:20px;font-weight:400;line-height:1.4}
+.new-portfolio.portfolio-secondary .sprint-proof-images .image-expand-trigger{background:transparent;border-radius:0}
+.new-portfolio.portfolio-secondary .sprint-proof-images figcaption{font-size:14px;color:#868686}
+.new-portfolio.portfolio-secondary .sprint-steps h3{font-size:20px;margin:24px 0 8px}
+.new-portfolio.portfolio-secondary .sprint-scope{background:var(--surface);border-radius:8px;margin-top:24px;padding:24px}
+.new-portfolio.portfolio-secondary .sprint-partnership{padding-top:36px;padding-bottom:36px;border-color:var(--rule-soft)}
+.new-portfolio.portfolio-secondary .sprint-close{padding-top:36px;padding-bottom:36px;border-color:var(--rule-soft)}
+.new-portfolio.portfolio-secondary .sprint-close h2{font-size:28px;line-height:1.3;margin:12px 0 8px}
+
+@media(min-width:1440px){.new-portfolio.portfolio-secondary>main{width:1219px}}
+@media(max-width:900px){
+ .new-portfolio.portfolio-secondary .about-hero-heading{grid-template-columns:1fr;gap:24px}
+ .new-portfolio.portfolio-secondary .about-portrait{width:280px;max-width:100%}
+ .new-portfolio.portfolio-secondary .workflow-row{grid-template-columns:32px minmax(0,1fr)}
+ .new-portfolio.portfolio-secondary .workflow-row>.workflow-visual{grid-column:2}
+}
+@media(max-width:650px){
+ .new-portfolio.portfolio-secondary>main{width:calc(100% - 40px);padding-top:32px;padding-bottom:32px}
+ .new-portfolio.portfolio-secondary h1{font-size:30px}
+ .new-portfolio.portfolio-secondary h2{font-size:26px}
+ .new-portfolio.portfolio-secondary .case-content h2{font-size:26px}
+ .new-portfolio.portfolio-secondary :is(.case-hero,.about-hero,.workflow-hero,.sprint-hero){padding-bottom:28px}
+ .new-portfolio.portfolio-secondary :is(.case-section,.sprint-section){padding-block:28px}
+ .new-portfolio.portfolio-secondary :is(.overview-grid,.learning-grid,.about-intro,.personality-highlight,.portfolio-direction article,.interest-row){grid-template-columns:1fr;gap:16px}
+ .new-portfolio.portfolio-secondary :is(.case-evidence-grid,.case-comparison-grid,.purno-screen-pair,.jayga-screen-pair){grid-template-columns:1fr;gap:24px}
+ .new-portfolio.portfolio-secondary .case-meta{gap:20px;flex-direction:column}
+ .new-portfolio.portfolio-secondary .workflow-row{grid-template-columns:1fr;gap:16px}
+ .new-portfolio.portfolio-secondary .workflow-row>.workflow-visual{grid-column:auto}
+ .new-portfolio.portfolio-secondary .sprint-proof,.new-portfolio.portfolio-secondary .sprint-proof .sprint-proof-copy{grid-template-columns:1fr;gap:16px}
+ .new-portfolio.portfolio-secondary .sprint-proof .sprint-proof-copy h3{grid-column:auto;grid-row:auto}
+ .new-portfolio.portfolio-secondary .sprint-scope,.new-portfolio.portfolio-secondary .sprint-partnership{grid-template-columns:1fr;gap:20px}
+ .new-portfolio.portfolio-secondary .sprint-steps{grid-template-columns:1fr}
+ .new-portfolio.portfolio-secondary .sprint-steps li{border-left:0;padding:20px 0;border-bottom:1px solid var(--rule-soft)}
+ .new-portfolio.portfolio-secondary .sprint-steps h3{margin-top:12px}
+ .new-portfolio.portfolio-secondary .next-project{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.new-portfolio.portfolio-secondary *{animation:none;transition:none;scroll-behavior:auto}}

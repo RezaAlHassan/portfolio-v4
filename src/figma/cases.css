@@ -1,0 +1,765 @@
+.new-portfolio .fd-1{position:absolute;align-content:stretch;display:flex;flex-direction:column;gap:36px;height:4285px;align-items:flex-start;left:122px;top:109px;width:1219px;position:relative;inset:auto;width:100%;height:auto;gap:36px}
+.new-portfolio .fd-2{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:1101px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(1101px,100%)}
+.new-portfolio .fd-3{min-width:100%;position:relative;flex-shrink:0;font-size:36px;color:#000;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-4{position:relative;flex-shrink:0;color:#6b6b6b;font-size:20px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-5{word-break:break-word;align-content:stretch;display:flex;font-family:Outfit,sans-serif;font-weight:400;gap:48px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:100%;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-6{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:105px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(105px,100%)}
+.new-portfolio .fd-7{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-8{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-9{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:300px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(300px,100%)}
+.new-portfolio .fd-10{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-11{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-12{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:244px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(244px,100%)}
+.new-portfolio .fd-13{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-14{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-15{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-16{border-color:#f6f6f6;border-width:1.15px;border-style:solid;align-content:stretch;display:flex;height:528.858px;align-items:flex-start;position:relative;flex-shrink:0;width:745px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(745px,100%)}
+.new-portfolio .fd-17{height:526.559px;position:relative;flex-shrink:0;width:742.716px}
+.new-portfolio .fd-18{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-19{position:absolute;height:99.96%;left:-0.06%;max-width:none;top:0;width:100.35%}
+.new-portfolio .fd-20{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-21{word-break:break-word;align-content:stretch;display:flex;font-family:Outfit,sans-serif;font-weight:400;gap:38px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:1094px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(1094px,100%)}
+.new-portfolio .fd-22{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;width:520px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(520px,100%)}
+.new-portfolio .fd-23{position:relative;flex-shrink:0;font-size:20px;color:#000;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-24{min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-25{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;width:555px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(555px,100%)}
+.new-portfolio .fd-26{position:relative;flex-shrink:0;font-size:20px;color:#000;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-27{min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-28{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:818px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(818px,100%)}
+.new-portfolio .fd-29{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-30{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-31{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:701px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(701px,100%)}
+.new-portfolio .fd-32{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:395px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(395px,100%)}
+.new-portfolio .fd-33{height:39px;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:584px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(584px,100%)}
+.new-portfolio .fd-34{align-content:stretch;display:flex;gap:36px;align-items:center;position:relative;flex-shrink:0;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-35{align-content:stretch;display:flex;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-36{align-content:stretch;display:flex;flex-direction:column;gap:36px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-37{align-content:stretch;display:flex;flex-direction:column;gap:16px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-38{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-39{height:48px;position:relative;flex-shrink:0;width:599px}
+.new-portfolio .fd-40{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:0;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.14px}
+.new-portfolio .fd-41{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-42{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:131px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.14px}
+.new-portfolio .fd-43{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-44{position:absolute;background:#e8f3ff;align-content:stretch;display:flex;align-items:center;justify-content:center;left:356px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.14px}
+.new-portfolio .fd-45{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-46{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:495px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.14px}
+.new-portfolio .fd-47{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-48{position:absolute;height:0;left:103px;top:23.86px;width:19.026px}
+.new-portfolio .fd-49{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-50{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-51{position:absolute;height:0;left:467px;top:23.86px;width:19.026px}
+.new-portfolio .fd-52{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-53{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-54{position:absolute;height:0;left:330px;top:24.14px;width:19.026px}
+.new-portfolio .fd-55{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-56{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-57{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;height:39px;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:654px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(654px,100%)}
+.new-portfolio .fd-58{align-content:stretch;display:flex;flex-direction:column;gap:16px;align-items:flex-start;position:relative;flex-shrink:0;width:636px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(636px,100%)}
+.new-portfolio .fd-59{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:122px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(122px,100%)}
+.new-portfolio .fd-60{height:48px;position:relative;flex-shrink:0;width:599px}
+.new-portfolio .fd-61{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:0;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.57px}
+.new-portfolio .fd-62{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-63{position:absolute;border-width:1px;border-color:#f6f6f6;border-style:solid;align-content:stretch;display:flex;align-items:center;justify-content:center;left:317px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.28px}
+.new-portfolio .fd-64{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap}
+.new-portfolio .fd-65{position:absolute;background:#e8f3ff;align-content:stretch;display:flex;align-items:center;justify-content:center;left:482px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.28px}
+.new-portfolio .fd-66{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-67{position:absolute;height:0;left:141px;top:23.57px;width:19.026px}
+.new-portfolio .fd-68{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-69{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-70{position:absolute;height:0;left:452px;top:23.72px;width:19.026px}
+.new-portfolio .fd-71{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-72{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-73{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:172px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.28px}
+.new-portfolio .fd-74{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-75{position:absolute;height:0;left:284px;top:23.72px;width:19.026px}
+.new-portfolio .fd-76{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-77{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-78{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;height:25px;line-height:normal;position:relative;flex-shrink:0;font-size:20px;color:#000;width:654px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(654px,100%)}
+.new-portfolio .fd-79{background:var(--grey1,#f6f6f6);align-content:stretch;display:flex;flex-direction:column;height:80px;align-items:center;justify-content:center;padding-inline:16px;padding-block:8px;position:relative;border-radius:12px;flex-shrink:0;width:483px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(483px,100%)}
+.new-portfolio .fd-80{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;height:60px;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-81{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:822px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(822px,100%)}
+.new-portfolio .fd-82{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-83{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-84{align-content:stretch;display:flex;gap:36px;align-items:center;position:relative;flex-shrink:0;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-85{border-width:1.436px;border-color:var(--border,#f5f5f5);border-style:solid;height:778.147px;position:relative;flex-shrink:0;width:547px}
+.new-portfolio .fd-86{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-87{position:absolute;height:100%;left:0.27%;max-width:none;top:-0.05%;width:99.71%}
+.new-portfolio .fd-88{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:36px;align-items:flex-start;justify-content:center;line-height:normal;position:relative;flex-shrink:0;width:636px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(636px,100%)}
+.new-portfolio .fd-89{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;width:552px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(552px,100%)}
+.new-portfolio .fd-90{height:25px;position:relative;flex-shrink:0;font-size:20px;color:#000;width:395px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(395px,100%)}
+.new-portfolio .fd-91{height:19px;min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-92{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:49px;align-items:flex-start;position:relative;flex-shrink:0;width:590px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(590px,100%)}
+.new-portfolio .fd-93{height:25px;position:relative;flex-shrink:0;font-size:20px;color:#000;width:395px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(395px,100%)}
+.new-portfolio .fd-94{height:19px;min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-95{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:52px;align-items:flex-start;position:relative;flex-shrink:0;width:482px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(482px,100%)}
+.new-portfolio .fd-96{height:25px;min-width:100%;position:relative;flex-shrink:0;font-size:20px;color:#000;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-97{height:19px;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:482px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(482px,100%)}
+.new-portfolio .fd-98{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:52px;align-items:flex-start;position:relative;flex-shrink:0;width:576px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(576px,100%)}
+.new-portfolio .fd-99{height:25px;position:relative;flex-shrink:0;font-size:20px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-100{height:19px;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-101{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:822px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(822px,100%)}
+.new-portfolio .fd-102{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-103{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-104{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-105{height:300.551px;position:relative;flex-shrink:0;width:642px}
+.new-portfolio .fd-106{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-107{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-108{align-content:stretch;display:flex;gap:36px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-109{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-110{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:257.119px;position:relative;flex-shrink:0;width:515px}
+.new-portfolio .fd-111{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-112{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-113{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-114{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:305.185px;position:relative;flex-shrink:0;width:515px}
+.new-portfolio .fd-115{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-116{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-117{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:797px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(797px,100%)}
+.new-portfolio .fd-118{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-119{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-120{align-content:stretch;display:flex;gap:36px;align-items:center;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-121{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-122{height:400.147px;position:relative;flex-shrink:0;width:375px}
+.new-portfolio .fd-123{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-124{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-125{align-content:stretch;display:flex;flex-direction:column;gap:36px;align-items:flex-start;justify-content:center;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-126{background:var(--grey1,#f6f6f6);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-inline:16px;padding-block:8px;position:relative;border-radius:12px;flex-shrink:0;width:483px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(483px,100%)}
+.new-portfolio .fd-127{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;height:39px;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-128{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:20px;width:483px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(483px,100%)}
+.new-portfolio .fd-129{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:958px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(958px,100%)}
+.new-portfolio .fd-130{height:34px;min-width:100%;position:relative;flex-shrink:0;font-size:28px;color:#000;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-131{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:958px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(958px,100%)}
+.new-portfolio .fd-132{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;font-size:20px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-133{line-height:normal;position:relative;flex-shrink:0;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-134{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;line-height:0;position:relative;flex-shrink:0;color:#0a66c2;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-135{display:block;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-136{text-underline-position:from-font;cursor:pointer;text-decoration-thickness:from-font;text-decoration-style:solid;line-height:normal;text-decoration:underline;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-137{display:block;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-138{text-underline-position:from-font;cursor:pointer;text-decoration-thickness:from-font;text-decoration-style:solid;line-height:normal;text-decoration:underline;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-139{background:var(--grey2,#efefef);align-content:stretch;display:flex;height:47px;align-items:center;justify-content:center;padding-inline:16px;position:relative;border-radius:10px;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-140{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-141{position:absolute;align-content:stretch;display:flex;flex-direction:column;gap:36px;align-items:flex-start;left:105px;top:113px;width:1219px;position:relative;inset:auto;width:100%;height:auto;gap:36px}
+.new-portfolio .fd-142{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:1101px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(1101px,100%)}
+.new-portfolio .fd-143{position:relative;flex-shrink:0;font-size:36px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-144{position:relative;flex-shrink:0;color:#6b6b6b;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-145{word-break:break-word;align-content:stretch;display:flex;font-family:Outfit,sans-serif;font-weight:400;gap:48px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:100%;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-146{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:124px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(124px,100%)}
+.new-portfolio .fd-147{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-148{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-149{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:210px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(210px,100%)}
+.new-portfolio .fd-150{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-151{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-152{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:210px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(210px,100%)}
+.new-portfolio .fd-153{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-154{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-155{align-content:stretch;display:flex;flex-direction:column;gap:6px;height:42px;align-items:flex-start;position:relative;flex-shrink:0;width:188px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(188px,100%)}
+.new-portfolio .fd-156{position:relative;flex-shrink:0;color:#6b6b6b;font-size:14px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-157{position:relative;flex-shrink:0;font-size:16px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-158{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:596px;position:relative;flex-shrink:0;width:950px}
+.new-portfolio .fd-159{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-160{position:absolute;height:101.51%;left:0.03%;max-width:none;top:-0.08%;width:99.58%}
+.new-portfolio .fd-161{word-break:break-word;align-content:stretch;display:flex;font-family:Outfit,sans-serif;font-weight:400;gap:38px;height:73px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:1094px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(1094px,100%)}
+.new-portfolio .fd-162{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;width:520px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(520px,100%)}
+.new-portfolio .fd-163{position:relative;flex-shrink:0;font-size:20px;color:#000;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-164{min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-165{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:93px;align-items:flex-start;position:relative;flex-shrink:0;width:555px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(555px,100%)}
+.new-portfolio .fd-166{position:relative;flex-shrink:0;font-size:20px;color:#000;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-167{min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-168{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-169{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-170{height:48px;position:relative;flex-shrink:0;width:831px}
+.new-portfolio .fd-171{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:0;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:-0.14px}
+.new-portfolio .fd-172{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-173{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:184px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:0}
+.new-portfolio .fd-174{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-175{position:absolute;background:#efefef;align-content:stretch;display:flex;align-items:center;justify-content:center;left:376px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:0}
+.new-portfolio .fd-176{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-177{position:absolute;background:#e8f3ff;align-content:stretch;display:flex;align-items:center;justify-content:center;left:588px;overflow:clip;padding-inline:18px;padding-block:14px;border-radius:20px;top:0}
+.new-portfolio .fd-178{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap}
+.new-portfolio .fd-179{position:absolute;height:0;left:153px;top:24px;width:19.026px}
+.new-portfolio .fd-180{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-181{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-182{position:absolute;height:0;left:558px;top:24px;width:19.026px}
+.new-portfolio .fd-183{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-184{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-185{position:absolute;height:0;left:344px;top:24px;width:19.026px}
+.new-portfolio .fd-186{position:absolute;inset:-3.68px -2.63% -3.68px 0}
+.new-portfolio .fd-187{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-188{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:818px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(818px,100%)}
+.new-portfolio .fd-189{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-190{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-191{align-content:stretch;display:flex;gap:36px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-192{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-193{background:#fff;border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:604px;overflow:clip;position:relative;flex-shrink:0;width:497px}
+.new-portfolio .fd-194{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:-30px;right:406px;color:#e8f3ff;font-size:18px;top:-186px;white-space:nowrap}
+.new-portfolio .fd-195{word-break:break-word;position:absolute;align-content:stretch;display:flex;flex-direction:column;gap:4px;height:97px;align-items:flex-start;line-height:normal;left:-30px;right:7px;color:#e8f3ff;top:-143px}
+.new-portfolio .fd-196{font-family:"Radio Canada Big",sans-serif;font-weight:500;height:55px;min-width:100%;position:relative;flex-shrink:0;font-size:48px;width:min-content}
+.new-portfolio .fd-197{font-family:"Radio Canada Big",sans-serif;font-weight:400;position:relative;flex-shrink:0;font-size:18px;width:533px}
+.new-portfolio .fd-198{position:absolute;height:569px;left:15px;top:16px;width:465px}
+.new-portfolio .fd-199{position:absolute;background:#e8f3ff;align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;left:166px;padding-bottom:51px;padding-left:42px;padding-right:43px;padding-top:47px;border-radius:5000px;width:120px;height:120px;top:229px}
+.new-portfolio .fd-200{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:0;position:relative;flex-shrink:0;color:#1e1e1e;font-size:18px;text-align:center;white-space:nowrap}
+.new-portfolio .fd-201{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-202{line-height:normal;white-space:pre}
+.new-portfolio .fd-203{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:175px;padding:10px;border-bottom-left-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:0}
+.new-portfolio .fd-204{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-205{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-206{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-207{line-height:normal;white-space:pre}
+.new-portfolio .fd-208{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:167px;border-radius:500px;width:120px;height:120px;top:57px}
+.new-portfolio .fd-209{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-210{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-211{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:0;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content;white-space:pre-wrap}
+.new-portfolio .fd-212{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-213{line-height:normal}
+.new-portfolio .fd-214{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:6px;padding:10px;border-bottom-left-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:95px}
+.new-portfolio .fd-215{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-216{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-217{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-218{line-height:normal}
+.new-portfolio .fd-219{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:1px;border-radius:500px;width:120px;height:120px;top:152px}
+.new-portfolio .fd-220{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-221{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-222{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:0;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content}
+.new-portfolio .fd-223{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-224{line-height:normal}
+.new-portfolio .fd-225{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:3px;padding:10px;border-bottom-left-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:296px}
+.new-portfolio .fd-226{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-227{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-228{line-height:normal}
+.new-portfolio .fd-229{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:168px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:406px}
+.new-portfolio .fd-230{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-231{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-232{line-height:normal}
+.new-portfolio .fd-233{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:0;border-radius:500px;width:120px;height:120px;top:339px}
+.new-portfolio .fd-234{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-235{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-236{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:normal;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content}
+.new-portfolio .fd-237{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:167px;border-radius:500px;width:120px;height:120px;top:449px}
+.new-portfolio .fd-238{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-239{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-240{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:0;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content;white-space:pre-wrap}
+.new-portfolio .fd-241{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-242{line-height:normal}
+.new-portfolio .fd-243{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:333px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:292px}
+.new-portfolio .fd-244{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-245{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-246{line-height:normal}
+.new-portfolio .fd-247{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:334px;border-radius:500px;width:120px;height:120px;top:335px}
+.new-portfolio .fd-248{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-249{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-250{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:normal;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content}
+.new-portfolio .fd-251{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:335px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:91px}
+.new-portfolio .fd-252{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-253{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-254{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-255{line-height:normal}
+.new-portfolio .fd-256{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:333px;border-radius:500px;width:120px;height:120px;top:152px}
+.new-portfolio .fd-257{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-258{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-259{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:0;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content;white-space:pre-wrap}
+.new-portfolio .fd-260{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-261{line-height:normal}
+.new-portfolio .fd-262{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:20px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-263{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-264{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:604px;position:relative;flex-shrink:0;width:573px}
+.new-portfolio .fd-265{position:absolute;height:425px;left:14px;top:139px;width:543px}
+.new-portfolio .fd-266{position:absolute;align-content:stretch;display:flex;gap:8px;align-items:center;left:0;top:0}
+.new-portfolio .fd-267{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:"Radio Canada Big",sans-serif;font-weight:400;height:428px;align-items:flex-start;justify-content:space-between;position:relative;flex-shrink:0;color:#424242;font-size:14px;width:73px}
+.new-portfolio .fd-268{line-height:normal;min-width:100%;position:relative;flex-shrink:0;width:min-content}
+.new-portfolio .fd-269{line-height:normal;min-width:100%;position:relative;flex-shrink:0;width:min-content}
+.new-portfolio .fd-270{line-height:0;min-width:100%;position:relative;flex-shrink:0;width:min-content}
+.new-portfolio .fd-271{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-272{line-height:normal}
+.new-portfolio .fd-273{line-height:normal;min-width:100%;position:relative;flex-shrink:0;width:min-content}
+.new-portfolio .fd-274{line-height:0;position:relative;flex-shrink:0;white-space:nowrap}
+.new-portfolio .fd-275{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-276{line-height:normal}
+.new-portfolio .fd-277{display:flex;height:428px;align-items:center;justify-content:center;position:relative;flex-shrink:0;width:0}
+.new-portfolio .fd-278{flex:none;rotate:90deg}
+.new-portfolio .fd-279{height:0;position:relative;width:428px}
+.new-portfolio .fd-280{position:absolute;inset:-0.5px 0 0 0}
+.new-portfolio .fd-281{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-282{position:absolute;height:313px;left:93px;top:0;width:71px}
+.new-portfolio .fd-283{position:absolute;height:305px;left:0;top:8px;width:8px}
+.new-portfolio .fd-284{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-285{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:18px;color:#424242;font-size:14px;top:0;white-space:nowrap}
+.new-portfolio .fd-286{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-287{line-height:normal;white-space:pre}
+.new-portfolio .fd-288{position:absolute;height:130px;left:164px;top:79px;width:76px}
+.new-portfolio .fd-289{position:absolute;height:103px;left:0;top:14px;width:8px}
+.new-portfolio .fd-290{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-291{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:0;white-space:nowrap}
+.new-portfolio .fd-292{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-293{line-height:normal}
+.new-portfolio .fd-294{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:94px;white-space:nowrap}
+.new-portfolio .fd-295{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-296{line-height:normal;white-space:pre}
+.new-portfolio .fd-297{position:absolute;height:130px;left:344px;top:0;width:76px}
+.new-portfolio .fd-298{position:absolute;height:88px;left:0;top:14px;width:8px}
+.new-portfolio .fd-299{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-300{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:0;white-space:nowrap}
+.new-portfolio .fd-301{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-302{line-height:normal}
+.new-portfolio .fd-303{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:80px;white-space:nowrap}
+.new-portfolio .fd-304{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-305{line-height:normal}
+.new-portfolio .fd-306{position:absolute;height:251px;left:248px;top:80px;width:76px}
+.new-portfolio .fd-307{position:absolute;height:217px;left:0;top:14px;width:8px}
+.new-portfolio .fd-308{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-309{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:0;white-space:nowrap}
+.new-portfolio .fd-310{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-311{line-height:normal;white-space:pre}
+.new-portfolio .fd-312{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:94px;white-space:nowrap}
+.new-portfolio .fd-313{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-314{line-height:normal}
+.new-portfolio .fd-315{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:205px;white-space:nowrap}
+.new-portfolio .fd-316{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-317{line-height:normal}
+.new-portfolio .fd-318{position:absolute;display:flex;height:423.999px;align-items:center;justify-content:center;left:332px;top:1px;width:0}
+.new-portfolio .fd-319{flex:none;rotate:90deg}
+.new-portfolio .fd-320{height:0;position:relative;width:423.999px}
+.new-portfolio .fd-321{position:absolute;inset:-0.5px 0 0 0}
+.new-portfolio .fd-322{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-323{position:absolute;height:250px;left:407px;top:174px;width:67px}
+.new-portfolio .fd-324{position:absolute;height:224px;left:0;top:17px;width:8px}
+.new-portfolio .fd-325{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-326{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:16px;color:#424242;font-size:14px;top:228px;white-space:nowrap}
+.new-portfolio .fd-327{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:3px;white-space:nowrap}
+.new-portfolio .fd-328{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-329{line-height:normal;white-space:pre}
+.new-portfolio .fd-330{position:absolute;height:420px;left:478px;top:0;width:65px}
+.new-portfolio .fd-331{position:absolute;height:408px;left:0;top:14px;width:8px}
+.new-portfolio .fd-332{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-333{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;left:16px;color:#424242;font-size:14px;top:0;white-space:nowrap}
+.new-portfolio .fd-334{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-335{line-height:normal;white-space:pre}
+.new-portfolio .fd-336{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:12px;color:#424242;font-size:14px;top:403px;white-space:nowrap}
+.new-portfolio .fd-337{position:absolute;height:64px;left:14px;top:28px;width:538px}
+.new-portfolio .fd-338{position:absolute;align-content:stretch;display:flex;align-items:center;justify-content:space-between;left:0;top:0;width:533px}
+.new-portfolio .fd-339{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:14px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-340{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-341{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-342{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-343{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-344{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-345{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-346{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-347{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-348{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-349{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-350{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-351{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-352{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-353{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-354{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-355{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-356{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-357{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-358{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-359{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-360{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-361{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-362{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-363{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-364{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-365{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-366{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-367{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-368{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-369{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-370{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-371{height:0;position:relative;flex-shrink:0;width:20px}
+.new-portfolio .fd-372{position:absolute;inset:-1px 0 0 0}
+.new-portfolio .fd-373{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-374{background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;padding-inline:12px;padding-block:6px;position:relative;border-radius:50px;flex-shrink:0;width:35px}
+.new-portfolio .fd-375{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-376{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;height:18px;line-height:normal;left:2px;font-size:14px;color:#000;top:46px;width:536px;white-space:nowrap}
+.new-portfolio .fd-377{position:absolute;left:0;top:0}
+.new-portfolio .fd-378{position:absolute;left:62px;top:0}
+.new-portfolio .fd-379{position:absolute;left:141px;top:0}
+.new-portfolio .fd-380{position:absolute;left:207px;top:0}
+.new-portfolio .fd-381{position:absolute;left:283px;top:0}
+.new-portfolio .fd-382{position:absolute;left:346px;top:0}
+.new-portfolio .fd-383{position:absolute;left:415px;top:0}
+.new-portfolio .fd-384{position:absolute;left:492px;top:0}
+.new-portfolio .fd-385{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:20px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-386{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:818px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(818px,100%)}
+.new-portfolio .fd-387{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-388{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-389{height:348px;overflow:clip;position:relative;flex-shrink:0;width:955px}
+.new-portfolio .fd-390{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:26px;font-size:18px;color:#000;top:-166px;white-space:nowrap}
+.new-portfolio .fd-391{word-break:break-word;position:absolute;align-content:stretch;display:flex;flex-direction:column;gap:4px;height:105px;align-items:flex-start;line-height:normal;left:26px;color:#000;top:-130px;width:518px}
+.new-portfolio .fd-392{font-family:"Radio Canada Big",sans-serif;font-weight:500;height:55px;position:relative;flex-shrink:0;font-size:48px;width:100%}
+.new-portfolio .fd-393{font-family:"Radio Canada Big",sans-serif;font-weight:400;position:relative;flex-shrink:0;font-size:18px;width:100%}
+.new-portfolio .fd-394{position:absolute;height:36px;left:33px;top:21px;width:99px}
+.new-portfolio .fd-395{position:absolute;background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;overflow:clip;padding-inline:14px;padding-block:6px;border-radius:50px;top:0;width:35px}
+.new-portfolio .fd-396{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-397{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:44px;font-size:14px;color:#000;top:9px;white-space:nowrap}
+.new-portfolio .fd-398{position:absolute;align-content:stretch;display:flex;flex-direction:column;height:260.07px;align-items:flex-start;left:29px;padding-top:10.506px;top:67px;width:204px}
+.new-portfolio .fd-399{align-content:stretch;display:flex;gap:11.93px;align-items:center;overflow:clip;position:relative;border-radius:7.004px;flex-shrink:0;width:202.807px}
+.new-portfolio .fd-400{height:245.59px;position:relative;flex-shrink:0;width:196.472px}
+.new-portfolio .fd-401{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-402{position:absolute;display:contents;inset:0.23% 74.59% 80.75% 2.03%}
+.new-portfolio .fd-403{position:absolute;inset:0.23% 74.59% 80.75% 2.03%}
+.new-portfolio .fd-404{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-405{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-406{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 80.54% 87.84% 7.64%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-407{position:absolute;display:contents;inset:0.23% 50.26% 80.75% 26.35%}
+.new-portfolio .fd-408{position:absolute;inset:0.23% 50.26% 80.75% 26.35%}
+.new-portfolio .fd-409{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-410{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-411{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 56.22% 87.84% 31.96%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-412{position:absolute;display:contents;inset:0.23% 25.94% 80.75% 50.67%}
+.new-portfolio .fd-413{position:absolute;inset:0.23% 25.94% 80.75% 50.67%}
+.new-portfolio .fd-414{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-415{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-416{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 31.9% 87.84% 56.28%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-417{position:absolute;display:contents;inset:0.23% 1.62% 80.75% 74.99%}
+.new-portfolio .fd-418{position:absolute;inset:0.23% 1.62% 80.75% 74.99%}
+.new-portfolio .fd-419{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-420{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-421{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 7.58% 87.84% 80.6%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-422{position:absolute;display:contents;inset:20.01% 74.59% 60.97% 2.03%}
+.new-portfolio .fd-423{position:absolute;inset:20.01% 74.59% 60.97% 2.03%}
+.new-portfolio .fd-424{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-425{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-426{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 80.54% 68.06% 7.64%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-427{position:absolute;display:contents;inset:20.01% 50.26% 60.97% 26.35%}
+.new-portfolio .fd-428{position:absolute;inset:20.01% 50.26% 60.97% 26.35%}
+.new-portfolio .fd-429{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-430{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-431{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 56.22% 68.06% 31.96%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-432{position:absolute;display:contents;inset:20.01% 25.94% 60.97% 50.67%}
+.new-portfolio .fd-433{position:absolute;inset:20.01% 25.94% 60.97% 50.67%}
+.new-portfolio .fd-434{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-435{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-436{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 31.9% 68.06% 56.28%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-437{position:absolute;display:contents;inset:20.01% 1.62% 60.97% 74.99%}
+.new-portfolio .fd-438{position:absolute;inset:20.01% 1.62% 60.97% 74.99%}
+.new-portfolio .fd-439{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-440{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-441{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 7.58% 68.06% 80.6%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-442{position:absolute;display:contents;inset:39.79% 74.59% 41.19% 2.03%}
+.new-portfolio .fd-443{position:absolute;inset:39.79% 74.59% 41.19% 2.03%}
+.new-portfolio .fd-444{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-445{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-446{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 80.54% 48.28% 7.64%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-447{position:absolute;display:contents;inset:39.79% 50.26% 41.19% 26.35%}
+.new-portfolio .fd-448{position:absolute;inset:39.79% 50.26% 41.19% 26.35%}
+.new-portfolio .fd-449{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-450{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-451{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 56.22% 48.28% 31.96%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-452{position:absolute;display:contents;inset:39.79% 25.94% 41.19% 50.67%}
+.new-portfolio .fd-453{position:absolute;inset:39.79% 25.94% 41.19% 50.67%}
+.new-portfolio .fd-454{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-455{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-456{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 31.9% 48.28% 56.28%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-457{position:absolute;display:contents;inset:39.79% 1.62% 41.19% 74.99%}
+.new-portfolio .fd-458{position:absolute;inset:39.79% 1.62% 41.19% 74.99%}
+.new-portfolio .fd-459{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-460{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-461{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 7.58% 48.28% 80.6%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-462{position:absolute;display:contents;inset:59.57% 74.59% 21.41% 2.03%}
+.new-portfolio .fd-463{position:absolute;inset:59.57% 74.59% 21.41% 2.03%}
+.new-portfolio .fd-464{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-465{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-466{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 80.54% 28.5% 7.64%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-467{position:absolute;display:contents;inset:59.57% 50.26% 21.41% 26.35%}
+.new-portfolio .fd-468{position:absolute;inset:59.57% 50.26% 21.41% 26.35%}
+.new-portfolio .fd-469{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-470{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-471{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 56.22% 28.5% 31.96%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-472{position:absolute;display:contents;inset:59.57% 25.94% 21.41% 50.67%}
+.new-portfolio .fd-473{position:absolute;inset:59.57% 25.94% 21.41% 50.67%}
+.new-portfolio .fd-474{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-475{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-476{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 31.9% 28.5% 56.28%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-477{position:absolute;display:contents;inset:59.57% 1.62% 21.41% 74.99%}
+.new-portfolio .fd-478{position:absolute;inset:59.57% 1.62% 21.41% 74.99%}
+.new-portfolio .fd-479{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-480{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-481{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 7.58% 28.5% 80.6%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-482{position:absolute;display:contents;inset:79.35% 74.59% 1.63% 2.03%}
+.new-portfolio .fd-483{position:absolute;inset:79.35% 74.59% 1.63% 2.03%}
+.new-portfolio .fd-484{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-485{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-486{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 80.54% 8.72% 7.64%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-487{position:absolute;display:contents;inset:79.35% 50.26% 1.63% 26.35%}
+.new-portfolio .fd-488{position:absolute;inset:79.35% 50.26% 1.63% 26.35%}
+.new-portfolio .fd-489{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-490{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-491{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 56.22% 8.72% 31.96%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-492{position:absolute;display:contents;inset:79.35% 25.94% 1.63% 50.67%}
+.new-portfolio .fd-493{position:absolute;inset:79.35% 25.94% 1.63% 50.67%}
+.new-portfolio .fd-494{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-495{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-496{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 31.9% 8.72% 56.28%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-497{position:absolute;display:contents;inset:79.35% 1.62% 1.63% 74.99%}
+.new-portfolio .fd-498{position:absolute;inset:79.35% 1.62% 1.63% 74.99%}
+.new-portfolio .fd-499{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-500{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-501{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 7.58% 8.72% 80.6%;line-height:normal;font-style:normal;font-size:8.501px;color:#000;text-align:center}
+.new-portfolio .fd-502{position:absolute;align-content:stretch;display:flex;flex-direction:column;height:261.345px;align-items:flex-start;left:287px;padding-top:10.557px;top:66px;width:205px}
+.new-portfolio .fd-503{align-content:stretch;display:flex;gap:11.988px;align-items:center;overflow:clip;position:relative;border-radius:7.038px;flex-shrink:0;width:203.801px}
+.new-portfolio .fd-504{height:246.794px;position:relative;flex-shrink:0;width:197.435px}
+.new-portfolio .fd-505{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-506{position:absolute;display:contents;inset:0.23% 74.59% 80.75% 2.03%}
+.new-portfolio .fd-507{position:absolute;inset:0.23% 74.59% 80.75% 2.03%}
+.new-portfolio .fd-508{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-509{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-510{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 80.54% 87.84% 7.64%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-511{position:absolute;display:contents;inset:0.23% 50.26% 80.75% 26.35%}
+.new-portfolio .fd-512{position:absolute;inset:0.23% 50.26% 80.75% 26.35%}
+.new-portfolio .fd-513{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-514{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-515{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 56.22% 87.84% 31.96%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-516{position:absolute;display:contents;inset:0.23% 25.94% 80.75% 50.67%}
+.new-portfolio .fd-517{position:absolute;inset:0.23% 25.94% 80.75% 50.67%}
+.new-portfolio .fd-518{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-519{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-520{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 31.9% 87.84% 56.28%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-521{position:absolute;display:contents;inset:0.23% 1.62% 80.75% 74.99%}
+.new-portfolio .fd-522{position:absolute;inset:0.23% 1.62% 80.75% 74.99%}
+.new-portfolio .fd-523{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-524{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-525{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:7.84% 7.58% 87.84% 80.6%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-526{position:absolute;display:contents;inset:20.01% 74.59% 60.97% 2.03%}
+.new-portfolio .fd-527{position:absolute;inset:20.01% 74.59% 60.97% 2.03%}
+.new-portfolio .fd-528{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-529{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-530{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 80.54% 68.06% 7.64%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-531{position:absolute;display:contents;inset:20.01% 50.26% 60.97% 26.35%}
+.new-portfolio .fd-532{position:absolute;inset:20.01% 50.26% 60.97% 26.35%}
+.new-portfolio .fd-533{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-534{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-535{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 56.22% 68.06% 31.96%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-536{position:absolute;display:contents;inset:20.01% 25.94% 60.97% 50.67%}
+.new-portfolio .fd-537{position:absolute;inset:20.01% 25.94% 60.97% 50.67%}
+.new-portfolio .fd-538{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-539{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-540{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 31.9% 68.06% 56.28%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-541{position:absolute;display:contents;inset:20.01% 1.62% 60.97% 74.99%}
+.new-portfolio .fd-542{position:absolute;inset:20.01% 1.62% 60.97% 74.99%}
+.new-portfolio .fd-543{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-544{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-545{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:27.62% 7.58% 68.06% 80.6%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-546{position:absolute;display:contents;inset:39.79% 50.26% 41.19% 26.35%}
+.new-portfolio .fd-547{position:absolute;inset:39.79% 50.26% 41.19% 26.35%}
+.new-portfolio .fd-548{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-549{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-550{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 56.22% 48.28% 31.96%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-551{position:absolute;display:contents;inset:39.79% 25.94% 41.19% 50.67%}
+.new-portfolio .fd-552{position:absolute;inset:39.79% 25.94% 41.19% 50.67%}
+.new-portfolio .fd-553{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-554{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-555{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 31.9% 48.28% 56.28%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-556{position:absolute;display:contents;inset:39.79% 1.62% 41.19% 74.99%}
+.new-portfolio .fd-557{position:absolute;inset:39.79% 1.62% 41.19% 74.99%}
+.new-portfolio .fd-558{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-559{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-560{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:47.4% 7.58% 48.28% 80.6%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-561{position:absolute;display:contents;inset:59.57% 74.59% 21.41% 2.03%}
+.new-portfolio .fd-562{position:absolute;inset:59.57% 74.59% 21.41% 2.03%}
+.new-portfolio .fd-563{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-564{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-565{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 80.54% 28.5% 7.64%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-566{position:absolute;display:contents;inset:59.57% 50.26% 21.41% 26.35%}
+.new-portfolio .fd-567{position:absolute;inset:59.57% 50.26% 21.41% 26.35%}
+.new-portfolio .fd-568{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-569{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-570{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 56.22% 28.5% 31.96%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-571{position:absolute;display:contents;inset:59.57% 25.94% 21.41% 50.67%}
+.new-portfolio .fd-572{position:absolute;inset:59.57% 25.94% 21.41% 50.67%}
+.new-portfolio .fd-573{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-574{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-575{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 31.9% 28.5% 56.28%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-576{position:absolute;display:contents;inset:59.57% 1.62% 21.41% 74.99%}
+.new-portfolio .fd-577{position:absolute;inset:59.57% 1.62% 21.41% 74.99%}
+.new-portfolio .fd-578{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-579{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-580{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:67.18% 7.58% 28.5% 80.6%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-581{position:absolute;display:contents;inset:79.35% 74.59% 1.63% 2.03%}
+.new-portfolio .fd-582{position:absolute;inset:79.35% 74.59% 1.63% 2.03%}
+.new-portfolio .fd-583{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-584{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-585{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 80.54% 8.72% 7.64%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-586{position:absolute;display:contents;inset:79.35% 50.26% 1.63% 26.35%}
+.new-portfolio .fd-587{position:absolute;inset:79.35% 50.26% 1.63% 26.35%}
+.new-portfolio .fd-588{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-589{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-590{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 56.22% 8.72% 31.96%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-591{position:absolute;display:contents;inset:79.35% 25.94% 1.63% 50.67%}
+.new-portfolio .fd-592{position:absolute;inset:79.35% 25.94% 1.63% 50.67%}
+.new-portfolio .fd-593{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-594{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-595{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 31.9% 8.72% 56.28%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-596{position:absolute;display:contents;inset:39.91% 1.62% 1.63% 2.03%}
+.new-portfolio .fd-597{position:absolute;display:contents;inset:39.91% 74.59% 41.07% 2.03%}
+.new-portfolio .fd-598{position:absolute;height:46.941px;left:0;top:0;width:47.66px}
+.new-portfolio .fd-599{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-600{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-601{translate:-50% 0;word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;height:10.671px;line-height:normal;left:23.48px;font-style:normal;font-size:8.543px;color:#000;text-align:center;top:18.78px;width:24.077px}
+.new-portfolio .fd-602{position:absolute;inset:79.35% 1.62% 1.63% 74.99%}
+.new-portfolio .fd-603{position:absolute;inset:-0.51% -0.5%}
+.new-portfolio .fd-604{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-605{word-break:break-word;position:absolute;font-family:Inter,sans-serif;font-weight:400;inset:86.96% 7.58% 8.72% 80.6%;line-height:normal;font-style:normal;font-size:8.543px;color:#000;text-align:center}
+.new-portfolio .fd-606{position:absolute;background:#9f9f9f;height:131.871px;left:58.74px;top:55.38px;width:37.164px}
+.new-portfolio .fd-607{position:absolute;background:var(--dark200,#353535);height:82.719px;left:158.25px;top:55.38px;width:35.965px}
+.new-portfolio .fd-608{position:absolute;height:36px;left:296px;top:21px;width:99px}
+.new-portfolio .fd-609{position:absolute;background:var(--grey2,#efefef);align-content:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;overflow:clip;padding-inline:14px;padding-block:6px;border-radius:50px;top:0;width:35px}
+.new-portfolio .fd-610{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;width:100%}
+.new-portfolio .fd-611{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:44px;font-size:14px;color:#000;top:9px;white-space:nowrap}
+.new-portfolio .fd-612{position:absolute;height:73px;left:555px;top:32px;width:267px}
+.new-portfolio .fd-613{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:127px;font-size:16px;color:#000;top:5px;width:136px}
+.new-portfolio .fd-614{position:absolute;display:flex;height:31px;align-items:center;justify-content:center;left:0.19px;top:0;width:110px}
+.new-portfolio .fd-615{rotate:-90deg;flex:none}
+.new-portfolio .fd-616{background:#9f9f9f;height:110px;position:relative;width:31px}
+.new-portfolio .fd-617{position:absolute;display:flex;height:30px;align-items:center;justify-content:center;left:0;top:43.31px;width:69px}
+.new-portfolio .fd-618{rotate:-90deg;flex:none}
+.new-portfolio .fd-619{background:var(--dark200,#353535);height:69px;position:relative;width:30px}
+.new-portfolio .fd-620{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:127px;font-size:16px;color:#000;top:47px;width:146px}
+.new-portfolio .fd-621{position:absolute;background:var(--grey2,#efefef);align-content:stretch;display:flex;align-items:center;justify-content:center;left:555px;padding:10px;top:127px}
+.new-portfolio .fd-622{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:18px;color:#000;white-space:nowrap}
+.new-portfolio .fd-623{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-624{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:708px;position:relative;flex-shrink:0;width:901px}
+.new-portfolio .fd-625{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-626{position:absolute;height:103.92%;left:-0.78%;max-width:none;top:0;width:101.66%}
+.new-portfolio .fd-627{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:20px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-628{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:818px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(818px,100%)}
+.new-portfolio .fd-629{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-630{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-631{height:504.778px;position:relative;flex-shrink:0;width:700px}
+.new-portfolio .fd-632{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-633{position:absolute;height:246.53%;left:0;max-width:none;top:-90.29%;width:100%}
+.new-portfolio .fd-634{align-content:stretch;display:flex;gap:36px;align-items:center;position:relative;flex-shrink:0;width:638px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(638px,100%)}
+.new-portfolio .fd-635{align-content:stretch;display:flex;gap:54.383px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-636{height:213px;position:relative;flex-shrink:0;width:184.298px}
+.new-portfolio .fd-637{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-638{height:213px;position:relative;flex-shrink:0;width:184.298px}
+.new-portfolio .fd-639{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-640{align-content:stretch;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-641{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#868686;font-size:0px;width:483px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(483px,100%)}
+.new-portfolio .fd-642{line-height:normal;margin-bottom:0;font-size:24px;color:#000;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-643{line-height:normal;font-size:16px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-644{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;width:603px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(603px,100%)}
+.new-portfolio .fd-645{align-content:stretch;display:flex;flex-direction:column;gap:36px;align-items:flex-start;position:relative;flex-shrink:0;width:603px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(603px,100%)}
+.new-portfolio .fd-646{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-647{height:424.392px;position:relative;flex-shrink:0;width:536px}
+.new-portfolio .fd-648{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-649{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:601px;white-space:pre-wrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(601px,100%)}
+.new-portfolio .fd-650{line-height:normal;margin-bottom:0;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-651{line-height:normal;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-652{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:822px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(822px,100%)}
+.new-portfolio .fd-653{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-654{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-655{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-656{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:519px;position:relative;flex-shrink:0;width:907.998px}
+.new-portfolio .fd-657{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-658{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-659{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;width:1186px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(1186px,100%)}
+.new-portfolio .fd-660{align-content:stretch;display:flex;gap:24px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-661{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:468px;position:relative;flex-shrink:0;width:593px}
+.new-portfolio .fd-662{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-663{position:absolute;height:99.97%;left:-1.35%;max-width:none;top:0.04%;width:101.35%}
+.new-portfolio .fd-664{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:467.83px;position:relative;flex-shrink:0;width:598.349px}
+.new-portfolio .fd-665{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-666{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;height:19px;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:520px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(520px,100%)}
+.new-portfolio .fd-667{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-668{height:754.111px;position:relative;flex-shrink:0;width:1060px}
+.new-portfolio .fd-669{position:absolute;inset:0;max-width:none;object-fit:cover;;width:100%;height:100%}
+.new-portfolio .fd-670{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;height:19px;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:520px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(520px,100%)}
+.new-portfolio .fd-671{align-content:stretch;display:flex;flex-direction:column;gap:8px;align-items:flex-start;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-672{border-width:1px;border-color:var(--border,#f5f5f5);border-style:solid;height:690px;position:relative;flex-shrink:0;width:868px}
+.new-portfolio .fd-673{position:absolute;inset:0;overflow:hidden;}
+.new-portfolio .fd-674{position:absolute;height:103.87%;left:-1.04%;max-width:none;top:-0.07%;width:104.61%}
+.new-portfolio .fd-675{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#868686;font-size:16px;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-676{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:8px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:822px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(822px,100%)}
+.new-portfolio .fd-677{height:34px;position:relative;flex-shrink:0;font-size:28px;color:#000;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-678{position:relative;flex-shrink:0;color:#868686;font-size:20px;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-679{align-content:stretch;display:flex;gap:36px;align-items:center;position:relative;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-680{height:647px;overflow:clip;position:relative;flex-shrink:0;width:548px}
+.new-portfolio .fd-681{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:26px;font-size:18px;color:var(--main,#c3e5e1);top:-151.72px;white-space:nowrap}
+.new-portfolio .fd-682{word-break:break-word;position:absolute;align-content:stretch;display:flex;flex-direction:column;gap:4px;align-items:flex-start;left:26px;color:var(--main,#c3e5e1);top:-115.72px;width:518px}
+.new-portfolio .fd-683{font-family:"Radio Canada Big",sans-serif;font-weight:500;height:55px;line-height:normal;position:relative;flex-shrink:0;font-size:48px;width:100%}
+.new-portfolio .fd-684{font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;font-size:18px;width:100%;white-space:pre-wrap}
+.new-portfolio .fd-685{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-686{line-height:normal}
+.new-portfolio .fd-687{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:423px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:572.28px}
+.new-portfolio .fd-688{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-689{position:absolute;height:380px;left:34px;top:21.28px;width:479.794px}
+.new-portfolio .fd-690{position:absolute;height:181px;left:10.37px;top:197px;width:122px}
+.new-portfolio .fd-691{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:-4px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:115px}
+.new-portfolio .fd-692{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-693{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-694{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-695{line-height:normal}
+.new-portfolio .fd-696{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:0;border-radius:500px;width:120px;height:120px;top:0}
+.new-portfolio .fd-697{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-698{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-699{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:normal;min-width:100%;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:min-content}
+.new-portfolio .fd-700{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:178.37px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:113px}
+.new-portfolio .fd-701{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-702{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-703{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-704{line-height:normal;margin-bottom:0}
+.new-portfolio .fd-705{line-height:normal}
+.new-portfolio .fd-706{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:188.37px;border-radius:500px;width:120px;height:120px;top:0}
+.new-portfolio .fd-707{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-708{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-709{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:normal;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:82px}
+.new-portfolio .fd-710{position:absolute;height:181px;left:359.37px;top:199px;width:120px}
+.new-portfolio .fd-711{position:absolute;background:#4e4e4e;align-content:stretch;display:flex;align-items:center;justify-content:center;left:7px;padding:10px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;top:113px}
+.new-portfolio .fd-712{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:0;position:relative;flex-shrink:0;color:#e8f3ff;font-size:12px;white-space:nowrap}
+.new-portfolio .fd-713{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-714{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-715{line-height:normal;margin-bottom:0;white-space:pre}
+.new-portfolio .fd-716{line-height:normal;white-space:pre}
+.new-portfolio .fd-717{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:0;border-radius:500px;width:120px;height:120px;top:0}
+.new-portfolio .fd-718{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-719{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-720{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:normal;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:82px}
+.new-portfolio .fd-721{position:absolute;display:flex;height:193.56px;align-items:center;justify-content:center;left:310.37px;top:13.49px;width:169.421px}
+.new-portfolio .fd-722{flex:none;rotate:-123.29deg}
+.new-portfolio .fd-723{height:89.028px;position:relative;width:173.098px}
+.new-portfolio .fd-724{position:absolute;inset:0 0 -1.12% 0}
+.new-portfolio .fd-725{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-726{position:absolute;display:flex;height:196.693px;align-items:center;justify-content:center;left:0;top:1.33px;width:185.373px}
+.new-portfolio .fd-727{scale:1 -1;flex:none;rotate:-50.11deg}
+.new-portfolio .fd-728{height:90.711px;position:relative;width:180.53px}
+.new-portfolio .fd-729{position:absolute;inset:0 0 -1.1% 0}
+.new-portfolio .fd-730{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-731{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:353.37px;color:#e8f3ff;font-size:12px;top:40px;white-space:nowrap}
+.new-portfolio .fd-732{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:71.37px;color:#e8f3ff;font-size:12px;top:40px;white-space:nowrap}
+.new-portfolio .fd-733{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:224.37px;color:#e8f3ff;font-size:12px;top:264px;white-space:nowrap}
+.new-portfolio .fd-734{position:absolute;display:flex;height:1px;align-items:center;justify-content:center;left:130px;top:253px;width:230px}
+.new-portfolio .fd-735{scale:1 -1;flex:none}
+.new-portfolio .fd-736{height:1px;position:relative;width:230px}
+.new-portfolio .fd-737{position:absolute;inset:-566.97% 0 -487.67% 0}
+.new-portfolio .fd-738{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-739{position:absolute;background:#3b3b3b;border-width:1px;border-color:#4e4e4e;border-style:solid;align-content:stretch;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;left:394px;border-radius:500px;width:120px;height:120px;top:457.28px}
+.new-portfolio .fd-740{position:relative;flex-shrink:0;width:24px;height:24px}
+.new-portfolio .fd-741{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-742{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:500;line-height:normal;position:relative;flex-shrink:0;color:#e8f3ff;font-size:16px;text-align:center;width:82px}
+.new-portfolio .fd-743{position:absolute;display:flex;height:41px;align-items:center;justify-content:center;left:454px;top:416.28px;width:0}
+.new-portfolio .fd-744{flex:none;rotate:90deg}
+.new-portfolio .fd-745{height:0;position:relative;width:41px}
+.new-portfolio .fd-746{position:absolute;inset:-5.77px 0}
+.new-portfolio .fd-747{display:block;max-width:none;width:100%;height:100%}
+.new-portfolio .fd-748{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:40px;font-size:18px;color:#000;top:470px;width:233px}
+.new-portfolio .fd-749{word-break:break-word;position:absolute;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;left:79px;font-size:18px;color:#000;top:516px;width:233px}
+.new-portfolio .fd-750{position:absolute;background:var(--dark0,#111);align-content:stretch;display:flex;height:22px;align-items:center;justify-content:center;left:40px;padding:10px;top:545px;width:77px}
+.new-portfolio .fd-751{word-break:break-word;font-family:"Radio Canada Big",sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;color:#e8f3ff;font-size:18px;white-space:nowrap}
+.new-portfolio .fd-752{word-break:break-word;align-content:stretch;display:flex;flex-direction:column;font-family:Outfit,sans-serif;font-weight:400;gap:36px;height:292px;align-items:flex-start;justify-content:center;position:relative;flex-shrink:0;width:641px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(641px,100%)}
+.new-portfolio .fd-753{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:74px;align-items:flex-start;position:relative;flex-shrink:0;width:100%;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-754{height:25px;line-height:normal;position:relative;flex-shrink:0;font-size:20px;color:#000;width:395px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(395px,100%)}
+.new-portfolio .fd-755{height:36px;line-height:0;min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:100%}
+.new-portfolio .fd-756{line-height:normal;margin-bottom:0;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-757{line-height:normal;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}
+.new-portfolio .fd-758{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:74px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:590px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(590px,100%)}
+.new-portfolio .fd-759{height:25px;position:relative;flex-shrink:0;font-size:20px;color:#000;width:395px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(395px,100%)}
+.new-portfolio .fd-760{height:19px;min-width:100%;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-761{align-content:stretch;display:flex;flex-direction:column;gap:8px;height:72px;align-items:flex-start;line-height:normal;position:relative;flex-shrink:0;width:641px;min-width:0;flex-shrink:1;max-width:100%;height:auto;width:min(641px,100%)}
+.new-portfolio .fd-762{height:25px;min-width:100%;position:relative;flex-shrink:0;font-size:20px;color:#000;width:min-content;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:100%}
+.new-portfolio .fd-763{height:39px;position:relative;flex-shrink:0;color:#868686;font-size:16px;width:641px;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0;width:min(641px,100%)}
+.new-portfolio .fd-764{background:var(--grey2,#efefef);align-content:stretch;display:flex;height:47px;align-items:center;justify-content:center;padding-inline:16px;position:relative;border-radius:10px;flex-shrink:0;min-width:0;flex-shrink:1;max-width:100%;height:auto}
+.new-portfolio .fd-765{word-break:break-word;font-family:Outfit,sans-serif;font-weight:400;line-height:normal;position:relative;flex-shrink:0;font-size:16px;color:#000;white-space:nowrap;min-width:0;flex-shrink:1;max-width:100%;height:auto;white-space:normal;min-width:0}

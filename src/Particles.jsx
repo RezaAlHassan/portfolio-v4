@@ -193,6 +193,5 @@ export function Particles({ shape = 'Portrait', reach = 80, force = 60, grain = 
     <button ref={stageRef} type="button" className="particle-stage" aria-label={`${current === 'Portrait' ? "Reza's portrait" : current} made of dots. Change to ${shapes[(shapes.indexOf(current) + 1) % shapes.length]}.`} onPointerMove={event => { if (event.pointerType !== 'touch') engineRef.current?.push(event); }} onClick={event => { if (event.detail > 0) engineRef.current?.push(event, true); next(); }}>
       <canvas ref={canvasRef} aria-hidden="true"/>
     </button>
-    <span className="particle-hint">Hover</span>
   </div>;
 }

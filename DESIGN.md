@@ -104,6 +104,16 @@ components:
 
 # Design System: Reza Portfolio
 
+## Calm portfolio hierarchy (October 2026)
+
+Portfolio homepages and all project detail pages use sentence-case headlines, regular-weight display type and shorter section titles. Project descriptions and evidence lead the homepage cards; tag pills are removed there. Detail pages retain scope tags as plain text, with smaller section labels and more relaxed reading space. Large narrative lime panels use neutral surfaces with a small lime marker; product diagrams retain their meaningful colours. Primary navigation focuses on work, About and contact, with quieter secondary links. Preserve all case-study copy, evidence, expandable images and reduced-motion controls.
+
+Orderific, Zevian HRMS and Portfolio use one aligned reading column and three section patterns: story, evidence grid and comparison. Story sections put the section label and heading first, then pair the explanation with its main artifact on desktop, using left and right image placements and vertically centred text. Mobile puts the explanation above its image. Evidence uses two images with captions, capped at 500px tall on desktop and 420px on mobile, without cropping. Comparisons use two columns for stages, decisions or results, with metric labels below their values. Grids stack on mobile. Supplied vector diagrams and product flows stay intact within these layouts and remain expandable. Zevian uses the fixed-column pilot described below.
+
+Jayga and Purno retain their original case-study layouts on both design and product routes: their original hero structure, indexed sections, image arrangements and navigation. Their headings, body text, labels, captions and metric typography use the shared text system. They are isolated from the newer case layout, image-height and paired-text rules.
+
+The canvas is warm paper, with ink text and lime signals. Zevian uses a fixed reading column as the image-led presentation pilot: current product, discovery changes, current experience, two-stage evolution, then system and build. Raw screenshots carry the story without added borders, backgrounds or frames. Group image sequences with brief captions between short text blocks. Avoid repeated problem/decision explanations and numbered notes under each screen. Keep uncropped image-height limits and click-to-expand. Detailed research and AI methods stay in closed native accordions. The earlier prototype uses one borderless ticker row of large expandable images, inspired by the Motion overflow example; reduced motion shows a static, horizontally scrollable row. The product route keeps its outcome and evidence limits before process.
+
 ## Portfolio entry and product route (September 2026)
 
 The product hero leads with Product Manager. Supporting copy mentions a design-led approach once; the design route keeps the stronger design identity and its editorial serif gesture.
@@ -118,7 +128,7 @@ Orderific's homepage preview now uses four supplied component-card exports in an
 
 ## Homepage particle detail (current)
 
-The homepage hero pairs its headline with an ink-dot canvas up to 440px wide. It opens with a grain portrait sampled from Reza's supplied photo, preserving his hair, glasses and facial features in fine ink dots. On first entering view, dots fade in from a loose cloud and gather into the portrait over about 1.5 seconds, then rest until interaction. Reduced motion shows the finished portrait immediately. Pressing cycles through Portrait, Tangled path and Clear flow. The portrait uses more, smaller dots to show facial detail; the flow uses larger dots. The only visible hint is Hover. On screens at 1100px and below, the canvas sits below the supporting copy and selected-work action. The contact section has no duplicate canvas.
+The homepage hero pairs its headline with an ink-dot canvas up to 440px wide. It opens with a grain portrait sampled from Reza's supplied photo, preserving his hair, glasses and facial features in fine ink dots. On first entering view, dots fade in from a loose cloud and gather into the portrait over about 1.5 seconds, then rest until interaction. Reduced motion shows the finished portrait immediately. Pressing cycles through Portrait, Tangled path and Clear flow. The portrait uses more, smaller dots to show facial detail; the flow uses larger dots. There is no visible interaction hint or selected-work hero button. On screens at 1100px and below, the canvas sits below the supporting copy. The contact section has no duplicate canvas.
 
 The 2,400 dots fill the flow blocks and tangled shape. They move only after pointer movement or a shape change, and stop once settled. The shape button supports Enter and Space. Reduced motion keeps each selected shape static. Use warm paper and ink; keep the headline visually dominant.
 
@@ -230,7 +240,7 @@ Thin ink borders are the main form language. Editorial structure stays square an
 
 ### Buttons
 
-- **Primary navigation action:** A compact Editorial Ink pill with Pure White text, `13px 18px` padding, and a label-arrow relationship. In the open mobile menu, it becomes Signal Lime with Editorial Ink text.
+- **Contact navigation action:** Use the Radix Themes Button with the solid, high-contrast gray variant, size 3 and medium radius. Render it as a mail link with DM Sans and a 16px arrow. Keep a 44px minimum height and the portfolio's visible keyboard focus. Use the same component in the mobile menu. The sprint contact action keeps its existing treatment.
 - **Selected-work action:** A Signal Lime pill with Editorial Ink text, `10px 14px` padding, and a downward arrow. It anchors the hero’s ruled support row and is the clearest path into the portfolio evidence.
 - **Hover:** Directional arrows move a few pixels in the direction they point over 300–350ms using the shared editorial easing.
 - **Focus:** Use a 2px Editorial Ink outline, a 3px outline offset, and a 5px Signal Lime outer halo. The focus corner is gently rounded (`4px`).
@@ -359,3 +369,23 @@ Zevian and Orderific both move automatically without visible control icons, acti
 ## Design homepage secondary work (current)
 
 The AI workflows teaser follows the four main design covers at full content width, with compact content and generous space above and below. Its content sits below the divider with a clear inset. Spacing reduces on mobile. Other work uses a smaller heading and the same two-column card pattern as the main projects. Zevian HRMS comes first with the supplied work-policy crop; Portfolio follows with a code-native editorial cover. Both cards link to their full cases and stack on mobile.
+
+## Zevian case layout (current)
+
+Both Zevian routes follow the layout of Marie Dvorzak's Multiplicity Pilot case: a fixed top navigation, a sticky 320px project-details sidebar, a 64px gutter and a 620px reading column. The page uses a maximum width of 1800px with 48px desktop insets; images use the wider story area. At 900px and below, the sidebar stacks above the story; below 700px, the insets become 20px. The portfolio keeps its DM Sans type, warm-paper surfaces and original evidence. Research and AI methods remain in closed accordions, and the earlier prototype keeps its separate accessible ticker. Layout styles live in `src/ZevianCase.css`.
+
+## Figma redesign — October 2026
+
+This section replaces the earlier design-system rules for all live routes. The earlier rules describe the archived portfolio. Retained case stories keep their supplied evidence and image arrangements while using the current typography, colours, navigation and controls.
+
+Use Figma file `HTGPw4wOrTMg6yLfIgRfnL`: homepage `1:2`, Zevian `9:178`, Jayga `32:110`, Purno `52:834`. `/`, `/design`, and `/product` show one shared homepage. Use white, black, neutral grey, Outfit, a 1219px content width and simple text navigation. At 1440px, covers are 590×306px with a 39px column gap; they stack below 650px. All covers share the same height at each breakpoint. Zevian restores the earlier video loop and Orderific restores its moving component cards. Both keep keyboard controls and reduced-motion support without visible controls. Purno's case preserves the supplied full-height payment and owner screen arrangements. Its ~20% faster transaction-time figure is a user-confirmed estimate.
+
+The new cases use a single vertical story, paired evidence, and the exact supplied diagrams and interface images. Preserve diagram topology and crops inside `ResponsiveArtifact`; stack reading layouts on smaller screens. Case images reuse `ExpandableImage`. Diagram text uses Radio Canada Big and Inter where specified by Figma. Fonts and design assets are stored locally. The active styles are `src/portfolio.css` and `src/figma/cases.css`.
+
+The previous source is preserved in `archive/portfolio-before-2026-10-15/`. Previous homepages are available at `/archive`, `/archive/design`, and `/archive/product`; previous case pages use `/archive/<original route>`.
+
+The active `/orderific` case follows Figma node `27:1114`, using its exact wording and content order as requested. Its styles are in `src/figma/orderific.css`. The two wide BMS direction screenshots stay in a horizontal scroll region with keyboard access; the other evidence pairs stack on mobile. All seven supplied images use `ExpandableImage`. The homepage's moving component-card cover stays unchanged.
+
+The current page background is almost-white grey (`#fafafa`) to distinguish white product screens from the surrounding page. Preserve the supplied images and their colours.
+
+All remaining live pages use this system through `.portfolio-secondary`: About, AI workflows, sprint, Zevian HRMS, portfolio and all four product case routes. `PortfolioHeader` and `PortfolioFooter` are shared with the homepage. Use 36px page titles, 28px section headings, 20px supporting titles and introductions, 16px body text, and 14px labels and captions; page titles become 30px and section titles 26px on small screens. Use neutral panels, light dividers, 8px image/panel corners, 10px buttons and blue focus rings. The reading container is 1219px, with responsive evidence pairs. Zevian's product case has a top details row. Preserve research accordions, expandable images, full product stories and the sprint's scope, price and contact flow. These overrides live in `src/secondary-pages.css`; archive routes do not receive the new theme.

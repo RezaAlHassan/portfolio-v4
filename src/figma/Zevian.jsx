@@ -17,6 +17,15 @@ const imgLine3 = `${assetPathPrefix}/6456d.svg`;
 const imgLine4 = `${assetPathPrefix}/4e940.svg`;
 const imgLine5 = `${assetPathPrefix}/7aeaa.svg`;
 
+function EarlierZevianLinks() {
+  return <nav className="zevian-earlier-links" aria-label="Links to earlier Zevian work">
+    <p>Links to earlier</p>
+    <div>
+      <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Case study <span aria-hidden="true">↗</span></a>
+      <a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">Prototype <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>;
+}
 
 export default function Zevian(){return <div className="new-portfolio"><PortfolioHeader/><main className="portfolio-width figma-case"><div data-node-id="9:179" className="fd-1">
         <div data-node-id="9:180" className="fd-2">
@@ -52,6 +61,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               10+ conversations, React Protoype
             </p>
           </div>
+          <EarlierZevianLinks/>
         </div>
         <div data-node-id="12:286" className="fd-15">
           <div data-node-id="9:184" data-flow="row" className="fd-16">

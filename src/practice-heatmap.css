@@ -1,0 +1,22 @@
+.new-portfolio .practice-heatmap{margin-top:56px;padding-block:28px;border-block:1px solid #e7e7e7}
+.new-portfolio .practice-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}
+.new-portfolio .practice-heading h2{font-size:20px;font-weight:500;line-height:1.25}
+.new-portfolio .practice-legend{display:flex;align-items:center;gap:18px;margin:0;padding:0;list-style:none;font-size:13px;color:#626262}
+.new-portfolio .practice-legend li{display:flex;align-items:center;gap:7px}
+.new-portfolio .practice-cell{fill:#eaeaea;background:#eaeaea}
+.new-portfolio .practice-cell[data-practice='code']{fill:#92c18d;background:#92c18d}
+.new-portfolio .practice-cell[data-practice='design']{fill:#9bb8e9;background:#9bb8e9}
+.new-portfolio .practice-cell[data-practice='code'][data-shade='0']{fill:#c8dfc5}
+.new-portfolio .practice-cell[data-practice='code'][data-shade='2']{fill:#6eaa68}
+.new-portfolio .practice-cell[data-practice='design'][data-shade='0']{fill:#cedcf4}
+.new-portfolio .practice-cell[data-practice='design'][data-shade='2']{fill:#7299d5}
+.new-portfolio .practice-legend .practice-cell{display:block;width:10px;height:10px;border-radius:2px}
+.new-portfolio .practice-pattern{display:block;width:100%;height:auto;overflow:visible}
+.new-portfolio .practice-caption{margin-top:16px;font-size:13px;color:#767676;line-height:1.4}
+@media(max-width:650px){
+  .new-portfolio .practice-heatmap{margin-top:40px;padding-block:24px}
+  .new-portfolio .practice-heading{gap:12px;margin-bottom:18px}
+  .new-portfolio .practice-heading h2{font-size:19px}
+  .new-portfolio .practice-legend{gap:12px;font-size:12px}
+  .new-portfolio .practice-caption{font-size:12px}
+}

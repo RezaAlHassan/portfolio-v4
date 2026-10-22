@@ -1023,11 +1023,11 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
             </div>
           </div>
         </div>
+        <p className="fd-646">
+          Rack levels let us stack goods vertically, reducing occupied floor space and making better use of storage capacity.
+        </p>
         <div data-node-id="43:684" className="fd-644">
           <div data-node-id="43:681" className="fd-645">
-            <p data-node-id="43:678" className="fd-646">
-              Surveys and qualitative research helped narrow the customer focus, helping us land our first client UNDP (NGO). Survey responses on price, distance, security, and retrieval also informed this choice.
-            </p>
             <ResponsiveArtifact width={536} height={424.392}><div data-node-id="43:680" data-name="opportunity-matrix 1" className="fd-647">
               <ExpandableImage src={imgOpportunityMatrix1} className="figma-expand" imageClassName="fd-648" alt="Customer priorities and opportunity matrix" />
             </div></ResponsiveArtifact>
@@ -1036,6 +1036,11 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
             <p className="fd-650">{`Cost demand matrix: Focused GTM  plans were on NGOs `}</p>
             <p className="fd-651">and mining companies</p>
           </div>
+        </div>
+        <div className="fd-645">
+          <p data-node-id="43:678" className="fd-646">
+            Surveys and qualitative research helped narrow the customer focus, helping us land our first client UNDP (NGO). Survey responses on price, distance, security, and retrieval also informed this choice.
+          </p>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="32:165" className="fd-652">

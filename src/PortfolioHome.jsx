@@ -119,10 +119,10 @@ function ZevianCover() {
 }
 
 const projects = [
-  { name: 'Zevian', role: 'Founder', description: 'Helping sales managers investigate performance changes.', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
-  { name: 'Jayga', role: 'Product Lead', description: 'Connecting warehouse storage, billing and delivery.', metric: '3× projected revenue · led 4 engineers', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
-  { name: 'Orderific', role: 'Product Designer', description: 'Design systems for six connected restaurant apps', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
-  { name: 'Purno', role: 'Founding Product Designer', description: 'Retail POS for payments and inventory.', metric: '$10K seed · cross-platform POS', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
+  { name: 'Zevian', description: 'Helping sales managers investigate performance changes.', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
+  { name: 'Jayga', description: 'Connecting warehouse storage, billing and delivery.', metric: '3× projected revenue · led 4 engineers', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
+  { name: 'Orderific', description: 'Design systems for six connected restaurant apps', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
+  { name: 'Purno', description: 'Retail POS for payments and inventory.', metric: '$10K seed · cross-platform POS', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
 ];
 
 export default function PortfolioHome() {
@@ -142,7 +142,7 @@ export default function PortfolioHome() {
             {project.image && <img src={project.image} alt={project.alt} loading={project.name === 'Zevian' || project.name === 'Jayga' ? 'eager' : 'lazy'}/>}
           </div>}
           <div className="portfolio-project-copy">
-            <h2><a className="portfolio-project-link" href={project.href}>{project.name}<span className="project-dot"> · </span><span className="project-role">{project.role}</span></a></h2>
+            <h2><a className="portfolio-project-link" href={project.href}>{project.name}</a></h2>
             <p>{project.description}</p><p className="project-metric">{project.metric}</p>
           </div>
           </ProjectTooltip>

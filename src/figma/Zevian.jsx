@@ -17,12 +17,13 @@ const imgLine3 = `${assetPathPrefix}/6456d.svg`;
 const imgLine4 = `${assetPathPrefix}/4e940.svg`;
 const imgLine5 = `${assetPathPrefix}/7aeaa.svg`;
 
-function EarlierZevianLinks() {
-  return <nav className="zevian-earlier-links" aria-label="Links to earlier Zevian work">
-    <p>Links to earlier</p>
+function ZevianLinks() {
+  return <nav className="zevian-earlier-links" aria-label="Zevian prototype and case study links">
+    <p>Links</p>
     <div>
-      <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Case study <span aria-hidden="true">↗</span></a>
-      <a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">Prototype <span aria-hidden="true">↗</span></a>
+      <a href="https://zevian-v3.netlify.app/" target="_blank" rel="noreferrer">Current prototype <span aria-hidden="true">↗</span></a>
+      <a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">Previous prototype <span aria-hidden="true">↗</span></a>
+      <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Previous case study <span aria-hidden="true">↗</span></a>
     </div>
   </nav>;
 }
@@ -47,10 +48,10 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
           </div>
           <div data-node-id="12:266" className="fd-9">
             <p data-node-id="12:267" className="fd-10">
-              Owned
+              Ownership
             </p>
             <p data-node-id="12:268" className="fd-11">
-              Discovery, product direction, UX, protoype
+              Discovery, product direction, UX, prototype
             </p>
           </div>
           <div data-node-id="12:277" className="fd-12">
@@ -58,10 +59,10 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               Evidence
             </p>
             <p data-node-id="12:279" className="fd-14">
-              10+ conversations, React Protoype
+              10+ conversations, React prototype
             </p>
           </div>
-          <EarlierZevianLinks/>
+          <ZevianLinks/>
         </div>
         <div data-node-id="12:286" className="fd-15">
           <div data-node-id="9:184" data-flow="row" className="fd-16">
@@ -295,7 +296,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             Design foundations
           </h2>
           <p data-node-id="27:1083" className="fd-119">
-            I defined the visual foundation and interaction states in Figma, then used Claude Code and Codex to build the React investigation prototype. The prototype will be updated soon
+            I defined the visual foundation and interaction states in Figma, then used Claude Code and Codex to build the current React investigation prototype linked above.
           </p>
         </div>
         <div data-node-id="27:1092" data-flow="row" className="fd-120">
@@ -307,7 +308,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
           </div>
           <div data-node-id="27:1095" className="fd-125">
             <div data-node-id="27:1089" className="fd-126">
-              <p data-node-id="27:1090" className="fd-127">{`Token generation was done by connecting Chatgpt to Figma. React prototype prepared using Figma → Codex. `}</p>
+              <p data-node-id="27:1090" className="fd-127">{`Token generation was done by connecting ChatGPT to Figma. React prototype prepared using Figma → Codex. `}</p>
             </div>
             <p data-node-id="27:1093" className="fd-128">
               For inspiration I used Notion for drawer design and Attio for overall design language. Findings are now being updated in Gmail style
@@ -319,20 +320,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
           <h2 data-node-id="27:1097" className="fd-130">
             Build-Measure-Learn
           </h2>
-          <p data-node-id="27:1098" className="fd-131">{`I’m following Lean methodlogy to learn and iterate protoypes based on findings. The earlier prototype can be found here. It was built was built using React connected with Supabase for database. `}</p>
-        </div>
-        <div data-node-id="27:1111" className="fd-132">
-          <p data-node-id="27:1109" className="fd-133">
-            Links
-          </p>
-          <div data-node-id="27:1105" className="fd-134">
-            <a href="https://demo.zevian.co" data-node-id="27:1102" target="_blank" className="fd-135" rel="noreferrer">
-              <p className="fd-136">View the earlier prototype →</p>
-            </a>
-            <a href="https://rezaalhasan.netlify.app/zevian" data-node-id="27:1103" target="_blank" className="fd-137" rel="noreferrer">
-              <p className="fd-138">Read earlier the case study →</p>
-            </a>
-          </div>
+          <p data-node-id="27:1098" className="fd-131">{`I’m following Lean methodology to learn and iterate prototypes based on findings. The earlier prototype was built using React connected to Supabase.`}</p>
         </div>
         <hr className="portfolio-divider" />
         <NextProject name="Jayga" href="/jayga"/>

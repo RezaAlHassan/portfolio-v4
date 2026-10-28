@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { PortfolioHeader, PortfolioFooter } from './PortfolioShared';
 import { DraggableMarquee } from './DraggableMarquee';
 import { ExpandableImage } from './LegacyPortfolio';
-import PracticeHeatmap from './PracticeHeatmap';
 
 const orderificCards = [
   { id: 1, src: '/Or-C1.png', alt: 'Orderific delivery-zone card in English LTR and Arabic RTL', width: 340, height: 403 },
@@ -154,7 +153,6 @@ export default function PortfolioHome() {
         </details>
         <a href="/ai-workflows">AI Workflows <img src="/figma/13a84.svg" alt="" width="24" height="24"/></a>
       </div>
-      <PracticeHeatmap/>
       <PortfolioFooter contained/>
     </main>
   </div>;

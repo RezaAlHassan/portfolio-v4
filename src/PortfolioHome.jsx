@@ -147,12 +147,21 @@ export default function PortfolioHome() {
           </ProjectTooltip>
         </article>)}
       </section>
-      <div className="portfolio-more">
-        <details className="portfolio-other"><summary>Other Projects <img src="/figma/13a84.svg" alt="" width="24" height="24"/></summary>
-          <div className="portfolio-other-links"><a href="/zevian-hrms">Zevian HRMS ↗</a><a href="/portfolio">Portfolio ↗</a></div>
-        </details>
-        <a href="/ai-workflows">AI Workflows <img src="/figma/13a84.svg" alt="" width="24" height="24"/></a>
-      </div>
+      <section className="portfolio-more" aria-labelledby="other-work-title">
+        <h2 id="other-work-title">Other work</h2>
+        <a className="portfolio-work-row" href="/zevian-hrms">
+          <h3>Zevian HRMS <span>— Interface system</span></h3>
+          <p className="portfolio-work-keywords">HR tools · Design systems · Prototyping</p>
+          <p className="portfolio-work-proof">25k+ views on Dribbble</p>
+          <img src="/figma/13a84.svg" alt="" width="20" height="20"/>
+        </a>
+        <a className="portfolio-work-row" href="/ai-workflows">
+          <h3>AI workflows <span>— Design and build</span></h3>
+          <p className="portfolio-work-keywords">Research · Prototyping · Development</p>
+          <p className="portfolio-work-proof">SQL ? Supabase ? Automations</p>
+          <img src="/figma/13a84.svg" alt="" width="20" height="20"/>
+        </a>
+      </section>
       <PortfolioFooter contained/>
     </main>
   </div>;

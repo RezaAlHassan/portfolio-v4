@@ -9,6 +9,8 @@ This repository contains Reza Al Hassan's product-design portfolio. Preserve fac
 
 ## Current Figma redesign (October 2026)
 
+- The homepage Other work section has two compact linked rows: Zevian HRMS and AI workflows. Each shows the work, three keywords and proof. HRMS shows the user-supplied 25k+ Dribbble views, with the Dribbble link inside its case study. Portfolio is no longer listed on the homepage; its existing route stays available.
+
 - The Figma file HTGPw4wOrTMg6yLfIgRfnL is the visual authority for the new homepage (1:2), Zevian case (9:178), Jayga case (32:110), Purno case (52:834), and Orderific case (27:1114).
 - `/orderific` uses the exact text and content order from Figma node 27:1114, including supplied spelling and punctuation. Do not rewrite its copy. Keep the wide LTR/RTL image pair horizontally scrollable and every evidence image expandable. The prior case remains at `/archive/orderific`; `/product/orderific` retains its product case.
 - `/`, `/design`, and `/product` render the same new homepage: Zevian, Jayga, Orderific, Purno. The image, image-to-text spacing and all text form one native card link and hover area. Zevian uses the earlier `/zevian/demo-loop.mp4` video without play/pause controls; reduced motion pauses playback. Orderific reuses the moving `Or-C1.png`–`Or-C4.png` component cards, drag/swipe, keyboard arrows, Space to pause, hover/focus pause and expandable images. All outer cover heights stay aligned.

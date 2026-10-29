@@ -14,6 +14,8 @@ Zevian's research workflow used Fireflies to create interview transcripts, organ
 
 ## Main pages
 
+The homepage also has two compact Other work rows: Zevian HRMS (interface system, with 25k+ Dribbble views reported by Reza) and AI workflows (research, prototyping and development, with SQL, Supabase and automations). The HRMS case links to Dribbble. The Portfolio redesign project is no longer listed on the homepage; its route remains available.
+
 - [Portfolio](/), [Design](/design), and [Product](/product): The same Figma-based homepage, with Zevian, Jayga, Orderific, and Purno. White background and Outfit. Zevian uses its earlier video loop; Orderific uses its moving, draggable and expandable component cards. Both support keyboard controls and reduced motion.
 - [Archived entry](/archive), [Archived design](/archive/design), and [Archived product](/archive/product): Previous portfolio homepages. Source snapshot: archive/portfolio-before-2026-10-15/.
 - [Jayga product case](/product/jayga): Jayga ran from November 2023 to August 2025. Reza led an eight-person team; the featured storage case covers four months in 2024. It uses the full design-case layout with an outcome-first product story, service journey, customer-segment prioritisation, grid and billing rules, delivery decisions and a modelled ~3× rack-pricing opportunity. The proposed pricing model was not built; actual revenue is unknown.

@@ -1,7 +1,10 @@
 // Figma HTGPw4wOrTMg6yLfIgRfnL, node 9:178. Artwork coordinates stay within ResponsiveArtifact.
 import React from 'react';
+import './zevian-updates.css';
+import CaseOutcome from '../CaseOutcome';
+import EvidenceSlider from '../EvidenceSlider';
 import { ExpandableImage } from '../LegacyPortfolio';
-import { ResponsiveArtifact, PortfolioHeader, NextProject } from '../PortfolioShared';
+import { ResponsiveArtifact, PortfolioHeader, NextProject, CaseStudyLayout } from '../PortfolioShared';
 const assetPathPrefix = "/figma";
 const imgFrame1 = `${assetPathPrefix}/4bf25.png`;
 const imgFrame41 = `${assetPathPrefix}/cc76f.png`;
@@ -28,12 +31,57 @@ function ZevianLinks() {
   </nav>;
 }
 
-export default function Zevian(){return <div className="new-portfolio"><PortfolioHeader/><main className="portfolio-width figma-case"><div data-node-id="9:179" className="fd-1">
+function EarlierDecisions() {
+  return <section className="zevian-decisions" aria-labelledby="earlier-decisions-title">
+    <header>
+      <p className="zevian-stage-label">Earlier version · Evaluation and patterns</p>
+      <h2 id="earlier-decisions-title" tabIndex={-1}>Earlier prototype: employee scoring</h2>
+      <p>These screens show the scoring product before I changed direction. They are separate from the current investigation prototype.</p>
+    </header>
+    <EvidenceSlider label="Earlier Zevian prototype" slideLabels={['KPI setup', 'Report', 'Dashboard', 'Ask AI']}>
+      <figure>
+        <ExpandableImage src="/zevian/archived/kpi-creation.png" alt="Earlier Zevian KPI setup: one long form on the left, followed by a two-step flow with presets and an AI builder" />
+        <figcaption>
+          <strong>Ask for one decision at a time</strong>
+          <span>Managers had to define a goal and its scoring rules in one form. I split setup into two steps and added presets, so they could start with the goal instead of a blank form.</span>
+          <small>The trade-off: one more step, with less to decide on each screen.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <ExpandableImage src="/zevian/archived/report-detail.png" alt="Earlier Zevian report detail with an employee score, numeric criteria, report evidence and coaching notes" />
+        <figcaption>
+          <strong>Review the evidence behind a score</strong>
+          <span>The report brought targets, written evidence and coaching notes together, so the manager could review what the score was based on.</span>
+          <small>This screen belongs to the earlier evaluation product.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <ExpandableImage src="/zevian/archived/manager-dashboard.png" alt="Earlier Zevian dashboard with one main team score, a reporting status bar and detailed employee numbers below" />
+        <figcaption>
+          <strong>Give the dashboard a clear starting point</strong>
+          <span>The earlier layout repeated status and metrics across several cards. I gave the team score the most weight and brought reporting status into one bar. Detail moved below the summary or a click away.</span>
+          <small>This improved the hierarchy, but it did not answer why performance changed. That became the focus of the current prototype.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <ExpandableImage src="/zevian/archived/ask-ai.png" alt="Earlier Zevian Ask AI screen showing selected people and dates, an answer and linked source reports" />
+        <figcaption>
+          <strong>Keep AI answers connected to their sources</strong>
+          <span>The manager chose the people and dates before asking a question. The answer linked back to the reports it used, so the manager could check the source material.</span>
+          <small>The current prototype takes this further with evidence, missing context and a manager decision.</small>
+        </figcaption>
+      </figure>
+    </EvidenceSlider>
+    <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Explore the earlier case study <span aria-hidden="true">↗</span></a>
+  </section>;
+}
+
+export default function Zevian(){return <div className="new-portfolio"><PortfolioHeader/><CaseStudyLayout items={[{ href: '#zevian-direction', label: 'Direction' },{ href: '#zevian-evidence', label: 'Evidence' },{ href: '#zevian-context', label: 'Context' },{ href: '#earlier-decisions-title', label: 'Earlier work' },{ href: '#zevian-foundations', label: 'Foundations' }]}><main className="figma-case"><div data-node-id="9:179" className="fd-1">
         <div data-node-id="9:180" className="fd-2">
           <h1 data-node-id="9:181" className="fd-3">
             Helping sales managers understand performance changes
           </h1>
-          <p data-node-id="9:182" className="fd-4">
+          <p data-node-id="9:182" className="fd-4 case-lead">
             I moved the product from AI scoring toward evidence-led investigation, keeping the manager in control of the decision.
           </p>
         </div>
@@ -51,7 +99,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               Ownership
             </p>
             <p data-node-id="12:268" className="fd-11">
-              Discovery, product direction, UX, prototype
+              Discovery, design, AI-assisted build
             </p>
           </div>
           <div data-node-id="12:277" className="fd-12">
@@ -64,7 +112,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
           </div>
           <ZevianLinks/>
         </div>
-        <div data-node-id="12:286" className="fd-15">
+                <div data-node-id="12:286" className="fd-15">
           <div data-node-id="9:184" data-flow="row" className="fd-16">
             <ResponsiveArtifact width={742.716} height={526.559}><div data-node-id="9:186" className="fd-17">
               <div className="fd-18">
@@ -72,40 +120,41 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               </div>
             </div></ResponsiveArtifact>
           </div>
-          <p data-node-id="12:285" className="fd-20">
+          <p data-node-id="12:285" className="fd-20 case-caption">
             Finding, evidence, and manager context
           </p>
         </div>
+        <CaseOutcome project="zevian"/>
         <div data-node-id="12:295" data-flow="row" className="fd-21">
           <div data-node-id="12:290" className="fd-22">
-            <p data-node-id="12:287" className="fd-23">
+            <h2 data-node-id="12:287" className="fd-23 case-context-heading">
               Problem
-            </p>
-            <p data-node-id="12:289" className="fd-24">
+            </h2>
+            <p data-node-id="12:289" className="fd-24 case-copy">
               A performance change needs explanation. A score alone does not provide the context needed to act.
             </p>
           </div>
           <div data-node-id="12:300" className="fd-25">
-            <p data-node-id="12:301" className="fd-26">My responsibility</p>
-            <p data-node-id="12:302" className="fd-27">
+            <h2 data-node-id="12:301" className="fd-26 case-context-heading">My responsibility</h2>
+            <p data-node-id="12:302" className="fd-27 case-copy">
               Challenged the scoring model, set a new direction, and designed a workflow from finding to human decision.
             </p>
           </div>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="12:307" className="fd-28">
-          <h2 data-node-id="12:304" className="fd-29">
-            From scoring employees to investigating changes.
+          <h2 id="zevian-direction" tabIndex={-1} data-node-id="12:304" className="fd-29">
+            Product direction
           </h2>
-          <p data-node-id="12:306" className="fd-30">
-            Conversations with managers challenged the original model. I changed the product direction before refining the interface.
+          <p data-node-id="12:306" className="fd-30 case-lead">
+            Manager feedback exposed two gaps: dashboard numbers lacked context, and AI scores were hard to trust. I removed the dashboard from the current workflow and brought findings, source evidence and manager context together.
           </p>
         </div>
         <div data-node-id="12:314" className="fd-31">
           <h2 data-node-id="12:315" className="fd-32">
             Assumption I changed
           </h2>
-          <p data-node-id="12:316" className="fd-33">
+          <p data-node-id="12:316" className="fd-33 case-copy">
             The early idea used employee reports and KPIs to produce AI scores. The new direction gives managers findings, evidence, and room to add context.
           </p>
         </div>
@@ -154,7 +203,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
                   </div>
                 </div></ResponsiveArtifact>
               </div>
-              <p data-node-id="17:464" className="fd-57">
+              <p data-node-id="17:464" className="fd-57 case-copy">
                 In discovery conversations, one manager said they did not trust AI scores. Another described investigating why those patterns occurred as the bigger challenge.
               </p>
               <div data-node-id="12:360" className="fd-58">
@@ -200,22 +249,22 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
                 </div></ResponsiveArtifact>
               </div>
               <p data-node-id="12:434" className="fd-78">
-                The system prepares the evidence. The manager judges what it means
+                The system prepares the evidence. The manager judges what it means.
               </p>
             </div>
           </div>
           <div data-node-id="19:4" className="fd-79">
-            <p data-node-id="19:6" className="fd-80">
-              Calls were recorded with Fireflies and the transcripts uplaoded to Google Drive. The drive was used as working brain by connecting to Chatgpt to generate qualitative research
+            <p data-node-id="19:6" className="fd-80 case-copy">
+              I recorded calls with Fireflies and organised the transcripts in Google Drive. I used ChatGPT to help group feedback, then reviewed it against the interviews before changing the product.
             </p>
           </div>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="12:437" className="fd-81">
-          <h2 data-node-id="12:438" className="fd-82">
-            Show uncertainty before asking someone to act
+          <h2 id="zevian-evidence" tabIndex={-1} data-node-id="12:438" className="fd-82">
+            Evidence and control
           </h2>
-          <p data-node-id="12:439" className="fd-83">
+          <p data-node-id="12:439" className="fd-83 case-lead">
             A finding should help a manager investigate. The interface separates what changed, possible reasons, and the decision.
           </p>
         </div>
@@ -227,50 +276,50 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
           </div></ResponsiveArtifact>
           <div data-node-id="17:453" className="fd-88">
             <div data-node-id="17:449" className="fd-89">
-              <p data-node-id="17:450" className="fd-90">
+              <h3 data-node-id="17:450" className="fd-90 case-subheading">
                 Evidence
-              </p>
-              <p data-node-id="17:451" className="fd-91">
+              </h3>
+              <p data-node-id="17:451" className="fd-91 case-copy">
                 Show the change and supporting signals before suggesting a possible cause.
               </p>
             </div>
             <div data-node-id="17:454" className="fd-92">
-              <p data-node-id="17:455" className="fd-93">
+              <h3 data-node-id="17:455" className="fd-93 case-subheading">
                 Uncertainty
-              </p>
-              <p data-node-id="17:456" className="fd-94">
+              </h3>
+              <p data-node-id="17:456" className="fd-94 case-copy">
                 Label missing context so a possible reason is not mistaken for an established fact.
               </p>
             </div>
             <div data-node-id="17:458" className="fd-95">
-              <p data-node-id="17:459" className="fd-96">{`Human context and judgment `}</p>
-              <p data-node-id="17:460" className="fd-97">
+              <h3 data-node-id="17:459" className="fd-96 case-subheading">{`Human context and judgment `}</h3>
+              <p data-node-id="17:460" className="fd-97 case-copy">
                 Let the manager add context and choose what happens next.
               </p>
             </div>
             <div data-node-id="17:444" className="fd-98">
-              <p data-node-id="17:445" className="fd-99">
+              <h3 data-node-id="17:445" className="fd-99 case-subheading">
                 Traceability
-              </p>
-              <p data-node-id="17:446" className="fd-100">
+              </h3>
+              <p data-node-id="17:446" className="fd-100 case-copy">
                 Store the action alongside the evidence and context used to make it.
               </p>
             </div>
           </div>
         </div>
         <div data-node-id="24:220" className="fd-101">
-          <h2 data-node-id="24:221" className="fd-102">
+          <h2 id="zevian-context" tabIndex={-1} data-node-id="24:221" className="fd-102">
             Edge cases
           </h2>
-          <p data-node-id="24:222" className="fd-103">
-            A finding is updated when it receives context either from a manager or an employee
+          <p data-node-id="24:222" className="fd-103 case-lead">
+            A finding changes when a manager or employee adds context. The record keeps the evidence, context and decision together.
           </p>
         </div>
         <div data-node-id="27:1072" className="fd-104">
           <ResponsiveArtifact width={642} height={300.551}><div data-node-id="27:1066" data-name="defaultpath 1" className="fd-105">
             <ExpandableImage src={imgDefaultpath1} className="figma-expand" imageClassName="fd-106" alt="Default finding state" />
           </div></ResponsiveArtifact>
-          <p data-node-id="27:1070" className="fd-107">
+          <p data-node-id="27:1070" className="fd-107 case-caption">
             Default state
           </p>
         </div>
@@ -279,7 +328,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             <ResponsiveArtifact width={515} height={257.119}><div data-node-id="27:1065" data-name="employee-context-decision made 1" className="fd-110">
               <ExpandableImage src={imgEmployeeContextDecisionMade1} className="figma-expand" imageClassName="fd-111" alt="Employee context and recorded decision" />
             </div></ResponsiveArtifact>
-            <p data-node-id="27:1073" className="fd-112">
+            <p data-node-id="27:1073" className="fd-112 case-caption">
               Employee context and decision made
             </p>
           </div>
@@ -287,41 +336,43 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             <ResponsiveArtifact width={515} height={305.185}><div data-node-id="27:1067" data-name="both-cobtext-summary 1" className="fd-114">
               <ExpandableImage src={imgBothCobtextSummary1} className="figma-expand" imageClassName="fd-115" alt="Both contexts updated and summary generated" />
             </div></ResponsiveArtifact>
-            <p data-node-id="27:1076" className="fd-116">{`Both context updated and summary generated `}</p>
+            <p data-node-id="27:1076" className="fd-116 case-caption">{`Both contexts added and summary updated `}</p>
           </div>
         </div>
         <hr className="portfolio-divider" />
+        <EarlierDecisions/>
+        <hr className="portfolio-divider" />
         <div data-node-id="27:1081" className="fd-117">
-          <h2 data-node-id="27:1082" className="fd-118">
+          <h2 id="zevian-foundations" tabIndex={-1} data-node-id="27:1082" className="fd-118">
             Design foundations
           </h2>
-          <p data-node-id="27:1083" className="fd-119">
-            I defined the visual foundation and interaction states in Figma, then used Claude Code and Codex to build the current React investigation prototype linked above.
+          <p data-node-id="27:1083" className="fd-119 case-lead">
+            I defined tokens and interaction states in Figma, then used Claude Code and Codex to build and revise the React investigation prototype.
           </p>
         </div>
         <div data-node-id="27:1092" data-flow="row" className="fd-120">
           <div data-node-id="27:1088" className="fd-121 zevian-foundations-evidence">
             <ExpandableImage src={imgZevianColors1} className="zevian-foundations-image" alt="Zevian primitive and semantic tokens" />
-            <p data-node-id="27:1086" className="fd-124">
+            <p data-node-id="27:1086" className="fd-124 case-caption">
               Primitive and semantic tokens
             </p>
           </div>
           <div data-node-id="27:1095" className="fd-125">
             <div data-node-id="27:1089" className="fd-126">
-              <p data-node-id="27:1090" className="fd-127">{`Token generation was done by connecting ChatGPT to Figma. React prototype prepared using Figma → Codex. `}</p>
+              <p data-node-id="27:1090" className="fd-127 case-copy">{`I used ChatGPT with Figma to create tokens, then brought the design into the React build with Codex. `}</p>
             </div>
-            <p data-node-id="27:1093" className="fd-128">
-              For inspiration I used Notion for drawer design and Attio for overall design language. Findings are now being updated in Gmail style
+            <p data-node-id="27:1093" className="fd-128 case-copy">
+              Notion informed the drawer pattern and Attio informed the visual language. I am exploring a Gmail-style list to make findings easier to scan.
             </p>
           </div>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="27:1096" className="fd-129">
           <h2 data-node-id="27:1097" className="fd-130">
-            Build-Measure-Learn
+            What changed and what comes next
           </h2>
-          <p data-node-id="27:1098" className="fd-131">{`I’m following Lean methodology to learn and iterate prototypes based on findings. The earlier prototype was built using React connected to Supabase.`}</p>
+          <p data-node-id="27:1098" className="fd-131 case-copy">{`Manager feedback changed the problem I was solving: a score was not enough to explain a performance change. The current prototype brings findings, evidence and context together. Next, I need to test whether managers can use it to choose a useful next action. The earlier product’s paying customers do not validate this new workflow.`}</p>
         </div>
         <hr className="portfolio-divider" />
         <NextProject name="Jayga" href="/jayga"/>
-      </div></main></div>;}
+      </div></main></CaseStudyLayout></div>;}

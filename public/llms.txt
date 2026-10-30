@@ -1,8 +1,12 @@
 # Reza Al Hassan — Product and Design Portfolios
 
-> Reza is a product manager, designer and founder in Dhaka who works across product direction, interface design and technical delivery for B2B SaaS and AI products.
+> Reza is a product designer in Dhaka seeking full-time product designer roles in B2B software and AI products. His founder and product-lead work supports his focus on interface design, reusable systems and working prototypes.
 
 This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
+
+The four main case studies have short topic headings and sticky contents navigation on the left. At smaller widths the links become a horizontally scrollable sticky row. The current topic is marked while reading; all links support keyboard navigation.
+
+Homepage routes and case studies share the ambient background with a #f2f2f2 base (about 5% grey). Purno interface images have subtle #e7e7e7 display borders; the supplied image assets remain unchanged.
 
 All live pages share Outfit typography, an almost-white grey background (#fafafa), neutral surfaces, simple navigation and consistent controls. This includes About, AI workflows, sprint, Zevian HRMS, the portfolio story and all four product case routes. Their project text and supplied evidence are preserved. Archive routes keep the previous visual system.
 
@@ -16,21 +20,23 @@ Zevian's research workflow used Fireflies to create interview transcripts, organ
 
 The homepage also has two compact Other work rows: Zevian HRMS (interface system, with 25k+ Dribbble views reported by Reza) and AI workflows (research, prototyping and development, with SQL, Supabase and automations). The HRMS case links to Dribbble. The Portfolio redesign project is no longer listed on the homepage; its route remains available.
 
-- [Portfolio](/), [Design](/design), and [Product](/product): The same Figma-based homepage, with Zevian, Jayga, Orderific, and Purno. White background and Outfit. Zevian uses its earlier video loop; Orderific uses its moving, draggable and expandable component cards. Both support keyboard controls and reduced motion.
+- [Portfolio](/), [Design](/design), and [Product](/product): The same Figma-based homepage, with Zevian, Orderific, Jayga, and Purno. White background and Outfit. Zevian uses its earlier video loop; Orderific uses its moving, draggable and expandable component cards. Both support keyboard controls and reduced motion.
 - [Archived entry](/archive), [Archived design](/archive/design), and [Archived product](/archive/product): Previous portfolio homepages. Source snapshot: archive/portfolio-before-2026-10-15/.
-- [Jayga product case](/product/jayga): Jayga ran from November 2023 to August 2025. Reza led an eight-person team; the featured storage case covers four months in 2024. It uses the full design-case layout with an outcome-first product story, service journey, customer-segment prioritisation, grid and billing rules, delivery decisions and a modelled ~3× rack-pricing opportunity. The proposed pricing model was not built; actual revenue is unknown.
+- [Jayga product case](/product/jayga): Jayga ran from November 2023 to August 2025. Reza worked with four engineers and the founder; the featured storage case covers four months in 2024. It uses the full design-case layout with an outcome-first product story, service journey, customer-segment prioritisation, grid and billing rules, delivery decisions and a modelled ~3× rack-pricing opportunity. The proposed pricing model was not built; actual revenue is unknown.
 - [Zevian product case](/product/zevian): Discovery changed the direction from employee scoring and manager-set KPI patterns to investigation and diagnosis. Reza built the current React prototype with Claude Code and Codex and iterated on manager feedback. CRM and outreach integration work aims to find sales-pipeline issues. Zevian has two paying customers; the current prototype remains in development and under validation.
 - [Purno product case](/product/purno): Designed MVP, category and card explorations, payment flows and owner app. The $10K seed figure relates to the pitch; no moderated test or measured transaction-speed result is claimed.
 - [Orderific product and design case](/product/orderific): One omnichannel restaurant management platform with six connected apps. Five named apps are BMS (desktop/tablet), CP (MCP) (tablet/mobile), MSP (desktop/tablet), WSP (desktop/tablet/mobile) and WCP Smartmenu (desktop/tablet). BMS also supported light/dark modes and English LTR/Arabic RTL. Reza focused on design systems, standard file and frame names, and documented handoff rules for automated development. A before-and-after comparison showed 28% less development time after handover changes. Comparing Reza's onboarding with new hires' showed half the time after a Figma guide. The case covers 56 design mapping projects, hiring, mentoring and QA, followed by later interface-to-data mapping.
 - [Product design sprint](/sprint): A focused two-week offer for one complex B2B SaaS, AI or operational product workflow, with product evidence, scope, starting price and a direct contact action. A post-sprint partnership is available.
 - [Zevian](/zevian): Current founder product. A decision-support workflow that helps sales managers detect performance changes, investigate possible causes, gather context, and decide what needs action. The current React prototype was built with Claude Code and Codex and iterated on manager feedback. It remains in development, including CRM and outreach integrations, with no public link supplied. Compact archived KPI, scored-report, dashboard and Ask AI screens document the earlier employee-scoring prototype at https://demo.zevian.co/dashboard; its archived case is at https://rezaalhasan.netlify.app/zevian.
 - [Zevian HRMS](/zevian-hrms): Earlier HRMS concept. Interface and design-system work for attendance, employee records, activities, calendars, approvals, and work policies.
-- [Orderific](/orderific): Uses the exact content from Figma node 27:1114: shared components, missing states, token rules, LTR/RTL comparison, BMS light/dark modes, collaboration and handoff, a central design-rules document, backend data collaboration and final deliverables. The prior design case remains at /archive/orderific.
+- [Orderific](/orderific): Keeps the Figma content order with user-authorised editorial corrections. Shows shared components, the actual component playground, token documentation, LTR/RTL comparison, BMS light/dark modes, collaboration and handoff. The prior design case remains at /archive/orderific.
+- Orderific's four-card component export replaces the earlier two form crops. The Interfaces section shows dashboard, reviews, loyalty setup, QR designer and pricing in an accessible manual ink-reveal carousel. Images remain uncropped and expandable. Thumbnails, arrows, keyboard and swipe provide navigation; reduced motion skips the transition. Source images and archived routes stay unchanged.
 - [Purno](/purno): The new Figma case covers competitive research, category and card explorations, checkout, cash/card/mobile payment flows, barcode scanning, receipts and owner screens. The ~20% faster transaction-time figure is an estimate confirmed by the user, not a measured result. $10K seed funding relates to the design prototype. The prior design case remains at /archive/purno.
+- Purno's interactive quantity example clarifies the user-confirmed rule: packaged goods use packs/units and loose goods use kg. It is a retrospective case-study correction; the unchanged original exploration remains expandable in a closed disclosure. Do not describe the clarification as tested or shipped work.
 - [Jayga](/jayga): Coordinated storage service for SMEs, connecting customers, admins, warehouse staff, logistics, grids and billing.
 - [Portfolio redesign](/portfolio): Moodboard-led iteration into one editorial portfolio system.
 - [AI workflows](/ai-workflows): Research synthesis, prototyping, code, code-to-design handoff through Codex and Figma Make, and human decision-making with AI.
-- [About](/about): Background, values, interests, and working focus.
+- [About](/about): Work history, engagement versus featured-case scope, education, interests and full-time product design focus. Includes a corrected [Product Designer CV](/cv/Reza_Al_Hasan_Product_Designer.pdf); the original supplied CVs are untouched.
 
 ## Identity and contact
 
@@ -68,3 +74,7 @@ The homepage also has two compact Other work rows: Zevian HRMS (interface system
 - Source: https://github.com/RezaAlHassan/portfolio-v4
 - Stack: React 19, Vite 5, CSS, Lucide React, locally bundled DM Sans and Instrument Serif.
 - Primary source files: `src/main.jsx`, `src/styles.css`, `DESIGN.md`, and `.impeccable/design.json`.
+
+## Zevian evidence update 30 October 2026
+The live Zevian case includes two image-led decisions from the earlier scoring product: two-step KPI setup and dashboard hierarchy. Its payment/email integrations and two paying customers belong to that earlier product, not validation of the current investigation prototype.
+The earlier-prototype sections on /zevian and /product/zevian show four expandable screens with explanations in a manual, keyboard-accessible slider. Page scrolling does not change slides.

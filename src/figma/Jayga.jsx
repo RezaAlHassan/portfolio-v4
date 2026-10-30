@@ -1,7 +1,8 @@
 // Figma HTGPw4wOrTMg6yLfIgRfnL, node 32:110. Artwork coordinates stay within ResponsiveArtifact.
 import React from 'react';
+import CaseOutcome from '../CaseOutcome';
 import { ExpandableImage } from '../LegacyPortfolio';
-import { ResponsiveArtifact, PortfolioHeader, NextProject } from '../PortfolioShared';
+import { ResponsiveArtifact, PortfolioHeader, NextProject, CaseStudyLayout } from '../PortfolioShared';
 const assetPathPrefix = "/figma";
 const imgFrame1 = `${assetPathPrefix}/28af7.png`;
 const imgAssignGrids1 = `${assetPathPrefix}/6b58d.png`;
@@ -41,12 +42,12 @@ const imgLine11 = `${assetPathPrefix}/0b8a8.svg`;
 const imgLine12 = `${assetPathPrefix}/7aeaa.svg`;
 
 
-export default function Jayga(){return <div className="new-portfolio"><PortfolioHeader/><main className="portfolio-width figma-case"><div data-node-id="32:111" className="fd-141">
+export default function Jayga(){return <div className="new-portfolio"><PortfolioHeader/><CaseStudyLayout items={[{ href: '#jayga-service', label: 'Workflows' },{ href: '#jayga-grids', label: 'Grids' },{ href: '#jayga-verification', label: 'Verification' },{ href: '#jayga-results', label: 'Results' },{ href: '#jayga-collaboration', label: 'Collaboration' }]}><main className="figma-case"><div data-node-id="32:111" className="fd-141">
         <div data-node-id="32:112" className="fd-142">
           <h1 data-node-id="32:113" className="fd-143">
             Connecting storage, billing and delivery
           </h1>
-          <p data-node-id="32:114" className="fd-144">{`I led product workflows for a shared warehouse service, linking each customer's space, stock, and bill across client, admin, and warehouse experiences.`}</p>
+          <p data-node-id="32:114" className="fd-144 case-lead">{`I led product workflows for a shared warehouse service, linking each customer's space, stock, and bill across client, admin, and warehouse experiences.`}</p>
         </div>
         <div data-node-id="32:115" data-flow="row" className="fd-145">
           <div data-node-id="32:116" className="fd-146">
@@ -62,7 +63,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
               Owned
             </p>
             <p data-node-id="32:121" className="fd-151">
-              Product strategy and backlog
+              Workflows, interface rules and backlog
             </p>
           </div>
           <div data-node-id="33:212" className="fd-152">
@@ -70,7 +71,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
               Team
             </p>
             <p data-node-id="33:214" className="fd-154">
-              Five engineers and the founder
+              Four engineers and the founder
             </p>
           </div>
           <div data-node-id="32:122" className="fd-155">
@@ -82,6 +83,8 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
             </p>
           </div>
         </div>
+      <CaseOutcome project="jayga"/>
+            <p className="case-scope-note">Project: November 2023–August 2025. This case covers four months of storage work in 2024. Client and admin workflows were delivered; the warehouse mobile experience remained a design concept.</p>
         <ResponsiveArtifact width={950} height={596}><div data-node-id="32:127" className="fd-158">
           <div className="fd-159">
             <ExpandableImage src={imgFrame1} className="figma-expand" imageClassName="fd-160" alt="Jayga shared order and storage interface" />
@@ -89,24 +92,24 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
         </div></ResponsiveArtifact>
         <div data-node-id="32:128" data-flow="row" className="fd-161">
           <div data-node-id="32:129" className="fd-162">
-            <p data-node-id="32:130" className="fd-163">
+            <h2 data-node-id="32:130" className="fd-163 case-context-heading">
               The problem
-            </p>
-            <p data-node-id="32:131" className="fd-164">
+            </h2>
+            <p data-node-id="32:131" className="fd-164 case-copy">
               Spreadsheets and handwritten logs left storage, billing, and delivery without one shared order record.
             </p>
           </div>
           <div data-node-id="32:132" className="fd-165">
-            <p data-node-id="32:133" className="fd-166">
+            <h2 data-node-id="32:133" className="fd-166 case-context-heading">
               My responsibility
-            </p>
-            <p data-node-id="32:134" className="fd-167">
+            </h2>
+            <p data-node-id="32:134" className="fd-167 case-copy">
               Map workflows, define grid and billing rules, set the design language, and own the product backlog.
             </p>
           </div>
         </div>
         <div data-node-id="43:612" className="fd-168">
-          <p data-node-id="43:610" className="fd-169">
+          <p data-node-id="43:610" className="fd-169 case-caption">
             3 Applications for 3 main user role groups
           </p>
           <ResponsiveArtifact width={831} height={48}><div data-node-id="33:218" className="fd-170">
@@ -149,10 +152,10 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="32:136" className="fd-188">
-          <h2 data-node-id="32:137" className="fd-189">
-            Connecting the service
+          <h2 id="jayga-service" tabIndex={-1} data-node-id="32:137" className="fd-189">
+            Workflows
           </h2>
-          <p data-node-id="32:138" className="fd-190">
+          <p data-node-id="32:138" className="fd-190 case-lead">
             I mapped the people, responsibilities, and handoffs across the service before defining the product workflows.
           </p>
         </div>
@@ -270,7 +273,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
                 </div>
               </div>
             </div></ResponsiveArtifact>
-            <p data-node-id="33:348" className="fd-262">
+            <p data-node-id="33:348" className="fd-262 case-caption">
               Ecosystem mapping and rich picture
             </p>
           </div>
@@ -499,17 +502,17 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
                 </div>
               </div>
             </div></ResponsiveArtifact>
-            <p data-node-id="33:405" className="fd-385">
+            <p data-node-id="33:405" className="fd-385 case-caption">
               Service journey
             </p>
           </div>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="33:445" className="fd-386">
-          <h2 data-node-id="33:446" className="fd-387">
+          <h2 id="jayga-grids" tabIndex={-1} data-node-id="33:446" className="fd-387">
             Using Grids to connect stock and billing
           </h2>
-          <p data-node-id="33:447" className="fd-388">
+          <p data-node-id="33:447" className="fd-388 case-lead">
             A grid represents rented space, the location assigned to an item, and the basis for billing. One item can be split across multiple grids.
           </p>
         </div>
@@ -984,22 +987,80 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
           </div>
         </div></ResponsiveArtifact>
         <div data-node-id="43:605" className="fd-623">
+          <h2 id="jayga-grid-assignment" tabIndex={-1} className="fd-387">Grid assignment</h2>
+          <p className="fd-388 case-lead">Batch assignment did not fit uneven or partly filled spaces. I kept quantity splits on one item card and used individual grid confirmations. The trade-off was more confirmations, with each placement visible before the next.</p>
           <ResponsiveArtifact width={901} height={708}><div data-node-id="41:602" data-name="Assign grids 1" className="fd-624">
             <div className="fd-625">
               <ExpandableImage src={imgAssignGrids1} className="figma-expand" imageClassName="fd-626" alt="Jayga grid assignment interface" />
             </div>
           </div></ResponsiveArtifact>
-          <p data-node-id="43:603" className="fd-627">
-            Grid assignment interface
+          <p data-node-id="43:603" className="fd-627 case-caption">
+            The Assigned tag tracks placed units while the backend occupancy count catches up.
+          </p>
+        </div>
+        <hr className="portfolio-divider" />
+        <hr className="portfolio-divider" />
+        <div data-node-id="32:165" className="fd-652">
+          <h2 id="jayga-verification" tabIndex={-1} data-node-id="32:166" className="fd-653">
+            Delivery verification and billing
+          </h2>
+          <p data-node-id="32:167" className="fd-654 case-lead">
+            The client requests a delivery. The admin selects the items, quantities and source grids. In the mobile concept, warehouse staff check the physical count before the order record changes. When they confirm a grid is empty, the client stops paying for that space. The admin reviews the generated invoice.
+          </p>
+        </div>
+        <div data-node-id="47:707" className="fd-655">
+          <ResponsiveArtifact width={907.998} height={519}><div data-node-id="47:694" data-name="Orderder verificationflow 1" className="fd-656">
+            <ExpandableImage src={imgOrderderVerificationflow1} className="figma-expand" imageClassName="fd-657" alt="Delivery verification workflow" />
+          </div></ResponsiveArtifact>
+          <p data-node-id="47:705" className="fd-658 case-caption">
+            Flowchart for the entire verification method
+          </p>
+        </div>
+        <div data-node-id="47:699" className="fd-659">
+          <div data-node-id="47:696" data-flow="row" className="fd-660">
+            <ResponsiveArtifact width={593} height={468}><div data-node-id="46:691" data-name="Delivery-1 1" className="fd-661">
+              <div className="fd-662">
+                <ExpandableImage src={imgDelivery11} className="figma-expand" imageClassName="fd-663" alt="Admin delivery request" />
+              </div>
+            </div></ResponsiveArtifact>
+            <ResponsiveArtifact width={598.349} height={467.83}><div data-node-id="46:690" data-name="Delivery-2 1" className="fd-664">
+              <ExpandableImage src={imgDelivery21} className="figma-expand" imageClassName="fd-665" alt="Select source items for delivery" />
+            </div></ResponsiveArtifact>
+          </div>
+          <p data-node-id="47:697" className="fd-666 case-caption">
+            Admin selects items and source
+          </p>
+        </div>
+        <div data-node-id="47:702" className="fd-667">
+          <ResponsiveArtifact width={1060} height={754.111}><div data-node-id="47:714" data-name="Mobile-verification 3" className="fd-668">
+            <ExpandableImage src={imgMobileVerification3} className="figma-expand" imageClassName="fd-669" alt="Warehouse staff verify physical counts" />
+          </div></ResponsiveArtifact>
+          <p data-node-id="47:700" className="fd-670 case-caption">
+            Warehouse staff confirm physical counts
+          </p>
+        </div>
+        <div data-node-id="47:704" className="fd-671">
+          <ResponsiveArtifact width={868} height={690}><div data-node-id="46:689" data-name="Generate invoice 1" className="fd-672">
+            <div className="fd-673">
+              <ExpandableImage src={imgGenerateInvoice1} className="figma-expand" imageClassName="fd-674" alt="Generated invoice review" />
+            </div>
+          </div></ResponsiveArtifact>
+          <p data-node-id="47:703" className="fd-675 case-caption">
+            Admin reviews the generated invoice.
           </p>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="43:606" className="fd-628">
-          <h2 data-node-id="43:607" className="fd-629">
-            Using Grids to connect stock and billing
+          <h2 id="jayga-results" tabIndex={-1} data-node-id="43:607" className="fd-629">
+            Results
           </h2>
-          <p data-node-id="43:608" className="fd-630">
+          <p data-node-id="43:608" className="fd-630 case-lead">
             Field research highlighted unused rack space. I proposed pricing each rack level separately.
+          </p>
+        </div>
+        <div className="fd-645">
+          <p data-node-id="43:678" className="fd-646 case-copy">
+            Surveys and qualitative research helped narrow the customer focus, helping us land our first client UNDP (NGO). Survey responses on price, distance, security, and retrieval also informed this choice.
           </p>
         </div>
         <ResponsiveArtifact width={700} height={504.778}><div data-node-id="44:685" data-name="warehouse-visit 1" className="fd-631">
@@ -1023,7 +1084,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
             </div>
           </div>
         </div>
-        <p className="fd-646">
+        <p className="fd-646 case-copy">
           Rack levels let us stack goods vertically, reducing occupied floor space and making better use of storage capacity.
         </p>
         <div data-node-id="43:684" className="fd-644">
@@ -1033,71 +1094,16 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
             </div></ResponsiveArtifact>
           </div>
           <div data-node-id="43:682" className="fd-649">
-            <p className="fd-650">{`Cost demand matrix: Focused GTM  plans were on NGOs `}</p>
-            <p className="fd-651">and mining companies</p>
+            <p className="fd-650 case-caption">{`Cost demand matrix: Focused GTM  plans were on NGOs `}</p>
+            <p className="fd-651 case-caption">and mining companies</p>
           </div>
-        </div>
-        <div className="fd-645">
-          <p data-node-id="43:678" className="fd-646">
-            Surveys and qualitative research helped narrow the customer focus, helping us land our first client UNDP (NGO). Survey responses on price, distance, security, and retrieval also informed this choice.
-          </p>
-        </div>
-        <hr className="portfolio-divider" />
-        <div data-node-id="32:165" className="fd-652">
-          <h2 data-node-id="32:166" className="fd-653">
-            Delivery verification and billing
-          </h2>
-          <p data-node-id="32:167" className="fd-654">
-            The client starts a delivery request. The admin approves it and assigns. Then it reaches the warehouse and the staff counts and verifies storage. Billing starts.
-          </p>
-        </div>
-        <div data-node-id="47:707" className="fd-655">
-          <ResponsiveArtifact width={907.998} height={519}><div data-node-id="47:694" data-name="Orderder verificationflow 1" className="fd-656">
-            <ExpandableImage src={imgOrderderVerificationflow1} className="figma-expand" imageClassName="fd-657" alt="Delivery verification workflow" />
-          </div></ResponsiveArtifact>
-          <p data-node-id="47:705" className="fd-658">
-            Flowchart for the entire verification method
-          </p>
-        </div>
-        <div data-node-id="47:699" className="fd-659">
-          <div data-node-id="47:696" data-flow="row" className="fd-660">
-            <ResponsiveArtifact width={593} height={468}><div data-node-id="46:691" data-name="Delivery-1 1" className="fd-661">
-              <div className="fd-662">
-                <ExpandableImage src={imgDelivery11} className="figma-expand" imageClassName="fd-663" alt="Admin delivery request" />
-              </div>
-            </div></ResponsiveArtifact>
-            <ResponsiveArtifact width={598.349} height={467.83}><div data-node-id="46:690" data-name="Delivery-2 1" className="fd-664">
-              <ExpandableImage src={imgDelivery21} className="figma-expand" imageClassName="fd-665" alt="Select source items for delivery" />
-            </div></ResponsiveArtifact>
-          </div>
-          <p data-node-id="47:697" className="fd-666">
-            Admin selects items and source
-          </p>
-        </div>
-        <div data-node-id="47:702" className="fd-667">
-          <ResponsiveArtifact width={1060} height={754.111}><div data-node-id="47:714" data-name="Mobile-verification 3" className="fd-668">
-            <ExpandableImage src={imgMobileVerification3} className="figma-expand" imageClassName="fd-669" alt="Warehouse staff verify physical counts" />
-          </div></ResponsiveArtifact>
-          <p data-node-id="47:700" className="fd-670">
-            Warehouse staff confirm physical counts
-          </p>
-        </div>
-        <div data-node-id="47:704" className="fd-671">
-          <ResponsiveArtifact width={868} height={690}><div data-node-id="46:689" data-name="Generate invoice 1" className="fd-672">
-            <div className="fd-673">
-              <ExpandableImage src={imgGenerateInvoice1} className="figma-expand" imageClassName="fd-674" alt="Generated invoice review" />
-            </div>
-          </div></ResponsiveArtifact>
-          <p data-node-id="47:703" className="fd-675">
-            Admin reviews the generated invoice.
-          </p>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="32:172" className="fd-676">
-          <h2 data-node-id="32:173" className="fd-677">
-            Collaboration and delivery
+          <h2 id="jayga-collaboration" tabIndex={-1} data-node-id="32:173" className="fd-677">
+            Collaboration
           </h2>
-          <p data-node-id="32:174" className="fd-678">{`I owned product strategy, the roadmap, and the backlog. I combined lean prioritisation with agile sprints as scope expanded. Interfaces were used as source of truth and collaboration. Logic and workflow first, build and iterate `}</p>
+          <p data-node-id="32:174" className="fd-678 case-lead">{`I owned product strategy, the roadmap, and the backlog. I combined lean prioritisation with agile sprints as scope expanded. Interfaces were used as source of truth and collaboration. Logic and workflow first, build and iterate `}</p>
         </div>
         <div data-node-id="52:833" data-flow="row" className="fd-679">
           <ResponsiveArtifact width={548} height={647}><div data-node-id="52:772" data-name="A4 - 29" className="fd-680">
@@ -1238,27 +1244,27 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
           </div></ResponsiveArtifact>
           <div data-node-id="52:822" className="fd-752">
             <div data-node-id="52:823" className="fd-753">
-              <p data-node-id="52:824" className="fd-754">
+              <h3 data-node-id="52:824" className="fd-754 case-subheading">
                 Sprints
-              </p>
+              </h3>
               <div data-node-id="52:825" className="fd-755">
-                <p className="fd-756">Notion and Trello kept engineers aligned on deliverables and sprints. We met once or twice weekly, depending on progress and need.</p>
+                <p className="fd-756 case-copy">Notion and Trello kept engineers aligned on deliverables and sprints. We met once or twice weekly, depending on progress and need.</p>
                 <p className="fd-757">​</p>
               </div>
             </div>
             <div data-node-id="52:826" className="fd-758">
-              <p data-node-id="52:827" className="fd-759">
+              <h3 data-node-id="52:827" className="fd-759 case-subheading">
                 Adapt as scope expands
-              </p>
-              <p data-node-id="52:828" className="fd-760">
+              </h3>
+              <p data-node-id="52:828" className="fd-760 case-copy">
                 I prioritised work that unblocked engineering and adjusted the roadmap as requirements evolved.
               </p>
             </div>
             <div data-node-id="52:829" className="fd-761">
-              <p data-node-id="52:830" className="fd-762">
+              <h3 data-node-id="52:830" className="fd-762 case-subheading">
                 Interfaces as the source of truth
-              </p>
-              <p data-node-id="52:831" className="fd-763">
+              </h3>
+              <p data-node-id="52:831" className="fd-763 case-copy">
                 Flows and screens captured business rules, responsibilities, and edge cases. They gave the team a shared reference.
               </p>
             </div>
@@ -1266,4 +1272,4 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
         </div>
         <hr className="portfolio-divider" />
         <NextProject name="Orderific" href="/orderific"/>
-      </div></main></div>;}
+      </div></main></CaseStudyLayout></div>;}

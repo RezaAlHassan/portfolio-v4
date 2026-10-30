@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { PortfolioHeader, PortfolioFooter } from './PortfolioShared';
 import { DraggableMarquee } from './DraggableMarquee';
 import { ExpandableImage } from './LegacyPortfolio';
@@ -11,10 +11,10 @@ const orderificCards = [
 ];
 
 const projectTooltips = {
-  Zevian: ['AI', 'Sales'],
-  Jayga: ['Service', 'Logistics'],
-  Orderific: ['Systems', 'Restaurants'],
-  Purno: ['UX', 'Retail'],
+  Zevian: ['Founder', 'Discovery & Prototyping'],
+  Jayga: ['Product Lead', 'Workflows & Interface Design'],
+  Orderific: ['Product Designer', 'Design Systems'],
+  Purno: ['Product Designer', 'POS Design'],
 };
 
 function ProjectTooltip({ name, children }) {
@@ -24,15 +24,34 @@ function ProjectTooltip({ name, children }) {
   const state = useRef({ pointer: false, focus: false, open: false, dismissed: false });
   const timer = useRef(null);
   const tooltip = useRef(null);
+  const anchor = useRef(null);
   const position = (x, y) => {
+    anchor.current = { x, y };
     const pill = tooltip.current;
     if (!pill) return;
     const { width, height } = pill.getBoundingClientRect();
-    const left = x + 16 + width > window.innerWidth - 12 ? x - width - 16 : x + 16;
+    const left = Math.min(x + 16, window.innerWidth - width - 12);
     const top = y + 16 + height > window.innerHeight - 12 ? y - height - 16 : y + 16;
     pill.style.left = `${Math.max(12, left)}px`;
     pill.style.top = `${Math.max(12, top)}px`;
   };
+  useLayoutEffect(() => {
+    const pill = tooltip.current;
+    const labels = [...pill.children];
+    const fitLabel = () => {
+      const active = labels[pill.dataset.domain ? 1 : 0];
+      const styles = window.getComputedStyle(pill);
+      pill.style.width = `${active.getBoundingClientRect().width + parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight)}px`;
+    };
+    fitLabel();
+    const observer = new ResizeObserver(entries => {
+      if (entries.some(entry => entry.target !== pill)) fitLabel();
+      if (anchor.current) position(anchor.current.x, anchor.current.y);
+    });
+    labels.forEach(label => observer.observe(label));
+    observer.observe(pill);
+    return () => observer.disconnect();
+  }, [domain]);
   const positionForFocus = element => {
     const bounds = element.getBoundingClientRect();
     position(bounds.left, Math.min(bounds.bottom, window.innerHeight) - 64);
@@ -118,10 +137,10 @@ function ZevianCover() {
 }
 
 const projects = [
-  { name: 'Zevian', description: 'Helping sales managers investigate performance changes.', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
-  { name: 'Jayga', description: 'Connecting warehouse storage, billing and delivery.', metric: '3× projected revenue · led 4 engineers', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
-  { name: 'Orderific', description: 'Design systems for six connected restaurant apps', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
-  { name: 'Purno', description: 'Retail POS for payments and inventory.', metric: '$10K seed · cross-platform POS', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
+  { name: 'Zevian', description: 'Designed an evidence-led investigation workflow for managers.', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
+  { name: 'Orderific', description: 'Reusable components, RTL and themes for restaurant apps.', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
+  { name: 'Jayga', description: 'Designed grid assignment, storage and billing workflows.', metric: '3× modelled revenue potential · Product lead', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
+  { name: 'Purno', description: 'Designed checkout, local payments and inventory flows.', metric: '$10K seed · Design prototype', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
 ];
 
 export default function PortfolioHome() {
@@ -129,8 +148,8 @@ export default function PortfolioHome() {
     <PortfolioHeader/>
     <main className="portfolio-width portfolio-home" id="work">
       <div className="portfolio-intro">
-        <h1>Product designer and manager</h1>
-        <p>I shape B2B products from early research to complete user experiences.</p>
+        <h1>Product designer for B2B and AI products</h1>
+        <p>I turn complex workflows into clear interfaces, reusable systems and working prototypes.</p>
       </div>
       <section className="portfolio-projects" aria-label="Selected projects">
         {projects.map(project => <article className="portfolio-project" key={project.name}>
@@ -158,7 +177,7 @@ export default function PortfolioHome() {
         <a className="portfolio-work-row" href="/ai-workflows">
           <h3>AI workflows <span>— Design and build</span></h3>
           <p className="portfolio-work-keywords">Research · Prototyping · Development</p>
-          <p className="portfolio-work-proof">SQL ? Supabase ? Automations</p>
+          <p className="portfolio-work-proof">SQL · Supabase · Automations</p>
           <img src="/figma/13a84.svg" alt="" width="20" height="20"/>
         </a>
       </section>

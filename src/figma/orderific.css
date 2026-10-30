@@ -22,10 +22,9 @@
 .new-portfolio .orderific-framed .orderific-expand{outline:1px solid #f5f5f5;outline-offset:-1px}
 .new-portfolio .orderific-case .orderific-image{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover}
 .new-portfolio .orderific-cover-crop{height:122.89%;left:-.08%;top:-2.87%;width:99.96%}
-.new-portfolio .orderific-component-run{width:1105px}
-.new-portfolio .orderific-direction-labels{display:flex;gap:8px}
-.new-portfolio .orderific-direction-labels span{display:flex;align-items:center;justify-content:center;width:115px;padding:14px 18px;border-radius:8px;font-size:16px;background:#efefef}
-.new-portfolio .orderific-direction-labels span:first-child{background:#e8f3ff}
+.new-portfolio .orderific-component-strip{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding-bottom:8px}
+.new-portfolio .orderific-component-cards{display:block;width:100%;min-width:960px;padding:0;border:0;background:transparent;cursor:zoom-in}
+.new-portfolio .orderific-component-cards img{display:block;width:100%;height:auto;max-height:none}
 .new-portfolio .orderific-rtl-run{display:flex;gap:36px;width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#ccc #f5f5f5;padding-bottom:8px}
 .new-portfolio .orderific-rtl-run>.orderific-figure{flex:0 0 851px;max-width:none}
 .new-portfolio .orderific-direction-crop{height:100.17%;left:.02%;top:-.06%}

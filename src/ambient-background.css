@@ -1,0 +1,17 @@
+.ambient-case-layout>.ambient-background{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#f2f2f2;isolation:isolate;opacity:.4692}
+.ambient-case-layout{position:relative;isolation:isolate;min-height:100vh;background:#f2f2f2}
+.ambient-case-layout>.new-portfolio{background:transparent}
+.ambient-background .ambient-blob{position:absolute;border-radius:50%;opacity:.6;will-change:transform}
+.ambient-blob-one{width:45%;height:80%;top:-10%;left:-25%;background:rgba(0,122,255,.4);animation:ambient-one 7s ease-in-out infinite alternate,ambient-color-one 10s ease-in-out infinite alternate}
+.ambient-blob-two{width:45%;height:70%;top:5%;right:-25%;background:rgba(175,82,222,.3);animation:ambient-two 5s ease-in-out infinite alternate,ambient-color-two 10s ease-in-out infinite alternate}
+.ambient-blob-three{width:40%;height:60%;bottom:-10%;left:-22%;background:rgba(50,173,230,.3);animation:ambient-three 6s ease-in-out infinite alternate,ambient-color-three 10s ease-in-out infinite alternate}
+.ambient-blur,.ambient-white{position:absolute;inset:0;z-index:10;pointer-events:none}
+.ambient-blur{backdrop-filter:blur(60px);-webkit-backdrop-filter:blur(60px)}
+.ambient-white{background:rgba(242,242,242,.5);opacity:.1}
+@keyframes ambient-one{from{transform:translate(-10%,-30px) scale(1)}to{transform:translate(5%,90px) scale(1.1)}}
+@keyframes ambient-two{from{transform:translate(10%,100px)}to{transform:translate(-5%,-20px)}}
+@keyframes ambient-three{from{transform:translate(-5%,60px)}to{transform:translate(5%,-80px)}}
+@keyframes ambient-color-one{0%{background:rgba(0,122,255,.4)}50%{background:rgba(175,82,222,.3)}100%{background:rgba(50,173,230,.3)}}
+@keyframes ambient-color-two{0%{background:rgba(175,82,222,.3)}50%{background:rgba(50,173,230,.3)}100%{background:rgba(0,122,255,.4)}}
+@keyframes ambient-color-three{0%{background:rgba(50,173,230,.3)}50%{background:rgba(0,122,255,.4)}100%{background:rgba(175,82,222,.3)}}
+@media(prefers-reduced-motion:reduce){.ambient-background .ambient-blob{animation:none;will-change:auto}}

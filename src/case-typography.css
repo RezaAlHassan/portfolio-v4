@@ -1,0 +1,12 @@
+/* Live case reading roles. Fixed artwork and archive routes keep their typography. */
+.new-portfolio .figma-case :is(h1,h2):not(.responsive-artifact *){line-height:1.25}
+.new-portfolio .figma-case h3:not(.responsive-artifact *){line-height:1.3}
+.new-portfolio .figma-case :is(.case-copy,.purno-note p,.orderific-note p,.orderific-collaboration>p){font-size:18px;line-height:1.55}
+.new-portfolio .figma-case :is(.case-lead,.purno-intro>p,.orderific-intro>p,.purno-section-heading>p,.orderific-section-heading>p){font-size:20px;line-height:1.5}
+.new-portfolio .figma-case :is(.case-subheading,.case-context-heading){font-size:20px;line-height:1.3;color:#000}
+.new-portfolio .figma-case :is(.purno-context,.orderific-context) h2{font-size:20px;line-height:1.3;margin-bottom:8px}
+.new-portfolio .figma-case :is(.case-caption,.purno-caption,.purno-figure figcaption,.orderific-document figcaption,.purno-callout){font-size:16px;line-height:1.5}
+.new-portfolio .figma-case :is(.purno-details,.orderific-details){line-height:1.5}
+.new-portfolio.portfolio-secondary :is(.case-page,.original-case-page) .case-content p:not(.responsive-artifact *,.zevian-flowchart *){font-size:18px;line-height:1.55}
+.new-portfolio.portfolio-secondary :is(.case-page,.original-case-page) .case-content p.lead{font-size:20px;line-height:1.5}
+.new-portfolio.portfolio-secondary :is(.case-page,.original-case-page) .case-content :is(figcaption,.evidence-note,.stage-note,.hrms-stage-note){font-size:16px;line-height:1.5}

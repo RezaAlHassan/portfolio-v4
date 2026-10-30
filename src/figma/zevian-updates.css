@@ -1,0 +1,8 @@
+.new-portfolio .zevian-decisions{display:flex;flex-direction:column;gap:40px;width:100%;min-width:0}
+.new-portfolio .zevian-decisions header{max-width:720px;display:flex;flex-direction:column;gap:10px}
+.new-portfolio .zevian-decisions h2{font-size:28px;font-weight:400;line-height:1.25}
+.new-portfolio .zevian-decisions p{font-size:20px;line-height:1.5;color:#868686}
+.new-portfolio .zevian-decisions .zevian-stage-label{font-size:14px;color:#6b6b6b}
+.new-portfolio .zevian-decisions>a{align-self:flex-start;font-size:16px}
+.new-portfolio .zevian-decisions button:focus-visible{outline:2px solid #2563eb;outline-offset:4px}
+@media(max-width:650px){.new-portfolio .zevian-decisions{gap:32px}.new-portfolio .zevian-decisions h2{font-size:26px}}

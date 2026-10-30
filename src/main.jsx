@@ -6,13 +6,15 @@ import Zevian from './figma/Zevian';
 import Jayga from './figma/Jayga';
 import Purno from './figma/Purno';
 import Orderific from './figma/Orderific';
+import AmbientBackground from './AmbientBackground';
 import './portfolio.css';
 import './figma/cases.css';
 import './figma/purno.css';
 import './figma/orderific.css';
 import './secondary-pages.css';
+import './case-typography.css';
 
-const homeMetadata = ['Reza Al Hassan — Product designer and manager', 'I shape B2B products from early research to complete user experiences. Selected work in AI, warehouse operations, design systems and retail.'];
+const homeMetadata = ['Reza Al Hassan — Product designer for B2B and AI products', 'Product designer seeking full-time roles. Clear interfaces, reusable systems and working prototypes for B2B software and AI products. Based in Dhaka.'];
 export const pageMetadata = {
   ...legacyMetadata,
   '/': homeMetadata, '/design': homeMetadata, '/product': homeMetadata,
@@ -34,11 +36,14 @@ export function App({ initialPath = null }) {
     document.querySelector('meta[name="description"]')?.setAttribute('content', metadata[1]);
   }, [path, metadata]);
   if (path === '/archive' || path.startsWith('/archive/')) return <LegacyApp initialPath={path.replace(/^\/archive/, '') || '/'} />;
-  if (['/', '/design', '/product'].includes(path)) return <CaseImageProvider><PortfolioHome/></CaseImageProvider>;
-  if (path === '/zevian') return <CaseImageProvider><Zevian/></CaseImageProvider>;
-  if (path === '/jayga') return <CaseImageProvider><Jayga/></CaseImageProvider>;
-  if (path === '/purno') return <CaseImageProvider><Purno/></CaseImageProvider>;
-  if (path === '/orderific') return <CaseImageProvider><Orderific/></CaseImageProvider>;
+  if (['/', '/design', '/product'].includes(path)) return <div className="ambient-case-layout"><AmbientBackground/><CaseImageProvider><PortfolioHome/></CaseImageProvider></div>;
+  const casePages = { '/zevian': Zevian, '/jayga': Jayga, '/purno': Purno, '/orderific': Orderific };
+  const CasePage = casePages[path];
+  const isCaseStudy = Boolean(CasePage) || ['/zevian-hrms', '/portfolio', '/product/zevian', '/product/jayga', '/product/purno', '/product/orderific'].includes(path);
+  if (isCaseStudy) return <div className="ambient-case-layout">
+    <AmbientBackground/>
+    {CasePage ? <CaseImageProvider><CasePage/></CaseImageProvider> : <div className="new-portfolio portfolio-secondary"><LegacyApp initialPath={path} modern/></div>}
+  </div>;
   return <div className="new-portfolio portfolio-secondary"><LegacyApp initialPath={path} modern/></div>;
 }
 if (typeof document !== 'undefined') {

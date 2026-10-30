@@ -8,11 +8,19 @@ import './styles.css';
 import './ZevianCase.css';
 import { ContactButton } from './ContactButton';
 import { EvidenceGrid, ComparisonGrid, EvidenceTicker } from './CaseLayouts';
+import EvidenceSlider from './EvidenceSlider';
 import { Particles } from './Particles';
 import { DraggableMarquee } from './DraggableMarquee';
 import { PortfolioHeader, PortfolioFooter } from './PortfolioShared';
+import CaseOutcome from './CaseOutcome';
+import VisitorTracker from './VisitorTracker';
 
 const PortfolioDesignContext = React.createContext(false);
+
+function LiveCaseOutcome({ project }) {
+  const modern = React.useContext(PortfolioDesignContext);
+  return modern ? <CaseOutcome project={project}/> : null;
+}
 
 const projects = [
   {
@@ -292,7 +300,7 @@ function OrderificAppMap() {
 function ProductOrderificCase() {
   return <><Nav caseStudy portfolio="product" processHref="#first-seven-months"/>
     <main className="case-page product-case product-orderific-page" id="top">
-      <section className="case-hero case-wrap"><a className="back-link" href="/product"><ArrowLeft/> Product work</a><p className="product-case-kicker">2025–26 · Product designer · Design and engineering</p><h1>Make complex systems<br/><em>easier to build.</em></h1><div className="case-hero-bottom"><p>I worked across six apps in one restaurant management platform, improving design systems, file naming and handoff for automated development.</p><div className="case-tags"><span>Handover</span><span>Design systems</span><span>RTL/LTR</span><span>Team guidance</span><span>Data mapping</span></div></div></section>
+      <section className="case-hero case-wrap"><a className="back-link" href="/product"><ArrowLeft/> Product work</a><p className="product-case-kicker">2025–26 · Product designer · Design and engineering</p><h1>Make complex systems<br/><em>easier to build.</em></h1><div className="case-hero-bottom"><p>I worked across six apps in one restaurant management platform, improving design systems, file naming and handoff for automated development.</p><div className="case-tags"><span>Handover</span><span>Design systems</span><span>RTL/LTR</span><span>Team guidance</span><span>Data mapping</span></div></div><LiveCaseOutcome project="orderific"/></section>
 
       <section className="case-section case-wrap product-outcome case-story-section" id="outcome"><div className="case-index">01 / Measured results</div><div className="case-content"><h2>Two internal comparisons.</h2><p className="lead narrow">I compared development time before and after changing handover. For onboarding, I compared my own time with that of new hires after I wrote a Figma guide for designers and QA.</p><ComparisonGrid className="orderific-result-pair"><div><strong>28%</strong><span>less development time after handover changes</span></div><div><strong>½</strong><span>the onboarding time after the Figma guide</span></div></ComparisonGrid></div></section>
 
@@ -355,6 +363,7 @@ function PortfolioCase() {
         <a className="back-link" href="/design"><ArrowLeft/> Selected work</a>
         <h1>A portfolio built<br/><em>through iteration.</em></h1>
         <div className="case-hero-bottom"><p>I rebuilt the portfolio around a clearer project hierarchy and one editorial system, using moodboards to test the visual direction.</p><div className="case-tags"><span>Portfolio</span><span>Visual direction</span><span>Design system</span><span>2026</span></div></div>
+        <LiveCaseOutcome project="portfolio"/>
         <div className="case-stage portfolio-stage"><PortfolioVisual/></div>
       </section>
 
@@ -416,6 +425,7 @@ function ZevianEvidence({ src, alt, caption }) {
 
 function ZevianCase({ portfolio = 'design' }) {
   const modern = React.useContext(PortfolioDesignContext);
+  const PrototypeGallery = modern ? EvidenceSlider : EvidenceTicker;
   return <>
     {modern ? <PortfolioHeader/> : <header className="zevian-reference-nav">
       <nav aria-label="Main navigation">
@@ -438,11 +448,12 @@ function ZevianCase({ portfolio = 'design' }) {
       <div className="zevian-reference-content">
         <section className="case-hero case-wrap">
           <p className="zevian-reference-description">Zevian helps sales managers investigate performance changes before they become pipeline problems. It brings the change, evidence, possible reasons and context together so managers can decide what needs action.</p>
+          <LiveCaseOutcome project="zevian"/>
         </section>
 
       {portfolio === 'product' && <section className="case-section case-wrap product-outcome case-story-section" id="outcome">
         <div className="case-index">Outcome / current stage</div>
-        <div className="case-content"><h2>A new direction, shown in a working prototype.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring toward manager-led investigation. Zevian has two paying customers; the current prototype remains in development and under validation.</p></div>
+        <div className="case-content"><h2>A new direction, shown in a working prototype.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring toward manager-led investigation. {modern ? 'The earlier scoring product reached two paying customers. The current investigation prototype remains in development and under validation.' : 'Zevian has two paying customers; the current prototype remains in development and under validation.'}</p></div>
       </section>}
 
       <section className="case-section case-wrap overview case-story-section" id="overview">
@@ -518,12 +529,12 @@ function ZevianCase({ portfolio = 'design' }) {
           </ComparisonGrid>
           <div className="zevian-archive-intro"><h3>Earlier prototype: employee scoring</h3><p>The first prototype scored employees and detected patterns based on KPIs set by the manager. Discovery shifted the focus to investigating changes and their possible causes.</p></div>
           <div className="zevian-prototype-actions" aria-label="Earlier prototype links"><a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">Open earlier prototype <ArrowUpRight/></a><a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Read earlier case study <ArrowUpRight/></a></div>
-          <EvidenceTicker className="zevian-archive-gallery" label="Earlier prototype: employee scoring">
+          <PrototypeGallery className="zevian-archive-gallery" label="Earlier prototype: employee scoring" slideLabels={['KPI setup', 'Report', 'Dashboard', 'Ask AI']}>
             <figure><ExpandableImage src="/zevian/archived/kpi-creation.png" alt="Archived Zevian KPI setup, showing a long scoring form beside a later two-step version" caption="KPI setup in the earlier evaluation prototype."/><figcaption><strong>Set scoring rules</strong><span>The manager defined what success meant before reports could be evaluated.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/report-detail.png" alt="Archived Zevian report detail with an employee score, numeric criteria, report evidence and coaching notes" caption="Scored report in the earlier evaluation prototype."/><figcaption><strong>Review a scored report</strong><span>The report tied a score to targets, written evidence and coaching notes.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/manager-dashboard.png" alt="Archived Zevian manager dashboard with a team average score, reporting status and AI team summary" caption="Manager dashboard in the earlier evaluation prototype."/><figcaption><strong>Read the team view</strong><span>The dashboard led with a team score and reporting summary.</span></figcaption></figure>
             <figure><ExpandableImage src="/zevian/archived/ask-ai.png" alt="Archived Zevian Ask AI screen annotated to show the selected people and dates, an answer grounded in report text and linked source reports" caption="Ask AI in the earlier evaluation prototype, with scope and source reports visible."/><figcaption><strong>Ask AI about the reports</strong><span>The manager chose the people and dates. The answer linked back to the reports it used.</span></figcaption></figure>
-          </EvidenceTicker>
+          </PrototypeGallery>
           <p className="zevian-method-summary">I used AI agents to build and maintain the earlier prototype, then iterated on manager feedback.</p>
           <details className="zevian-method"><summary>Earlier prototype: AI build and testing workflow</summary><div className="zevian-method-body">
             <h4>Combine UI libraries.</h4><p>I combined shadcn with the Datadog library and set up the libraries for the employee-scoring prototype.</p>
@@ -602,6 +613,7 @@ function ZevianHrmsCase() {
         <a className="back-link" href="/design"><ArrowLeft/> Selected work</a>
         <h1>An HR system<br/><em>given one language.</em></h1>
         <div className="case-hero-bottom"><p>I refined an early HRMS concept and working prototype into a reusable interface system for employee records, attendance, policies and approvals.</p><div className="case-tags"><span>Early concept</span><span>HRMS</span><span>Design system</span><span>Prototype</span></div></div>
+        <LiveCaseOutcome project="hrms"/>
         <div className="hrms-stage" aria-label="Zevian HRMS interface overview">
           <span className="hrms-stage-note">Early product concept · interface studies</span>
           <HrmsImage className="hrms-stage-policy" src="/zevian-hrms/interface-policy.png" alt="Cropped view of the Zevian work modality policy setup screen" />
@@ -827,6 +839,7 @@ function PurnoCase({ portfolio = 'design' }) {
           <p>I shaped a loose brief into a cross-platform POS for small shops in Bangladesh, bringing sales, stock and local payment methods into one daily flow.</p>
           <div className="case-tags"><span>Fintech</span><span>Multi-platform</span><span>Prototyping</span><span>Interface design</span></div>
         </div>
+        <LiveCaseOutcome project="purno"/>
         <div className="purno-stage">
           <div className="stage-note"><span>Merchant app</span><strong>Desktop · tablet · mobile</strong></div>
           <ExpandableImage className="case-stage-image" src="/purno/cover.webp" alt="Purno payment cover showing the total and split amount" caption="Purno payment experience." loading="eager" decoding="sync" />
@@ -945,6 +958,7 @@ function JaygaImage({ src, alt, caption, className = '' }) {
 
 function JaygaCase({ portfolio = 'design' }) {
   const isProduct = portfolio === 'product';
+  const modern = React.useContext(PortfolioDesignContext);
   return <>
     <Nav caseStudy originalCase portfolio={isProduct ? 'product' : undefined} processHref={isProduct ? '#research' : undefined}/>
     <main className={`original-case-page jayga-page ${isProduct ? 'jayga-page--product' : ''}`} id="top">
@@ -956,6 +970,7 @@ function JaygaCase({ portfolio = 'design' }) {
           <p>{isProduct ? 'I turned warehouse research into priorities and product rules for space, stock, delivery and billing.' : 'I led product on Jayga’s warehouse system, connecting storage, pricing, billing and delivery across the client, admin and warehouse floor.'}</p>
           <div className="case-tags"><span>Product leadership</span><span>Service design</span><span>Field research</span><span>Business rules</span></div>
         </div>
+        <LiveCaseOutcome project="jayga"/>
         <div className="jayga-stage" aria-label="Jayga admin and warehouse applications">
           <div className="stage-note"><span>Shared storage for SMEs</span><strong>Client / admin / warehouse</strong></div>
           <JaygaImage src="/jayga/admin-requests.png" alt="Jayga admin console showing active warehouse grid requests"/>
@@ -970,8 +985,8 @@ function JaygaCase({ portfolio = 'design' }) {
         <div className="case-content">
           <h2>Replace scattered handoffs.</h2>
           <div className="overview-grid"><p className="lead">Warehouse teams used spreadsheets and handwritten logs. Storage, billing and delivery had no shared order record, so orders took days.</p><p>Jayga rents shared warehouse space to businesses that need less than a full facility. I designed the system that linked each customer’s rented space, stock and bill.</p></div>
-          <dl className="case-meta"><div><dt>Role</dt><dd>Product lead</dd></div><div><dt>Team</dt><dd>{isProduct ? '8-person team · 5 engineers' : 'Product lead / 5 engineers / founder'}</dd></div><div><dt>Project period</dt><dd>Nov 2023–Aug 2025</dd></div><div><dt>Experiences</dt><dd>2 web views · 1 mobile design</dd></div><div><dt>Methods</dt><dd>Interviews · contextual inquiry</dd></div><div><dt>Storage scope</dt><dd>2024 · 4 months</dd></div></dl>
-          <p className="lead narrow">{isProduct ? 'I led the eight-person team and owned the backlog, working with five engineers on grid and billing rules. The founder held the product vision and final decisions. This case covers four months of storage work within the longer Jayga project.' : 'I mapped workflows, defined the grid and billing rules, set the design language and owned the product backlog. I worked with five engineers and the founder, who held the product vision and final decisions.'}</p>
+          <dl className="case-meta"><div><dt>Role</dt><dd>Product lead</dd></div><div><dt>Team</dt><dd>{modern ? 'Four engineers and the founder' : isProduct ? '8-person team · 5 engineers' : 'Product lead / 5 engineers / founder'}</dd></div><div><dt>Project period</dt><dd>Nov 2023–Aug 2025</dd></div><div><dt>Experiences</dt><dd>2 web views · 1 mobile design</dd></div><div><dt>Methods</dt><dd>Interviews · contextual inquiry</dd></div><div><dt>Storage scope</dt><dd>2024 · 4 months</dd></div></dl>
+          <p className="lead narrow">{modern ? 'I mapped workflows, defined grid and billing rules, set the design language and owned the backlog. I worked with four engineers and the founder, who held the product vision and final decisions. This case covers four months of storage work within the longer Jayga project.' : isProduct ? 'I led the eight-person team and owned the backlog, working with five engineers on grid and billing rules. The founder held the product vision and final decisions. This case covers four months of storage work within the longer Jayga project.' : 'I mapped workflows, defined the grid and billing rules, set the design language and owned the product backlog. I worked with five engineers and the founder, who held the product vision and final decisions.'}</p>
           <JaygaManagementFramework/>
         </div>
       </section>
@@ -1059,10 +1074,10 @@ function JaygaCase({ portfolio = 'design' }) {
 function AboutMe() {
   const modern = React.useContext(PortfolioDesignContext);
   const experience = [
-    { company: 'Zevian', role: 'Founder · Designer and manager', duration: 'Feb 2026 – Present', summary: 'Building AI tools that help managers investigate sales performance.' },
+    { company: 'Zevian', role: 'Founder · Product designer', duration: 'Feb 2026 – Present', summary: 'Building AI tools that help managers investigate sales performance.' },
     { company: 'AutomatedPros · Orderific', role: 'Product designer', duration: 'Jun 2025 – Aug 2026', summary: 'Scaled design systems and improved handover across six restaurant apps.' },
-    { company: 'Purno', role: 'Product designer', duration: 'May 2024 – May 2025', summary: 'Designed a retail POS connecting checkout, inventory and reporting.' },
-    { company: 'Jayga', role: 'Product lead', duration: 'Nov 2023 – Aug 2025', summary: 'Led product strategy and workflows across client, admin and warehouse tools.' },
+    { company: 'Purno', role: 'Product designer · Contract', duration: 'May 2024 – May 2025', summary: 'Designed a retail POS connecting checkout, inventory and reporting. The case covers a three-month design scope in 2024.' },
+    { company: 'Jayga', role: 'Product lead · Design and product', duration: 'Nov 2023 – Aug 2025', summary: 'Designed workflows with four engineers and the founder. The case covers four months of storage work in 2024.' },
   ];
   const interests = [
     { title: 'Video games', description: 'I love a good single-player story, a difficult level and the feeling of finally getting past it.' },
@@ -1082,6 +1097,7 @@ function AboutMe() {
           <p>I’m a product designer and founder in Dhaka, with a computer science background.</p>
           <p>I enjoy the space between design and working software: finding the real problem, shaping the system, building enough to test it and improving the result through evidence.</p>
         </div>
+        {modern && <p className="about-hiring-note">Seeking full-time product designer roles in B2B and AI products. Based in Dhaka. <a href="/cv/Reza_Al_Hasan_Product_Designer.pdf" download>Download product designer CV</a></p>}
       </header>
 
       {modern && <>
@@ -1101,7 +1117,7 @@ function AboutMe() {
             <div><h3>Independent University, Bangladesh</h3><p>Bachelor of Computer Science</p></div>
             <div><h3>The AI-Driven Product Designer</h3><p>LinkedIn</p></div>
             <div><h3>Data-Driven Product Management</h3><p>LinkedIn</p></div>
-            <div><h3>Project Management Professional</h3><p>Google</p></div>
+            <div><h3>{modern ? 'Google Project Management Professional Certificate' : 'Project Management Professional'}</h3><p>Google</p></div>
           </div>
         </section>
       </>}
@@ -1129,6 +1145,7 @@ function AboutMe() {
           </article>)}
         </div>
       </section>
+      {modern && <VisitorTracker/>}
     </main>
     <About/>
   </>;

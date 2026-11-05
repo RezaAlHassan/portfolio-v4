@@ -16,10 +16,10 @@
 .new-portfolio .portfolio-header{display:flex;align-items:center;justify-content:space-between;min-height:67px;padding-block:24px;gap:24px}
 .new-portfolio .portfolio-header nav{display:flex;align-items:center;gap:24px;white-space:nowrap}
 .new-portfolio .portfolio-home{padding-top:41px;padding-bottom:190px}
-.new-portfolio .portfolio-intro{margin-bottom:38px}
+.new-portfolio .portfolio-intro{margin-bottom:64px}
 .new-portfolio .portfolio-intro h1{font-size:43px;line-height:1.25;margin-bottom:8px}
 .new-portfolio .portfolio-intro p{font-size:24px;color:#6b6b6b;line-height:1.25}
-.new-portfolio .portfolio-projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:39px;row-gap:36px}
+.new-portfolio .portfolio-projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:39px;row-gap:64px}
 .new-portfolio .portfolio-project{min-width:0}
 .new-portfolio .portfolio-cover-interaction{position:relative;min-width:0;height:100%}
 .new-portfolio .portfolio-project-link{position:static}
@@ -50,7 +50,7 @@
 .new-portfolio .portfolio-project h2 a:hover{text-decoration:none}
 .new-portfolio .portfolio-project p{font-size:16px;line-height:1.25}
 .new-portfolio .project-metric{color:#6b6b6b}
-.new-portfolio .portfolio-more{margin-top:48px}
+.new-portfolio .portfolio-more{margin-top:80px}
 .new-portfolio .portfolio-more>h2{font-size:16px;font-weight:500;margin-bottom:16px;color:#6b6b6b}
 .new-portfolio .portfolio-work-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,.8fr) 20px;align-items:center;gap:24px;padding-block:22px;border-top:1px solid #e7e7e7}
 .new-portfolio .portfolio-work-row:last-child{border-bottom:1px solid #e7e7e7}
@@ -107,15 +107,15 @@
   .new-portfolio .portfolio-header{align-items:flex-start;gap:18px;padding-block:20px;flex-wrap:wrap}
   .new-portfolio .portfolio-header nav{gap:18px;font-size:14px;flex-wrap:wrap}
   .new-portfolio .portfolio-home{padding-top:32px;padding-bottom:64px}
-  .new-portfolio .portfolio-intro{margin-bottom:28px}
+  .new-portfolio .portfolio-intro{margin-bottom:40px}
   .new-portfolio .portfolio-intro h1{font-size:32px;max-width:400px}
   .new-portfolio .portfolio-intro p{font-size:20px;line-height:1.4}
-  .new-portfolio .portfolio-projects{grid-template-columns:1fr;row-gap:32px}
+  .new-portfolio .portfolio-projects{grid-template-columns:1fr;row-gap:48px}
   .new-portfolio .portfolio-cover{height:240px}
   .new-portfolio .portfolio-project h2{font-size:19px}
   .new-portfolio .portfolio-footer{align-items:flex-start;flex-direction:column;font-size:18px;gap:20px}
   .new-portfolio .portfolio-identity{gap:28px}
-  .new-portfolio .portfolio-more{margin-top:32px}
+  .new-portfolio .portfolio-more{margin-top:56px}
   .new-portfolio .portfolio-work-row{grid-template-columns:minmax(0,1fr) 20px;gap:6px 16px;padding-block:20px}
   .new-portfolio .portfolio-work-row h3{grid-column:1;grid-row:1}
   .new-portfolio .portfolio-work-keywords{grid-column:1;grid-row:2}
@@ -161,4 +161,20 @@
 }
 @media(max-width:650px){
   .new-portfolio .case-supporting-evidence .case-evidence-image img{max-height:420px}
+}
+
+/* Topic breaks have more space than related text, images and captions.
+   Two 36px layout gaps plus the divider margins make a 96px topic break. */
+.new-portfolio .figma-case>.fd-1,
+.new-portfolio .figma-case>.fd-141,
+.new-portfolio .figma-case.orderific-case,
+.new-portfolio .figma-case.purno-case{gap:36px}
+.new-portfolio .figma-case .portfolio-divider{margin-block:12px}
+.new-portfolio .figma-case .portfolio-divider+.portfolio-divider{display:none}
+@media(max-width:650px){
+  .new-portfolio .figma-case>.fd-1,
+  .new-portfolio .figma-case>.fd-141,
+  .new-portfolio .figma-case.orderific-case,
+  .new-portfolio .figma-case.purno-case{gap:24px}
+  .new-portfolio .figma-case .portfolio-divider{margin-block:4px}
 }

@@ -23,6 +23,8 @@
 .new-portfolio.portfolio-secondary :is(.case-content>p,.case-content>h2,.case-content>h3,.case-content>.narrow){max-width:822px}
 .new-portfolio.portfolio-secondary :is(.case-hero,.about-hero,.workflow-hero,.sprint-hero){padding-top:0;padding-bottom:36px}
 .new-portfolio.portfolio-secondary :is(.case-section,.sprint-section){display:block;padding:36px 0;border-top:1px solid var(--rule-soft);margin:0}
+.new-portfolio.portfolio-secondary .case-section{padding-block:48px}
+@media(max-width:650px){.new-portfolio.portfolio-secondary .case-section{padding-block:28px}}
 .new-portfolio.portfolio-secondary .case-index{position:static;display:block;padding:0;margin:0 0 16px;color:#868686;font-size:14px;line-height:1.4;text-transform:none;letter-spacing:normal}
 .new-portfolio.portfolio-secondary .case-content{width:100%;min-width:0}
 .new-portfolio.portfolio-secondary .case-content h2{font-size:28px;line-height:1.25;font-weight:400;letter-spacing:normal;margin-bottom:8px}

@@ -137,10 +137,10 @@ function ZevianCover() {
 }
 
 const projects = [
-  { name: 'Zevian', description: 'Designed an evidence-led investigation workflow for managers.', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
-  { name: 'Orderific', description: 'Reusable components, RTL and themes for restaurant apps.', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
-  { name: 'Jayga', description: 'Designed grid assignment, storage and billing workflows.', metric: '3× projected revenue · Product lead', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
-  { name: 'Purno', description: 'Designed checkout, local payments and inventory flows.', metric: '$10K seed · 20% faster transactions', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
+  { name: 'Zevian', description: 'Designed AI workflows that keep people in control.', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
+  { name: 'Orderific', description: 'Designed systems for restaurant apps across MENA, US, UK and India.', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
+  { name: 'Jayga', description: 'Designed grid assignment, storage and billing workflows.', metric: 'UNDP partner · 3× projected revenue', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
+  { name: 'Purno', description: 'Designed checkout, local payments and inventory flows.', metric: 'Funded by Antler + Orange Corners', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
 ];
 
 export default function PortfolioHome() {

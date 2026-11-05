@@ -50,7 +50,7 @@ try {
   const { App, pageMetadata } = await vite.ssrLoadModule('/src/main.jsx');
   for (const [path, metadata] of Object.entries(pageMetadata)) { if (path !== '/') routes[path.slice(1)] = metadata; }
   for (const [slug, metadata] of Object.entries(routes)) {
-    if (slug !== 'archive' && !slug.startsWith('archive/')) routes[`archive/${slug}`] = [`Archived ${metadata[0]}`, metadata[1]];
+    if (slug !== 'crypto-onboarding' && slug !== 'archive' && !slug.startsWith('archive/')) routes[`archive/${slug}`] = [`Archived ${metadata[0]}`, metadata[1]];
   }
   const entry = renderToString(React.createElement(App, { initialPath:'/' }));
   await writeFile(join(output, 'index.html'), shell

@@ -18,7 +18,9 @@ Zevian's research workflow used Fireflies to create interview transcripts, organ
 
 ## Main pages
 
-The homepage also has two compact Other work rows: Zevian HRMS (interface system, with 25k+ Dribbble views reported by Reza) and AI workflows (research, prototyping and development, with SQL, Supabase and automations). The HRMS case links to Dribbble. The Portfolio redesign project is no longer listed on the homepage; its route remains available.
+The homepage has three compact Other work rows: Crypto.com onboarding, Zevian HRMS (interface system, with 25k+ Dribbble views reported by Reza) and AI workflows (research, prototyping and development, with SQL, Supabase and automations). The HRMS case links to Dribbble. The Portfolio redesign project is no longer listed on the homepage; its route remains available.
+
+- [Crypto.com onboarding](/crypto-onboarding): A UX redesign exercise informed by a review of 11 platforms and two early guided sessions with experienced participants. P01 used the stepper to identify his stage but could not fully recall what remained. P02 reported greater confidence, expected the homepage after verification and preferred earlier nationality collection after explanation. The expectations screen added limited value for these participants. Nationality moved earlier and three follow-up screens were removed; adding the expectations screen leaves two fewer screens overall, retaining required checks. Coinbase informed the overview, Solflare informed security explanations, and AI supported research, early design generation and documentation before manual refinement. Completion time, satisfaction improvement and abandonment reduction are unmeasured. A 30% satisfaction increase is a proposed target; lower abandonment is a hypothesis. Next: compare unassisted completion, progress understanding and satisfaction with a beginner. Screens are unchanged exports from the supplied Figma file.
 
 - [Portfolio](/), [Design](/design), and [Product](/product): The same Figma-based homepage, with Zevian, Orderific, Jayga, and Purno. White background and Outfit. Zevian uses its earlier video loop; Orderific uses its moving, draggable and expandable component cards. Both support keyboard controls and reduced motion.
 - [Archived entry](/archive), [Archived design](/archive/design), and [Archived product](/archive/product): Previous portfolio homepages. Source snapshot: archive/portfolio-before-2026-10-15/.
@@ -55,6 +57,8 @@ The homepage also has two compact Other work rows: Zevian HRMS (interface system
 - Research signals, observed use, and commercial outcomes are kept separate.
 
 ## AI-readable case studies
+
+- [Crypto.com onboarding case study](/ai/crypto-onboarding.md)
 
 - [Zevian case study](/ai/zevian.md)
 - [Product portfolio](/ai/product.md)

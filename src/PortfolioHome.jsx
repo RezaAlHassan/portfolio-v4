@@ -168,14 +168,20 @@ export default function PortfolioHome() {
       </section>
       <section className="portfolio-more" aria-labelledby="other-work-title">
         <h2 id="other-work-title">Other work</h2>
+        <a className="portfolio-work-row" href="/crypto-onboarding">
+          <h3>Crypto.com</h3>
+          <p className="portfolio-work-keywords">Onboarding · Progress · UX research</p>
+          <p className="portfolio-work-proof">11 platforms reviewed · 2 early sessions</p>
+          <img src="/figma/13a84.svg" alt="" width="20" height="20"/>
+        </a>
         <a className="portfolio-work-row" href="/zevian-hrms">
-          <h3>Zevian HRMS <span>— Interface system</span></h3>
+          <h3>Zevian HRMS</h3>
           <p className="portfolio-work-keywords">HR tools · Design systems · Prototyping</p>
           <p className="portfolio-work-proof">25k+ views on Dribbble</p>
           <img src="/figma/13a84.svg" alt="" width="20" height="20"/>
         </a>
         <a className="portfolio-work-row" href="/ai-workflows">
-          <h3>AI workflows <span>— Design and build</span></h3>
+          <h3>AI workflows</h3>
           <p className="portfolio-work-keywords">Research · Prototyping · Development</p>
           <p className="portfolio-work-proof">SQL · Supabase · Automations</p>
           <img src="/figma/13a84.svg" alt="" width="20" height="20"/>

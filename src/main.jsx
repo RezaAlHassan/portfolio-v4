@@ -6,6 +6,7 @@ import Zevian from './figma/Zevian';
 import Jayga from './figma/Jayga';
 import Purno from './figma/Purno';
 import Orderific from './figma/Orderific';
+import CryptoOnboarding from './figma/CryptoOnboarding';
 import AmbientBackground from './AmbientBackground';
 import './portfolio.css';
 import './figma/cases.css';
@@ -17,6 +18,7 @@ import './case-typography.css';
 const homeMetadata = ['Reza Al Hassan — Product designer for B2B and AI products', 'Product designer seeking full-time roles. Clear interfaces, reusable systems and working prototypes for B2B software and AI products. Based in Dhaka.'];
 export const pageMetadata = {
   ...legacyMetadata,
+  '/crypto-onboarding': ['Crypto.com — Clearer onboarding case study', 'An onboarding redesign informed by a review of 11 platforms and two early guided sessions. Clearer progress, earlier nationality collection and two fewer screens overall.'],
   '/': homeMetadata, '/design': homeMetadata, '/product': homeMetadata,
   '/zevian': ['Zevian — Performance investigation case study', 'From AI scoring to evidence-led investigation, with findings, supporting signals and manager control.'],
   '/jayga': ['Jayga — Storage, billing and delivery', 'Product workflows, research and grid rules connecting client, admin and warehouse experiences.'],
@@ -37,7 +39,7 @@ export function App({ initialPath = null }) {
   }, [path, metadata]);
   if (path === '/archive' || path.startsWith('/archive/')) return <LegacyApp initialPath={path.replace(/^\/archive/, '') || '/'} />;
   if (['/', '/design', '/product'].includes(path)) return <div className="ambient-case-layout"><AmbientBackground/><CaseImageProvider><PortfolioHome/></CaseImageProvider></div>;
-  const casePages = { '/zevian': Zevian, '/jayga': Jayga, '/purno': Purno, '/orderific': Orderific };
+  const casePages = { '/zevian': Zevian, '/jayga': Jayga, '/purno': Purno, '/orderific': Orderific, '/crypto-onboarding': CryptoOnboarding };
   const CasePage = casePages[path];
   const isCaseStudy = Boolean(CasePage) || ['/zevian-hrms', '/portfolio', '/product/zevian', '/product/jayga', '/product/purno', '/product/orderific'].includes(path);
   if (isCaseStudy) return <div className="ambient-case-layout">

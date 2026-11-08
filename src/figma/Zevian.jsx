@@ -72,6 +72,17 @@ function EarlierDecisions() {
         </figcaption>
       </figure>
     </EvidenceSlider>
+    <details className="zevian-ai-method">
+      <summary>Earlier RAG decisions</summary>
+      <div className="zevian-ai-method-body">
+        <p>In the earlier scoring product, I designed the retrieval-augmented generation (RAG) assistant around a selected set of reports, people and dates. Answers linked to source reports, and the assistant was set up to decline questions outside the retrieved evidence.</p>
+        <h4>Choose where AI judgment belongs</h4>
+        <p>Numeric criteria used targets and deterministic checks. Judgment criteria used weighted rules and report quotes to support the score. This kept numeric checks separate from AI interpretation.</p>
+        <h4>Keep a human review path</h4>
+        <p>Managers could override a score with a reason while preserving the original score. Employees could see the criteria and score a draft before submitting it.</p>
+        <p className="zevian-ai-method-note">These choices belong to the earlier scoring product. They describe the approach, not measured safety or validation of the current investigation prototype.</p>
+      </div>
+    </details>
     <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Explore the earlier case study <span aria-hidden="true">↗</span></a>
   </section>;
 }
@@ -253,10 +264,19 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               </p>
             </div>
           </div>
-          <div data-node-id="19:4" className="fd-79">
+          <div data-node-id="19:4" className="fd-79 zevian-ai-callout">
+            <h3>AI-assisted research</h3>
             <p data-node-id="19:6" className="fd-80 case-copy">
-              I recorded calls with Fireflies and organised the transcripts in Google Drive. I used ChatGPT to help group feedback, then reviewed it against the interviews before changing the product.
+              Fireflies captured the interviews, Google Drive held the transcripts, and ChatGPT helped group feedback. I reviewed the themes against the interviews before changing the product.
             </p>
+            <details className="zevian-ai-method">
+              <summary>Research method and design changes</summary>
+              <div className="zevian-ai-method-body">
+                <p>I organised the transcripts in a dedicated Google Drive folder connected to ChatGPT. AI supported synthesis; I checked the grouped feedback against the interviews and decided what to change.</p>
+                <p>Unclear dashboard numbers led me to remove the dashboard and narrow the current workflow. Investigating patterns was already part of one manager's job and a bigger problem for another. Distrust of AI decisions informed visible evidence, missing context and manager control.</p>
+                <p className="zevian-ai-method-note">These are qualitative findings and design decisions. They do not establish measured validation of the current workflow.</p>
+              </div>
+            </details>
           </div>
         </div>
         <hr className="portfolio-divider" />
@@ -350,7 +370,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             I defined tokens and interaction states in Figma, then used Claude Code and Codex to build and revise the React investigation prototype.
           </p>
         </div>
-        <div data-node-id="27:1092" data-flow="row" className="fd-120">
+        <div data-node-id="27:1092" data-flow="row" className="fd-120 zevian-foundations-row">
           <div data-node-id="27:1088" className="fd-121 zevian-foundations-evidence">
             <ExpandableImage src={imgZevianColors1} className="zevian-foundations-image" alt="Zevian primitive and semantic tokens" />
             <p data-node-id="27:1086" className="fd-124 case-caption">
@@ -358,8 +378,17 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             </p>
           </div>
           <div data-node-id="27:1095" className="fd-125">
-            <div data-node-id="27:1089" className="fd-126">
-              <p data-node-id="27:1090" className="fd-127 case-copy">{`I used ChatGPT with Figma to create tokens, then brought the design into the React build with Codex. `}</p>
+            <div data-node-id="27:1089" className="fd-126 zevian-ai-callout">
+              <h3>AI-assisted design and build</h3>
+              <p data-node-id="27:1090" className="fd-127 case-copy">I used ChatGPT with Figma to create tokens, then used Claude Code and Codex to build and revise the React prototype. I set the product direction and interaction rules, and iterated on manager feedback.</p>
+              <details className="zevian-ai-method">
+                <summary>AI-assisted working method</summary>
+                <div className="zevian-ai-method-body">
+                  <p>I used Claude and Codex for requirements refinement, architecture and roadmap planning, feature KPI definition, backlog generation, prototypes and code. I chose between them according to the task.</p>
+                  <p>Figma tokens, components and interaction states gave the build a design reference. The current prototype was built with Claude Code and Codex, then revised as manager feedback changed the workflow.</p>
+                  <p className="zevian-ai-method-note">The investigation prototype remains in development. This describes my working method; it does not establish measured speed gains or product validation.</p>
+                </div>
+              </details>
             </div>
             <p data-node-id="27:1093" className="fd-128 case-copy">
               Notion informed the drawer pattern and Attio informed the visual language. I am exploring a Gmail-style list to make findings easier to scan.

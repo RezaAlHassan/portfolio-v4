@@ -5,4 +5,17 @@
 .new-portfolio .zevian-decisions .zevian-stage-label{font-size:14px;color:#6b6b6b}
 .new-portfolio .zevian-decisions>a{align-self:flex-start;font-size:16px}
 .new-portfolio .zevian-decisions button:focus-visible{outline:2px solid #2563eb;outline-offset:4px}
+.new-portfolio .figma-case .zevian-ai-callout{background:transparent;border:0;border-radius:0;padding:0;align-items:stretch;gap:12px}
+.new-portfolio .figma-case .zevian-ai-callout h3{font-size:20px;line-height:1.3;color:#000}
+.new-portfolio .figma-case .zevian-ai-callout .case-copy{font-size:16px;line-height:1.5;color:#6b6b6b}
+.new-portfolio .zevian-ai-method{width:100%;min-width:0;border:0;border-radius:0;background:transparent;overflow-wrap:break-word}
+.new-portfolio .zevian-ai-method summary{padding:12px 0;cursor:pointer;font-size:16px;line-height:1.5;color:#6b6b6b}
+.new-portfolio .zevian-ai-method summary:hover{color:#000;text-decoration:underline;text-underline-offset:4px}
+.new-portfolio .zevian-ai-method-body{display:flex;flex-direction:column;gap:12px;padding:4px 0 12px}
+.new-portfolio .zevian-ai-method-body p{font-size:16px;line-height:1.5;color:#6b6b6b}
+.new-portfolio .zevian-ai-method-body h4{margin:8px 0 0;font-size:16px;font-weight:400;line-height:1.5;color:#000}
+.new-portfolio .zevian-ai-method-body .zevian-ai-method-note{color:#868686}
+.new-portfolio .figma-case .zevian-ai-callout .zevian-ai-method{border:0;border-radius:0;background:transparent}
+.new-portfolio .figma-case .zevian-ai-callout .zevian-ai-method summary{padding:12px 0}
+.new-portfolio .figma-case .zevian-ai-callout .zevian-ai-method-body{padding:0 0 4px}
 @media(max-width:650px){.new-portfolio .zevian-decisions{gap:32px}.new-portfolio .zevian-decisions h2{font-size:26px}}

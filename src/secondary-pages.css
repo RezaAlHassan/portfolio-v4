@@ -84,6 +84,9 @@
 .new-portfolio.portfolio-secondary .about-experience-list li{display:grid;grid-template-columns:220px 290px minmax(0,1fr);gap:20px}
 .new-portfolio.portfolio-secondary .about-background .about-role{color:#747474}
 .new-portfolio.portfolio-secondary .about-background .about-duration{font-size:14px;color:#747474;margin-top:4px}
+.new-portfolio.portfolio-secondary .about-research-copy{max-width:720px;display:grid;gap:12px}
+.new-portfolio.portfolio-secondary .about-research-copy a{display:inline-flex;align-items:center;gap:6px;justify-self:start;font-size:16px}
+.new-portfolio.portfolio-secondary .about-research-copy a svg{width:18px;height:18px}
 .new-portfolio.portfolio-secondary .about-education-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
 @media(max-width:1100px){
  .new-portfolio.portfolio-secondary .about-experience-list li{grid-template-columns:200px minmax(0,1fr);gap:4px 24px}

@@ -1097,7 +1097,7 @@ function AboutMe() {
           <p>I’m a product designer and founder in Dhaka, with a computer science background.</p>
           <p>I enjoy the space between design and working software: finding the real problem, shaping the system, building enough to test it and improving the result through evidence.</p>
         </div>
-        {modern && <p className="about-hiring-note">Seeking full-time product designer roles in B2B and AI products. Based in Dhaka. <a href="/cv/Reza_Al_Hasan_Product_Designer.pdf" download>Download product designer CV</a></p>}
+        {modern && <p className="about-hiring-note">Seeking full-time product designer roles in B2B and AI products. Based in Dhaka.</p>}
       </header>
 
       {modern && <>
@@ -1110,6 +1110,15 @@ function AboutMe() {
               <p>{summary}</p>
             </li>)}
           </ul>
+        </section>
+        <section className="about-background section" aria-labelledby="about-research-title">
+          <h2 id="about-research-title">Research</h2>
+          <div className="about-research-copy">
+            <h3>How small software teams use feedback</h3>
+            <p>I reviewed literature, designed a questionnaire and analysed survey responses to explore how small software teams use Lean and Agile practices. I brought the findings together in a proposed framework for including user feedback in development.</p>
+            <p className="about-duration">Feedback-Driven Lean Agile · Unpublished exploratory study</p>
+            <a href="https://drive.google.com/file/d/1S6vryu-Sb47godwmU-myDFILdFOTvl8O/view?usp=sharing" target="_blank" rel="noreferrer">Read the research paper <ArrowUpRight/></a>
+          </div>
         </section>
         <section className="about-background section" aria-labelledby="about-education-title">
           <h2 id="about-education-title">Education</h2>

@@ -35,7 +35,7 @@ export default function Purno() {
         <p>I designed a retail POS that connects inventory, checkout and payments, with a separate owner experience for sales and business records.</p>
       </div>
       <dl className="purno-details">
-        <div><dt>My role</dt><dd>Product Designer &amp; Founder</dd></div>
+        <div><dt>My role</dt><dd>Product Designer</dd></div>
         <div><dt>Owned</dt><dd>Product ecosystem · UX · Interface design</dd></div>
         <div><dt>Scope</dt><dd>Three months · 2024</dd></div>
       </dl>

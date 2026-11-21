@@ -11,7 +11,7 @@ const orderificCards = [
 ];
 
 const projectTooltips = {
-  Zevian: ['Founder', 'Discovery & Prototyping'],
+  Zevian: ['Product Designer', 'Discovery & Prototyping'],
   Jayga: ['Product Lead', 'Workflows & Interface Design'],
   Orderific: ['Product Designer', 'Design Systems'],
   Purno: ['Product Designer', 'POS Design'],
@@ -149,7 +149,7 @@ export default function PortfolioHome() {
     <main className="portfolio-width portfolio-home" id="work">
       <div className="portfolio-intro">
         <h1>Product designer for B2B and AI products</h1>
-        <p>I turn complex workflows into clear interfaces, reusable systems and working prototypes.</p>
+        <p>I design and build B2B and AI products from 0 to 1, from the first customer conversation through launch. I designed and prototyped Zevian's AI workflows for sales managers, led product at Jayga (UNDP partner), designed Orderific's restaurant platform for the US, UK, India and MENA, and worked on Purno (Antler, Orange Corners).</p>
       </div>
       <section className="portfolio-projects" aria-label="Selected projects">
         {projects.map(project => <article className="portfolio-project" key={project.name}>
@@ -187,6 +187,14 @@ export default function PortfolioHome() {
           <img src="/figma/13a84.svg" alt="" width="20" height="20"/>
         </a>
       </section>
+      <a className="portfolio-github" href="https://github.com/RezaAlHassan" target="_blank" rel="noreferrer">
+        <span className="portfolio-github-head">
+          <img src="/figma/71f48.svg" alt="" width="24" height="24"/>
+          <h2>31 projects across frontend and backend</h2>
+          <span className="portfolio-github-cta">GitHub <span aria-hidden="true">→</span></span>
+        </span>
+        <p>I build the products I design. My public repositories include React interfaces and working prototypes, backend work with SQL and Supabase, and automation scripts with tests across separate development and production branches.</p>
+      </a>
       <PortfolioFooter contained/>
     </main>
   </div>;

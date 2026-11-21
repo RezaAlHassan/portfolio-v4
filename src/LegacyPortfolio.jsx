@@ -67,7 +67,7 @@ const pageMetadata = {
   '/jayga': ['Jayga — Warehouse operations case study', 'A warehouse order system connecting storage, pricing, billing and fulfilment.'],
   '/portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
   '/ai-workflows': ['AI workflows — Reza Al Hassan', 'How Reza uses AI for research synthesis, prototyping, production code and product exploration while keeping people in control.'],
-  '/about': ['About Reza Al Hassan', 'Product designer and founder in Dhaka working on B2B systems, AI workflows and clarity-critical products.'],
+  '/about': ['About Reza Al Hassan', 'Product designer in Dhaka working on B2B systems, AI workflows and clarity-critical products.'],
   '/sprint': ['2-week product design sprint — Reza Al Hassan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
 };
 
@@ -203,10 +203,10 @@ function SelectedProjects({ portfolio = 'design' }) {
     reducedMotion.addEventListener('change', update);
     return () => reducedMotion.removeEventListener('change', update);
   }, []);
-  const designSelected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI investigation for sales managers.', metric: '10+ discovery conversations · React prototype', tags: ['Founder product', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
+  const designSelected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI investigation for sales managers.', metric: '10+ discovery conversations · React prototype', tags: ['Independent project', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
   const selected = portfolio === 'product' ? [
     { title: 'Jayga', year: 'Nov 2023–Aug 2025 · Product lead', metric: '~3× revenue/m² potential · 8-person team led', description: 'Turned warehouse operations into grid, billing and delivery workflows.', tags: ['Product rules', 'Service flows', 'Operational tools'], url: '/product/jayga', image: '/jayga/warehouse-visit.jpg', alt: 'Checking stock in a Jayga warehouse aisle' },
-    { title: 'Zevian', year: '2026 · Founder product', metric: '10+ discovery conversations · 2 paying customers', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
+    { title: 'Zevian', year: '2026 · Independent project', metric: '10+ discovery conversations · 2 paying customers', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
     { title: 'Orderific', year: '2025–26 · Product designer', metric: '28% less development time · ½ onboarding time', description: 'Scaled design systems for six connected restaurant apps.', tags: ['Design systems', 'RTL design', 'Technical delivery'], url: '/product/orderific', visual: 'rtl', image: '/orderific/cover-comparison.svg', alt: 'Orderific interface components in English LTR and Arabic RTL' },
     { title: 'Purno', year: '2024 · Product designer', metric: '$10K seed · desktop, tablet and mobile', description: 'Designed POS workflows across sales, inventory and operations.', tags: ['POS flows', 'Interface design', 'Payments'], url: '/product/purno', image: '/purno/cover.webp', alt: 'Purno payment cover showing the total and split amount' },
   ] : designSelected;
@@ -232,7 +232,7 @@ function SelectedProjects({ portfolio = 'design' }) {
           {project.title !== 'Orderific' && project.title !== 'Zevian' && <figure className={`work-cover work-cover--${project.title.toLowerCase()}`}>
             <img src={project.image} alt={project.alt} loading={index === 0 ? 'eager' : 'lazy'}/>
           </figure>}
-          <div className="work-card-heading"><span>{portfolio === 'design' && index === 0 ? 'Founder product' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
+          <div className="work-card-heading"><span>{portfolio === 'design' && index === 0 ? 'Independent project' : project.year}</span><ArrowUpRight aria-hidden="true"/></div>
           <h3>{project.title}{portfolio === 'product' && project.title === 'Jayga' && <span className="work-featured-label">Featured project</span>}</h3>
           <p className="work-description"><span className="work-summary">{project.description}</span><span className="work-metric">{project.metric}</span></p>
         </a>
@@ -437,8 +437,8 @@ function ZevianCase({ portfolio = 'design' }) {
       <aside className="zevian-reference-sidebar" aria-label="Project details">
         <h1>Zevian</h1>
         <dl className="zevian-project-meta">
-          <div><dt>Product</dt><dd>Founder product</dd></div>
-          <div><dt>Role</dt><dd>Founder · Product designer</dd></div>
+          <div><dt>Product</dt><dd>Independent project</dd></div>
+          <div><dt>Role</dt><dd>Product designer</dd></div>
           <div><dt>Scope</dt><dd>Strategy · UX · UI</dd></div>
           <div><dt>Research</dt><dd>Interviews · Prototype feedback</dd></div>
           <div><dt>Current stage</dt><dd>React prototype<br/>Ongoing validation</dd></div>
@@ -1074,7 +1074,7 @@ function JaygaCase({ portfolio = 'design' }) {
 function AboutMe() {
   const modern = React.useContext(PortfolioDesignContext);
   const experience = [
-    { company: 'Zevian', role: 'Founder · Product designer', duration: 'Feb 2026 – Present', summary: 'Building AI tools that help managers investigate sales performance.' },
+    { company: 'Zevian', role: 'Product designer', duration: 'Feb 2026 – Present', summary: 'Building AI tools that help managers investigate sales performance.' },
     { company: 'AutomatedPros · Orderific', role: 'Product designer', duration: 'Jun 2025 – Aug 2026', summary: 'Scaled design systems and improved handover across six restaurant apps.' },
     { company: 'Purno', role: 'Product designer · Contract', duration: 'May 2024 – May 2025', summary: 'Designed a retail POS connecting checkout, inventory and reporting. The case covers a three-month design scope in 2024.' },
     { company: 'Jayga', role: 'Product lead · Design and product', duration: 'Nov 2023 – Aug 2025', summary: 'Designed workflows with four engineers and the founder. The case covers four months of storage work in 2024.' },
@@ -1094,7 +1094,7 @@ function AboutMe() {
           <img className="about-portrait" src="/reza-and-cat.jpg" alt="Reza holding his cat" width="1152" height="2048" decoding="async"/>
         </div>
         <div className="about-intro">
-          <p>I’m a product designer and founder in Dhaka, with a computer science background.</p>
+          <p>I’m a product designer in Dhaka, with a computer science background.</p>
           <p>I enjoy the space between design and working software: finding the real problem, shaping the system, building enough to test it and improving the result through evidence.</p>
         </div>
         {modern && <p className="about-hiring-note">Seeking full-time product designer roles in B2B and AI products. Based in Dhaka.</p>}

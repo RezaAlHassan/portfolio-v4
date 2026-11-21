@@ -102,7 +102,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               My role
             </p>
             <p data-node-id="12:255" className="fd-8">
-              Solo Founder
+              Solo Product Designer
             </p>
           </div>
           <div data-node-id="12:266" className="fd-9">

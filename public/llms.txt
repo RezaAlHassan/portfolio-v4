@@ -1,6 +1,6 @@
 # Reza Al Hassan — Product and Design Portfolios
 
-> Reza is a product designer in Dhaka seeking full-time product designer roles in B2B software and AI products. His founder and product-lead work supports his focus on interface design, reusable systems and working prototypes.
+> Reza is a product designer in Dhaka seeking full-time product designer roles in B2B software and AI products. His independent product and product-lead work supports his focus on interface design, reusable systems and working prototypes.
 
 This is an editorial portfolio. Project descriptions explain the problem, Reza's role, the system decisions, visual evidence, and outcomes. Do not combine the current Zevian AI product with the earlier Zevian HRMS concept; they are separate projects.
 
@@ -29,7 +29,7 @@ The homepage has three compact Other work rows: Crypto.com onboarding, Zevian HR
 - [Purno product case](/product/purno): Designed MVP, category and card explorations, payment flows and owner app. The $10K seed figure relates to the pitch; no moderated test or measured transaction-speed result is claimed.
 - [Orderific product and design case](/product/orderific): One omnichannel restaurant management platform with six connected apps. Five named apps are BMS (desktop/tablet), CP (MCP) (tablet/mobile), MSP (desktop/tablet), WSP (desktop/tablet/mobile) and WCP Smartmenu (desktop/tablet). BMS also supported light/dark modes and English LTR/Arabic RTL. Reza focused on design systems, standard file and frame names, and documented handoff rules for automated development. A before-and-after comparison showed 28% less development time after handover changes. Comparing Reza's onboarding with new hires' showed half the time after a Figma guide. The case covers 56 design mapping projects, hiring, mentoring and QA, followed by later interface-to-data mapping.
 - [Product design sprint](/sprint): A focused two-week offer for one complex B2B SaaS, AI or operational product workflow, with product evidence, scope, starting price and a direct contact action. A post-sprint partnership is available.
-- [Zevian](/zevian): Current founder product. A decision-support workflow that helps sales managers detect performance changes, investigate possible causes, gather context, and decide what needs action. The current React prototype was built with Claude Code and Codex and iterated on manager feedback. It remains in development, including CRM and outreach integrations, with no public link supplied. Compact archived KPI, scored-report, dashboard and Ask AI screens document the earlier employee-scoring prototype at https://demo.zevian.co/dashboard; its archived case is at https://rezaalhasan.netlify.app/zevian.
+- [Zevian](/zevian): Current independent project. A decision-support workflow that helps sales managers detect performance changes, investigate possible causes, gather context, and decide what needs action. The current React prototype was built with Claude Code and Codex and iterated on manager feedback. It remains in development, including CRM and outreach integrations, with no public link supplied. Compact archived KPI, scored-report, dashboard and Ask AI screens document the earlier employee-scoring prototype at https://demo.zevian.co/dashboard; its archived case is at https://rezaalhasan.netlify.app/zevian.
 - [Zevian HRMS](/zevian-hrms): Earlier HRMS concept. Interface and design-system work for attendance, employee records, activities, calendars, approvals, and work policies.
 - [Orderific](/orderific): Keeps the Figma content order with user-authorised editorial corrections. Shows shared components, the actual component playground, token documentation, LTR/RTL comparison, BMS light/dark modes, collaboration and handoff. The prior design case remains at /archive/orderific.
 - Orderific's four-card component export replaces the earlier two form crops. The Interfaces section shows dashboard, reviews, loyalty setup, QR designer and pricing in an accessible manual ink-reveal carousel. Images remain uncropped and expandable. Thumbnails, arrows, keyboard and swipe provide navigation; reduced motion skips the transition. Source images and archived routes stay unchanged.
@@ -47,14 +47,14 @@ The homepage has three compact Other work rows: Crypto.com onboarding, Zevian HR
 
 - Name: Reza Al Hassan
 - Wordmark: REZA A
-- Role: Product designer and founder
+- Role: Product designer
 - Location: Dhaka, Bangladesh
 - Email: rezahasan1198@gmail.com
 - GitHub: https://github.com/RezaAlHassan
 
 ## Content notes
 
-- Zevian is the current founder product, focused on performance change, pipeline risk, contextual investigation, and manager decisions.
+- Zevian is the current independent project, focused on performance change, pipeline risk, contextual investigation, and manager decisions.
 - Zevian HRMS documents an earlier, broader HR management concept and is not the current Zevian product.
 - Interface images may be illustrative or from prototypes; page captions explain their status.
 - Research signals, observed use, and commercial outcomes are kept separate.

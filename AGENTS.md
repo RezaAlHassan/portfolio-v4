@@ -4,12 +4,14 @@
 
 This repository contains Reza Al Hassan's product-design portfolio. Preserve factual distinctions between projects, especially:
 
-- Zevian: the current founder product for evidence-backed AI performance signals.
+- Zevian: the current independent project for evidence-backed AI performance signals.
 - Zevian HRMS: an earlier, broader HR management concept and interface-system project.
 
 ## Current Figma redesign (October 2026)
 
 - User clarification, 5 November 2026: Zevian's design work includes a RAG workflow and decisions about controllable AI in performance management and sales. The homepage leads with AI workflows and human control. Keep the earlier performance-scoring product distinct from the current investigation prototype; do not imply measured safety or validation outcomes.
+
+- User clarification, 21 November 2026: do not describe Reza as Zevian's founder on any page, including archives; it was more of a project. Use "Product designer" for his role and "Independent project" where a project-type label is needed. References to Jayga's and Purno's own founders stay. The hero now reads as 0-to-1 B2B and AI product work, naming Zevian, Jayga (UNDP partner), Orderific's markets and Purno's funders. Jayga stays "led product" until a co-founder role or $15K MRR is confirmed.
 
 - User confirmation, 5 November 2026: Orderific was a global product spanning MENA markets, the US, the UK and India. Its homepage description states this market scope while retaining the measured development-time and onboarding comparisons.
 
@@ -25,6 +27,7 @@ This repository contains Reza Al Hassan's product-design portfolio. Preserve fac
 - Homepage routes now use the same ambient background as case studies, with a shared `#f2f2f2` base (about 5% grey). Purno's interface images use a subtle `#e7e7e7` border drawn over their display wrappers; keep supplied image files unchanged. Mobile case navigation matches this grey background.
 
 - The homepage Other work section has three compact linked rows: Crypto.com onboarding, Zevian HRMS and AI workflows. Each shows the work, three keywords and evidence. HRMS shows the user-supplied 25k+ Dribbble views, with the Dribbble link inside its case study. Portfolio is no longer listed on the homepage; its existing route stays available.
+- A GitHub block sits between Other work and the footer: the GitHub logo, the user-supplied "31 projects across frontend and backend" and a "GitHub →" link on one line, then a smaller grey summary of 2–3 lines. Keep the summary limited to the documented stack (React, SQL, Supabase, automation and tests).
 
 - The Figma file HTGPw4wOrTMg6yLfIgRfnL is the visual authority for the new homepage (1:2), Zevian case (9:178), Jayga case (32:110), Purno case (52:834), and Orderific case (27:1114).
 - `/orderific` retains the content order from Figma node 27:1114. The user authorised audit fixes on 30 October 2026: correct spelling, punctuation and unclear sentences, and add the existing component-playground and token-governance images to support the claims. Preserve project meaning. Keep the wide LTR/RTL image pair horizontally scrollable and every evidence image expandable. The prior case remains at `/archive/orderific`; `/product/orderific` retains its product case.
@@ -32,7 +35,7 @@ This repository contains Reza Al Hassan's product-design portfolio. Preserve fac
 - `/purno` uses the new Figma case, with Purno-specific introduction and scope in place of the copied Orderific introduction. The user confirmed the ~20% faster transaction-time figure is an estimate; label it as an estimate and do not present it as measured. The original case remains at `/archive/purno`, and `/product/purno` keeps its existing product case.
 - The new pages use an almost-white grey background (`#fafafa`), Outfit, and the exact supplied Figma assets under `public/figma/`. Keep screen assets unchanged so their white surfaces remain distinct from the page. Responsive reading layouts stack on mobile; fixed diagram coordinates are preserved inside ResponsiveArtifact.
 - All other live routes use this same system: `/about`, `/ai-workflows`, `/sprint`, `/zevian-hrms`, `/portfolio`, and the four `/product/<project>` cases. They retain their full story and supplied evidence, use shared `PortfolioHeader` and `PortfolioFooter`, and load scoped rules from `src/secondary-pages.css`. `LegacyPortfolio.App` receives `modern` only for live pages. Archive routes keep the earlier typography, colours, navigation and layouts. Zevian's live product case uses a top details row instead of the old sticky sidebar.
-- Homepage covers have 8px corners. A cursor-following black pill changes after one second to blue; labels show role then focus: Zevian Founder → Discovery & Prototyping, Jayga Product Lead → Workflows & Interface Design, Orderific Product Designer → Design Systems, Purno Product Designer → POS Design. Keep the pill inside the viewport. Keyboard focus uses a position near the cover; Escape dismisses it. Tooltips must not block cover controls, mouse clicks must not leave them behind, and reduced motion disables fades.
+- Homepage covers have 8px corners. A cursor-following black pill changes after one second to blue; labels show role then focus: Zevian Product Designer → Discovery & Prototyping, Jayga Product Lead → Workflows & Interface Design, Orderific Product Designer → Design Systems, Purno Product Designer → POS Design. Keep the pill inside the viewport. Keyboard focus uses a position near the cover; Escape dismisses it. Tooltips must not block cover controls, mouse clicks must not leave them behind, and reduced motion disables fades.
 - Homepage and case code: `src/PortfolioHome.jsx`, `src/PortfolioShared.jsx`, `src/portfolio.css`, and `src/figma/`. The root `index.html` remains the Vite entry; the build generates complete route HTML.
 - The prior source, including uncommitted edits, is saved in `archive/portfolio-before-2026-10-15/`. Its live implementation is retained in `src/LegacyPortfolio.jsx`.
 - Previous homepages are at `/archive`, `/archive/design`, and `/archive/product`. Old case pages can be viewed at `/archive/<original route>`. Other existing routes remain available. Archive links return to the current portfolio.

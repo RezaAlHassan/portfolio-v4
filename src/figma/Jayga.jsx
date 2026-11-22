@@ -1,6 +1,6 @@
 // Figma HTGPw4wOrTMg6yLfIgRfnL, node 32:110. Artwork coordinates stay within ResponsiveArtifact.
 import React from 'react';
-import CaseOutcome from '../CaseOutcome';
+import CaseOutcome, { CaseReflection } from '../CaseOutcome';
 import { ExpandableImage } from '../LegacyPortfolio';
 import { ResponsiveArtifact, PortfolioHeader, NextProject, CaseStudyLayout } from '../PortfolioShared';
 const assetPathPrefix = "/figma";
@@ -84,7 +84,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
           </div>
         </div>
       <CaseOutcome project="jayga"/>
-            <p className="case-scope-note">Project: November 2023–August 2025. This case covers four months of storage work in 2024. Client and admin workflows were delivered; the warehouse mobile experience remained a design concept.</p>
+            <p className="case-scope-note">I worked with Jayga from November 2023 to August 2025. This case covers one four-month storage release in 2024. Client and admin workflows were delivered; the warehouse mobile experience remained a design concept.</p>
         <ResponsiveArtifact width={950} height={596}><div data-node-id="32:127" className="fd-158">
           <div className="fd-159">
             <ExpandableImage src={imgFrame1} className="figma-expand" imageClassName="fd-160" alt="Jayga shared order and storage interface" />
@@ -1060,7 +1060,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
         </div>
         <div className="fd-645">
           <p data-node-id="43:678" className="fd-646 case-copy">
-            Surveys and qualitative research helped narrow the customer focus, helping us land our first client UNDP (NGO). Survey responses on price, distance, security, and retrieval also informed this choice.
+            Surveys and qualitative research on price, distance, security and retrieval narrowed the customer focus to NGOs and mining companies. UNDP became our first client.
           </p>
         </div>
         <ResponsiveArtifact width={700} height={504.778}><div data-node-id="44:685" data-name="warehouse-visit 1" className="fd-631">
@@ -1103,7 +1103,7 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
           <h2 id="jayga-collaboration" tabIndex={-1} data-node-id="32:173" className="fd-677">
             Collaboration
           </h2>
-          <p data-node-id="32:174" className="fd-678 case-lead">{`I owned product strategy, the roadmap, and the backlog. I combined lean prioritisation with agile sprints as scope expanded. Interfaces were used as source of truth and collaboration. Logic and workflow first, build and iterate `}</p>
+          <p data-node-id="32:174" className="fd-678 case-lead">{`I owned the roadmap and backlog; the founder set the product vision and made final decisions. I combined lean prioritisation with agile sprints as scope expanded, and interfaces served as the team's shared source of truth.`}</p>
         </div>
         <div data-node-id="52:833" data-flow="row" className="fd-679">
           <ResponsiveArtifact width={548} height={647}><div data-node-id="52:772" data-name="A4 - 29" className="fd-680">
@@ -1230,17 +1230,6 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
                 </div>
               </div>
             </div>
-            <p data-node-id="52:815" className="fd-748">
-              Lean-Agile management style reduced development time
-            </p>
-            <p data-node-id="52:816" className="fd-749">
-              compared to traditional style
-            </p>
-            <div data-node-id="52:817" className="fd-750">
-              <p data-node-id="52:818" className="fd-751">
-                by ~40%
-              </p>
-            </div>
           </div></ResponsiveArtifact>
           <div data-node-id="52:822" className="fd-752">
             <div data-node-id="52:823" className="fd-753">
@@ -1270,6 +1259,8 @@ export default function Jayga(){return <div className="new-portfolio"><Portfolio
             </div>
           </div>
         </div>
+        <hr className="portfolio-divider" />
+        <CaseReflection project="jayga"/>
         <hr className="portfolio-divider" />
         <NextProject name="Orderific" href="/orderific"/>
       </div></main></CaseStudyLayout></div>;}

@@ -15,7 +15,7 @@ import './figma/orderific.css';
 import './secondary-pages.css';
 import './case-typography.css';
 
-const homeMetadata = ['Reza Al Hassan — Product designer for B2B and AI products', 'Product designer seeking full-time roles. Clear interfaces, reusable systems and working prototypes for B2B software and AI products. Based in Dhaka.'];
+const homeMetadata = ['Reza Al Hasan — Product designer, B2B and AI', 'Product designer for B2B and AI products, available immediately. Clear interfaces, reusable systems and working prototypes. Based in Dhaka.'];
 export const pageMetadata = {
   ...legacyMetadata,
   '/crypto-onboarding': ['Crypto.com — Clearer onboarding case study', 'An onboarding redesign informed by a review of 11 platforms and two early guided sessions. Clearer progress, earlier nationality collection and two fewer screens overall.'],
@@ -24,9 +24,9 @@ export const pageMetadata = {
   '/jayga': ['Jayga — Storage, billing and delivery', 'Product workflows, research and grid rules connecting client, admin and warehouse experiences.'],
   '/purno': ['Purno — Retail POS and owner experience', 'Research, category explorations, checkout, payment flows and owner screens for a connected retail system.'],
   '/orderific': ['Orderific — A shared system for connected apps', 'Components, RTL, themes, collaboration and handoff across a restaurant management platform with six connected apps.'],
-  '/archive': ['Archived portfolio — Reza Al Hassan', 'The previous product and design portfolio.'],
-  '/archive/design': ['Archived design portfolio — Reza Al Hassan', 'The previous design portfolio homepage.'],
-  '/archive/product': ['Archived product portfolio — Reza Al Hassan', 'The previous product portfolio homepage.'],
+  '/archive': ['Archived portfolio — Reza Al Hasan', 'The previous product and design portfolio.'],
+  '/archive/design': ['Archived design portfolio — Reza Al Hasan', 'The previous design portfolio homepage.'],
+  '/archive/product': ['Archived product portfolio — Reza Al Hasan', 'The previous product portfolio homepage.'],
 };
 export function App({ initialPath = null }) {
   const path = (initialPath ?? window.location.pathname).replace(/\/$/, '') || '/';

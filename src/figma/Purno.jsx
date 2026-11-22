@@ -1,6 +1,6 @@
 // Figma HTGPw4wOrTMg6yLfIgRfnL, node 52:834.
 import React from 'react';
-import CaseOutcome from '../CaseOutcome';
+import CaseOutcome, { CaseReflection } from '../CaseOutcome';
 import { ExpandableImage } from '../LegacyPortfolio';
 import { PortfolioHeader, ResponsiveArtifact, NextProject, CaseStudyLayout } from '../PortfolioShared';
 import PurnoFlow from './PurnoFlow';
@@ -57,13 +57,13 @@ export default function Purno() {
       <Image file="81a5e.png" alt="Competitive audit table comparing five POS products and local payment support" width={1076} height={390} crop="purno-audit-crop" caption="Competitive analysis" framed/>
       <div className="purno-pair purno-flow-pair">
         <ResponsiveArtifact width={595} height={603}><PurnoFlow/></ResponsiveArtifact>
-        <aside className="purno-callout">Purno was built around payments first, then expanded to inventory, a small work tracker and sales insights for the owner.</aside>
+        <aside className="purno-callout">The store app handles the sale, from inventory to receipt. The owner app follows what happened: sales, top sellers and payment methods.</aside>
       </div>
       <div id="purno-product-selection" tabIndex={-1}><Note title="Flatten the category structure">I reduced four nested levels to one visible level, so merchants could browse without moving through each branch.</Note></div>
       <Image file="ab917.png" alt="Purno category structure before and after the redesign" width={1046} height={695.59}/>
       <div className="purno-notes">
         <Note title="Find products during checkout">Merchants need to find an item while serving a customer. I kept search and category filters in the product view.</Note>
-        <Note title="Use colour for categories">I replaced emoji chips with text labels and category colours. The ~20% speed benefit noted in the image is an estimate, not a measured result.</Note>
+        <Note title="Use colour for categories">I replaced emoji chips with text labels and category colours.</Note>
       </div>
       <Image file="0a867.png" alt="Purno home before and after: emoji category chips replaced by text labels and colour-coded product cards, with design callouts" width={1046} height={683.387}/>
       <hr className="portfolio-divider"/>
@@ -75,7 +75,7 @@ export default function Purno() {
           <Image file="f8076.png" alt="Purno card payment tap or insert screen" width={326.691} height={705} framed/>
           <Image file="232a3.png" alt="Purno card payment PIN entry screen" width={327} height={708.282} framed/>
         </div>
-        <p className="purno-caption">The usual payment method is selected first. Card payments use Purno?s POS hardware: tap or insert, enter a PIN, then confirm.</p>
+        <p className="purno-caption">The usual payment method is selected first. Card payments use Purno’s POS hardware: tap or insert, enter a PIN, then confirm.</p>
       </div>
       <div className="purno-image-run purno-payment-run">
         <div className="purno-payment-row">
@@ -108,15 +108,9 @@ export default function Purno() {
       </div>
       <hr className="portfolio-divider"/>
 
-      <Heading title="Outcomes"/>
-      <ul className="purno-outcomes">
-        <li>$10K seed funding <span>from the design prototype</span></li>
-        <li>~20% faster transaction time <span>estimate for merchants</span></li>
-        <li>3 applications <span>for employees, owners and payments</span></li>
-        <li>Web portal <span>for quick online business setup</span></li>
-      </ul>
+      <CaseReflection project="purno"/>
       <hr className="portfolio-divider"/>
-      <NextProject name="Orderific" href="/orderific"/>
+      <NextProject name="Jayga" href="/jayga"/>
     </main>
     </CaseStudyLayout>
   </div>;

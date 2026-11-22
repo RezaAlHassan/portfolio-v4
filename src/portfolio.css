@@ -8,6 +8,16 @@
 .new-portfolio .case-outcome-summary{width:100%;max-width:822px;min-width:0}
 .new-portfolio .case-outcome-summary h2{font-size:14px;line-height:1.5;font-weight:400;color:#6b6b6b;margin:0 0 6px}
 .new-portfolio .case-outcome-summary p{font-size:16px;line-height:1.5;font-weight:400;color:#000;margin:0;overflow-wrap:break-word}
+.new-portfolio .case-outcome-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0 0;padding:0}
+.new-portfolio .case-outcome-metrics>div{min-width:0}
+.new-portfolio .case-outcome-metrics dt{font-size:28px;line-height:1.2;color:#000;margin:0}
+.new-portfolio .case-outcome-metrics dd{font-size:14px;line-height:1.5;color:#6b6b6b;margin:6px 0 0}
+.new-portfolio .case-key-decision{margin-top:24px}
+.new-portfolio .case-outcome-summary .case-key-decision-alt{color:#6b6b6b;margin-top:4px}
+.new-portfolio .case-reflection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;width:100%;max-width:822px}
+.new-portfolio .case-reflection h2{font-size:20px;line-height:1.4;color:#000;margin:0 0 8px}
+.new-portfolio .case-reflection p{font-size:16px;line-height:1.5;color:#3d3d3d;margin:0}
+@media (max-width:700px){.new-portfolio .case-outcome-metrics{grid-template-columns:1fr;gap:16px}.new-portfolio .case-reflection{grid-template-columns:1fr}}
 .new-portfolio :is(h1,h2,h3,p,figure){margin:0;font-family:inherit;font-weight:400;letter-spacing:normal;line-height:normal}
 .new-portfolio a{color:inherit;text-decoration:none}
 .new-portfolio a:hover{text-decoration:underline;text-underline-offset:4px}
@@ -162,8 +172,9 @@
 .new-portfolio .case-supporting-evidence .case-evidence-image{display:block;width:100%;padding:0;border:0;border-radius:0;background:transparent;cursor:zoom-in}
 .new-portfolio .case-supporting-evidence .case-evidence-image img{display:block;position:static;width:100%;height:auto;max-height:500px;object-fit:contain;object-position:left center}
 .new-portfolio .case-supporting-evidence figcaption{max-width:760px;font-size:16px;line-height:1.55;margin-top:12px;color:#565656}
-.new-portfolio .about-hiring-note{font-size:16px;line-height:1.6;margin-top:16px}
-.new-portfolio .about-hiring-note a{text-decoration:underline;text-underline-offset:4px}
+.new-portfolio .about-hiring-note{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;font-size:16px;line-height:1.6;margin-top:16px}
+.new-portfolio .about-hiring-note a{text-decoration:none}
+.new-portfolio .about-outcome{color:#000}
 @media(max-width:1000px){
   .new-portfolio .case-study-layout{display:block;padding-top:0}
   .new-portfolio .case-decision-nav{top:0;z-index:30;max-height:none;padding-block:8px;background:#fafafa;border-bottom:1px solid #e3e3e3;overflow:visible}

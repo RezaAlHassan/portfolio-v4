@@ -137,10 +137,10 @@ function ZevianCover() {
 }
 
 const projects = [
-  { name: 'Orderific', description: 'Scaled a global multi-product restaurant management SaaS design system', metric: '28% less dev time · ½ onboarding time', href: '/orderific' },
+  { name: 'Orderific', description: 'Scaled a global multi-product restaurant management SaaS design system', metric: 'Component detachment cut from 50% to 20%', href: '/orderific' },
+  { name: 'Zevian', description: 'AI experiences that keep people in control of sales performance decisions', metric: '10+ discovery conversations · 2 prototypes', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
   { name: 'Purno', description: 'Founding designer for a retail POS product ecosystem', metric: 'Funded by Antler + Orange Corners', image: '/figma/bd6d5.png', className: 'purno', href: '/purno', alt: 'Purno point of sale payment screen' },
-  { name: 'Jayga', description: 'Led a founding team to design and build inventory, storage and billing', metric: 'UNDP partner · 3× projected revenue', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
-  { name: 'Zevian', description: 'AI experiences that keep people in control of sales performance decisions', metric: '10+ discovery conversations · React prototype', image: '/figma/d8846.png', className: 'zevian', href: '/zevian', alt: 'Zevian review findings and performance evidence' },
+  { name: 'Jayga', description: 'Led a founding team to design and build inventory, storage and billing', metric: 'UNDP partner · 3× revenue', image: '/figma/9a696.png', className: 'jayga', href: '/jayga', alt: 'Reza researching storage workflows at the Jayga warehouse' },
 ];
 
 export default function PortfolioHome() {
@@ -148,8 +148,8 @@ export default function PortfolioHome() {
     <PortfolioHeader/>
     <main className="portfolio-width portfolio-home" id="work">
       <div className="portfolio-intro">
-        <h1>Product designer for B2B and AI products</h1>
-        <p>I design and build B2B and AI products from 0 to 1, from the first customer conversation through launch. I designed and prototyped Zevian's AI workflows for sales managers, led product at Jayga (UNDP partner), designed Orderific's restaurant platform for the US, UK, India and MENA, and worked on Purno (Antler, Orange Corners).</p>
+        <h1>Product designer, B2B and AI</h1>
+        <p>I design and ship B2B and AI products end to end. I talk to users, turn research into flows, build and maintain the Figma tokens, and ship to a production Git branch. My work has been funded by Antler and Orange Corners and used by UNDP.</p>
       </div>
       <section className="portfolio-projects" aria-label="Selected projects">
         {projects.map(project => <article className="portfolio-project" key={project.name}>

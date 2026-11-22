@@ -1,7 +1,7 @@
 // Figma HTGPw4wOrTMg6yLfIgRfnL, node 9:178. Artwork coordinates stay within ResponsiveArtifact.
 import React from 'react';
 import './zevian-updates.css';
-import CaseOutcome from '../CaseOutcome';
+import CaseOutcome, { CaseReflection } from '../CaseOutcome';
 import EvidenceSlider from '../EvidenceSlider';
 import { ExpandableImage } from '../LegacyPortfolio';
 import { ResponsiveArtifact, PortfolioHeader, NextProject, CaseStudyLayout } from '../PortfolioShared';
@@ -24,8 +24,8 @@ function ZevianLinks() {
   return <nav className="zevian-earlier-links" aria-label="Zevian prototype and case study links">
     <p>Links</p>
     <div>
-      <a href="https://zevian-v3.netlify.app/" target="_blank" rel="noreferrer">Current prototype <span aria-hidden="true">↗</span></a>
-      <a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">Previous prototype <span aria-hidden="true">↗</span></a>
+      <a href="https://zevian-v3.netlify.app/" target="_blank" rel="noreferrer">Investigation prototype <span aria-hidden="true">↗</span></a>
+      <a href="https://demo.zevian.co/dashboard" target="_blank" rel="noreferrer">React v1 prototype <span aria-hidden="true">↗</span></a>
       <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Previous case study <span aria-hidden="true">↗</span></a>
     </div>
   </nav>;
@@ -36,7 +36,7 @@ function EarlierDecisions() {
     <header>
       <p className="zevian-stage-label">Earlier version · Evaluation and patterns</p>
       <h2 id="earlier-decisions-title" tabIndex={-1}>Earlier prototype: employee scoring</h2>
-      <p>These screens show the scoring product before I changed direction. They are separate from the current investigation prototype.</p>
+      <p>These screens show the React v1 scoring prototype before I changed direction.</p>
     </header>
     <EvidenceSlider label="Earlier Zevian prototype" slideLabels={['KPI setup', 'Report', 'Dashboard', 'Ask AI']}>
       <figure>
@@ -60,7 +60,7 @@ function EarlierDecisions() {
         <figcaption>
           <strong>Give the dashboard a clear starting point</strong>
           <span>The earlier layout repeated status and metrics across several cards. I gave the team score the most weight and brought reporting status into one bar. Detail moved below the summary or a click away.</span>
-          <small>This improved the hierarchy, but it did not answer why performance changed. That became the focus of the current prototype.</small>
+          <small>This improved the hierarchy, but it did not answer why performance changed. That became the focus of the investigation design.</small>
         </figcaption>
       </figure>
       <figure>
@@ -68,7 +68,7 @@ function EarlierDecisions() {
         <figcaption>
           <strong>Keep AI answers connected to their sources</strong>
           <span>The manager chose the people and dates before asking a question. The answer linked back to the reports it used, so the manager could check the source material.</span>
-          <small>The current prototype takes this further with evidence, missing context and a manager decision.</small>
+          <small>The investigation design takes this further with evidence, missing context and a manager decision.</small>
         </figcaption>
       </figure>
     </EvidenceSlider>
@@ -80,7 +80,6 @@ function EarlierDecisions() {
         <p>Numeric criteria used targets and deterministic checks. Judgment criteria used weighted rules and report quotes to support the score. This kept numeric checks separate from AI interpretation.</p>
         <h4>Keep a human review path</h4>
         <p>Managers could override a score with a reason while preserving the original score. Employees could see the criteria and score a draft before submitting it.</p>
-        <p className="zevian-ai-method-note">These choices belong to the earlier scoring product. They describe the approach, not measured safety or validation of the current investigation prototype.</p>
       </div>
     </details>
     <a href="https://rezaalhasan.netlify.app/zevian" target="_blank" rel="noreferrer">Explore the earlier case study <span aria-hidden="true">↗</span></a>
@@ -93,7 +92,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             Helping sales managers understand performance changes
           </h1>
           <p data-node-id="9:182" className="fd-4 case-lead">
-            I moved the product from AI scoring toward evidence-led investigation, keeping the manager in control of the decision.
+            I moved the product from AI scoring toward evidence-led investigation, then stopped building when discovery showed the causes sat outside the system's data.
           </p>
         </div>
         <div data-node-id="12:270" data-flow="row" className="fd-5">
@@ -102,7 +101,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               My role
             </p>
             <p data-node-id="12:255" className="fd-8">
-              Solo Product Designer
+              Product Designer
             </p>
           </div>
           <div data-node-id="12:266" className="fd-9">
@@ -110,15 +109,15 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
               Ownership
             </p>
             <p data-node-id="12:268" className="fd-11">
-              Discovery, design, AI-assisted build
+              Discovery, design, React v1 build
             </p>
           </div>
           <div data-node-id="12:277" className="fd-12">
             <p data-node-id="12:278" className="fd-13">
-              Evidence
+              Project
             </p>
             <p data-node-id="12:279" className="fd-14">
-              10+ conversations, React prototype
+              Independent project · 2026
             </p>
           </div>
           <ZevianLinks/>
@@ -267,14 +266,12 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
           <div data-node-id="19:4" className="fd-79 zevian-ai-callout">
             <h3>AI-assisted research</h3>
             <p data-node-id="19:6" className="fd-80 case-copy">
-              Fireflies captured the interviews, Google Drive held the transcripts, and ChatGPT helped group feedback. I reviewed the themes against the interviews before changing the product.
+              Tools: Fireflies, Google Drive and ChatGPT for interview synthesis, checked against the transcripts.
             </p>
             <details className="zevian-ai-method">
-              <summary>Research method and design changes</summary>
+              <summary>Design changes from feedback</summary>
               <div className="zevian-ai-method-body">
-                <p>I organised the transcripts in a dedicated Google Drive folder connected to ChatGPT. AI supported synthesis; I checked the grouped feedback against the interviews and decided what to change.</p>
                 <p>Unclear dashboard numbers led me to remove the dashboard and narrow the current workflow. Investigating patterns was already part of one manager's job and a bigger problem for another. Distrust of AI decisions informed visible evidence, missing context and manager control.</p>
-                <p className="zevian-ai-method-note">These are qualitative findings and design decisions. They do not establish measured validation of the current workflow.</p>
               </div>
             </details>
           </div>
@@ -367,7 +364,7 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             Design foundations
           </h2>
           <p data-node-id="27:1083" className="fd-119 case-lead">
-            I defined tokens and interaction states in Figma, then used Claude Code and Codex to build and revise the React investigation prototype.
+            I defined tokens and interaction states in Figma, demoed the investigation workflow from Figma, then built it as a prototype.
           </p>
         </div>
         <div data-node-id="27:1092" data-flow="row" className="fd-120 zevian-foundations-row">
@@ -378,30 +375,19 @@ export default function Zevian(){return <div className="new-portfolio"><Portfoli
             </p>
           </div>
           <div data-node-id="27:1095" className="fd-125">
-            <div data-node-id="27:1089" className="fd-126 zevian-ai-callout">
-              <h3>AI-assisted design and build</h3>
-              <p data-node-id="27:1090" className="fd-127 case-copy">I used ChatGPT with Figma to create tokens, then used Claude Code and Codex to build and revise the React prototype. I set the product direction and interaction rules, and iterated on manager feedback.</p>
-              <details className="zevian-ai-method">
-                <summary>AI-assisted working method</summary>
-                <div className="zevian-ai-method-body">
-                  <p>I used Claude and Codex for requirements refinement, architecture and roadmap planning, feature KPI definition, backlog generation, prototypes and code. I chose between them according to the task.</p>
-                  <p>Figma tokens, components and interaction states gave the build a design reference. The current prototype was built with Claude Code and Codex, then revised as manager feedback changed the workflow.</p>
-                  <p className="zevian-ai-method-note">The investigation prototype remains in development. This describes my working method; it does not establish measured speed gains or product validation.</p>
-                </div>
-              </details>
-            </div>
+            <p className="fd-127 case-copy">Tools: Figma tokens with ChatGPT; Claude Code and Codex for the React v1 build.</p>
             <p data-node-id="27:1093" className="fd-128 case-copy">
-              Notion informed the drawer pattern and Attio informed the visual language. I am exploring a Gmail-style list to make findings easier to scan.
+              Notion informed the drawer pattern and Attio informed the visual language. I explored a Gmail-style list to make findings easier to scan.
             </p>
           </div>
         </div>
         <hr className="portfolio-divider" />
         <div data-node-id="27:1096" className="fd-129">
           <h2 data-node-id="27:1097" className="fd-130">
-            What changed and what comes next
+            Reflection
           </h2>
-          <p data-node-id="27:1098" className="fd-131 case-copy">{`Manager feedback changed the problem I was solving: a score was not enough to explain a performance change. The current prototype brings findings, evidence and context together. Next, I need to test whether managers can use it to choose a useful next action. The earlier product’s paying customers do not validate this new workflow.`}</p>
         </div>
+        <CaseReflection project="zevian"/>
         <hr className="portfolio-divider" />
-        <NextProject name="Jayga" href="/jayga"/>
+        <NextProject name="Purno" href="/purno"/>
       </div></main></CaseStudyLayout></div>;}

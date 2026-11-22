@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'Orderific',
     description: 'Design systems and handoff rules for six connected restaurant apps.',
-    metric: '28% less dev time · ½ onboarding time',
+    metric: 'Designer onboarding cut from 4 to 2 weeks',
     tags: ['Design systems', 'Design tokens', 'Variables', 'RTL/LTR'],
     year: '2025–26',
     visual: 'rtl',
@@ -53,22 +53,22 @@ const projects = [
 ];
 
 const pageMetadata = {
-  '/product': ['Reza Al Hassan — Product manager portfolio', 'Product management work across Jayga, Zevian, Orderific and Purno, led with a design approach.'],
-  '/design': ['Reza Al Hassan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
+  '/product': ['Reza Al Hasan — Product manager portfolio', 'Product management work across Jayga, Zevian, Orderific and Purno, led with a design approach.'],
+  '/design': ['Reza Al Hasan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
   '/product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
   '/product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],
   '/product/purno': ['Purno — Product case study', 'Product scope and design decisions behind a retail POS and owner app.'],
   '/product/orderific': ['Orderific — Product and design systems case study', 'Design systems, documented naming rules and handoff across six responsive restaurant apps. BMS also supports LTR, RTL, light and dark modes.'],
-  '/': ['Reza Al Hassan — Product and design portfolios', 'Choose the product or design portfolio of Reza Al Hassan.'],
+  '/': ['Reza Al Hasan — Product and design portfolios', 'Choose the product or design portfolio of Reza Al Hasan.'],
   '/zevian': ['Zevian — Performance investigation case study', 'How Zevian helps sales managers detect performance changes, add context and decide what needs action.'],
   '/zevian-hrms': ['Zevian HRMS — Interface system case study', 'An early HRMS concept and reusable interface system covering attendance, employee records, calendars, approvals and work policies.'],
   '/orderific': ['Orderific — Design system case study', 'Design systems and handoff rules across six responsive restaurant apps, with BMS examples in LTR, RTL, light and dark modes.'],
   '/purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
   '/jayga': ['Jayga — Warehouse operations case study', 'A warehouse order system connecting storage, pricing, billing and fulfilment.'],
-  '/portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
-  '/ai-workflows': ['AI workflows — Reza Al Hassan', 'How Reza uses AI for research synthesis, prototyping, production code and product exploration while keeping people in control.'],
-  '/about': ['About Reza Al Hassan', 'Product designer in Dhaka working on B2B systems, AI workflows and clarity-critical products.'],
-  '/sprint': ['2-week product design sprint — Reza Al Hassan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
+  '/portfolio': ['Portfolio redesign — Reza Al Hasan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
+  '/ai-workflows': ['AI workflows — Reza Al Hasan', 'How Reza uses AI for research synthesis, prototyping, production code and product exploration while keeping people in control.'],
+  '/about': ['About Reza Al Hasan', 'Product designer in Dhaka working on B2B systems, AI workflows and clarity-critical products.'],
+  '/sprint': ['2-week product design sprint — Reza Al Hasan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
 };
 
 const sprintEmail = 'mailto:rezahasan1198@gmail.com?subject=Product%20design%20sprint&body=Hi%20Reza%2C%0A%0AThe%20workflow%20we%20need%20help%20with%20is%3A%20';
@@ -186,7 +186,7 @@ function ProductHero() {
 
 function PortfolioEntry() {
   return <main className="portfolio-entry" id="top">
-    <div className="portfolio-entry-inner"><span className="entry-mark">REZA A<i aria-hidden="true"/></span><div className="entry-intro"><p>Reza Al Hassan · Dhaka, Bangladesh</p><h1>Choose a <em>portfolio.</em></h1><span>Two views of work across product decisions, interfaces and delivery.</span></div>
+    <div className="portfolio-entry-inner"><span className="entry-mark">REZA A<i aria-hidden="true"/></span><div className="entry-intro"><p>Reza Al Hasan · Dhaka, Bangladesh</p><h1>Choose a <em>portfolio.</em></h1><span>Two views of work across product decisions, interfaces and delivery.</span></div>
       <div className="entry-choices"><a href="/product"><span>01 / Product</span><strong>Product leadership, decisions and delivery.</strong><ArrowUpRight aria-hidden="true"/></a><a href="/design"><span>02 / Design</span><strong>Product design, systems and interface evidence.</strong><ArrowUpRight aria-hidden="true"/></a></div>
     </div>
   </main>;
@@ -206,8 +206,8 @@ function SelectedProjects({ portfolio = 'design' }) {
   const designSelected = [{ title: 'Zevian', year: '2026 / Now', description: 'AI investigation for sales managers.', metric: '10+ discovery conversations · React prototype', tags: ['Independent project', 'AI workflow', 'Human-in-the-loop'], url: '/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' }, ...projects.map(project => ({ ...project, image: project.visual === 'rtl' ? '/orderific/cover-comparison.svg' : project.visual === 'pos' ? '/purno/cover.webp' : '/jayga/warehouse-visit.jpg', alt: project.visual === 'rtl' ? 'Orderific delivery zone screen in English LTR and Arabic RTL' : project.visual === 'pos' ? 'Purno payment cover showing the total and split amount' : 'Checking stock in a Jayga warehouse aisle' }))];
   const selected = portfolio === 'product' ? [
     { title: 'Jayga', year: 'Nov 2023–Aug 2025 · Product lead', metric: '~3× revenue/m² potential · 8-person team led', description: 'Turned warehouse operations into grid, billing and delivery workflows.', tags: ['Product rules', 'Service flows', 'Operational tools'], url: '/product/jayga', image: '/jayga/warehouse-visit.jpg', alt: 'Checking stock in a Jayga warehouse aisle' },
-    { title: 'Zevian', year: '2026 · Independent project', metric: '10+ discovery conversations · 2 paying customers', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
-    { title: 'Orderific', year: '2025–26 · Product designer', metric: '28% less development time · ½ onboarding time', description: 'Scaled design systems for six connected restaurant apps.', tags: ['Design systems', 'RTL design', 'Technical delivery'], url: '/product/orderific', visual: 'rtl', image: '/orderific/cover-comparison.svg', alt: 'Orderific interface components in English LTR and Arabic RTL' },
+    { title: 'Zevian', year: '2026 · Independent project', metric: '10+ discovery conversations · 2 prototypes', description: 'Shifted AI performance insights to manager-led investigation.', tags: ['Discovery', 'AI workflow', 'Interaction design'], url: '/product/zevian', image: '/zevian/cover-sharp.svg', alt: 'Zevian findings, evidence, context and manager decision' },
+    { title: 'Orderific', year: '2025–26 · Product designer', metric: 'Designer onboarding cut from 4 to 2 weeks', description: 'Scaled design systems for six connected restaurant apps.', tags: ['Design systems', 'RTL design', 'Technical delivery'], url: '/product/orderific', visual: 'rtl', image: '/orderific/cover-comparison.svg', alt: 'Orderific interface components in English LTR and Arabic RTL' },
     { title: 'Purno', year: '2024 · Product designer', metric: '$10K seed · desktop, tablet and mobile', description: 'Designed POS workflows across sales, inventory and operations.', tags: ['POS flows', 'Interface design', 'Payments'], url: '/product/purno', image: '/purno/cover.webp', alt: 'Purno payment cover showing the total and split amount' },
   ] : designSelected;
   const toggleDemo = () => {
@@ -302,7 +302,7 @@ function ProductOrderificCase() {
     <main className="case-page product-case product-orderific-page" id="top">
       <section className="case-hero case-wrap"><a className="back-link" href="/product"><ArrowLeft/> Product work</a><p className="product-case-kicker">2025–26 · Product designer · Design and engineering</p><h1>Make complex systems<br/><em>easier to build.</em></h1><div className="case-hero-bottom"><p>I worked across six apps in one restaurant management platform, improving design systems, file naming and handoff for automated development.</p><div className="case-tags"><span>Handover</span><span>Design systems</span><span>RTL/LTR</span><span>Team guidance</span><span>Data mapping</span></div></div><LiveCaseOutcome project="orderific"/></section>
 
-      <section className="case-section case-wrap product-outcome case-story-section" id="outcome"><div className="case-index">01 / Measured results</div><div className="case-content"><h2>Two internal comparisons.</h2><p className="lead narrow">I compared development time before and after changing handover. For onboarding, I compared my own time with that of new hires after I wrote a Figma guide for designers and QA.</p><ComparisonGrid className="orderific-result-pair"><div><strong>28%</strong><span>less development time after handover changes</span></div><div><strong>½</strong><span>the onboarding time after the Figma guide</span></div></ComparisonGrid></div></section>
+      <section className="case-section case-wrap product-outcome case-story-section" id="outcome"><div className="case-index">01 / Results</div><div className="case-content"><h2>Faster designer onboarding.</h2><p className="lead narrow">After I wrote a Figma guide for designers and QA, designer onboarding fell from four weeks to two across three designers.</p><ComparisonGrid className="orderific-result-pair"><div><strong>4 → 2</strong><span>weeks of designer onboarding</span></div><div><strong>3</strong><span>token layers</span></div></ComparisonGrid></div></section>
 
       <section className="case-section case-wrap case-story-section" id="first-seven-months"><div className="case-index">02 / First seven months</div><div className="case-content"><h2>Build the system, then help the team use it.</h2><p className="lead narrow">As development began, my work moved from design systems and handoff to reviews, hiring and team support.</p><ol className="orderific-phase-list"><li><span>01 / Handover</span><div><h3>Prepare files for development.</h3><p>I improved handoff, set standard frame and component names, and documented rules for automated development.</p></div></li><li><span>02 / RTL</span><div><h3>Design Arabic flows for restaurant management.</h3><p>I set RTL rules for navigation, reading order and components while keeping English screens in the same system.</p></div></li><li><span>03–04 / Audit</span><div><h3>Review 56 mapping projects with a two-person design team.</h3><p>I checked screens and naming rules, guided junior designers, and worked through conflicts with engineers as development started.</p></div></li><li><span>05 / Hiring</span><div><h3>Help select the next designers.</h3><p>I took part in junior-designer interviews and design tests.</p></div></li><li><span>06 / Team delivery</span><div><h3>Keep prototypes, tasks and system assets aligned.</h3><p>I guided prototyping, managed design tasks and onboarding, and fixed asset differences across the design systems.</p></div></li><li><span>07 / Guidance</span><div><h3>Make the system easier to learn and check.</h3><p>I wrote the Figma guide for designers and QA, prepared ICP research, and made icon use more consistent.</p></div></li></ol></div></section>
 
@@ -430,7 +430,7 @@ function ZevianCase({ portfolio = 'design' }) {
     {modern ? <PortfolioHeader/> : <header className="zevian-reference-nav">
       <nav aria-label="Main navigation">
         <div className="zevian-reference-links"><a href={`/${portfolio}`}>Portfolio</a><a href="/about">Information</a></div>
-        <div className="zevian-reference-identity"><ContactButton/><a href="/" className="zevian-reference-name">Reza Al Hassan <span aria-hidden="true">✳</span> <span>Product &amp; Design</span></a></div>
+        <div className="zevian-reference-identity"><ContactButton/><a href="/" className="zevian-reference-name">Reza Al Hasan <span aria-hidden="true">✳</span> <span>Product &amp; Design</span></a></div>
       </nav>
     </header>}
     <main className="case-page zevian-page zevian-reference-layout" id="top">
@@ -453,7 +453,7 @@ function ZevianCase({ portfolio = 'design' }) {
 
       {portfolio === 'product' && <section className="case-section case-wrap product-outcome case-story-section" id="outcome">
         <div className="case-index">Outcome / current stage</div>
-        <div className="case-content"><h2>A new direction, shown in a working prototype.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring toward manager-led investigation. {modern ? 'The earlier scoring product reached two paying customers. The current investigation prototype remains in development and under validation.' : 'Zevian has two paying customers; the current prototype remains in development and under validation.'}</p></div>
+        <div className="case-content"><h2>A new direction, then a stop.</h2><p className="lead narrow">Discovery moved Zevian away from employee scoring toward manager-led investigation. After 10+ conversations showed that performance causes sat outside the system’s data, I stopped building. Zevian has no paying customers.</p></div>
       </section>}
 
       <section className="case-section case-wrap overview case-story-section" id="overview">
@@ -565,7 +565,7 @@ function ZevianCase({ portfolio = 'design' }) {
           </ComparisonGrid>
             <h4>Start with a design foundation.</h4><p>I designed tokens in a Figma file and a few pages with components to guide the build. This gave the AI concrete references instead of relying on the common SaaS dashboard layouts it often produces with shadcn variants.</p>
             <h4>Use AI to explore, then make the decisions.</h4><p>I used ChatGPT for product critique, reference analysis, token structure and state exploration. I kept product decisions grounded in research and my own judgment.</p>
-            <h4>Bring the design into React.</h4><p>I used Claude Code and Codex to build the React investigation prototype from the design direction. The prototype remains in development.</p>
+            <h4>Bring the design into React.</h4><p>I used Claude Code and Codex to build React prototypes from the design direction. I stopped development after discovery showed the causes sat outside the system’s data.</p>
             <h4>Develop the sales-pipeline workflow.</h4><p>Current work includes CRM and outreach integrations to bring sales-pipeline signals into the investigation workflow. Validation continues as the product develops.</p>
           </div></details>
           <div className="final-learning"><span>Main learning</span><p>The product became the investigation around a change—and the manager's ability to judge it fairly.</p></div>
@@ -1074,10 +1074,10 @@ function JaygaCase({ portfolio = 'design' }) {
 function AboutMe() {
   const modern = React.useContext(PortfolioDesignContext);
   const experience = [
-    { company: 'Zevian', role: 'Product designer', duration: 'Feb 2026 – Present', summary: 'Building AI tools that help managers investigate sales performance.' },
-    { company: 'AutomatedPros · Orderific', role: 'Product designer', duration: 'Jun 2025 – Aug 2026', summary: 'Scaled design systems and improved handover across six restaurant apps.' },
-    { company: 'Purno', role: 'Product designer · Contract', duration: 'May 2024 – May 2025', summary: 'Designed a retail POS connecting checkout, inventory and reporting. The case covers a three-month design scope in 2024.' },
-    { company: 'Jayga', role: 'Product lead · Design and product', duration: 'Nov 2023 – Aug 2025', summary: 'Designed workflows with four engineers and the founder. The case covers four months of storage work in 2024.' },
+    { company: 'Zevian', role: 'Product designer · Independent project', duration: 'Feb 2026 – Present', summary: 'Designed AI tools that help managers investigate sales performance.', outcome: 'Sunset after 10+ discovery conversations showed the causes sat outside the system’s data.' },
+    { company: 'AutomatedPros · Orderific', role: 'Product designer', duration: 'Jun 2025 – Aug 2026', summary: 'Built a design system across six connected restaurant apps.', outcome: 'Cut component detachment from 50% to 20% and designer onboarding from 4 weeks to 2.' },
+    { company: 'Jayga', role: 'Product lead · Design', duration: 'Nov 2023 – Aug 2025', summary: 'Designed storage, billing and delivery workflows with four engineers and the founder.', outcome: 'Delivered the 2024 storage release in 4 months against a 6-month deadline.' },
+    { company: 'Purno', role: 'Product designer · Contract', duration: 'May 2024 – May 2025', summary: 'Designed a retail POS connecting checkout, inventory and reporting.', outcome: 'The design prototype supported $10K seed funding from Orange Corners.' },
   ];
   const interests = [
     { title: 'Video games', description: 'I love a good single-player story, a difficult level and the feeling of finally getting past it.' },
@@ -1097,17 +1097,18 @@ function AboutMe() {
           <p>I’m a product designer in Dhaka, with a computer science background.</p>
           <p>I enjoy the space between design and working software: finding the real problem, shaping the system, building enough to test it and improving the result through evidence.</p>
         </div>
-        {modern && <p className="about-hiring-note">Seeking full-time product designer roles in B2B and AI products. Based in Dhaka.</p>}
+        {modern && <div className="about-hiring-note"><p>Available immediately.</p><ContactButton/></div>}
       </header>
 
       {modern && <>
         <section className="about-background section" aria-labelledby="about-experience-title">
           <h2 id="about-experience-title">Experience</h2>
           <ul className="about-experience-list">
-            {experience.map(({ company, role, duration, summary }) => <li key={company}>
+            {experience.map(({ company, role, duration, summary, outcome }) => <li key={company}>
               <div><h3>{company}</h3><p className="about-duration">{duration}</p></div>
               <p className="about-role">{role}</p>
               <p>{summary}</p>
+              <p className="about-outcome">{outcome}</p>
             </li>)}
           </ul>
         </section>
@@ -1125,19 +1126,9 @@ function AboutMe() {
           <div className="about-education-grid">
             <div><h3>Independent University, Bangladesh</h3><p>Bachelor of Computer Science</p></div>
             <div><h3>The AI-Driven Product Designer</h3><p>LinkedIn</p></div>
-            <div><h3>Data-Driven Product Management</h3><p>LinkedIn</p></div>
-            <div><h3>{modern ? 'Google Project Management Professional Certificate' : 'Project Management Professional'}</h3><p>Google</p></div>
           </div>
         </section>
       </>}
-
-      <section className="personality-highlight section">
-        <div>
-          <h2>INTJ</h2>
-          <p>I like time to think, getting absorbed in new ideas and the quiet satisfaction of figuring something out. This profile explains a lot about how I am.</p>
-        </div>
-        <a href="https://www.16personalities.com/intj-careers" target="_blank" rel="noreferrer">Read the profile <ArrowUpRight/></a>
-      </section>
 
       <section className="about-values section">
         <p>What guides my work</p>

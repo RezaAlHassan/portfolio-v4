@@ -1,12 +1,11 @@
 // Content and assets from Figma HTGPw4wOrTMg6yLfIgRfnL, node 27:1114.
 import React from 'react';
-import CaseOutcome from '../CaseOutcome';
+import CaseOutcome, { CaseReflection } from '../CaseOutcome';
 import InkInterfaceCarousel from '../InkInterfaceCarousel';
 import { ExpandableImage } from '../LegacyPortfolio';
 import { PortfolioHeader, ResponsiveArtifact, NextProject, CaseStudyLayout } from '../PortfolioShared';
 
 const interfaces = [
-  { src: '/orderific/dashboard.png', title: 'Dashboard', alt: 'Orderific BMS dashboard with onboarding, metrics, charts and inventory', description: 'Shared navigation, onboarding, metrics, charts and inventory.' },
   { src: '/orderific/table.png', title: 'Reviews', alt: 'Orderific review tables with filters, status labels and row actions', description: 'Filters, review status and actions use shared table rules.' },
   { src: '/orderific/Loyalty.png', title: 'Loyalty', alt: 'Orderific loyalty setup with reward-type cards and points-system fields', description: 'Choice cards and form fields support loyalty-program setup.' },
   { src: '/orderific/QRcode.png', title: 'QR designer', alt: 'Orderific QR designer with template, pattern, colour, marker and logo controls', description: 'Template, pattern, colour and logo controls in one screen.' },
@@ -47,12 +46,12 @@ export default function Orderific() {
       <CaseOutcome project="orderific"/>
             <EvidenceImage file="6b1f7.png" alt="Orderific BMS dashboard and connected restaurant management tools" width={743} height={605} crop="orderific-cover-crop" framed/>
       <div className="orderific-pair orderific-context">
-        <Note level="h2" title="Challenge">Components had drifted across products. Missing states and inconsistent rules made reuse and handoff harder. RTL and tablet layouts for many apps were not present.</Note>
-        <Note level="h2" title="My contribution">Improved reusable components, refined BMS direction and theme support, and documented rules for the team. All apps had responsive layouts.</Note>
+        <Note level="h2" title="Challenge">Components had drifted across products. Missing states and inconsistent rules made reuse and handoff harder, and many apps had no RTL or tablet layouts.</Note>
+        <Note level="h2" title="My contribution">I improved reusable components, added the missing responsive layouts, refined the BMS (brand management system) direction and theme support, and documented rules for the team.</Note>
       </div>
       <hr className="portfolio-divider"/>
 
-      <Heading id="orderific-components" title="Reusing components">Different spacing, corners, and missing states pushed designers to detach components. I added reusable properties and shared token rules.</Heading>
+      <Heading id="orderific-components" title="Reusing components">Different spacing, corners, shadows and missing states pushed designers to detach components. I added configurable properties and shared token rules, and detachment fell from 50% to 20%.</Heading>
       <figure className="case-supporting-evidence">
         <ExpandableImage src="/orderific/component-playground.png" className="case-evidence-image" alt="Orderific component playground with input type, state, content, helper and variable-mode properties"/>
         <figcaption>Type, state, content and helper settings are exposed in one panel. The cards below show shared controls across LTR, RTL and QR customisation.</figcaption>
@@ -67,11 +66,11 @@ export default function Orderific() {
       </div>
       <hr className="portfolio-divider"/>
 
-      <Heading id="orderific-interfaces" title="Interfaces">The same component rules carry through dashboards, review tables, setup forms and pricing.</Heading>
+      <Heading id="orderific-interfaces" title="Interfaces">The same component rules carry through the dashboard above, review tables, setup forms and pricing.</Heading>
       <InkInterfaceCarousel slides={interfaces} label="Orderific full interfaces"/>
       <hr className="portfolio-divider"/>
 
-      <Heading id="orderific-direction" title="RTL">Direction became a component property in BMS. Navigation and reading order adapt, while maps and other fixed content keep their orientation.</Heading>
+      <Heading id="orderific-direction" title="RTL">To meet the deadline, I built the BMS RTL screens first, using detached components. Navigation and reading order adapt, while maps and other fixed content keep their orientation.</Heading>
       <div className="orderific-rtl-run" role="region" aria-label="BMS LTR and RTL layout comparison" tabIndex={0}>
         <EvidenceImage file="37126.png" alt="Orderific BMS delivery zone layout in English LTR" width={851} height={604} crop="orderific-direction-crop"/>
         <EvidenceImage file="5c0d5.png" alt="Orderific BMS delivery zone layout in Arabic RTL" width={851} height={604} crop="orderific-direction-crop"/>
@@ -104,13 +103,15 @@ export default function Orderific() {
 
       <Heading title="System deliverables"/>
       <ul className="orderific-deliverables">
-        <li>6 connected apps <span>~3–4 responsive layouts per app</span></li>
-        <li>3 token layers</li>
-        <li>LTR and RTL <span>for BMS</span></li>
-        <li>Light and dark themes <span>for BMS</span></li>      </ul>
+        <li>~3–4 responsive layouts <span>per app</span></li>
+        <li>LTR and RTL <span>for BMS (brand management system)</span></li>
+        <li>Light and dark themes <span>for BMS</span></li>
+      </ul>
       <hr className="portfolio-divider"/>
       <Heading title="Team development">One of the two junior designers I mentored was promoted.</Heading>
-      <NextProject name="Purno" href="/purno"/>
+      <hr className="portfolio-divider"/>
+      <CaseReflection project="orderific"/>
+      <NextProject name="Zevian" href="/zevian"/>
     </main>
     </CaseStudyLayout>
   </div>;

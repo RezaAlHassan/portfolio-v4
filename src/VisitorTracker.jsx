@@ -22,6 +22,6 @@ export default function VisitorTracker() {
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}
       />
-    </a> : <span className="about-visitors-status">{failed ? 'View count unavailable' : 'View count available on the live site'}</span>}
+    </a> : null}
   </aside>;
 }

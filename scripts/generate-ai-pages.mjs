@@ -9,8 +9,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const output = join(root, 'dist');
 const shell = await readFile(join(output, 'index.html'), 'utf8');
 const routes = {
-  'product': ['Reza Al Hassan — Product manager portfolio', 'Product management work across Zevian, Orderific, Jayga and Purno, led with a design approach.'],
-  'design': ['Reza Al Hassan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
+  'product': ['Reza Al Hasan — Product manager portfolio', 'Product management work across Zevian, Orderific, Jayga and Purno, led with a design approach.'],
+  'design': ['Reza Al Hasan — Product design portfolio', 'Product design work across B2B software, AI workflows, retail and warehouse operations.'],
   'product/jayga': ['Jayga — Product case study', 'Product decisions, research, service journeys and storage rules from Jayga, November 2023 to August 2025.'],
   'product/zevian': ['Zevian — Product case study', 'Discovery and decisions behind a sales performance investigation prototype.'],
   'product/purno': ['Purno — Product case study', 'Product scope and design decisions behind a retail POS and owner app.'],
@@ -20,8 +20,8 @@ const routes = {
   'orderific': ['Orderific — Design system case study', 'Design systems and handoff rules across six responsive restaurant apps, with BMS examples in LTR, RTL, light and dark modes.'],
   'purno': ['Purno — POS product case study', 'A point-of-sale system connecting shop sales, inventory, payments and daily retail operations.'],
   'jayga': ['Jayga — Warehouse operations case study', 'A warehouse system connecting storage, pricing, billing, delivery and fulfilment.'],
-  'portfolio': ['Portfolio redesign — Reza Al Hassan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
-  'sprint': ['2-week product design sprint — Reza Al Hassan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
+  'portfolio': ['Portfolio redesign — Reza Al Hasan', 'How this portfolio moved from moodboards and section studies into one clear editorial design system.'],
+  'sprint': ['2-week product design sprint — Reza Al Hasan', 'A focused two-week design sprint for complex B2B SaaS, AI and operational product workflows. From problem framing to states and engineering handoff.'],
 };
 
 const escapeHtml = (value) => value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -54,12 +54,12 @@ try {
   }
   const entry = renderToString(React.createElement(App, { initialPath:'/' }));
   await writeFile(join(output, 'index.html'), shell
-    .replace(/<title>.*?<\/title>/s, '<title>Reza Al Hassan — Product designer and manager</title>')
-    .replace(/<meta name="description" content=".*?"\s*\/?>/s, '<meta name="description" content="I shape B2B products from early research to complete user experiences. Selected work by Reza Al Hassan." />')
+    .replace(/<title>.*?<\/title>/s, '<title>Reza Al Hasan — Product designer, B2B and AI</title>')
+    .replace(/<meta name="description" content=".*?"\s*\/?>/s, '<meta name="description" content="I shape B2B products from early research to complete user experiences. Selected work by Reza Al Hasan." />')
     .replace('<div id="root"></div>', `<div id="root" data-route="/">${entry}</div>`));
   for (const [slug, [title, description]] of Object.entries(routes)) {
     const rendered = renderToString(React.createElement(App, { initialPath:`/${slug}` }));
-    const person = {'@type':'Person',name:'Reza Al Hassan',jobTitle:'Product Designer'};
+    const person = {'@type':'Person',name:'Reza Al Hasan',jobTitle:'Product Designer'};
     const jsonLd = JSON.stringify(slug === 'sprint'
       ? {'@context':'https://schema.org','@type':'Service',name:title,description,provider:person,url:`/${slug}`}
       : {'@context':'https://schema.org','@type':'CreativeWork',name:title,description,author:person,inLanguage:'en',url:`/${slug}`}).replaceAll('<','\\u003c');

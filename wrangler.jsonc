@@ -1,0 +1,10 @@
+{
+  // Static site: `npm run build` prerenders every route into dist/.
+  "name": "portfolio-v4",
+  "compatibility_date": "2025-11-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}
